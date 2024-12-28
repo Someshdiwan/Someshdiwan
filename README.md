@@ -4,7 +4,7 @@
 <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/4649464/skatter-programmer.gif">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="someshdiwan" /> </p>
 
-- 🌱 I’m currently learning **JAVA HTML CSS JAVASCRIPT**
+- 🌱 I’m currently learning **JVA AND Spring Boot**
 
 - 📫 How to reach me **someshdiwan369@gmail.com**
 
