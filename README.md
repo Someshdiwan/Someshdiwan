@@ -8,7 +8,7 @@
 </p>
 
 
-- 🌱 I’m currently learning **JAVA Spring Boot, Spring Framework**
+- 🌱 I’m currently learning **Spring Boot, Spring Frameworks**
 - 💬 Ask me about **JAVA, Full-stack Development, AI/ML**
 - 📫 How to reach me: **someshdiwan369@gmail.com**
 
