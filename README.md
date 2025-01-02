@@ -3,7 +3,10 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="someshdiwan" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=someshdiwan" alt="someshdiwan" /></a> </p>
+<p id="top" align="center">
+  <img src="https://github.com/thompsonemerson/thompsonemerson/raw/master/cover-thompson.png" />
+</p>
+
 
 - 🌱 I’m currently learning **JAVA Spring Boot, Spring Framework**
 - 💬 Ask me about **JAVA, Full-stack Development, AI/ML**
