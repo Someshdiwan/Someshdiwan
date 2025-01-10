@@ -1,25 +1,39 @@
 <h1 align="center">Hi 👋, I'm Somesh Diwan</h1>
 <h3 align="center">Aspiring Junior Software Developer</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="someshdiwan" /> </p>
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="someshdiwan" />
+</p>
 
 <p id="top" align="center">
   <img src="https://github.com/thompsonemerson/thompsonemerson/raw/master/cover-thompson.png" alt="header image"/>
 </p>
 
-- 🌱 I’m currently learning **Spring Boot, Spring Frameworks**
-- 💬 Ask me about **Java, Full-Stack Development, AI/ML**
+- 🌱 I’m currently learning **Spring Boot, Spring Frameworks**  
+- 💬 Ask me about **Java, Full-Stack Development, AI/ML**  
 - 📫 Reach me at **someshdiwan369@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
-<p align="left">
-  <a href="https://app.daily.dev/someshdiwan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="Daily.dev" height="30" width="40" /></a>
-  <a href="https://www.linkedin.com/in/somesh-diwan-5bb330229/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Somesh Diwan LinkedIn" height="30" width="40" /></a>
-  <a href="https://stackoverflow.com/users/19798425/somesh-diwan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="Somesh Diwan Stack Overflow" height="30" width="40" /></a>
-  <a href="https://www.kaggle.com/someshsanjaydiwan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="Somesh Diwan Kaggle" height="30" width="40" /></a>
-  <a href="https://www.codechef.com/users/someshdiwan7" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="Somesh Diwan Codechef" height="30" width="40" /></a>
-  <a href="https://leetcode.com/someshdiwan7/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="Somesh Diwan LeetCode" height="30" width="40" /></a>
-</p>
+<div align="left">
+  <a href="https://www.linkedin.com/in/somesh-diwan-5bb330229/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo" />
+  </a>
+  <a href="https://twitter.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="twitter logo" />
+  </a>
+  <a href="https://discord.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/discord/default.svg" width="52" height="40" alt="discord logo" />
+  </a>
+  <a href="https://youtube.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="52" height="40" alt="youtube logo" />
+  </a>
+  <a href="https://medium.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/medium/default.svg" width="52" height="40" alt="medium logo" />
+  </a>
+  <a href="https://stackoverflow.com/users/19798425/somesh-diwan" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/stackoverflow/default.svg" width="52" height="40" alt="stackoverflow logo" />
+  </a>
+</div>
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="left">
@@ -50,5 +64,5 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=someshdiwan&" alt="someshdiwan" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=someshdiwan&theme=radical" alt="someshdiwan streak stats" />
 </p>
