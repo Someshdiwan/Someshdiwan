@@ -71,7 +71,7 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=someshdiwan&show_icons=true&locale=en" alt="someshdiwan" />
 </p>
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=someshdiwan" alt="someshdiwan streak stats" />
+<!-- <img src="https://github-readme-streak-stats.herokuapp.com/?user=someshdiwan" alt="someshdiwan streak stats" /> -->
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=someshdiwan&theme=radical" alt="someshdiwan streak stats" />
