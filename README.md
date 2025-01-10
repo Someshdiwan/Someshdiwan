@@ -18,7 +18,6 @@
   <a href="https://stackoverflow.com/users/19798425/somesh-diwan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="Somesh Diwan Stack Overflow" height="30" width="40" /></a>
   <a href="https://www.kaggle.com/someshsanjaydiwan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="Somesh Diwan Kaggle" height="30" width="40" /></a>
   <a href="https://www.codechef.com/users/someshdiwan7" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.1.0/icons/codechef.svg" alt="Somesh Diwan Codechef" height="30" width="40" /></a>
-  <a href="https://www.hackerrank.com/someshdiwan369" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="Somesh Diwan Hackerrank" height="30" width="40" /></a>
   <a href="https://leetcode.com/someshdiwan7/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="Somesh Diwan LeetCode" height="30" width="40" /></a>
 </p>
 
