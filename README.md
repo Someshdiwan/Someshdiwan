@@ -15,9 +15,6 @@
 
 <h3 align="left" style="color: #228B22;">Connect with me:</h3>
 <div align="left">
-  <a href="https://www.linkedin.com/in/somesh-diwan-5bb330229/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="50" alt="LinkedIn" />
-  </a>
   <a href="https://stackoverflow.com/users/19798425/somesh-diwan" target="_blank">
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/stackoverflow/default.svg" width="50" alt="Stack Overflow" />
   </a>
