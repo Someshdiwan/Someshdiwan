@@ -24,10 +24,9 @@
   <a href="https://www.codechef.com/users/someshdiwan7" target="_blank">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/codechef.svg" width="50" alt="CodeChef" />
   </a>
-  <a href="https://leetcode.com/u/someshdiwan99" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/LeetCode_Logo.png" width="50" alt="LeetCode" />
+<a href="https://leetcode.com/u/someshdiwan99" target="_blank">
+    <img src="https://miro.medium.com/v2/resize:fit:2400/1*IC0JXUE3UEAfDfQnFyGtGA.jpeg" width="50" alt="LeetCode" />
 </a>
-
 </div>
 
 <h3 align="left" style="color: #228B22;">Languages and Tools:</h3>
