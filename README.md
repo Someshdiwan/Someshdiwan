@@ -19,7 +19,7 @@
     <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/stackoverflow/default.svg" width="50" alt="Stack Overflow" />
   </a>
   <a href="https://www.kaggle.com/someshsanjaydiwan" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/kaggle.svg" width="50" alt="Kaggle" />
+    <img src="https://www.kaggle.com/static/images/logos/kaggle-logo-gray-300.png" width="50" alt="Kaggle" />
   </a>
   <a href="https://www.codechef.com/users/someshdiwan7" target="_blank">
     <img src="https://th.bing.com/th/id/OIP.u2f8ffsPnvhvnf1m7lojgAHaHa?rs=1&pid=ImgDetMain" width="50" alt="CodeChef" />
