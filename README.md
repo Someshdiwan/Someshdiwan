@@ -22,7 +22,7 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/kaggle.svg" width="50" alt="Kaggle" />
   </a>
   <a href="https://www.codechef.com/users/someshdiwan7" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/codechef.svg" width="50" alt="CodeChef" />
+    <img src="https://th.bing.com/th/id/OIP.u2f8ffsPnvhvnf1m7lojgAHaHa?rs=1&pid=ImgDetMain" width="50" alt="CodeChef" />
   </a>
 <a href="https://leetcode.com/u/someshdiwan99" target="_blank">
     <img src="https://miro.medium.com/v2/resize:fit:2400/1*IC0JXUE3UEAfDfQnFyGtGA.jpeg" width="50" alt="LeetCode" />
@@ -31,7 +31,6 @@
 
 <h3 align="left" style="color: #228B22;">Languages and Tools:</h3>
 <p align="left">
-  <a href="https://angular.io" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg" alt="AngularJS" width="40" /> </a> 
   <a href="https://getbootstrap.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="Bootstrap" width="40" /> </a> 
   <a href="https://www.w3schools.com/cpp/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" width="40" /> </a> 
   <a href="https://www.w3schools.com/css/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="CSS3" width="40" /> </a> 
