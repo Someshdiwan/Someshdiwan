@@ -25,8 +25,9 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v6/icons/codechef.svg" width="50" alt="CodeChef" />
   </a>
   <a href="https://leetcode.com/u/someshdiwan99" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/leetcode/default.svg" width="50" alt="LeetCode" />
-  </a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/LeetCode_Logo.png" width="50" alt="LeetCode" />
+</a>
+
 </div>
 
 <h3 align="left" style="color: #228B22;">Languages and Tools:</h3>
