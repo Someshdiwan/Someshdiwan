@@ -57,10 +57,4 @@
 <div align="center">
   <img width="390" src="https://github-readme-stats.vercel.app/api?username=Someshdiwan&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="GitHub Stats" />
   <img width="325" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Someshdiwan&hide=HTML&langs_count=8&layout=compact&theme=react&border_radius=10&size_weight=0.5&count_weight=0.5&exclude_repo=github-readme-stats" alt="Top Languages" />
-  <h2 align="center">🔥 Daily Coding Streak 🔥</h2>
-<div align="center">
-  <img src="https://streak-stats.demolab.com/?user=Someshdiwan&theme=react&hide_border=true&border_radius=10" alt="Somesh Diwan's Coding Streak" />
-</div>
-
-
 </div>
