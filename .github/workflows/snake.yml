@@ -25,7 +25,7 @@ jobs:
         uses: Platane/snk@v3
         with:
           # GitHub username to generate the animation for
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: ${{ github.https://github.com/Someshdiwan/Someshdiwan }}
           # Define the output files and their configurations
           outputs: |
             dist/github-snake.svg
@@ -33,13 +33,13 @@ jobs:
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           # Use the GitHub token to authenticate API requests
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.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 }}
 
       # Step 3: Deploy the generated files to the 'output' branch
       - name: Deploy to Output Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.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 }}
           publish_dir: ./dist
           publish_branch: output
           # Custom commit message to describe the changes
