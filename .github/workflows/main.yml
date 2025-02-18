@@ -1,7 +1,7 @@
-name: Generate GitHub Contribution Grid Snake Animation
+name: Generate Dark Mode GitHub Contribution Grid Snake Animation
 
 on:
-  # Automatically run the job every 24 hours
+  # Automatically run the job every 1 hour
   schedule:
     - cron: "0 * * * *"
   
@@ -21,17 +21,17 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # Step 1: Generate GitHub contribution grid snake with a yellow snake color
-      - name: Generate Contribution Snake Animation (Yellow)
+      # Step 1: Generate GitHub contribution grid snake with dark yellow snake color for dark mode
+      - name: Generate Dark Mode Contribution Snake Animation (Dark Yellow)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Someshdiwan
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-yellow.svg?palette=yellow
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-darkyellow.svg?palette=darkyellow
 
       # Step 2: Push the generated snake animation to the output branch for display
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (Dark Mode)
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
