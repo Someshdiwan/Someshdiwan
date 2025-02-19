@@ -17,13 +17,13 @@ jobs:
 
     steps:
       # Step 1: Generate GitHub contribution grid snake with dark yellow snake color for dark mode
-      - name: Generate Dark Mode Contribution Snake Animation (Dark Yellow)
+      - name: Generate Dark Mode Contribution Snake Animation (Yellow)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Someshdiwan
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-darkyellow.svg?palette=darkyellow&color_snake=#9B7D33
+            dist/github-contribution-grid-snake-darkyellow.svg?palette=yellow&color_snake=#FFFF00
 
       # Step 2: Deploy to GitHub Pages (Dark Mode)
       - name: Deploy to GitHub Pages (Dark Mode)
