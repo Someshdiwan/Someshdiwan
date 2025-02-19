@@ -1,14 +1,9 @@
 name: Generate Dark Mode GitHub Contribution Grid Snake Animation
 
 on:
-  # Automatically run the job every 1 hour
   schedule:
     - cron: "0 * * * *"
-  
-  # Allows manual triggering of the job at any time
   workflow_dispatch:
-  
-  # Runs on every push to the master branch
   push:
     branches:
       - master
@@ -19,7 +14,7 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    
+
     steps:
       # Step 1: Generate GitHub contribution grid snake with dark yellow snake color for dark mode
       - name: Generate Dark Mode Contribution Snake Animation (Dark Yellow)
@@ -28,9 +23,9 @@ jobs:
           github_user_name: Someshdiwan
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-darkyellow.svg?color_snake=#9B7D33  # Use the dark yellow color
+            dist/github-contribution-grid-snake-darkyellow.svg?palette=darkyellow&color_snake=#9B7D33
 
-      # Step 2: Push the generated snake animation to the output branch for display
+      # Step 2: Deploy to GitHub Pages (Dark Mode)
       - name: Deploy to GitHub Pages (Dark Mode)
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
