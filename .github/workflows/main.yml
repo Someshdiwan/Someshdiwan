@@ -28,7 +28,7 @@ jobs:
           github_user_name: Someshdiwan
           outputs: |
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-            dist/github-contribution-grid-snake-darkyellow.svg?palette=darkyellow
+            dist/github-contribution-grid-snake-darkyellow.svg?color_snake=#9B7D33  # Use the dark yellow color
 
       # Step 2: Push the generated snake animation to the output branch for display
       - name: Deploy to GitHub Pages (Dark Mode)
