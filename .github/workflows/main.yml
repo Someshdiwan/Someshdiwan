@@ -16,21 +16,21 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      # Step 1: Generate GitHub contribution grid snake with yellow snake color (Dark background)
-      - name: Generate Contribution Snake Animation (Dark Background)
+      # Step 1: Generate GitHub contribution grid snake with yellow snake color (dark background)
+      - name: Generate Contribution Snake Animation (Yellow, Dark Background)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Someshdiwan
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23FFFF00  #Yellow snake, dark background
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%23FFFF00  # Yellow snake, dark background
 
-      # Step 2: Generate GitHub contribution grid snake with yellow snake color (White background)
-      - name: Generate Contribution Snake Animation (White Background)
+      # Step 2: Generate GitHub contribution grid snake with yellow snake color (light background)
+      - name: Generate Contribution Snake Animation (Yellow, White Background)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Someshdiwan
           outputs: |
-            dist/github-contribution-grid-snake-white.svg?palette=github-light&color_snake=%23FFFF00  #Yellow snake, light background
+            dist/github-contribution-grid-snake-white.svg?palette=github-light&color_snake=%23FFFF00  # Yellow snake, light background
 
       # Step 3: Deploy both generated snake animations to GitHub Pages
       - name: Deploy to GitHub Pages
