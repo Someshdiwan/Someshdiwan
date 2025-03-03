@@ -24,7 +24,15 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake-dark-mode.svg?color_snake=%23FFFFFF&palette=%23000000  # White snake, black background
 
-      # Step 2: Generate GitHub contribution grid snake with white snake color and light mode (white background)
+      # Step 2: Modify the SVG to change comment color to red and make other style adjustments
+      - name: Modify SVG for Red Comments
+        run: |
+          # Change color of comments and adjust other styles
+          sed -i 's/--c1:#9be9a8;/--c1:#FFFFFF;/' dist/github-contribution-grid-snake-dark-mode.svg  # Change snake color to white
+          sed -i 's/--c0:#ebedf0;/--c0:#000000;/' dist/github-contribution-grid-snake-dark-mode.svg  # Change background to black
+          sed -i 's/--c3:#30a14e;/--c3:#ff0000;/' dist/github-contribution-grid-snake-dark-mode.svg  # Change comments color to red
+
+      # Step 3: Generate GitHub contribution grid snake with white snake color and light mode (white background)
       - name: Generate Contribution Snake Animation (White Snake, White Background)
         uses: Platane/snk/svg-only@v3
         with:
@@ -32,7 +40,7 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake-white.svg?color_snake=%23FFFFFF&palette=github-light  # White snake, white background
 
-      # Step 3: Deploy to GitHub Pages (Both Snake Versions)
+      # Step 4: Deploy to GitHub Pages (Both Snake Versions)
       - name: Deploy to GitHub Pages (White Snake, Black Background)
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
