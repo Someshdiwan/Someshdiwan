@@ -22,7 +22,7 @@ jobs:
         with:
           github_user_name: Someshdiwan
           outputs: |
-            dist/github-contribution-grid-snake-dark-mode.svg?color_snake=%23FFFF00&palette=%23000000  # Yellow snake, black background
+            dist/github-contribution-grid-snake-dark-mode.svg?color_snake=%23FFFF00&palette=github-dark  # Yellow snake, dark background
 
       # Step 2: Generate GitHub contribution grid snake with yellow snake color and light mode look (white background)
       - name: Generate Contribution Snake Animation (Yellow Snake, White Background)
