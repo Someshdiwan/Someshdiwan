@@ -1,9 +1,9 @@
-name: Update WakaTime Stats
+name: Update Stats
 
 on:
   schedule:
     - cron: "0 0 * * *"  # Runs daily at midnight UTC
-  workflow_dispatch:  # Allows manual triggering
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -12,14 +12,39 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: WakaTime Readme Stats
+      # --- WakaTime Stats Update ---
+      - name: Update WakaTime Stats in README
         uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # or use your own GH_TOKEN secret if preferred
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # or use GITHUB_TOKEN if preferred
           SHOW_UPDATED_DATE: "True"
           SHOW_LINES_OF_CODE: "True"
           SHOW_TIMEZONE: "True"
           SHOW_DAYS_OF_WEEK: "True"
           SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
+          # Add any additional parameters if supported by the action
+
+      # --- GitHub Stats Update ---
+      # This example uses a custom script to fetch daily commits and push counts.
+      - name: Update GitHub Contribution Stats
+        run: |
+          # Count commits made in the last 24 hours
+          DAILY_COMMITS=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits?since=$(date -d 'yesterday' --iso-8601=seconds)" \
+            -H "Authorization: token ${{ secrets.GH_TOKEN }}" | jq length)
+          
+          # Here you can add additional queries (for example, push events) as needed.
+          # For demonstration, we'll assume DAILY_PUSHES equals DAILY_COMMITS.
+          DAILY_PUSHES=$DAILY_COMMITS
+          
+          # Update README.md using sed or a custom script:
+          sed -i "s/<!--START_SECTION:github_commits-->.*<!--END_SECTION:github_commits-->/<!--START_SECTION:github_commits-->\n**Daily Commits:** \`$DAILY_COMMITS\`\n**Daily Pushes:** \`$DAILY_PUSHES\`\n<!--END_SECTION:github_commits-->/" README.md
+          
+      - name: Commit and Push README Update
+        run: |
+          git config --global user.name "Someshdiwan"
+          git config --global user.email "someshdiwan369@gmail.com"
+          git add README.md
+          git commit -m "Updated stats: WakaTime and GitHub contributions"
+          git push
