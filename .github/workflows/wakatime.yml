@@ -41,16 +41,19 @@ jobs:
           # Remove the "Timeline" line and the subsequent line containing "bar_graph.png"
           sed -i '/Timeline/d' README.md
           sed -i '/bar_graph\.png/d' README.md
-
-      - name: Commit and Push README Update
-        run: |
+          
+          
+          - name: Commit and Push README Update
+          run: |
           git config --global user.name "Someshdiwan"
           git config --global user.email "someshdiwan369@gmail.com"
           git add README.md
           if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
+          echo "No changes to commit."
+          exit 0
           else
-            git commit -m "Updated WakaTime stats and removed unwanted sections"
-            git push
+          git commit -m "Updated WakaTime stats and removed unwanted sections"
+          git pull --rebase origin main
+          git push
           fi
+
