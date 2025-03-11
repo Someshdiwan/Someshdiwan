@@ -36,21 +36,27 @@ jobs:
           sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
           # Remove the "**I Mostly Code in Jupyter Notebook**" line
           sed -i '/I Mostly Code in Jupyter Notebook/d' README.md
-          # Remove the code block with language stats: from a line starting with "```text" until the next line starting with "```"
+          # Remove the code block with language stats: from a line starting with "```text" until the closing "```"
           sed -i '/^```text/,/^```/d' README.md
           # Remove the "Timeline" line and any line containing "bar_graph.png"
           sed -i '/Timeline/d' README.md
           sed -i '/bar_graph\.png/d' README.md
+
+      - name: Remove Assets Folder
+        run: |
+          if [ -d "assets" ]; then
+            echo "Removing assets folder..."
+            rm -rf assets
+            git rm -rf --cached assets || echo "assets folder not tracked"
+          else
+            echo "No assets folder found."
+          fi
 
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
           git config --global user.email "someshdiwan369@gmail.com"
           git add README.md
-          # Remove assets folder if it exists
-          if [ -d "assets" ]; then
-            git rm -r --cached assets
-          fi
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
