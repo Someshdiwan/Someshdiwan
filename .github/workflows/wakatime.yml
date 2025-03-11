@@ -23,37 +23,31 @@ jobs:
           SHOW_DAYS_OF_WEEK: "True"
           SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
-          # Attempt to disable timeline and bar chart output (if supported by the action)
           SHOW_TIMELINE: "False"
           SHOW_BAR_CHART: "False"
 
-      - name: Remove Unwanted Sections from README
+      - name: Remove unwanted sections from README
         run: |
           echo "Removing unwanted sections from README..."
-          # Remove the "Not Opted to Hire" line
           sed -i '/Not Opted to Hire/d' README.md
-          # Remove block from "🐱‍💻 Projects:" until the first blank line after it
           sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
-          # Remove any line containing "I Mostly Code in Jupyter Notebook"
           sed -i '/I Mostly Code in Jupyter Notebook/d' README.md
-          # Remove code block with language stats: from a line starting with "```text" until the next line starting with "```"
           sed -i '/^```text/,/^```/d' README.md
-          # Remove the "Timeline" line and the subsequent line containing "bar_graph.png"
           sed -i '/Timeline/d' README.md
           sed -i '/bar_graph\.png/d' README.md
-          
-          
-          - name: Commit and Push README Update
-          run: |
+          rm -rf assets  # Remove the assets folder
+
+      - name: Commit and Push README Update
+        run: |
           git config --global user.name "Someshdiwan"
           git config --global user.email "someshdiwan369@gmail.com"
           git add README.md
+          git rm -r --cached assets  # Ensure assets folder is removed from Git
           if git diff --cached --quiet; then
-          echo "No changes to commit."
-          exit 0
+            echo "No changes to commit."
+            exit 0
           else
-          git commit -m "Updated WakaTime stats and removed unwanted sections"
-          git pull --rebase origin main
-          git push
+            git commit -m "Updated WakaTime stats and removed unwanted sections"
+            git pull --rebase origin main
+            git push
           fi
-
