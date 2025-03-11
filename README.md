@@ -59,12 +59,5 @@ Unknown Editor           1 min               ░░░░░░░░░░░�
 Windows                  7 hrs 16 mins       █████████████████████████   100.00 % 
 ```
 
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/assets/bar_graph.png)
-
-
  Last Updated on 11/03/2025 00:26:44 UTC
 <!--END_SECTION:waka-->
