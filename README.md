@@ -13,8 +13,6 @@
  > 
 > 🏆 550 Contributions in the Year 2025
  > 
-> 🚫 Not Opted to Hire
- > 
 > 📜 17 Public Repositories 
  > 
 > 🔑 16 Private Repositories 
@@ -68,23 +66,4 @@ Unknown Project          0 secs              ░░░░░░░░░░░�
 💻 Operating System: 
 Windows                  7 hrs 16 mins       █████████████████████████   100.00 % 
 ```
-
-**I Mostly Code in Jupyter Notebook** 
-
-```text
-Jupyter Notebook         6 repos             ██████░░░░░░░░░░░░░░░░░░░   23.08 % 
-Python                   5 repos             █████░░░░░░░░░░░░░░░░░░░░   19.23 % 
-HTML                     4 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.38 % 
-Java                     2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
-Kotlin                   1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.85 % 
-```
-
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/assets/bar_graph.png)
-
-
- Last Updated on 11/03/2025 00:58:38 UTC
 <!--END_SECTION:waka-->
