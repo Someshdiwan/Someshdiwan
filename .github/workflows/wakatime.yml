@@ -34,17 +34,21 @@ jobs:
           DAILY_COMMITS=$(curl -s "https://api.github.com/repos/${GITHUB_REPOSITORY}/commits?since=$(date -d 'yesterday' --iso-8601=seconds)" \
             -H "Authorization: token ${{ secrets.GH_TOKEN }}" | jq length)
           
-          # Here you can add additional queries (for example, push events) as needed.
           # For demonstration, we'll assume DAILY_PUSHES equals DAILY_COMMITS.
           DAILY_PUSHES=$DAILY_COMMITS
           
-          # Update README.md using sed or a custom script:
+          # Update README.md using sed to inject the stats into a marked section.
           sed -i "s/<!--START_SECTION:github_commits-->.*<!--END_SECTION:github_commits-->/<!--START_SECTION:github_commits-->\n**Daily Commits:** \`$DAILY_COMMITS\`\n**Daily Pushes:** \`$DAILY_PUSHES\`\n<!--END_SECTION:github_commits-->/" README.md
-          
+
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
           git config --global user.email "someshdiwan369@gmail.com"
           git add README.md
-          git commit -m "Updated stats: WakaTime and GitHub contributions"
-          git push
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          else
+            git commit -m "Updated stats: WakaTime and GitHub contributions"
+            git push
+          fi
