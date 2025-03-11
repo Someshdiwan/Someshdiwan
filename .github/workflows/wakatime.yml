@@ -24,7 +24,7 @@ jobs:
           SHOW_DAYS_OF_WEEK: "True"
           SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
-          # Add any additional parameters if supported by the action
+          # No timeline or bar graph parameters provided, so these assets won't be generated.
 
       # --- GitHub Stats Update ---
       # This example uses a custom script to fetch daily commits and push counts.
