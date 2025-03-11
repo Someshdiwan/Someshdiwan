@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+      
       - name: Update WakaTime Stats in README
         uses: anmol098/waka-readme-stats@master
         with:
@@ -26,22 +26,23 @@ jobs:
           # Attempt to disable timeline and bar chart output (if supported)
           SHOW_TIMELINE: "False"
           SHOW_BAR_CHART: "False"
-
+      
       - name: Remove Unwanted Sections from README
         run: |
           echo "Removing unwanted sections from README..."
-          # Remove the "Not Opted to Hire" line
+          # Remove the "Not Opted to Hire" line, if present
           sed -i '/Not Opted to Hire/d' README.md
-          # Remove the block from "🐱‍💻 Projects:" until the first blank line after it
+          # Remove the block starting with "🐱‍💻 Projects:" until the next blank line
           sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
-          # Remove the "**I Mostly Code in Jupyter Notebook**" line
+          # Remove the "I Mostly Code in Jupyter Notebook" line
           sed -i '/I Mostly Code in Jupyter Notebook/d' README.md
-          # Remove the code block with language stats: from a line starting with "```text" until the closing "```"
+          # Remove the code block with language stats from "```text" to the next "```"
           sed -i '/^```text/,/^```/d' README.md
-          # Remove the "Timeline" line and any line containing "bar_graph.png"
+          # Remove any line containing "Timeline"
           sed -i '/Timeline/d' README.md
+          # Remove any line containing "bar_graph.png"
           sed -i '/bar_graph\.png/d' README.md
-
+      
       - name: Remove Assets Folder
         run: |
           if [ -d "assets" ]; then
@@ -51,7 +52,7 @@ jobs:
           else
             echo "No assets folder found."
           fi
-
+      
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
