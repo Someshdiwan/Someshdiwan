@@ -13,8 +13,6 @@
  > 
 > 🏆 550 Contributions in the Year 2025
  > 
-> 🚫 Not Opted to Hire
- > 
 > 📜 17 Public Repositories 
  > 
 > 🔑 16 Private Repositories 
@@ -78,13 +76,6 @@ HTML                     4 repos             ████░░░░░░░�
 Java                     2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   07.69 % 
 Kotlin                   1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   03.85 % 
 ```
-
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/assets/bar_graph.png)
-
 
  Last Updated on 11/03/2025 00:21:25 UTC
 <!--END_SECTION:waka-->
