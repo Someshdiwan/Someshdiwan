@@ -9,11 +9,11 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository
+      # 1. Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
       
-      # Step 2: Update the README with WakaTime stats
+      # 2. Update README with WakaTime stats
       - name: Update WakaTime Stats in README
         uses: anmol098/waka-readme-stats@master
         with:
@@ -29,24 +29,22 @@ jobs:
           SHOW_TIMELINE: "False"
           SHOW_BAR_CHART: "False"
       
-      # Step 3: Clean the README by removing unwanted sections
-      - name: Clean README
+      # 3. Clean unwanted sections from README
+      - name: Clean Unwanted Sections from README
         run: |
           echo "Cleaning unwanted sections from README..."
-          # Remove any line containing "Not Opted" (removes "🚫 Not Opted to Hire")
+          # Remove any line containing "Not Opted" (e.g., "🚫 Not Opted to Hire")
           sed -i '/Not Opted/d' README.md
           # Remove the block starting with "🐱‍💻 Projects:" until the first blank line
           sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
-          # Remove the line "I Mostly Code in Jupyter Notebook"
-          sed -i '/I Mostly Code in Jupyter Notebook/d' README.md
-          # Remove the code block with language stats (from a line starting with "```text" until the next "```")
-          sed -i '/^```text/,/^```/d' README.md
+          # Remove the block starting at "I Mostly Code in Jupyter Notebook" until the next line starting with "**Timeline**"
+          sed -i '/I Mostly Code in Jupyter Notebook/,/^**Timeline**/d' README.md
           # Remove any line containing "Timeline"
           sed -i '/Timeline/d' README.md
           # Remove any line containing "bar_graph.png"
           sed -i '/bar_graph\.png/d' README.md
       
-      # Step 4: Remove the assets folder (if it exists)
+      # 4. Remove the assets folder (if it exists)
       - name: Remove Assets Folder
         run: |
           if [ -d "assets" ]; then
@@ -57,7 +55,7 @@ jobs:
             echo "No assets folder found."
           fi
       
-      # Step 5: Commit and push changes if any, handling rebase conflicts
+      # 5. Commit and Push changes (handle rebase conflicts)
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
