@@ -9,11 +9,11 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repository
+      # Step 1: Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
       
-      # 2. Update README with WakaTime stats
+      # Step 2: Update the README with WakaTime stats
       - name: Update WakaTime Stats in README
         uses: anmol098/waka-readme-stats@master
         with:
@@ -25,19 +25,19 @@ jobs:
           SHOW_DAYS_OF_WEEK: "True"
           SHOW_PROFILE_VIEWS: "True"
           SHOW_SHORT_INFO: "True"
-          # Attempt to disable timeline and bar chart output (if supported)
+          # Attempt to disable timeline and bar chart output (if supported by the action)
           SHOW_TIMELINE: "False"
           SHOW_BAR_CHART: "False"
       
-      # 3. Remove unwanted sections from README
+      # Step 3: Clean the README by removing unwanted sections
       - name: Clean README
         run: |
           echo "Cleaning unwanted sections from README..."
-          # Remove "Not Opted to Hire" line
-          sed -i '/Not Opted to Hire/d' README.md
-          # Remove block from "🐱‍💻 Projects:" until the first blank line
+          # Remove any line containing "Not Opted" (e.g., "🚫 Not Opted to Hire")
+          sed -i '/Not Opted/d' README.md
+          # Remove the block starting with "🐱‍💻 Projects:" until the first blank line after it
           sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
-          # Remove "I Mostly Code in Jupyter Notebook" line
+          # Remove the "I Mostly Code in Jupyter Notebook" line
           sed -i '/I Mostly Code in Jupyter Notebook/d' README.md
           # Remove the code block with language stats (from a line starting with "```text" until the next "```")
           sed -i '/^```text/,/^```/d' README.md
@@ -46,18 +46,18 @@ jobs:
           # Remove any line containing "bar_graph.png"
           sed -i '/bar_graph\.png/d' README.md
       
-      # 4. Remove the assets folder (if it exists)
+      # Step 4: Remove the assets folder (if it exists)
       - name: Remove Assets Folder
         run: |
           if [ -d "assets" ]; then
             echo "Removing assets folder..."
             rm -rf assets
-            git rm -rf --cached assets || echo "Assets folder not tracked"
+            git rm -rf --cached assets || echo "Assets folder not tracked."
           else
             echo "No assets folder found."
           fi
       
-      # 5. Commit and push changes if any
+      # Step 5: Commit and Push the changes
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
@@ -67,7 +67,7 @@ jobs:
             echo "No changes to commit."
             exit 0
           else
-            git commit -m "Updated WakaTime stats and cleaned README"
+            git commit -m "Updated WakaTime stats and removed unwanted sections"
             git pull --rebase origin main
             git push
           fi
