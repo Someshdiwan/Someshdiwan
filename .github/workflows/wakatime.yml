@@ -1,8 +1,8 @@
-name: Update WakaTime Stats
+name: WakaTime Readme
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs daily at midnight UTC
+    - cron: "0 20 * * *"  # Runs daily at 20:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -12,50 +12,19 @@ jobs:
       # 1. Checkout the repository
       - name: Checkout Repository
         uses: actions/checkout@v3
-      
+
       # 2. Update README with WakaTime stats
       - name: Update WakaTime Stats in README
-        uses: anmol098/waka-readme-stats@master
+        uses: athul/waka-readme@8539bedb8277066fc9fe1b47d1f9b108eb866494
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_UPDATED_DATE: "True"
-          SHOW_LINES_OF_CODE: "True"
-          SHOW_TIMEZONE: "True"
-          SHOW_DAYS_OF_WEEK: "True"
-          SHOW_PROFILE_VIEWS: "True"
-          SHOW_SHORT_INFO: "True"
-          # Attempt to disable timeline and bar chart output (if supported)
-          SHOW_TIMELINE: "False"
-          SHOW_BAR_CHART: "False"
-      
-      # 3. Clean unwanted sections from README
-      - name: Clean Unwanted Sections from README
-        run: |
-          echo "Cleaning unwanted sections from README..."
-          # Remove any line containing "Not Opted" (e.g., "🚫 Not Opted to Hire")
-          sed -i '/Not Opted/d' README.md
-          # Remove the block starting with "🐱‍💻 Projects:" until the first blank line
-          sed -i '/🐱‍💻 Projects:/,/^$/d' README.md
-          # Remove the block starting at "I Mostly Code in Jupyter Notebook" until the next line starting with "**Timeline**"
-          sed -i '/I Mostly Code in Jupyter Notebook/,/^**Timeline**/d' README.md
-          # Remove any line containing "Timeline"
-          sed -i '/Timeline/d' README.md
-          # Remove any line containing "bar_graph.png"
-          sed -i '/bar_graph\.png/d' README.md
-      
-      # 4. Remove the assets folder (if it exists)
-      - name: Remove Assets Folder
-        run: |
-          if [ -d "assets" ]; then
-            echo "Removing assets folder..."
-            rm -rf assets
-            git rm -rf --cached assets || echo "Assets folder not tracked."
-          else
-            echo "No assets folder found."
-          fi
-      
-      # 5. Commit and Push changes (handle rebase conflicts)
+          COMMIT_MESSAGE: "Update Wakapi stats"
+          BLOCKS: "⬜🟨🟩"
+          TIME_RANGE: "last_30_days"
+          SHOW_TIME: "true"
+
+      # 3. Commit and Push changes (if any)
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
@@ -65,7 +34,8 @@ jobs:
             echo "No changes to commit."
             exit 0
           else
-            git commit -m "Updated WakaTime stats and removed unwanted sections"
-            git pull --rebase origin main || git rebase --skip
+            git commit -m "Updated WakaTime stats"
+            git pull --rebase --autostash origin main || git rebase --skip
             git push
           fi
+          
