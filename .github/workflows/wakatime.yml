@@ -24,17 +24,14 @@ jobs:
           TIME_RANGE: "last_30_days"
           SHOW_TIME: "true"
 
-      # 3. Commit and Push changes
+            # 3. Commit and Push changes (force update)
       - name: Commit and Push README Update
         run: |
           git config --global user.name "Someshdiwan"
           git config --global user.email "someshdiwan369@gmail.com"
-          git add README.md
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          else
-            git commit -m "Updated WakaTime stats"
-            git pull --rebase --autostash origin main || git rebase --skip
-            git push
-          fi
+          echo "Last updated on $(date)" > waka_timestamp.txt
+          git add README.md waka_timestamp.txt
+          git commit -m "Updated WakaTime stats [$(date)]" || echo "No changes to commit."
+          git pull --rebase --autostash origin main || git rebase --skip
+          git push
+
