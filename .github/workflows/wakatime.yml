@@ -1,37 +1,29 @@
-name: Update WakaTime Stats in README
+name: Update WakaTime Stats
 
 on:
   schedule:
-    - cron: "0 20 * * *"  # Runs daily at 20:00 UTC
-  workflow_dispatch:
+    - cron: "0 * * * *"  # Runs every hour
+  workflow_dispatch:  # Allow manual run
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # 2. Update README with WakaTime stats
-      - name: Update WakaTime Stats in README
+      - name: Fetch WakaTime Stats
         uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          COMMIT_MESSAGE: "Update WakaTime stats"
-          BLOCKS: "⬜🟨🟩"
-          TIME_RANGE: "last_30_days"
-          SHOW_TIME: "true"
+          USERNAME: "Somesh"
 
-            # 3. Commit and Push changes (force update)
-      - name: Commit and Push README Update
+      - name: Push changes
         run: |
-          git config --global user.name "Someshdiwan"
-          git config --global user.email "someshdiwan369@gmail.com"
-          echo "Last updated on $(date)" > waka_timestamp.txt
-          git add README.md waka_timestamp.txt
-          git commit -m "Updated WakaTime stats [$(date)]" || echo "No changes to commit."
-          git pull --rebase --autostash origin main || git rebase --skip
+          git config --global user.name "Somesh Diwan"
+          git config --global user.email "your-email@example.com"
+          git add README.md
+          git commit -m "Updated WakaTime stats" || echo "No changes to commit"
           git push
 
