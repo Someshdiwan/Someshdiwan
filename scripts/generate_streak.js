@@ -127,6 +127,7 @@ function safeFontFamily() {
    - centered big rounded number, matching handwritten style
    - subtle notch & drop shadow under the card
 */
+
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -138,7 +139,7 @@ function makeStreakSVG(streak) {
      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
     <filter id="cardShadow" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="6" dy="20" stdDeviation="18" flood-color="#000" flood-opacity="0.30"/>
+      <feDropShadow dx="6" dy="18" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
     </filter>
 
     <linearGradient id="cardGrad" x1="0" x2="1">
@@ -152,28 +153,27 @@ function makeStreakSVG(streak) {
     </linearGradient>
 
     <style>
-      .card-font { font-family: ${safeFontFamily()}; -webkit-font-smoothing:antialiased; }
-      .title { fill:#6b5a1f; font-weight:700; font-size:20px; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:112px; text-anchor:middle; filter: drop-shadow(0 8px 0 rgba(0,0,0,0.12)); }
-      .sub { fill:#6b6b6b; font-size:18px; text-anchor:middle; }
+      .card-font { font-family: "Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+      .title { fill:#6b5a1f; font-weight:700; font-size:20px; text-anchor:middle; }
+      .big { fill:url(#numGrad); font-weight:900; font-size:88px; text-anchor:middle; filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)); }
+      .sub { fill:#6b6b6b; font-size:16px; text-anchor:middle; }
       .egg-shadow { fill: rgba(0,0,0,0.12); }
       .flame-anim { animation: floaty 2400ms ease-in-out infinite; transform-origin: 120px 72px; }
       .flame-flicker { animation: flicker 1400ms linear infinite; transform-origin: 120px 72px; }
-      @keyframes floaty { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-6px) rotate(-1deg); } 100% { transform: translateY(0) rotate(0deg); } }
-      @keyframes flicker { 0% { transform: scale(1); opacity:1 } 50% { transform: scale(0.995); opacity:0.95 } 100% { transform: scale(1); opacity:1 } }
+      @keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
+      @keyframes flicker { 0%{transform:scale(1)} 50%{transform:scale(0.99)} 100%{transform:scale(1)} }
     </style>
   </defs>
 
-  <!-- card body with notch -->
+  <!-- sticky card body -->
   <g filter="url(#cardShadow)">
     <path d="M24 20 h300 a28 28 0 0 1 28 28 v128 a28 28 0 0 1 -28 28 h-146 q-12 8 -24 8 t-24 -8 h-180 z"
           fill="url(#cardGrad)" stroke="#f0e0a0" stroke-width="1.2" />
-    <!-- corner shine -->
     <path d="M332 68 q-6 18 -22 26" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.66"/>
     <ellipse cx="308" cy="46" rx="6" ry="3" fill="#fff9d8" opacity="0.78"/>
   </g>
 
-  <!-- left flame / egg and its subtle shadow -->
+  <!-- left flame -->
   <g transform="translate(72,40)">
     <ellipse class="egg-shadow" cx="26" cy="86" rx="76" ry="18" opacity="0.10" />
     <g class="flame-anim" transform="translate(0,-6)">
@@ -185,29 +185,22 @@ function makeStreakSVG(streak) {
     </g>
   </g>
 
-  <!-- main content -->
-  <g class="card-font" transform="translate(0,0)">
-    <text x="${width/2 + 6}" y="64" class="title">GitHub streak</text>
-
-    <text x="${width/2}" y="160" class="big">${escapeXml(daysText)}</text>
-
-    <text x="${width/2}" y="196" class="sub">day streak</text>
-
-    <!-- small decorative notch echo -->
-    <g transform="translate(${width/2 - 20}, 238)">
-      <path d="M0 14 q20 18 40 0" fill="#f7eed1" stroke="none" opacity="0.96"/>
-      <path d="M0 14 q20 18 40 0" fill="#e9dcc3" opacity="0.08" transform="translate(0,6)"/>
-    </g>
-
-    <!-- balancing little egg at top-right for composition -->
-    <g transform="translate(${width - 80}, 32) scale(0.85)">
-      <ellipse cx="0" cy="0" rx="14" ry="10" fill="#fff8d8" opacity="0.9"/>
-      <path d="M8 -6 C4 -16 -6 -18 -12 -6 C-6 -10 0 -2 8 -6 Z" fill="#fff2b0" opacity="0.5"/>
-    </g>
-
-    <!-- link anchor (won't be clickable in raw preview) -->
-    <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
+  <!-- top-right mini flame for balance -->
+  <g transform="translate(${width - 80}, 48) scale(0.65)" class="flame-anim">
+    <ellipse cx="0" cy="24" rx="22" ry="6" fill="rgba(0,0,0,0.12)" />
+    <path d="M20 -6 C12 -18 -4 -20 -12 -6 C-18 4 -12 26 6 28 C24 30 30 10 20 -6 Z" fill="#ffd86b"/>
+    <path d="M12 4 C8 -2 -2 -2 -6 4 C-8 8 -4 14 4 14 C10 14 16 10 12 4 Z" fill="#fff3d8" opacity="0.9"/>
   </g>
+
+  <!-- centered texts -->
+  <g class="card-font">
+    <text x="${width/2}" y="70" class="title">GitHub streak</text>
+    <text x="${width/2}" y="155" class="big">${escapeXml(daysText)}</text>
+    <text x="${width/2}" y="185" class="sub">day streak</text>
+  </g>
+
+  <!-- clickable link -->
+  <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
 </svg>`;
 }
 
