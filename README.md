@@ -1,16 +1,12 @@
-<p align="center">
-  <table align="center" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-      <td align="center" valign="top" style="padding-right:12px;">
-        <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="./streak.svg" alt="GitHub streak" width="420"/>
-        </a>
-      </td>
-      <td align="center" valign="top" style="padding-left:12px;">
-        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="./wakatime.svg" alt="WakaTime (all time)" width="420"/>
-        </a>
-      </td>
-    </tr>
-  </table>
-</p>
+<div align="center" style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:28px;">
+  <div style="flex:0 0 auto;">
+    <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
+      <img src="./streak.svg" alt="GitHub streak" width="380"/>
+    </a>
+  </div>
+  <div style="flex:0 0 auto;">
+    <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
+      <img src="./wakatime.svg" alt="WakaTime (all time)" width="380"/>
+    </a>
+  </div>
+</div>
