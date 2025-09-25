@@ -139,7 +139,6 @@ function safeFontFamily() {
 
 
 
-
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -150,14 +149,12 @@ function makeStreakSVG(streak) {
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
-    <clipPath id="cardClip">
-      <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"/>
-    </clipPath>
+    <clipPath id="cardClip"><rect x="20" y="20" width="${width-40}" height="${height-40}" rx="20" ry="20"/></clipPath>
 
     <filter id="cardShadow" x="-50%" y="-50%" width="220%" height="220%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
       <feOffset dx="4" dy="10" result="offsetblur"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+      <feComponentTransfer><feFuncA type="linear" slope="0.26"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
@@ -166,88 +163,86 @@ function makeStreakSVG(streak) {
       <stop offset="100%" stop-color="#ffebae"/>
     </linearGradient>
 
+    <!-- Softer, brighter number gradient -->
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff3bf"/>
-      <stop offset="60%" stop-color="#ffd07a"/>
-      <stop offset="100%" stop-color="#ff9b3e"/>
+      <stop offset="0%" stop-color="#fff6d0"/>
+      <stop offset="55%" stop-color="#ffd47a"/>
+      <stop offset="100%" stop-color="#ff9a3e"/>
     </linearGradient>
 
-    <!-- circular orbit used by comet -->
-    <path id="orbitPath" d="M210,150 m -66,0 a66,66 0 1,0 132,0 a66,66 0 1,0 -132,0" />
+    <!-- smaller orbit for comet (keeps it fully inside the card) -->
+    <path id="orbitPath" d="M210,150 m -48,0 a48,48 0 1,0 96,0 a48,48 0 1,0 -96,0" />
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
       .title { fill:#463718; font-weight:700; font-size:20px; text-anchor:middle; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:78px; text-anchor:middle; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12)); }
+      .big { fill:url(#numGrad); font-weight:900; font-size:78px; text-anchor:middle; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.10)); }
       .sub { fill:#4a4a4a; font-size:16px; text-anchor:middle; }
-      .egg-shadow { fill: rgba(0,0,0,0.11); }
+      .egg-shadow { fill: rgba(0,0,0,0.10); }
 
-      /* gentle float */
-      .floaty { animation: floaty 5200ms ease-in-out infinite; transform-origin: center center; }
-      /* slower quieter flicker */
-      .flicker { animation: flicker 3600ms ease-in-out infinite; transform-origin: center center; }
+      /* gentler float */
+      .floaty { animation: floaty 6400ms ease-in-out infinite; transform-origin: center center; }
+      /* slower, subtler flicker */
+      .flicker { animation: flicker 5200ms ease-in-out infinite; transform-origin: center center; }
 
       @keyframes floaty {
         0%{ transform: translateY(0); }
-        50%{ transform: translateY(-6px); }
+        50%{ transform: translateY(-5px); }
         100%{ transform: translateY(0); }
       }
       @keyframes flicker {
         0% { transform: scale(1); opacity:1; filter:brightness(1); }
-        45% { transform: scale(0.992); opacity:0.93; filter:brightness(0.96); }
-        75% { transform: scale(1.008); opacity:0.99; filter:brightness(1.03); }
+        45% { transform: scale(0.995); opacity:0.94; filter:brightness(0.98); }
+        80% { transform: scale(1.01); opacity:0.98; filter:brightness(1.03); }
         100% { transform: scale(1); opacity:1; filter:brightness(1); }
       }
 
       /* comet subtle pulse */
-      .cometGlow { animation: pulse 8000ms ease-in-out infinite; }
+      .cometGlow { animation: pulse 14000ms ease-in-out infinite; }
       @keyframes pulse {
-        0% { opacity:0.95; transform: scale(1); filter: blur(0px); }
-        50% { opacity:0.75; transform: scale(0.92); filter: blur(0.5px); }
-        100% { opacity:0.95; transform: scale(1); filter: blur(0px); }
+        0% { opacity:0.96; transform: scale(1); }
+        50% { opacity:0.78; transform: scale(0.94); }
+        100%{ opacity:0.96; transform: scale(1); }
       }
     </style>
   </defs>
 
   <!-- card shadow + body -->
   <g filter="url(#cardShadow)">
-    <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
+    <rect x="20" y="20" width="${width-40}" height="${height-40}" rx="20" ry="20"
           fill="url(#cardGrad)" stroke="#e6d09a" stroke-width="1.2"/>
-    <ellipse cx="${width - 100}" cy="38" rx="6" ry="3" fill="#fff9e0" opacity="0.78"/>
+    <ellipse cx="${width - 100}" cy="36" rx="5.5" ry="2.8" fill="#fff9e0" opacity="0.78"/>
   </g>
 
   <g clip-path="url(#cardClip)">
 
-    <!-- left main flame (clean, no bright white patch) -->
+    <!-- Left main flame (clean, realistic color layering) -->
     <g transform="translate(60,70)">
-      <ellipse class="egg-shadow" cx="30" cy="86" rx="46" ry="14" opacity="0.11"/>
+      <ellipse class="egg-shadow" cx="30" cy="84" rx="44" ry="14" opacity="0.11"/>
       <g class="floaty">
         <g class="flicker" transform="translate(0,0)">
-          <!-- outer shape: warm orange -->
-          <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 80 40 86 C66 92 80 58 70 20 Z"
-                fill="#ffb04a" opacity="0.98"/>
-          <!-- mid core: deeper orange/red, subtle animated shift -->
-          <path d="M56 42 C50 30 42 32 36 44 C34 50 42 68 54 64 C62 60 68 52 56 42 Z"
-                fill="#ff6a2a" opacity="0.92">
-            <animate attributeName="fill" dur="3.6s" repeatCount="indefinite"
-                     values="#ff6a2a;#ff7f3a;#ff5a10;#ff6a2a"/>
-            <animate attributeName="opacity" dur="3.6s" repeatCount="indefinite" values="0.92;0.7;0.95;0.92"/>
+          <!-- outer warm body -->
+          <path d="M70 18 C50 -6 36 -6 22 18 C10 36 14 78 40 84 C66 90 80 56 70 18 Z"
+                fill="#ffb24a" opacity="0.98"/>
+          <!-- core: richer orange/red with slow color cycling -->
+          <path d="M56 40 C50 28 42 30 36 42 C34 48 42 66 54 62 C62 58 68 50 56 40 Z"
+                fill="#ff5f1a" opacity="0.96">
+            <animate attributeName="fill" dur="4.8s" repeatCount="indefinite"
+                     values="#ff5f1a;#ff7a2a;#ff4f10;#ff5f1a"/>
+            <animate attributeName="opacity" dur="4.8s" repeatCount="indefinite"
+                     values="0.96;0.78;0.95;0.96"/>
           </path>
-          <!-- soft glow (very faint, not harsh white) -->
-          <ellipse cx="48" cy="36" rx="16" ry="8" fill="#ffdba0" opacity="0.18">
-            <animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" values="0.18;0.08;0.16;0.18"/>
-          </ellipse>
+          <!-- faint warm halo (very subtle, not white) -->
+          <ellipse cx="48" cy="36" rx="14" ry="6" fill="#ffd197" opacity="0.14"/>
         </g>
       </g>
     </g>
 
-    <!-- small "comet" orbiter that orbits inside the card slowly -->
+    <!-- smaller "comet" orbiter (kept inside - smaller orbit radius) -->
     <g>
-      <g class="cometGlow">
-        <g>
-          <circle cx="0" cy="0" r="5" fill="#ffd78f" opacity="0.98"/>
-          <circle cx="0" cy="0" r="9" fill="#ffb46a" opacity="0.06"/>
-        </g>
+      <g class="cometGlow" transform="translate(0,0)">
+        <circle cx="0" cy="0" r="4.2" fill="#ffd67a" opacity="0.98"/>
+        <circle cx="0" cy="0" r="8.5" fill="#ffb06a" opacity="0.06"/>
         <animateMotion dur="36s" repeatCount="indefinite" rotate="auto">
           <mpath xlink:href="#orbitPath"/>
         </animateMotion>
@@ -258,16 +253,16 @@ function makeStreakSVG(streak) {
     <g class="card-font">
       <text x="${width/2}" y="70" class="title">GitHub Streak</text>
       <text x="${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
-      <text x="${width/2}" y="190" class="sub">Days</text>
+      <text x="${width/2}" y="192" class="sub">Days</text>
     </g>
 
-    <!-- medium flame below number, toned down -->
-    <g transform="translate(${width/2}, 246) scale(0.94)" class="floaty">
-      <ellipse cx="0" cy="18" rx="34" ry="9" fill="rgba(0,0,0,0.08)" />
+    <!-- medium flame below number, nudged slightly lower (closer to notch) -->
+    <g transform="translate(${width/2}, 256) scale(0.95)" class="floaty">
+      <ellipse cx="0" cy="18" rx="32" ry="9" fill="rgba(0,0,0,0.08)" />
       <g class="flicker">
-        <path d="M34 -8 C24 -20 -8 -24 -16 -8 C-22 6 -14 30 10 32 C34 34 40 14 34 -8 Z"
-              fill="#ff9a3a" opacity="0.95">
-          <animate attributeName="fill" dur="3.2s" repeatCount="indefinite" values="#ff9a3a;#ff8230;#ffb454;#ff9a3a"/>
+        <path d="M32 -8 C22 -20 -8 -24 -14 -8 C-18 6 -10 28 8 30 C32 32 38 12 32 -8 Z"
+              fill="#ff8f30" opacity="0.94">
+          <animate attributeName="fill" dur="4.0s" repeatCount="indefinite" values="#ff8f30;#ff7a25;#ffab50;#ff8f30"/>
         </path>
       </g>
     </g>
