@@ -36,11 +36,31 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add wakatime.png || true
-          if ! git diff --staged --quiet; then
-            git commit -m "chore: update wakatime.png"
-            git pull --rebase origin main
-            git push origin main
-          else
+
+          # Stage only the generated image(s)
+          git add wakatime.png streak.svg || true
+
+          # If nothing staged, exit
+          if git diff --staged --quiet; then
             echo "No changes to commit"
+            exit 0
           fi
+
+          # Commit staged changes
+          git commit -m "chore: update generated assets"
+
+          # Fetch remote and rebase safely by stashing any local unstaged/untracked changes
+          git fetch origin main
+
+          # Create a stash of any remaining unstaged/untracked changes (if any)
+          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
+
+          # Rebase on top of remote main
+          git pull --rebase origin main
+
+          # Try to pop the stash (may fail cleanly if nothing to pop)
+          git stash pop || true
+
+          # Push the new commit (if remote advanced during rebase this will fail; runner will show it)
+          git push origin main
+      
