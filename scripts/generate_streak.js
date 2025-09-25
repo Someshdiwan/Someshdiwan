@@ -3,12 +3,18 @@
  * Generates an animated SVG 'streak.svg' for your GitHub profile.
  * Uses GitHub GraphQL via the action-provided GITHUB_TOKEN.
  *
- * Streak definition: consecutive days with contributionCount > 0 ending on TODAY (calendar day).
+ * This version supports "resume" mode: if a streak_state.json exists with a
+ * previously recorded streak and date, the script will attempt to continue
+ * that streak if there were no contribution gaps between the saved date and
+ * the latest calendar day. Otherwise it falls back to the calendar-computed
+ * streak.
  */
 
 const { graphql } = require('@octokit/graphql');
 const fs = require('fs');
 const path = require('path');
+
+const STATE_FILE = path.join(process.cwd(), 'streak_state.json');
 
 const token = process.env.GITHUB_TOKEN;
 if (!token) {
@@ -61,23 +67,49 @@ function flattenDays(calendar) {
     return days;
 }
 
-function computeStreakEndingToday(days) {
-    const utcToday = new Date(Date.UTC(
-        new Date().getUTCFullYear(),
-        new Date().getUTCMonth(),
-        new Date().getUTCDate()
-    ));
-    const utcTodayStr = utcToday.toISOString().slice(0, 10);
-
-    let i = days.findIndex(d => d.date === utcTodayStr);
-    if (i < 0) i = days.length - 1;
-
+function calendarStreakFromLastDay(days) {
+    // count consecutive >0 days starting from the last available day backwards
+    let i = days.length - 1;
     let streak = 0;
     for (; i >= 0; i--) {
         if (days[i].count > 0) streak++;
         else break;
     }
-    return { streak, utcTodayStr, lastDayDate: days[days.length - 1]?.date };
+    return { streak, lastDayDate: days[days.length - 1]?.date };
+}
+
+function datesBetweenInclusive(startDateStr, endDateStr) {
+    // returns array of YYYY-MM-DD strings from startDate (exclusive) to endDate (inclusive)
+    const res = [];
+    let cur = new Date(startDateStr + 'T00:00:00Z');
+    const end = new Date(endDateStr + 'T00:00:00Z');
+    cur.setUTCDate(cur.getUTCDate() + 1); // start from next day after startDate
+    while (cur <= end) {
+        res.push(cur.toISOString().slice(0, 10));
+        cur.setUTCDate(cur.getUTCDate() + 1);
+    }
+    return res;
+}
+
+function buildDayMap(days) {
+    const map = new Map();
+    for (const d of days) map.set(d.date, d.count);
+    return map;
+}
+
+function readState() {
+    try {
+        if (!fs.existsSync(STATE_FILE)) return null;
+        const raw = fs.readFileSync(STATE_FILE, 'utf8');
+        return JSON.parse(raw);
+    } catch (err) {
+        console.warn('Could not read state file:', err.message);
+        return null;
+    }
+}
+
+function writeState(obj) {
+    fs.writeFileSync(STATE_FILE, JSON.stringify(obj, null, 2), 'utf8');
 }
 
 function makeStreakSVG(streak) {
@@ -125,10 +157,53 @@ function makeStreakSVG(streak) {
         const calendar = await fetchContributionCalendar(repoOwner);
         const days = flattenDays(calendar);
         if (!days.length) throw new Error('No contribution data found.');
-        const { streak, utcTodayStr, lastDayDate } = computeStreakEndingToday(days);
-        const svg = makeStreakSVG(streak);
-        fs.writeFileSync(path.join(process.cwd(), 'streak.svg'), svg, 'utf8');
-        console.log(`Wrote streak.svg — streak=${streak}, utcToday=${utcTodayStr}, lastDayInCalendar=${lastDayDate}`);
+
+        // debug: show last 12 days
+        console.log('last12:', days.slice(-12).map(d => `${d.date}:${d.count}`).join(', '));
+
+        const { streak: calendarStreak, lastDayDate } = calendarStreakFromLastDay(days);
+        console.log('calendarStreak:', calendarStreak, 'lastDayDate:', lastDayDate);
+
+        // attempt resume from saved state
+        const state = readState();
+        let finalStreak = calendarStreak;
+        if (state && state.streak != null && state.date) {
+            try {
+                const savedDate = state.date;
+                // If saved date is same as lastDayDate, use saved streak (no change)
+                if (savedDate === lastDayDate) {
+                    finalStreak = state.streak;
+                    console.log('Using saved state (same day):', state);
+                } else {
+                    // Check each date between savedDate (exclusive) and lastDayDate (inclusive)
+                    const range = datesBetweenInclusive(savedDate, lastDayDate);
+                    const dayMap = buildDayMap(days);
+                    // Are all days in range present and >0?
+                    const allHaveContrib = range.length > 0 && range.every(d => (dayMap.get(d) || 0) > 0);
+                    if (allHaveContrib) {
+                        // continue streak
+                        finalStreak = state.streak + range.length;
+                        console.log('Continuing saved streak. added days:', range.length, '->', finalStreak);
+                    } else {
+                        console.log('Cannot continue saved streak — gap found, falling back to calendar streak.');
+                        finalStreak = calendarStreak;
+                    }
+                }
+            } catch (err) {
+                console.warn('Error while attempting to resume state:', err.message);
+                finalStreak = calendarStreak;
+            }
+        } else {
+            console.log('No saved state found — using calendar streak.');
+        }
+
+        // write svg and state
+        const svg = makeStreakSVG(finalStreak);
+        const outPath = path.join(process.cwd(), 'streak.svg');
+        fs.writeFileSync(outPath, svg, 'utf8');
+        writeState({ streak: finalStreak, date: lastDayDate });
+
+        console.log(`Wrote streak.svg — finalStreak=${finalStreak}, lastDay=${lastDayDate}`);
     } catch (err) {
         console.error('Error generating streak svg:', err);
         process.exit(1);
