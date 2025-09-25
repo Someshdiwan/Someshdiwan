@@ -174,93 +174,71 @@ function makeStreakSVG(streak) {
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
       .title { fill:#3b2f14; font-weight:700; font-size:20px; text-anchor:middle; }
       .big { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
-      .sub { fill:#444; font-size:16px; text-anchor:middle; }
-      .egg-shadow { fill: rgba(0,0,0,0.12); }
+      .sub  { fill:#444; font-size:16px; text-anchor:middle; }
 
-      /* slower, smoother float + flicker */
-      .floaty { animation: floaty 7000ms ease-in-out infinite; transform-origin: center; }
+      .floaty  { animation: floaty 7000ms ease-in-out infinite; transform-origin: center; }
       .flicker { animation: flicker 5200ms linear infinite; transform-origin: center; }
 
       @keyframes floaty {
-        0%{ transform: translateY(0); }
-        50%{ transform: translateY(-6px); }
-        100%{ transform: translateY(0); }
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-6px); }
+        100% { transform: translateY(0); }
       }
       @keyframes flicker {
-        0% { transform: scale(1); opacity:1; filter:brightness(1); }
-        40% { transform: scale(0.992); opacity:0.92; filter:brightness(0.96); }
-        80% { transform: scale(1.01); opacity:1; filter:brightness(1.05); }
-        100% { transform: scale(1); opacity:1; filter:brightness(1); }
+        0%   { transform: scale(1);     opacity:1;   filter:brightness(1); }
+        40%  { transform: scale(0.992); opacity:0.92;filter:brightness(0.96); }
+        80%  { transform: scale(1.01);  opacity:1;   filter:brightness(1.05); }
+        100% { transform: scale(1);     opacity:1;   filter:brightness(1); }
       }
     </style>
   </defs>
 
-  <!-- card shadow + body -->
+  <!-- Card border/shadow (transparent by default) -->
   <g filter="url(#cardShadow)">
-    <!-- DEFAULT: transparent card background (shows page background) -->
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
           fill="none" stroke="#e6d09a" stroke-width="1.2"/>
     <!--
-      Uncomment ONE of these lines below to use a filled card background instead of transparent:
-      Dark background:
+      To use a filled card background instead of transparent, uncomment ONE:
+      Dark:
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22" fill="#0f2527" stroke="#0b1a1a" stroke-width="1.2"/>
-      Medium background:
+      Medium:
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22" fill="#072021" stroke="#0b1a1a" stroke-width="1.0"/>
-      Faint warm card (original sticky):
+      Warm sticky:
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22" fill="url(#cardGrad)" stroke="#e6d09a" stroke-width="1.2"/>
     -->
   </g>
 
   <g clip-path="url(#cardClip)">
-
-    <!-- Decorative left subtle shadow under where flame lives (not a white patch) -->
-    <g transform="translate(58,76)">
-      <ellipse class="egg-shadow" cx="30" cy="86" rx="46" ry="14" opacity="0.10"/>
-    </g>
-
-    <!-- Left flame (kept but compact) -->
-    <g transform="translate(60,70)">
-      <g class="floaty">
-        <g class="flicker" transform="translate(0,0) scale(0.92)">
-          <!-- outer warm -->
-          <path d="M70 18 C50 -6 36 -6 22 18 C10 36 14 78 40 84 C66 90 80 56 70 18 Z" fill="#ffb44a"/>
-          <!-- mid core (more orange/red) -->
-          <path d="M56 40 C50 28 42 30 36 42 C34 48 42 66 54 62 C62 58 68 50 56 40 Z" fill="#ff6a24" opacity="0.98"/>
-          <!-- tiny inner highlight (soft white, subtle) -->
-          <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#fff5d8" opacity="0.55"/>
-        </g>
-      </g>
-    </g>
-
-    <!-- Centered texts -->
+    <!-- Title, number, subtitle -->
     <g class="card-font">
-      <text x="${width/2}" y="70" class="title">GitHub Streak</text>
+      <text x="${width/2}" y="70"  class="title">GitHub Streak</text>
       <text x="${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
       <text x="${width/2}" y="190" class="sub">Days</text>
     </g>
 
-    <!-- Big flame BELOW the number (centered) -->
-    <g transform="translate(${width/2}, 240) scale(0.98)" class="floaty">
-      <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)" />
+    <!-- BIG flame: centered and BELOW the "Days" label (parallel line, slightly lower) -->
+    <!-- Adjust Y by changing the 228 below (bigger -> lower). Adjust X by changing ${width/2}. -->
+    <g transform="translate(${width/2}, 228) scale(0.98)" class="floaty">
+      <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
       <g class="flicker">
         <!-- outer warm -->
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.96"/>
         <!-- core red/orange -->
         <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4b00" opacity="0.92"/>
-        <!-- subtle soft white patch INSIDE big flame (small, gentle) -->
+        <!-- gentle inner highlight -->
         <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.28"/>
       </g>
     </g>
 
-    <!-- Small flicker near the big flame (INSIDE the card and closer to big flame) -->
-    <!-- Adjust this single translate to nudge the small flicker: (x, y) currently set to (width/2 + 28, 218) -->
-    <g transform="translate(${width/2 + 28}, 218) scale(0.52)" class="floaty">
+    <!-- SMALL flame: near the title, slightly ABOVE it, vertically aligned over the big flame,
+         a bit to the LEFT and safely inside the card. -->
+    <!-- Tweak X/Y here: (${width/2 - 42}, 56). Smaller X -> more left, larger X -> more right; larger Y -> lower. -->
+    <g transform="translate(${width/2 - 42}, 56) scale(0.46)" class="floaty">
       <g class="flicker">
-        <path d="M14 -4 C10 -12 -4 -14 -8 -4 C-10 2 -6 18 4 18 C12 18 18 8 14 -4 Z" fill="#ffb95a" />
-        <path d="M8 6 C6 2 0 2 -1 6 C-1 9 2 12 6 12 C9 12 12 10 8 6 Z" fill="#fff6d8" opacity="0.55"/>
+        <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
+        <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
       </g>
     </g>
-
   </g>
 
   <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener">
@@ -268,96 +246,6 @@ function makeStreakSVG(streak) {
   </a>
 </svg>`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
