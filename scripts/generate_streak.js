@@ -206,13 +206,15 @@ function makeStreakSVG(streak) {
     </g>
 
     <!-- Small top-right flame (moved more inward & scaled down) -->
-    <g transform="translate(${width - 160}, 60) scale(0.45)" class="floaty">
-      <ellipse cx="0" cy="20" rx="18" ry="6" fill="rgba(0,0,0,0.12)" />
-      <g class="flicker">
-        <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ff9e2a"/>
-        <path d="M12 6 C8 0 0 0 -2 6 C-4 10 -1 14 6 14 C10 14 16 12 12 6 Z" fill="#fff6d6" opacity="0.92"/>
-      </g>
-    </g>
+    <!-- Small top-right flame (inside more) -->
+<g transform="translate(${width - 180}, 70) scale(0.42)" class="floaty">
+  <ellipse cx="0" cy="20" rx="18" ry="6" fill="rgba(0,0,0,0.12)" />
+  <g class="flicker">
+    <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ff9e2a"/>
+    <path d="M12 6 C8 0 0 0 -2 6 C-4 10 -1 14 6 14 C10 14 16 12 12 6 Z" fill="#fff6d6" opacity="0.92"/>
+  </g>
+</g>
+
 
     <!-- Centered texts -->
     <g class="card-font">
