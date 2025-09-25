@@ -112,44 +112,104 @@ function writeState(obj) {
     fs.writeFileSync(STATE_FILE, JSON.stringify(obj, null, 2), 'utf8');
 }
 
+/**
+ * makeStreakSVG: replaced UI only.
+ * Produces a 420x300 "sticky note" card visually matching the WakaTime card.
+ * No logic changes elsewhere.
+ */
 function makeStreakSVG(streak) {
-    const width = 900;
-    const height = 420;
+    const width = 420;
+    const height = 300;
+    const hoursText = String(streak);
     return `<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-  <style>
-    .bg { fill: #0f2527; }
-    .flame { transform-origin: 450px 90px; animation: float 2.4s infinite ease-in-out; }
-    .drop { transform-origin: 450px 32px; animation: drip 2.6s infinite ease-in-out; }
-    .num { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 200px; text-anchor: middle; fill: url(#numGrad); filter: drop-shadow(0 12px 0 rgba(0,0,0,0.25)); }
-    .label { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-size: 36px; text-anchor: middle; fill: #f6a936; font-weight: 700; }
-    @keyframes float { 0%{transform:translateY(0);} 50%{transform:translateY(-10px);} 100%{transform:translateY(0);} }
-    @keyframes drip { 0%{transform:translateY(0) scale(1);opacity:1;} 80%{transform:translateY(22px) scale(0.9);opacity:0.6;} 100%{transform:translateY(0) scale(1);opacity:1;} }
-  </style>
-
-  <rect width="100%" height="100%" rx="12" class="bg"/>
-
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${hoursText} days">
   <defs>
+    <filter id="sdrop" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="6" dy="18" stdDeviation="14" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff6c7"/>
+      <stop offset="100%" stop-color="#fff1b8"/>
+    </linearGradient>
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#ffd86b"/>
       <stop offset="100%" stop-color="#f39a2e"/>
     </linearGradient>
+    <style>
+      .card-font { font-family: "Comic Sans MS", "Segoe UI", Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+      .title { fill:#6b5a1f; font-weight:700; font-size:18px; }
+      .big { fill:url(#numGrad); font-weight:800; font-size:96px; text-anchor:middle; filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)); }
+      .sub { fill:#6b6b6b; font-size:14px; text-anchor:middle; }
+      .donut-label { fill:#2b2b2b; font-weight:700; font-size:12px; text-anchor:middle; }
+      .donut-pct { fill:#806015; font-size:12px; text-anchor:middle; }
+    </style>
   </defs>
 
-  <g class="flame" transform="translate(300,8) scale(1.0)">
-    <ellipse cx="150" cy="160" rx="110" ry="24" fill="rgba(0,0,0,0.35)"/>
-    <path d="M250 60 C220 10 170 -10 130 40 C95 85 100 160 150 160 C210 160 270 120 250 60 Z" fill="#ffd86b"/>
-    <path d="M210 88 C192 68 165 74 154 96 C150 106 166 122 190 116 C202 112 214 104 210 88 Z" fill="#fff3d8"/>
-    <path d="M198 40 C188 30 170 32 164 46 C160 56 172 64 184 58 C192 54 200 48 198 40 Z" fill="#ffe08a" opacity="0.9"/>
+  <!-- sticky card body -->
+  <g filter="url(#sdrop)">
+    <path d="M20 20 h300 a20 20 0 0 1 20 20 v160 a20 20 0 0 1 -20 20 h-134 q-12 8 -24 8 t-24 -8 h-144 z"
+          fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2" />
+    <!-- peeled corner highlight -->
+    <path d="M322 62 q-6 18 -22 26" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <ellipse cx="305" cy="46" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
   </g>
 
-  <g class="drop" transform="translate(430,12)">
-    <ellipse cx="0" cy="0" rx="9" ry="12" fill="#f39a2e"/>
-  </g>
+  <!-- content -->
+  <g class="card-font" transform="translate(0,0)">
+    <text x="${width/2}" y="64" class="title">GitHub streak</text>
 
-  <text x="${width/2}" y="300" class="num">${streak}</text>
-  <text x="${width/2}" y="352" class="label">day streak</text>
+    <text x="${width/2}" y="150" class="big">${escapeXml(hoursText)}</text>
+
+    <text x="${width/2}" y="178" class="sub">day streak</text>
+
+    <!-- three small decorative donuts (visual symmetry only) -->
+    <g transform="translate(70,220)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
+              stroke-linecap="round"
+              stroke-dasharray="188.49555921538757 188.49555921538757"
+              stroke-dashoffset="75"
+              transform="rotate(-90)"></circle>
+      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
+      <text x="0" y="-2" class="donut-label">Contrib</text>
+      <text x="0" y="14" class="donut-pct">—</text>
+    </g>
+
+    <g transform="translate(210,220)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
+              stroke-linecap="round"
+              stroke-dasharray="188.49555921538757 188.49555921538757"
+              stroke-dashoffset="120"
+              transform="rotate(-90)"></circle>
+      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
+      <text x="0" y="-2" class="donut-label">Commit</text>
+      <text x="0" y="14" class="donut-pct">—</text>
+    </g>
+
+    <g transform="translate(350,220)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
+              stroke-linecap="round"
+              stroke-dasharray="188.49555921538757 188.49555921538757"
+              stroke-dashoffset="150"
+              transform="rotate(-90)"></circle>
+      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
+      <text x="0" y="-2" class="donut-label">Days</text>
+      <text x="0" y="14" class="donut-pct">—</text>
+    </g>
+
+    <!-- clickable overlay anchor (won't be active in raw preview but safe) -->
+    <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
+  </g>
 </svg>`;
+}
+
+function escapeXml(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
 (async () => {
