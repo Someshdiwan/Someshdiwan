@@ -111,10 +111,8 @@ function makeStreakSVG(streak) {
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
-    <!-- IMPORTANT: use userSpaceOnUse so px values work as intended -->
     <clipPath id="cardClip" clipPathUnits="userSpaceOnUse">
-      <!-- add a little extra bottom room for the big flame -->
-      <rect x="20" y="18" width="${width - 40}" height="${height - 34}" rx="22" ry="22"/>
+      <rect x="20" y="16" width="${width - 40}" height="${height - 28}" rx="22" ry="22"/>
     </clipPath>
 
     <filter id="cardShadow" x="-50%" y="-50%" width="220%" height="220%">
@@ -158,11 +156,11 @@ function makeStreakSVG(streak) {
     </style>
   </defs>
 
-  <!-- Transparent card by default -->
+  <!-- transparent card outline (uncomment a fill below if you want a solid card) -->
   <g filter="url(#cardShadow)">
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
           fill="none" stroke="#e6d09a" stroke-width="1.2"/>
-    <!-- To use a filled background instead, uncomment ONE of these:
+    <!-- Optional filled backgrounds:
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#0f2527"/>
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#072021"/>
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="url(#cardGrad)"/>
@@ -185,8 +183,8 @@ function makeStreakSVG(streak) {
       </g>
     </g>
 
-    <!-- Big flame BELOW the number; raised a bit and slightly smaller so it stays inside -->
-    <g transform="translate(${width/2}, 234) scale(1.04)" class="floaty">
+    <!-- BIG flame — back to original placement -->
+    <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
       <g class="flicker">
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
