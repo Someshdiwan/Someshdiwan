@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@octokit/graphql": "^5.0.0",
-    "puppeteer": "^21.0.0"
+    "puppeteer": "^24.22.3"
   },
   "scripts": {
     "generate:streak": "node ./scripts/generate_streak.js",
