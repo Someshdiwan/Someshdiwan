@@ -191,7 +191,6 @@ function makeStreakSVG(streak) {
   <g filter="url(#cardShadow)">
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
           fill="url(#cardGrad)" stroke="#e6d09a" stroke-width="1.2"/>
-    <ellipse cx="${width - 100}" cy="40" rx="6" ry="3" fill="#fff9e0" opacity="0.85"/>
   </g>
 
   <g clip-path="url(#cardClip)">
@@ -201,42 +200,26 @@ function makeStreakSVG(streak) {
       <ellipse class="egg-shadow" cx="30" cy="90" rx="50" ry="16" opacity="0.12"/>
       <g class="floaty">
         <g class="flicker">
-          <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 88 40 94 C66 100 80 60 70 20 Z" fill="#ffc84a"/>
-          <path d="M58 52 C50 40 46 40 38 52 C34 60 42 72 56 68 C66 66 76 60 58 52 Z" fill="#fff7df" opacity="0.92"/>
-          <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#ff7a2e" opacity="0.98"/>
+          <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 88 40 94 C66 100 80 60 70 20 Z" fill="#ff8c1a"/>
+          <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#ff3d00" opacity="0.85"/>
         </g>
       </g>
     </g>
 
-    <!-- Orbital small flicker (sun + slowly orbiting planet) - replaces simple small flame -->
-    <g transform="translate(${width - 180}, 70)" aria-hidden="true">
-      <!-- central "sun" (bigger flicker) -->
-      <g transform="translate(0,0) scale(0.78)" class="floaty" style="transform-origin:0px 0px;">
-        <ellipse cx="0" cy="18" rx="22" ry="8" fill="rgba(0,0,0,0.12)" />
-        <path d="M28 -8 C18 -26 -6 -28 -18 -8 C-24 6 -18 34 10 36 C34 38 42 18 28 -8 Z" fill="#ff8a1a"/>
-        <path d="M18 8 C14 0 4 0 0 8 C-2 12 0 18 8 18 C14 18 22 14 18 8 Z" fill="#fff2d0" opacity="0.95"/>
+    <!-- NEW Comet Flicker (planet-like, free orbit inside card) -->
+    <g>
+      <animateTransform attributeName="transform"
+                        attributeType="XML"
+                        type="rotate"
+                        from="0 210 150"
+                        to="360 210 150"
+                        dur="24s"
+                        repeatCount="indefinite" />
+      <!-- comet at radius -->
+      <g transform="translate(40,0) scale(0.5)">
+        <ellipse cx="0" cy="14" rx="12" ry="4" fill="rgba(0,0,0,0.12)" />
+        <path d="M14 -4 C10 -12 -4 -14 -8 -4 C-12 2 -8 18 6 20 C14 20 18 10 14 -4 Z" fill="#ffb84d"/>
       </g>
-
-      <!-- orbit group: rotate applied to this group -->
-      <g>
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="0 0 0"
-                          to="360 0 0"
-                          dur="18s"
-                          repeatCount="indefinite" />
-
-        <!-- planet position: placed at +28px on x axis; will orbit around (0,0) -->
-        <g transform="translate(28, 0) scale(0.48)">
-          <ellipse cx="0" cy="16" rx="12" ry="4" fill="rgba(0,0,0,0.10)" />
-          <path d="M12 -4 C8 -10 -2 -12 -6 -4 C-8 2 -6 18 6 20 C14 22 18 12 12 -4 Z" fill="#ffb84d" opacity="0.98"/>
-          <path d="M8 6 C6 2 0 2 -1 6 C-2 8 -1 12 4 12 C7 12 10 10 8 6 Z" fill="#fff8e6" opacity="0.96"/>
-        </g>
-      </g>
-
-      <!-- subtle orbit trace (very faint) -->
-      <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="2" />
     </g>
 
     <!-- Centered texts -->
@@ -250,9 +233,7 @@ function makeStreakSVG(streak) {
     <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)" />
       <g class="flicker">
-        <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ffb43f" opacity="0.98"/>
-        <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#fff8df" opacity="0.95"/>
-        <path d="M12 -2 C8 -10 0 -12 -6 -2 C-6 0 -2 6 6 6 C10 6 14 4 12 -2 Z" fill="#ff6a2e" opacity="0.95"/>
+        <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff7a1a" opacity="0.98"/>
       </g>
     </g>
 
@@ -263,17 +244,6 @@ function makeStreakSVG(streak) {
   </a>
 </svg>`;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
