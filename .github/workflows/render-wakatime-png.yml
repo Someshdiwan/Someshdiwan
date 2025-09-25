@@ -2,7 +2,7 @@ name: Render WakaTime PNG (nightly)
 
 on:
   schedule:
-    - cron: '0 3 * * *'        # every day at 03:00 UTC
+    - cron: '0 3 * * *'    # 03:00 UTC daily
   workflow_dispatch:
 
 permissions:
@@ -31,18 +31,16 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
         run: node ./scripts/render_waka_png.js
 
-      - name: Commit PNG to assets-bot branch
+      # <-- ADD THE COMMIT STEP HERE (last step of job) -->
+      - name: Commit assets if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # checkout/create the assets-bot branch
-          git fetch origin
-          git checkout -B assets-bot
           git add wakatime.png || true
           if ! git diff --staged --quiet; then
             git commit -m "chore: update wakatime.png"
-            # push branch (force to ensure branch is in sync)
-            git push --set-upstream origin assets-bot --force
+            git pull --rebase origin main
+            git push origin main
           else
-            echo "No changes to wakatime.png"
+            echo "No changes to commit"
           fi

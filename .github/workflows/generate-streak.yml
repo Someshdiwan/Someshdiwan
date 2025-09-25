@@ -1,23 +1,22 @@
-name: Generate Streak SVG
+name: Generate Streak SVG (nightly)
 
 on:
   schedule:
-    - cron: '0 0 * * *' # run daily at midnight UTC
+    - cron: '0 0 * * *'
   workflow_dispatch:
-  push:
-    branches: [ main ]
 
 permissions:
   contents: write
 
 jobs:
-  build-and-commit:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,17 +29,17 @@ jobs:
       - name: Generate streak.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
         run: node ./scripts/generate_streak.js
 
-      - name: Commit generated SVG if changed
+      - name: Commit assets if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add streak.svg || true
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update streak svg"
-            git push
+            git commit -m "chore: update streak.svg"
+            git pull --rebase origin main
+            git push origin main
           else
             echo "No changes to commit"
           fi
