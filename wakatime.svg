@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220">
+  <rect width="100%" height="100%" fill="#0f2527" rx="8"/>
+  <text x="40" y="50" font-size="20" fill="#ffd86b" font-weight="700">WakaTime (last 7 days)</text>
+  <text x="40" y="95" font-size="48" fill="#ffffff" font-weight="700">40.4 hrs</text>
+  <text x="230" y="80" font-size="18" fill="#ffffff">Java</text>
+            <text x="560" y="80" font-size="18" fill="#f6a936">67%</text>
+<text x="230" y="110" font-size="18" fill="#ffffff">Text</text>
+            <text x="560" y="110" font-size="18" fill="#f6a936">13%</text>
+<text x="230" y="140" font-size="18" fill="#ffffff">Python</text>
+            <text x="560" y="140" font-size="18" fill="#f6a936">7%</text>
+<text x="230" y="170" font-size="18" fill="#ffffff">JavaScript</text>
+            <text x="560" y="170" font-size="18" fill="#f6a936">4%</text>
+</svg>
