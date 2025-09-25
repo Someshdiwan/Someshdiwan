@@ -3,67 +3,77 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 254 days">
   <defs>
-    <filter id="cardShadow" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="6" dy="18" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
+    <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="4" dy="12" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
 
-    <linearGradient id="cardGrad" x1="0" x2="1">
-      <stop offset="0%" stop-color="#fff8d7"/>
-      <stop offset="100%" stop-color="#fff3bf"/>
+    <linearGradient id="cardGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff9e0"/>
+      <stop offset="100%" stop-color="#ffe8a3"/>
     </linearGradient>
 
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ffd86b"/>
-      <stop offset="100%" stop-color="#f39a2e"/>
+      <stop offset="0%" stop-color="#ffca28"/>
+      <stop offset="100%" stop-color="#f57c00"/>
     </linearGradient>
 
     <style>
-      .card-font { font-family: "Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:#6b5a1f; font-weight:700; font-size:20px; text-anchor:middle; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:88px; text-anchor:middle; filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)); }
-      .sub { fill:#6b6b6b; font-size:16px; text-anchor:middle; }
-      .egg-shadow { fill: rgba(0,0,0,0.12); }
-      .flame-anim { animation: floaty 2400ms ease-in-out infinite; transform-origin: 120px 72px; }
-      .flame-flicker { animation: flicker 1400ms linear infinite; transform-origin: 120px 72px; }
-      @keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
-      @keyframes flicker { 0%{transform:scale(1)} 50%{transform:scale(0.99)} 100%{transform:scale(1)} }
+      .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; font-smoothing:antialiased; }
+      .title { fill:#5a4a20; font-weight:700; font-size:22px; text-anchor:middle; letter-spacing:1px; }
+      .big { fill:url(#numGrad); font-weight:900; font-size:92px; text-anchor:middle; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2)); }
+      .sub { fill:#666; font-size:18px; text-anchor:middle; letter-spacing:0.5px; }
+      .egg-shadow { fill: rgba(0,0,0,0.15); }
+      .flame-anim { animation: floaty 2800ms ease-in-out infinite; transform-origin: 100px 80px; }
+      .flame-flicker { animation: flicker 1600ms ease-in-out infinite; transform-origin: 100px 80px; }
+      @keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-8px)} 100%{transform:translateY(0)} }
+      @keyframes flicker { 0%{transform:scale(1)} 50%{transform:scale(0.98)} 100%{transform:scale(1)} }
     </style>
   </defs>
 
-  <!-- sticky card body -->
+  <!-- sticky card body with subtle texture -->
   <g filter="url(#cardShadow)">
-    <path d="M24 20 h300 a28 28 0 0 1 28 28 v128 a28 28 0 0 1 -28 28 h-146 q-12 8 -24 8 t-24 -8 h-180 z"
-          fill="url(#cardGrad)" stroke="#f0e0a0" stroke-width="1.2" />
-    <path d="M332 68 q-6 18 -22 26" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.66"/>
-    <ellipse cx="308" cy="46" rx="6" ry="3" fill="#fff9d8" opacity="0.78"/>
+    <path d="M20 16 h320 a24 24 0 0 1 24 24 v140 a24 24 0 0 1 -24 24 h-160 q-10 6 -20 6 t-20 -6 h-160 a24 24 0 0 1 -24 -24 v-140 a24 24 0 0 1 24 -24 z"
+          fill="url(#cardGrad)" stroke="#f0e0a0" stroke-width="1.5"/>
+    <path d="M340 60 q-8 16 -24 24" stroke="#f5e0a0" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <ellipse cx="316" cy="40" rx="8" ry="4" fill="#fff9e0" opacity="0.8"/>
   </g>
 
   <!-- left flame -->
-  <g transform="translate(72,40)">
-    <ellipse class="egg-shadow" cx="26" cy="86" rx="76" ry="18" opacity="0.10" />
-    <g class="flame-anim" transform="translate(0,-6)">
-      <g class="flame-flicker" transform="translate(0,0) scale(0.98)">
-        <path d="M86 18 C66 -6 42 -6 28 18 C16 36 20 86 56 92 C92 98 106 58 86 18 Z" fill="#ffd86b"/>
-        <path d="M74 50 C66 38 52 38 44 50 C40 58 48 70 62 66 C72 64 82 58 74 50 Z" fill="#fff3d8" opacity="0.96"/>
-        <path d="M68 12 C62 6 50 8 46 14 C44 20 50 26 58 24 C64 22 70 16 68 12 Z" fill="#ffe08a" opacity="0.98"/>
+  <g transform="translate(60,36)">
+    <ellipse class="egg-shadow" cx="30" cy="90" rx="80" ry="20" opacity="0.12"/>
+    <g class="flame-anim" transform="translate(0,-8)">
+      <g class="flame-flicker" transform="translate(0,0) scale(0.96)">
+        <path d="M90 20 C70 -4 46 -4 32 20 C20 38 24 88 60 94 C96 100 110 60 90 20 Z" fill="#ffca28"/>
+        <path d="M78 52 C70 40 56 40 48 52 C44 60 52 72 66 68 C76 66 86 60 78 52 Z" fill="#fff3d8" opacity="0.95"/>
+        <path d="M72 14 C66 8 54 10 50 16 C48 22 54 28 62 26 C68 24 74 18 72 14 Z" fill="#ffe082" opacity="0.97"/>
       </g>
     </g>
   </g>
 
-  <!-- top-right mini flame for balance -->
-  <g transform="translate(340, 48) scale(0.65)" class="flame-anim">
-    <ellipse cx="0" cy="24" rx="22" ry="6" fill="rgba(0,0,0,0.12)" />
-    <path d="M20 -6 C12 -18 -4 -20 -12 -6 C-18 4 -12 26 6 28 C24 30 30 10 20 -6 Z" fill="#ffd86b"/>
-    <path d="M12 4 C8 -2 -2 -2 -6 4 C-8 8 -4 14 4 14 C10 14 16 10 12 4 Z" fill="#fff3d8" opacity="0.9"/>
+  <!-- top-right mini flame -->
+  <g transform="translate(330, 44) scale(0.6)" class="flame-anim">
+    <ellipse cx="0" cy="26" rx="24" ry="8" fill="rgba(0,0,0,0.15)" />
+    <path d="M22 -8 C14 -20 -6 -22 -14 -8 C-20 2 -14 28 8 30 C26 32 32 12 22 -8 Z" fill="#ffca28"/>
+    <path d="M14 6 C10 0 0 0 -4 6 C-6 10 -2 16 6 16 C12 16 18 12 14 6 Z" fill="#fff3d8" opacity="0.92"/>
   </g>
 
   <!-- centered texts -->
   <g class="card-font">
-    <text x="210" y="70" class="title">GitHub streak</text>
-    <text x="210" y="155" class="big">254</text>
-    <text x="210" y="185" class="sub">day streak</text>
+    <text x="210" y="74" class="title">GitHub Streak</text>
+    <text x="210" y="160" class="big">254</text>
+    <text x="210" y="192" class="sub">Days</text>
   </g>
 
   <!-- clickable link -->
-  <a xlink:href="https://github.com/Someshdiwan" target="_blank" rel="noopener"></a>
+  <a xlink:href="https://github.com/Someshdiwan" target="_blank" rel="noopener">
+    <rect x="0" y="0" width="420" height="300" fill="none"/>
+  </a>
 </svg>
