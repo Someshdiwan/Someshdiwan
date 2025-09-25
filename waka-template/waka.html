@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --bg:#0f2527; --panel:#072021; --accent:#f6a936; --muted:#9fb3b3;
+        }
+        html,body{margin:0;padding:0;width:1200px;height:360px;font-family:Inter,system-ui,Arial;background:var(--bg);}
+        .card{width:1120px;height:300px;margin:30px auto;border-radius:14px;background:linear-gradient(180deg,#072021,#0b2b2b);box-shadow:0 16px 40px rgba(0,0,0,0.6);padding:28px;display:flex;align-items:center;gap:36px}
+        .left{width:40%;display:flex;flex-direction:column;justify-content:center}
+        .label{color:var(--accent);font-weight:700;font-size:18px;letter-spacing:0.6px}
+        .hours{color:#fff;font-size:64px;font-weight:900;margin-top:6px}
+        .meta{color:var(--muted);margin-top:6px;font-size:13px}
+        .right{flex:1;padding-right:12px}
+        .lang{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
+        .lang-name{color:#fff;font-weight:600}
+        .lang-bar{flex:1;height:12px;background:#042a2a;border-radius:8px;margin:0 16px;overflow:hidden}
+        .lang-fill{height:100%;border-radius:8px}
+        .footer{color:var(--muted);font-size:12px;margin-top:18px}
+    </style>
+</head>
+<body>
+<div class="card" id="card">
+    <div class="left">
+        <div class="label">WakaTime — All time</div>
+        <div class="hours" id="hours">0 hrs</div>
+        <div class="meta" id="meta">0 projects • 0 languages</div>
+    </div>
+    <div class="right" id="langs"></div>
+</div>
+
+<script>
+    // This script will be replaced by the Action: we'll inject a JSON blob into the page
+    const DATA = window.__WAKA_DATA__ || { hours: '0.0', projects:0, languages: [] };
+    document.getElementById('hours').textContent = DATA.hours + ' hrs';
+    document.getElementById('meta').textContent = DATA.projects + ' projects • ' + DATA.languages.length + ' languages';
+
+    const right = document.getElementById('langs');
+    DATA.languages.slice(0,8).forEach(lang => {
+        const pct = Math.round(lang.percent || 0);
+        const row = document.createElement('div'); row.className='lang';
+        const name = document.createElement('div'); name.className='lang-name'; name.textContent = lang.name;
+        const barWrap = document.createElement('div'); barWrap.className='lang-bar';
+        const fill = document.createElement('div'); fill.className='lang-fill';
+        fill.style.width = Math.max(6, Math.round((pct/100)*100)) + '%';
+        fill.style.background = lang.color || '#f6a936';
+        barWrap.appendChild(fill);
+        const pctEl = document.createElement('div'); pctEl.style.color='#ffd86b'; pctEl.style.fontWeight='700'; pctEl.textContent = pct + '%';
+        row.appendChild(name); row.appendChild(barWrap); row.appendChild(pctEl);
+        right.appendChild(row);
+    });
+</script>
+</body>
+</html>
