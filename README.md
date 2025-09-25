@@ -3,5 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="./wakatime.svg" alt="WakaTime activity (all time)" />
+  <a href="https://wakatime.com/@SomeshDiwan" target="_blank">
+    <img src="./wakatime.svg" alt="WakaTime activity (all time)" />
+  </a>
 </p>
