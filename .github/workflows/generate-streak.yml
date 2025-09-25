@@ -2,8 +2,13 @@ name: Generate Streak SVG (nightly)
 
 on:
   schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+    - cron: '0 3 * * *'        # every day at 03:00 UTC
+  workflow_dispatch:           # manual run button
+  push:                        # also run on pushes to main
+    branches: [ main ]
+    paths-ignore:
+      - 'streak.svg'
+      - 'streak_state.json'
 
 concurrency:
   group: generate-streak-svg
@@ -14,6 +19,7 @@ permissions:
 
 jobs:
   generate:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -40,7 +46,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # stage only the generated file
+          # stage only the generated file(s)
           git add streak.svg || true
 
           # exit early if nothing staged

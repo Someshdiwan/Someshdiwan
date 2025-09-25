@@ -249,11 +249,13 @@ function makeStreakSVG(streak) {
             try {
                 const savedDate = state.date;
                 if (savedDate === lastDayDate) {
-                    finalStreak = state.streak;
-                    console.log('Using saved state (same day):', state);
+                    // If contributions increased today, use the larger of calendar vs saved
+                    finalStreak = Math.max(calendarStreak, state.streak);
+                    console.log('Same day — picking max(calendar, saved):', { calendarStreak, saved: state.streak, finalStreak });
                 } else {
                     const range = datesBetweenInclusive(savedDate, lastDayDate);
                     const dayMap = buildDayMap(days);
+                    writeState({ streak: finalStreak, date: lastDayDate, todayCount: dayMap.get(lastDayDate) || 0 });
                     const allHaveContrib = range.length > 0 && range.every(d => (dayMap.get(d) || 0) > 0);
                     if (allHaveContrib) {
                         finalStreak = state.streak + range.length;
