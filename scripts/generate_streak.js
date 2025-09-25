@@ -208,16 +208,36 @@ function makeStreakSVG(streak) {
       </g>
     </g>
 
-    <!-- Small top-right flame (moved more inward & scaled down) -->
-    <!-- Small top-right flame (inside more) -->
-<g transform="translate(${width - 180}, 70) scale(0.42)" class="floaty">
-  <ellipse cx="0" cy="20" rx="18" ry="6" fill="rgba(0,0,0,0.12)" />
-  <g class="flicker">
-    <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ff9e2a"/>
-    <path d="M12 6 C8 0 0 0 -2 6 C-4 10 -1 14 6 14 C10 14 16 12 12 6 Z" fill="#fff6d6" opacity="0.92"/>
-  </g>
-</g>
+    <!-- Orbital small flicker (sun + slowly orbiting planet) - replaces simple small flame -->
+    <g transform="translate(${width - 180}, 70)" aria-hidden="true">
+      <!-- central "sun" (bigger flicker) -->
+      <g transform="translate(0,0) scale(0.78)" class="floaty" style="transform-origin:0px 0px;">
+        <ellipse cx="0" cy="18" rx="22" ry="8" fill="rgba(0,0,0,0.12)" />
+        <path d="M28 -8 C18 -26 -6 -28 -18 -8 C-24 6 -18 34 10 36 C34 38 42 18 28 -8 Z" fill="#ff8a1a"/>
+        <path d="M18 8 C14 0 4 0 0 8 C-2 12 0 18 8 18 C14 18 22 14 18 8 Z" fill="#fff2d0" opacity="0.95"/>
+      </g>
 
+      <!-- orbit group: rotate applied to this group -->
+      <g>
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 0 0"
+                          to="360 0 0"
+                          dur="18s"
+                          repeatCount="indefinite" />
+
+        <!-- planet position: placed at +28px on x axis; will orbit around (0,0) -->
+        <g transform="translate(28, 0) scale(0.48)">
+          <ellipse cx="0" cy="16" rx="12" ry="4" fill="rgba(0,0,0,0.10)" />
+          <path d="M12 -4 C8 -10 -2 -12 -6 -4 C-8 2 -6 18 6 20 C14 22 18 12 12 -4 Z" fill="#ffb84d" opacity="0.98"/>
+          <path d="M8 6 C6 2 0 2 -1 6 C-2 8 -1 12 4 12 C7 12 10 10 8 6 Z" fill="#fff8e6" opacity="0.96"/>
+        </g>
+      </g>
+
+      <!-- subtle orbit trace (very faint) -->
+      <circle cx="0" cy="0" r="28" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="2" />
+    </g>
 
     <!-- Centered texts -->
     <g class="card-font">
@@ -243,7 +263,6 @@ function makeStreakSVG(streak) {
   </a>
 </svg>`;
 }
-
 
 
 
