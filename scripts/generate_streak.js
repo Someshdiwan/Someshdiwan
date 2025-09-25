@@ -109,7 +109,7 @@ function makeStreakSVG(streak) {
     return `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
+     width="\${width}" height="\${height}" viewBox="0 0 \${width} \${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
     <filter id="cardShadow" x="-50%" y="-50%" width="220%" height="220%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
@@ -124,14 +124,14 @@ function makeStreakSVG(streak) {
     </linearGradient>
 
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%"   stop-color="#fff8df"/>
-      <stop offset="55%"  stop-color="#ffd26a"/>
+      <stop offset="0%" stop-color="#fff8df"/>
+      <stop offset="55%" stop-color="#ffd26a"/>
       <stop offset="100%" stop-color="#e66a00"/>
     </linearGradient>
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
+      .title { fill:#3b2f14; font-weight:700; font-size:20px; text-anchor:middle; }
       .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
       .sub   { fill:#444; font-size:16px; text-anchor:middle; }
 
@@ -139,8 +139,8 @@ function makeStreakSVG(streak) {
       .flicker { animation: flicker 5200ms linear infinite; transform-origin: center; }
 
       @keyframes floaty {
-        0%   { transform: translateY(0); }
-        50%  { transform: translateY(-6px); }
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
         100% { transform: translateY(0); }
       }
       @keyframes flicker {
@@ -152,35 +152,35 @@ function makeStreakSVG(streak) {
     </style>
   </defs>
 
-  <!-- Transparent card outline (uncomment one fill to use a solid card) -->
+  <!-- Transparent card outline (leave fill as none to keep it transparent).
+       Uncomment ONE of the fills below if you want a solid card background. -->
   <g filter="url(#cardShadow)">
-    <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
+    <rect x="20" y="20" width="\${width - 40}" height="\${height - 40}" rx="22" ry="22"
           fill="none" stroke="#e6d09a" stroke-width="1.2"/>
-    <!-- Optional fills:
-    <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#0f2527"/>
-    <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#072021"/>
-    <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="url(#cardGrad)"/>
+    <!-- Optional solid backgrounds:
+    <rect x="20" y="20" width="\${width - 40}" height="\${height - 40}" rx="22" fill="#0f2527"/>
+    <rect x="20" y="20" width="\${width - 40}" height="\${height - 40}" rx="22" fill="#072021"/>
+    <rect x="20" y="20" width="\${width - 40}" height="\${height - 40}" rx="22" fill="url(#cardGrad)"/>
     -->
   </g>
 
-  <!-- No clipPath -> nothing can be accidentally clipped -->
-  <!-- Text -->
+  <!-- Title / Number / Subtitle -->
   <g class="card-font">
-    <text x="${width/2}" y="70"  class="title">GitHub Streak</text>
-    <text x="${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
-    <text x="${width/2}" y="190" class="sub">Days</text>
+    <text x="\${width/2}" y="70"  class="title">GitHub Streak</text>
+    <text x="\${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
+    <text x="\${width/2}" y="190" class="sub">Days</text>
   </g>
 
-  <!-- Small flame (inside, near the title) -->
-  <g transform="translate(${width/2 - 64}, 88) scale(0.50)" class="floaty">
+  <!-- Small flame (inside, near title; tweak X/Y here if needed) -->
+  <g transform="translate(\${width/2 - 64}, 88) scale(0.50)" class="floaty">
     <g class="flicker">
       <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
       <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
     </g>
   </g>
 
-  <!-- BIG flame (original bottom-center placement; drawn last so it stays visible) -->
-  <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
+  <!-- BIG flame (bottom-center, fully visible because no clipPath) -->
+  <g transform="translate(\${width/2}, 250) scale(0.92)" class="floaty">
     <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
     <g class="flicker">
       <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
@@ -189,8 +189,8 @@ function makeStreakSVG(streak) {
     </g>
   </g>
 
-  <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener">
-    <rect x="0" y="0" width="${width}" height="${height}" fill="none"/>
+  <a xlink:href="https://github.com/\${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener">
+    <rect x="0" y="0" width="\${width}" height="\${height}" fill="none"/>
   </a>
 </svg>`;
 }
