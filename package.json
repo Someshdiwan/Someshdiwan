@@ -9,6 +9,6 @@
   "scripts": {
     "generate:streak": "node ./scripts/generate_streak.js",
     "generate:wakatime": "node \"Archived Codes/wakatime_to_svg.js\"",
-    "render:waka": "node ./scripts/render_waka_png.js"
+    "render:waka": "node Archived Codes/render_waka_png.js"
   }
 }
