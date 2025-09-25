@@ -111,10 +111,6 @@ function makeStreakSVG(streak) {
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
-    <clipPath id="cardClip" clipPathUnits="userSpaceOnUse">
-      <rect x="20" y="16" width="${width - 40}" height="${height - 28}" rx="22" ry="22"/>
-    </clipPath>
-
     <filter id="cardShadow" x="-50%" y="-50%" width="220%" height="220%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
       <feOffset dx="4" dy="12" result="offsetblur"/>
@@ -128,8 +124,8 @@ function makeStreakSVG(streak) {
     </linearGradient>
 
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff8df"/>
-      <stop offset="55%" stop-color="#ffd26a"/>
+      <stop offset="0%"   stop-color="#fff8df"/>
+      <stop offset="55%"  stop-color="#ffd26a"/>
       <stop offset="100%" stop-color="#e66a00"/>
     </linearGradient>
 
@@ -156,41 +152,40 @@ function makeStreakSVG(streak) {
     </style>
   </defs>
 
-  <!-- transparent card outline (uncomment a fill below if you want a solid card) -->
+  <!-- Transparent card outline (uncomment one fill to use a solid card) -->
   <g filter="url(#cardShadow)">
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
           fill="none" stroke="#e6d09a" stroke-width="1.2"/>
-    <!-- Optional filled backgrounds:
+    <!-- Optional fills:
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#0f2527"/>
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="#072021"/>
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" fill="url(#cardGrad)"/>
     -->
   </g>
 
-  <g clip-path="url(#cardClip)">
-    <!-- Text -->
-    <g class="card-font">
-      <text x="${width/2}" y="70"  class="title">GitHub Streak</text>
-      <text x="${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
-      <text x="${width/2}" y="190" class="sub">Days</text>
-    </g>
+  <!-- No clipPath -> nothing can be accidentally clipped -->
+  <!-- Text -->
+  <g class="card-font">
+    <text x="${width/2}" y="70"  class="title">GitHub Streak</text>
+    <text x="${width/2}" y="150" class="big">${escapeXml(daysText)}</text>
+    <text x="${width/2}" y="190" class="sub">Days</text>
+  </g>
 
-    <!-- Small flame (inside, near title) -->
-    <g transform="translate(${width/2 - 64}, 88) scale(0.50)" class="floaty">
-      <g class="flicker">
-        <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
-        <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
-      </g>
+  <!-- Small flame (inside, near the title) -->
+  <g transform="translate(${width/2 - 64}, 88) scale(0.50)" class="floaty">
+    <g class="flicker">
+      <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
+      <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
     </g>
+  </g>
 
-    <!-- BIG flame — back to original placement -->
-    <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
-      <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
-      <g class="flicker">
-        <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
-        <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4b00" opacity="0.94"/>
-        <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.28"/>
-      </g>
+  <!-- BIG flame (original bottom-center placement; drawn last so it stays visible) -->
+  <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
+    <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
+    <g class="flicker">
+      <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
+      <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4b00" opacity="0.94"/>
+      <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.28"/>
     </g>
   </g>
 
