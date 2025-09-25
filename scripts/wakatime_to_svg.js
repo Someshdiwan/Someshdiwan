@@ -1,12 +1,24 @@
-// scripts/wakatime_to_svg.js
+// scripts/render_waka_png.js
 /**
- * Generates an advanced wakatime.svg showing ALL-TIME stats.
- * - Uses WAKATIME_API_KEY secret (Basic auth with key: blank_password)
- * - Outputs wide SVG card with total hours, progress bars, and details
+ * Robust renderer: fetch WakaTime all_time stats, cache JSON, render PNG via Puppeteer.
+ * - Retries fetch with exponential backoff
+ * - Uses timeout for fetch
+ * - Falls back to cached JSON (.github/waka-template/waka_data.json) if fetch fails
+ * - Writes wakatime.png using Puppeteer
+ *
+ * Requires:
+ *   - WAKATIME_API_KEY in env (repo secret)
+ *   - .github/waka-template/waka.html template present
  */
 
 const fs = require('fs');
 const path = require('path');
+const puppeteer = require('puppeteer');
+
+const TEMPLATE_DIR = path.join(process.cwd(), '.github', 'waka-template');
+const TEMPLATE_FILE = path.join(TEMPLATE_DIR, 'waka.html');
+const CACHE_FILE = path.join(TEMPLATE_DIR, 'waka_data.json');
+const OUT_FILE = path.join(process.cwd(), 'wakatime.png');
 
 const apiKey = process.env.WAKATIME_API_KEY;
 if (!apiKey) {
@@ -14,82 +26,139 @@ if (!apiKey) {
     process.exit(1);
 }
 
-async function fetchWaka(url) {
-    const authHeader = Buffer.from(`${apiKey}:`).toString('base64');
-    const res = await fetch(url, { headers: { Authorization: `Basic ${authHeader}` } });
-    if (!res.ok) throw new Error(`WakaTime API error: ${res.status} ${res.statusText}`);
-    return res.json();
+// simple fetch with timeout & retry (node 18+ global fetch)
+async function fetchWithTimeout(url, opts = {}, timeoutMs = 10000) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+        const res = await fetch(url, { ...opts, signal: controller.signal });
+        clearTimeout(id);
+        return res;
+    } catch (err) {
+        clearTimeout(id);
+        throw err;
+    }
+}
+
+async function fetchWakaAllTime(retries = 3, timeoutMs = 10000) {
+    const url = 'https://wakatime.com/api/v1/users/current/stats/all_time';
+    const authHeader = 'Basic ' + Buffer.from(apiKey + ':').toString('base64');
+
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
+            console.log(`WakaTime fetch attempt ${attempt}/${retries} (timeout=${timeoutMs}ms)`);
+            const res = await fetchWithTimeout(url, { headers: { Authorization: authHeader } }, timeoutMs);
+            // Network-level success; check HTTP status
+            if (!res.ok) {
+                const body = await res.text().catch(() => '');
+                throw new Error(`HTTP ${res.status} ${res.statusText} ${body ? '| Body:' + body.slice(0,200) : ''}`);
+            }
+            const json = await res.json();
+            return json;
+        } catch (err) {
+            console.warn(`Waka fetch attempt ${attempt} failed: ${err.message}`);
+            if (attempt < retries) {
+                // exponential backoff with jitter
+                const backoff = Math.round((Math.pow(2, attempt) * 500) + (Math.random() * 400));
+                console.log(`Waiting ${backoff}ms before retry...`);
+                await new Promise(r => setTimeout(r, backoff));
+            } else {
+                console.error('All WakaTime fetch attempts failed.');
+                throw err;
+            }
+        }
+    }
 }
 
 function languageColor(name) {
-    // Simple hash → deterministic color
     const colors = ["#f39a2e","#ffd86b","#29a3a3","#f67280","#6a5acd","#20b2aa","#ff6f61","#87ceeb"];
-    let hash = 0;
-    for (let i=0; i<name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
-    return colors[Math.abs(hash) % colors.length];
+    let h=0; for (let i=0;i<name.length;i++) h = name.charCodeAt(i) + ((h<<5)-h);
+    return colors[Math.abs(h) % colors.length];
 }
 
-function makeWakaSVG(totalHours, languages, username, projectsCount, totalLangs) {
-    const w = 1200, h = 360;
-    const leftPad = 60, topPad = 50;
-    const maxBar = 600;
-    const barHeight = 18;
+function normalizeWakaData(raw) {
+    // We expect raw.data to hold the useful fields per current API. Normalize to safe shape.
+    const d = raw && raw.data ? raw.data : {};
+    const totalSec = d.total_seconds || d.total_seconds_all || 0;
+    const totalHours = (totalSec / 3600) || 0;
+    const languages = (d.languages || []).map(l => ({
+        name: l.name,
+        percent: l.percent || (l.total_seconds ? (l.total_seconds / totalSec) * 100 : 0),
+        total_seconds: l.total_seconds || 0,
+        color: languageColor(l.name || '')
+    }));
+    return {
+        hours: totalHours.toFixed(1),
+        projects: (d.projects || []).length || 0,
+        languages
+    };
+}
 
-    const topLangs = languages.slice(0, 8);
+async function renderPngFromData(data) {
+    if (!fs.existsSync(TEMPLATE_FILE)) {
+        throw new Error(`Template missing: ${TEMPLATE_FILE}`);
+    }
+    const htmlTemplate = fs.readFileSync(TEMPLATE_FILE, 'utf8');
 
-    const langRows = topLangs.map((l, i) => {
-        const y = 140 + i * 32;
-        const pct = Math.round(l.percent || 0);
-        const barW = Math.max(6, Math.round((pct / 100) * maxBar));
-        const color = languageColor(l.name);
-        return `
-      <text x="${leftPad}" y="${y}" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">${l.name}</text>
-      <rect x="${leftPad + 160}" y="${y - barHeight + 4}" width="${barW}" height="${barHeight}" rx="6" fill="${color}" />
-      <text x="${leftPad + maxBar + 190}" y="${y}" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">${pct}%</text>
-    `;
-    }).join('\n');
+    // We inject JSON by replacing a marker script; the template should use window.__WAKA_DATA__ or similar.
+    // Inject as a global assignment to avoid CORS/network.
+    const injectedHtml = htmlTemplate.replace('window.__WAKA_DATA__ || { hours: \'0.0\', projects:0, languages: [] }',
+        JSON.stringify(data));
 
-    return `<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img">
-  <style>
-    .bg{fill:#0f2527}
-    .title{font-family:'Segoe UI',Roboto,Arial; font-size:28px; fill:#ffd86b; font-weight:700}
-    .hours{font-family:Georgia,serif; font-size:72px; fill:#ffffff; font-weight:700}
-    .footer{font-family:'Segoe UI',Roboto,Arial; font-size:14px; fill:#9fb3b3}
-  </style>
-  <rect width="100%" height="100%" fill="#0f2527" rx="18"/>
-  <g transform="translate(${leftPad},${topPad})">
-    <text class="title" x="0" y="0">WakaTime (All-time coding stats)</text>
-    <text class="hours" x="0" y="70">${totalHours} hrs</text>
-    ${langRows}
-    <text class="footer" x="0" y="${h - topPad - 10}">Tracking ${projectsCount} projects • ${totalLangs} languages • See more at wakatime.com/@${username}</text>
-  </g>
-</svg>`;
+    const tmpHtml = path.join(TEMPLATE_DIR, '_waka_render.html');
+    fs.writeFileSync(tmpHtml, injectedHtml, 'utf8');
+
+    const browser = await puppeteer.launch({ args: ['--no-sandbox','--disable-setuid-sandbox'] });
+    try {
+        const page = await browser.newPage();
+        await page.setViewport({ width: 1200, height: 360, deviceScaleFactor: 2 });
+        await page.goto('file://' + tmpHtml, { waitUntil: 'networkidle0' });
+        await page.screenshot({ path: OUT_FILE, omitBackground: false });
+        console.log('Rendered wakatime.png ->', OUT_FILE);
+    } finally {
+        await browser.close();
+    }
 }
 
 (async () => {
+    let raw = null;
     try {
-        const url = 'https://wakatime.com/api/v1/users/current/stats/all_time';
-        const data = await fetchWaka(url);
+        raw = await fetchWakaAllTime(4, 12000); // 4 attempts, 12s timeout
+        // Cache raw JSON for fallback
+        try {
+            if (!fs.existsSync(TEMPLATE_DIR)) fs.mkdirSync(TEMPLATE_DIR, { recursive: true });
+            fs.writeFileSync(CACHE_FILE, JSON.stringify(raw, null, 2), 'utf8');
+            console.log('Cached WakaTime JSON to', CACHE_FILE);
+        } catch (err) {
+            console.warn('Could not write cache file:', err.message);
+        }
+    } catch (fetchErr) {
+        console.error('Fetch failed — will attempt to use cached data if available:', fetchErr.message);
+        if (fs.existsSync(CACHE_FILE)) {
+            try {
+                raw = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+                console.log('Loaded cached WakaTime JSON from', CACHE_FILE);
+            } catch (err) {
+                console.error('Cached file exists but could not be parsed:', err.message);
+                raw = null;
+            }
+        }
+    }
 
-        const totalSec = data.data.total_seconds || 0;
-        const totalHours = ((totalSec / 3600) || 0).toFixed(1);
+    // If still no data, prepare a fallback placeholder
+    if (!raw) {
+        console.warn('No WakaTime data available; using placeholder dataset.');
+        raw = { data: { total_seconds: 0, languages: [], projects: [] } };
+    }
 
-        const languages = (data.data.languages || []).map(l => ({
-            name: l.name,
-            percent: l.percent || (l.total_seconds ? (l.total_seconds / totalSec) * 100 : 0),
-            total_seconds: l.total_seconds || 0
-        }));
+    const normalized = normalizeWakaData(raw);
+    console.log('Using data: hours=', normalized.hours, 'projects=', normalized.projects, 'languages=', normalized.languages.length);
 
-        const projectsCount = (data.data.projects || []).length;
-        const totalLangs = (data.data.languages || []).length;
-        const username = (data.data.username || '').replace('@','') || process.env.WAKATIME_USERNAME || 'SomeshDiwan';
-
-        const svg = makeWakaSVG(totalHours, languages, username, projectsCount, totalLangs);
-        fs.writeFileSync(path.join(process.cwd(), 'wakatime.svg'), svg, 'utf8');
-        console.log('wakatime.svg written:', totalHours, 'hrs');
+    try {
+        await renderPngFromData(normalized);
+        process.exit(0);
     } catch (err) {
-        console.error('Error in wakatime_to_svg:', err);
+        console.error('Rendering failed:', err.message);
         process.exit(1);
     }
 })();
