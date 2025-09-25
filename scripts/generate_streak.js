@@ -156,31 +156,43 @@ function makeStreakSVG(streak) {
     </linearGradient>
 
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#fff0a8"/>
-      <stop offset="55%" stop-color="#ffd06a"/>
+      <stop offset="0%" stop-color="#fff6b8"/>
+      <stop offset="60%" stop-color="#ffd07a"/>
       <stop offset="100%" stop-color="#ff9a3a"/>
     </linearGradient>
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
       .title { fill:#3b2f14; font-weight:700; font-size:20px; text-anchor:middle; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:84px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
+      /* soften number color a touch and reduce contrast */
+      .big { fill:url(#numGrad); font-weight:900; font-size:78px; text-anchor:middle; opacity:0.98;
+             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.12)); }
       .sub { fill:#444; font-size:16px; text-anchor:middle; }
       .egg-shadow { fill: rgba(0,0,0,0.12); }
 
-      .floaty { animation: floaty 4800ms ease-in-out infinite; transform-origin: center; }
-      .flicker { animation: flicker 4200ms ease-in-out infinite; transform-origin: center; }
+      /* slower, gentler float for both flames */
+      .floaty { animation: floaty 5200ms ease-in-out infinite; transform-origin: center; }
+      /* slower, subtle flicker for small flame (longer duration & smaller scale change) */
+      .flicker-slow { animation: flicker-slow 7000ms ease-in-out infinite; transform-origin: center; }
+      /* medium flicker for larger flame below number */
+      .flicker-med { animation: flicker-med 4200ms ease-in-out infinite; transform-origin: center; }
 
       @keyframes floaty {
         0%{ transform: translateY(0); }
         50%{ transform: translateY(-6px); }
         100%{ transform: translateY(0); }
       }
-      @keyframes flicker {
-        0% { transform: scale(1); opacity:1; filter:brightness(1); }
-        30% { transform: scale(0.987); opacity:0.9; filter:brightness(0.96); }
-        60% { transform: scale(1.015); opacity:1; filter:brightness(1.05); }
-        100% { transform: scale(1); opacity:1; filter:brightness(1); }
+      @keyframes flicker-slow {
+        0%  { transform: scale(1); opacity:0.98; filter:brightness(1); }
+        40% { transform: scale(0.995); opacity:0.92; filter:brightness(0.96); }
+        80% { transform: scale(1.01); opacity:1; filter:brightness(1.03); }
+        100%{ transform: scale(1); opacity:0.98; filter:brightness(1); }
+      }
+      @keyframes flicker-med {
+        0%  { transform: scale(1); opacity:1; filter:brightness(1); }
+        35% { transform: scale(0.985); opacity:0.9; filter:brightness(0.95); }
+        65% { transform: scale(1.02); opacity:1; filter:brightness(1.06); }
+        100%{ transform: scale(1); opacity:1; filter:brightness(1); }
       }
     </style>
   </defs>
@@ -193,11 +205,11 @@ function makeStreakSVG(streak) {
 
   <g clip-path="url(#cardClip)">
 
-    <!-- Left flame -->
+    <!-- Left flame (kept) -->
     <g transform="translate(60,70)">
       <ellipse class="egg-shadow" cx="30" cy="90" rx="50" ry="16" opacity="0.12"/>
       <g class="floaty">
-        <g class="flicker">
+        <g class="flicker-med" transform="translate(0, -2) scale(0.96)">
           <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 88 40 94 C66 100 80 60 70 20 Z" fill="#ffc84a"/>
           <path d="M58 52 C50 40 46 40 38 52 C34 60 42 72 56 68 C66 66 76 60 58 52 Z" fill="#fff7df" opacity="0.92"/>
           <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#ff7a2e" opacity="0.98"/>
@@ -205,16 +217,29 @@ function makeStreakSVG(streak) {
       </g>
     </g>
 
-    <!-- Small top-right flame (moved more inward & scaled down) -->
-    <!-- Small top-right flame (inside more) -->
-<g transform="translate(${width - 180}, 70) scale(0.42)" class="floaty">
-  <ellipse cx="0" cy="20" rx="18" ry="6" fill="rgba(0,0,0,0.12)" />
-  <g class="flicker">
-    <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ff9e2a"/>
-    <path d="M12 6 C8 0 0 0 -2 6 C-4 10 -1 14 6 14 C10 14 16 12 12 6 Z" fill="#fff6d6" opacity="0.92"/>
-  </g>
-</g>
-
+    <!-- Small top-right flame (moved fully inside & scaled smaller; slow, planet-like float) -->
+    <g transform="translate(${width - 165}, 78)" aria-hidden="true">
+      <!-- subtle orbit via SMIL rotate around center (very slow) -->
+      <g>
+        <animateTransform attributeName="transform"
+                          attributeType="XML"
+                          type="rotate"
+                          from="0 0 0"
+                          to="360 0 0"
+                          dur="18s"
+                          repeatCount="indefinite" />
+        <!-- planet (small flicker) placed at radius 18 -->
+        <g transform="translate(18, 0) scale(0.36)" class="floaty">
+          <ellipse cx="0" cy="12" rx="10" ry="3" fill="rgba(0,0,0,0.10)" />
+          <g class="flicker-slow">
+            <path d="M12 -4 C8 -10 -2 -12 -6 -4 C-8 2 -6 18 6 20 C12 22 16 10 12 -4 Z" fill="#ffbe5a" />
+            <path d="M8 6 C6 2 0 2 -1 6 C-2 8 -1 10 4 10 C7 10 10 8 8 6 Z" fill="#fff6dc" opacity="0.96"/>
+          </g>
+        </g>
+      </g>
+      <!-- faint orbit trace -->
+      <circle cx="0" cy="0" r="18" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1.5" />
+    </g>
 
     <!-- Centered texts -->
     <g class="card-font">
@@ -223,10 +248,10 @@ function makeStreakSVG(streak) {
       <text x="${width/2}" y="190" class="sub">Days</text>
     </g>
 
-    <!-- Medium flame below number -->
-    <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
+    <!-- Medium flame below number (slightly lower, gentle float) -->
+    <g transform="translate(${width/2}, 252) scale(0.92)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)" />
-      <g class="flicker">
+      <g class="flicker-med">
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ffb43f" opacity="0.98"/>
         <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#fff8df" opacity="0.95"/>
         <path d="M12 -2 C8 -10 0 -12 -6 -2 C-6 0 -2 6 6 6 C10 6 14 4 12 -2 Z" fill="#ff6a2e" opacity="0.95"/>
@@ -240,6 +265,7 @@ function makeStreakSVG(streak) {
   </a>
 </svg>`;
 }
+
 
 
 
