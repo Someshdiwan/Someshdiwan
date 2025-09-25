@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-label="WakaTime all-time 389.7 hours">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img">
   <style>
     .bg{fill:#0f2527}
-    .card{rx:12; fill:#0f2527}
-    .title{font-family: 'Segoe UI', Roboto, Arial; font-size:20px; fill:#ffd86b; font-weight:700}
-    .hours{font-family: Georgia, 'Times New Roman', serif; font-size:60px; fill:#ffffff; font-weight:700}
-    .lang{font-family: 'Segoe UI', Roboto, Arial; font-size:15px; fill:#ffffff}
-    .pct{font-family: 'Segoe UI', Roboto, Arial; font-size:15px; fill:#ffd86b; font-weight:700}
+    .title{font-family:'Segoe UI',Roboto,Arial; font-size:28px; fill:#ffd86b; font-weight:700}
+    .hours{font-family:Georgia,serif; font-size:72px; fill:#ffffff; font-weight:700}
+    .footer{font-family:'Segoe UI',Roboto,Arial; font-size:14px; fill:#9fb3b3}
   </style>
-
-  <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank">
-    <rect width="100%" height="100%" fill="#0f2527" rx="12"/>
-    <g transform="translate(40,30)">
-      <text class="title" x="0" y="26">WakaTime (All time)</text>
-      <text class="hours" x="0" y="86">389.7 hrs</text>
-
-      <!-- language bars -->
-      
-      <text x="48" y="130" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Other</text>
-      <rect x="160" y="116" width="206" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="130" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">49%</text>
+  <rect width="100%" height="100%" fill="#0f2527" rx="18"/>
+  <g transform="translate(60,50)">
+    <text class="title" x="0" y="0">WakaTime (All-time coding stats)</text>
+    <text class="hours" x="0" y="70">478.6 hrs</text>
+    
+      <text x="60" y="140" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Other</text>
+      <rect x="220" y="126" width="276" height="18" rx="6" fill="#f39a2e" />
+      <text x="850" y="140" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">46%</text>
     
 
-      <text x="48" y="156" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Java</text>
-      <rect x="160" y="142" width="143" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="156" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">34%</text>
+      <text x="60" y="172" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Java</text>
+      <rect x="220" y="158" width="222" height="18" rx="6" fill="#29a3a3" />
+      <text x="850" y="172" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">37%</text>
     
 
-      <text x="48" y="182" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Markdown</text>
-      <rect x="160" y="168" width="17" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="182" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">4%</text>
+      <text x="60" y="204" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Text</text>
+      <rect x="220" y="190" width="30" height="18" rx="6" fill="#20b2aa" />
+      <text x="850" y="204" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">5%</text>
     
 
-      <text x="48" y="208" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Text</text>
-      <rect x="160" y="194" width="17" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="208" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">4%</text>
+      <text x="60" y="236" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Markdown</text>
+      <rect x="220" y="222" width="24" height="18" rx="6" fill="#ffd86b" />
+      <text x="850" y="236" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">4%</text>
     
 
-      <text x="48" y="234" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">JavaScript</text>
-      <rect x="160" y="220" width="8" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="234" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">2%</text>
+      <text x="60" y="268" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">JavaScript</text>
+      <rect x="220" y="254" width="12" height="18" rx="6" fill="#f67280" />
+      <text x="850" y="268" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">2%</text>
     
 
-      <text x="48" y="260" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">HTML</text>
-      <rect x="160" y="246" width="8" height="12" rx="6" fill="#f6a936" />
-      <text x="600" y="260" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">2%</text>
+      <text x="60" y="300" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">HTML</text>
+      <rect x="220" y="286" width="12" height="18" rx="6" fill="#f67280" />
+      <text x="850" y="300" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">2%</text>
     
 
-      <!-- small footer -->
-      <text x="0" y="242" font-size="12" fill="#9fb3b3" font-family="Segoe UI, Roboto, Arial">Click to view full WakaTime profile</text>
-    </g>
-  </a>
+      <text x="60" y="332" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">CSS</text>
+      <rect x="220" y="318" width="6" height="18" rx="6" fill="#f67280" />
+      <text x="850" y="332" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">1%</text>
+    
+
+      <text x="60" y="364" font-size="18" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">Python</text>
+      <rect x="220" y="350" width="6" height="18" rx="6" fill="#6a5acd" />
+      <text x="850" y="364" font-size="16" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">1%</text>
+    
+    <text class="footer" x="0" y="300">Tracking 77 projects • 58 languages • See more at wakatime.com/@SomeshDiwan</text>
+  </g>
 </svg>
