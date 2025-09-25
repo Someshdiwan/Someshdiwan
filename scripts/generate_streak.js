@@ -1,16 +1,4 @@
 // scripts/generate_streak.js
-/**
- * Generates an animated SVG 'streak.svg' for your GitHub profile.
- * Uses GitHub GraphQL via the action-provided GITHUB_TOKEN.
- *
- * Logic is unchanged. Only the SVG UI (makeStreakSVG) is replaced to
- * produce a sticky-note card that visually matches the WakaTime card:
- * - larger centered number
- * - properly aligned left flame (animated float + subtle flicker)
- * - improved gradients, notch, and drop-shadow
- * - Comic/rounded handwritten style fonts (fallbacks included)
- */
-
 const { graphql } = require('@octokit/graphql');
 const fs = require('fs');
 const path = require('path');
@@ -30,9 +18,7 @@ if (!repoOwner) {
 }
 
 const graphqlWithAuth = graphql.defaults({
-    headers: {
-        authorization: `token ${token}`,
-    },
+    headers: { authorization: `token ${token}` },
 });
 
 async function fetchContributionCalendar(login) {
@@ -51,8 +37,7 @@ async function fetchContributionCalendar(login) {
           }
         }
       }
-    }
-  `;
+    }`;
     const res = await graphqlWithAuth(query, { login });
     return res.user.contributionsCollection.contributionCalendar;
 }
@@ -69,7 +54,6 @@ function flattenDays(calendar) {
 }
 
 function calendarStreakFromLastDay(days) {
-    // count consecutive >0 days starting from the last available day backwards
     let i = days.length - 1;
     let streak = 0;
     for (; i >= 0; i--) {
@@ -80,11 +64,10 @@ function calendarStreakFromLastDay(days) {
 }
 
 function datesBetweenInclusive(startDateStr, endDateStr) {
-    // returns array of YYYY-MM-DD strings from startDate (exclusive) to endDate (inclusive)
     const res = [];
     let cur = new Date(startDateStr + 'T00:00:00Z');
     const end = new Date(endDateStr + 'T00:00:00Z');
-    cur.setUTCDate(cur.getUTCDate() + 1); // start from next day after startDate
+    cur.setUTCDate(cur.getUTCDate() + 1);
     while (cur <= end) {
         res.push(cur.toISOString().slice(0, 10));
         cur.setUTCDate(cur.getUTCDate() + 1);
@@ -101,8 +84,7 @@ function buildDayMap(days) {
 function readState() {
     try {
         if (!fs.existsSync(STATE_FILE)) return null;
-        const raw = fs.readFileSync(STATE_FILE, 'utf8');
-        return JSON.parse(raw);
+        return JSON.parse(fs.readFileSync(STATE_FILE, 'utf8'));
     } catch (err) {
         console.warn('Could not read state file:', err.message);
         return null;
@@ -117,26 +99,8 @@ function escapeXml(s) {
     if (s == null) return '';
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
-function safeFontFamily() {
-    return `"Comic Sans MS","Cosmic Sans MS","Segoe UI",Roboto,Arial,sans-serif`;
-}
 
-/* UI only: produce sticky-note streak card that matches the WakaTime look.
-   - width/height 420x300 to match WakaTime card
-   - left flame aligned & animated (float + tiny flicker)
-   - centered big rounded number, matching handwritten style
-   - subtle notch & drop shadow under the card
-*/
-
-
-
-
-
-
-
-
-
-
+/** UI-only: sticky-card style, transparent by default, with gentle flames */
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -171,9 +135,10 @@ function makeStreakSVG(streak) {
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:#1a1a1a; font-weight:700; font-size:20px; text-anchor:middle; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
-      .sub  { fill:#444; font-size:16px; text-anchor:middle; }
+      .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
+      .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
+      .sub   { fill:#444; font-size:16px; text-anchor:middle; }
+      .egg-shadow { fill: rgba(0,0,0,0.12); }
 
       .floaty  { animation: floaty 7000ms ease-in-out infinite; transform-origin: center; }
       .flicker { animation: flicker 5200ms linear infinite; transform-origin: center; }
@@ -211,23 +176,22 @@ function makeStreakSVG(streak) {
       <text x="${width/2}" y="190" class="sub">Days</text>
     </g>
 
-    <!-- Small flame: near title, slightly above; vertically aligned over the big flame, a bit left -->
-    <!-- Adjust here if needed: translate(X, Y) -->
-    <g transform="translate(${width/2 - 86}, 84) scale(0.46)" class="floaty">
+    <!-- Small flame: inside, near title; slightly left of center -->
+    <g transform="translate(${width/2 - 64}, 88) scale(0.50)" class="floaty">
       <g class="flicker">
         <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
         <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
       </g>
     </g>
 
-    <!-- BIG flame: draw LAST so it’s always visible and not clipped -->
-    <!-- If you still don’t see it, increase the second value (Y) slightly (e.g., 236, 240) -->
-    <g transform="translate(${width/2}, 248) scale(1.08)" class="floaty">
+    <!-- Big flame BELOW the number; raised to avoid bottom clip -->
+    <g transform="translate(${width/2}, 236) scale(1.08)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
       <g class="flicker">
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
         <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4b00" opacity="0.94"/>
-        <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.30"/>
+        <!-- subtle inner glow -->
+        <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.28"/>
       </g>
     </g>
   </g>
@@ -238,41 +202,31 @@ function makeStreakSVG(streak) {
 </svg>`;
 }
 
-
-
-
-
-
 (async () => {
     try {
         const calendar = await fetchContributionCalendar(repoOwner);
         const days = flattenDays(calendar);
         if (!days.length) throw new Error('No contribution data found.');
 
-        // debug: show last 12 days
         console.log('last12:', days.slice(-12).map(d => `${d.date}:${d.count}`).join(', '));
 
         const { streak: calendarStreak, lastDayDate } = calendarStreakFromLastDay(days);
         console.log('calendarStreak:', calendarStreak, 'lastDayDate:', lastDayDate);
 
-        // attempt resume from saved state
         const state = readState();
         let finalStreak = calendarStreak;
+
         if (state && state.streak != null && state.date) {
             try {
                 const savedDate = state.date;
-                // If saved date is same as lastDayDate, use saved streak (no change)
                 if (savedDate === lastDayDate) {
                     finalStreak = state.streak;
                     console.log('Using saved state (same day):', state);
                 } else {
-                    // Check each date between savedDate (exclusive) and lastDayDate (inclusive)
                     const range = datesBetweenInclusive(savedDate, lastDayDate);
                     const dayMap = buildDayMap(days);
-                    // Are all days in range present and >0?
                     const allHaveContrib = range.length > 0 && range.every(d => (dayMap.get(d) || 0) > 0);
                     if (allHaveContrib) {
-                        // continue streak
                         finalStreak = state.streak + range.length;
                         console.log('Continuing saved streak. added days:', range.length, '->', finalStreak);
                     } else {
@@ -288,7 +242,6 @@ function makeStreakSVG(streak) {
             console.log('No saved state found — using calendar streak.');
         }
 
-        // write svg and state
         const svg = makeStreakSVG(finalStreak);
         const outPath = path.join(process.cwd(), 'streak.svg');
         fs.writeFileSync(outPath, svg, 'utf8');
