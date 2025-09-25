@@ -30,6 +30,6 @@
     <ellipse cx="0" cy="0" rx="9" ry="12" fill="#f39a2e"/>
   </g>
 
-  <text x="450" y="300" class="num">0</text>
+  <text x="450" y="300" class="num">254</text>
   <text x="450" y="352" class="label">day streak</text>
 </svg>
