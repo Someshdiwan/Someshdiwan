@@ -25,40 +25,46 @@
     <text x="210" y="110" font-size="44" font-weight="800" fill="#2b2b2b" text-anchor="middle">486.0</text>
     <text x="210" y="130" font-size="12" fill="#6b6b6b" text-anchor="middle">hrs coding</text>
 
-    <g transform="translate(70, 180)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="101.78760197630929" transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
-      <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Other</text>
-      <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">46%</text>
-    </g>
+    
+      <g transform="translate(70, 180)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="101.78760197630929" transform="rotate(-90)"></circle>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
+        <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Other</text>
+        <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">46%</text>
+      </g>
+    
 
-    <g transform="translate(170, 180)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="119.50618454255573" transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
-      <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Java</text>
-      <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">37%</text>
-    </g>
+      <g transform="translate(170, 180)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="119.50618454255573" transform="rotate(-90)"></circle>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
+        <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Java</text>
+        <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">37%</text>
+      </g>
+    
 
-    <g transform="translate(270, 180)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="178.8822856954028" transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
-      <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Text</text>
-      <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">5%</text>
-    </g>
+      <g transform="translate(270, 180)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="178.8822856954028" transform="rotate(-90)"></circle>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"></circle>
+        <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">Text</text>
+        <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">5%</text>
+      </g>
+    
 
-    <!-- footer text removed as requested -->
+    <text x="210" y="282" font-size="10" fill="#7a7a7a" text-anchor="middle">Click to view full WakaTime profile</text>
 
+    <!-- clickable link overlay: when used on GitHub raw it won't be clickable, but in some viewers it is -->
+    <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener"></a>
   </g>
 </svg>
