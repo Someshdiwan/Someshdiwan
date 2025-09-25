@@ -3,98 +3,206 @@
 <head>
   <meta charset="utf-8" />
   <style>
-    body {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 360px;
-      background: #0f2527;
+    :root{
+      --bg: rgba(0,0,0,0);
+      --page-w: 1200px;
+      --page-h: 360px;
+      --card-w: 420px;
+    }
+    html,body{height:100%;margin:0;padding:0;background:var(--bg);}
+    body{
+      width:var(--page-w);
+      height:var(--page-h);
+      display:flex;
+      align-items:center;
+      justify-content:center;
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      color: #fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    .card {
-      width: 400px;
-      padding: 24px;
-      border-radius: 24px;
-      background: linear-gradient(145deg, #092022, #0f2c2e);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-      text-align: center;
+
+    .wrap{
+      width:var(--card-w);
+      border-radius:20px;
+      padding:22px;
+      box-sizing:border-box;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      backdrop-filter: blur(4px);
     }
-    .title {
-      font-size: 22px;
-      color: #ffd86b;
-      font-weight: 700;
-      margin-bottom: 12px;
+
+    svg.sticky-bg{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
     }
-    .hours {
-      font-size: 48px;
-      font-weight: 700;
-      margin: 10px 0 20px;
-      text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+
+    /* sticky notes group positions */
+    .sticky-a{ position:absolute; left:-68px; top:-42px; transform: rotate(-12deg) scale(.78); opacity:.95; }
+    .sticky-b{ position:absolute; right:-64px; top:-56px; transform: rotate(8deg) scale(.84); opacity:.95; }
+    .sticky-c{ position:absolute; left:28px; bottom:-56px; transform: rotate(6deg) scale(.68); opacity:.9; }
+
+    .title { font-size:18px; color:#c89d2b; font-weight:700; letter-spacing:.2px; text-align:center; }
+    .hours { font-size:44px; color:#ffffff; font-weight:800; text-shadow:0 6px 18px rgba(0,0,0,0.45); }
+    .hrs-sub { font-size:12px; color:#a7c6c3; margin-top:-6px; }
+
+    .donuts {
+      width:100%;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      padding-top:4px;
     }
-    .langs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px;
+
+    .donut {
+      width:84px;
+      height:84px;
+      border-radius:50%;
+      background:linear-gradient(180deg,#0b2b2c,#0f2f31);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      box-shadow:0 4px 18px rgba(3,10,10,0.6);
     }
-    .lang-circle {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: #112c2e;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 13px;
-      font-weight: 600;
+
+    .donut svg { position:absolute; inset:0; width:100%; height:100%; transform: rotate(-90deg); }
+    .donut .inner {
+      width:50%;
+      height:50%;
+      border-radius:50%;
+      background:rgba(15,20,20,0.85);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:2;
+      color:#fff;
+      font-weight:700;
+      font-size:13px;
+      text-shadow:0 2px 4px rgba(0,0,0,0.6);
     }
-    .circle-inner {
-      position: absolute;
-      inset: 0;
-      border-radius: 50%;
-      background: conic-gradient(var(--color) calc(var(--percent) * 1%), #333 0%);
+
+    .note-legend {
+      font-size:11px;
+      color:#9fb3b1;
+      margin-top:6px;
+      text-align:center;
     }
-    .circle-content {
-      position: relative;
-      z-index: 1;
-    }
-    .circle-percent {
-      font-size: 12px;
-      color: #ffd86b;
-      font-weight: 500;
-    }
+
+    /* responsive-ish clamping for image output */
+    @media (max-width:1200px){ body{transform:scale(.9);} }
   </style>
 </head>
 <body>
-<div class="card">
-  <div class="title">WakaTime (All Time)</div>
-  <div class="hours" id="hours">0 hrs</div>
-  <div class="langs" id="langs"></div>
-</div>
-<script>
-  const DATA = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
-  document.getElementById('hours').textContent = DATA.hours + ' hrs';
+<div class="wrap" role="img" aria-label="WakaTime card">
+  <!-- sticky note SVGs (3 variations) -->
+  <svg class="sticky-bg sticky-a" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="sdrop" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="6" dy="8" stdDeviation="12" flood-color="#001818" flood-opacity="0.6"/>
+      </filter>
+    </defs>
+    <g filter="url(#sdrop)">
+      <path d="M12 12 h164 a12 12 0 0 1 12 12 v120 a12 12 0 0 1 -12 12 h-80 q-12 8 -24 8 t-24 -8 h-40 z"
+            fill="#fff1b9" stroke="#f0dfa0" stroke-width="1.2"/>
+      <path d="M156 132 q18 -4 26 -12 v-60 q0 -6 -6 -6 h-18 q-6 0 -6 6 v66z" fill="#ffeab0" opacity=".95"/>
+      <path d="M150 18 q10 12 0 26" stroke="#fde4a2" stroke-width="2" fill="none" opacity=".3"/>
+      <ellipse cx="120" cy="28" rx="8" ry="4" fill="#fff8d8" opacity=".7"/>
+    </g>
+  </svg>
 
-  const langsDiv = document.getElementById('langs');
-  DATA.languages.slice(0,4).forEach(lang => {
-    const div = document.createElement('div');
-    div.className = 'lang-circle';
-    div.style.setProperty('--percent', lang.percent / 100);
-    div.style.setProperty('--color', lang.color || '#f6a936');
-    div.innerHTML = `
-      <div class="circle-inner"></div>
-      <div class="circle-content">
-        <div>${lang.name}</div>
-        <div class="circle-percent">${Math.round(lang.percent)}%</div>
-      </div>
-    `;
-    langsDiv.appendChild(div);
-  });
+  <svg class="sticky-bg sticky-b" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#sdrop)">
+      <path d="M12 12 h164 a12 12 0 0 1 12 12 v120 a12 12 0 0 1 -12 12 h-164 z" fill="#fff8d2" stroke="#f7e9b0" stroke-width="1"/>
+      <path d="M172 14 q-8 8 -6 22 l18 6" fill="none" stroke="#f1d98e" stroke-width="1.4" opacity=".6"/>
+      <path d="M24 160 q10 8 24 8 h100" stroke="#f2e0a8" stroke-width="1" fill="none" opacity=".6"/>
+    </g>
+  </svg>
+
+  <svg class="sticky-bg sticky-c" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#sdrop)">
+      <path d="M12 12 h132 a12 12 0 0 1 12 12 v92 q-6 6 -18 10 l-8 2 q-10 4 -16 4 h-102 z"
+            fill="#fff6c8" stroke="#f0e2a5" stroke-width="1.1"/>
+      <path d="M120 120 q20 -6 36 -6" stroke="#f5e8b0" stroke-width="2" fill="none" opacity=".5"/>
+    </g>
+  </svg>
+
+  <!-- main content over sticky notes; transparent background preserved -->
+  <div style="position:relative; z-index:6; width:100%; display:flex; flex-direction:column; align-items:center;">
+    <div class="title">WakaTime (All Time)</div>
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div class="hours" id="hours">0.0</div>
+      <div class="hrs-sub" id="hrs-sub">hrs coding</div>
+    </div>
+
+    <div class="donuts" id="donuts"></div>
+    <div class="note-legend">Click image to open WakaTime profile</div>
+  </div>
+</div>
+
+<script>
+  // window.__WAKA_DATA__ will be injected by the renderer (render_waka_png.js)
+  const D = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
+
+  function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+  document.getElementById('hours').textContent = (D.hours || "0.0");
+  const secs = D.hours && D.hours.toString().includes(":") ? D.hours : D.hours;
+  document.getElementById('hrs-sub').textContent = 'hrs coding';
+
+  const donuts = document.getElementById('donuts');
+  const langs = (D.languages || []).slice(0,3);
+  if(langs.length===0){
+    const empty = document.createElement('div');
+    empty.style.color = '#9fb3b1';
+    empty.style.fontSize = '13px';
+    empty.textContent = 'No language data';
+    donuts.appendChild(empty);
+  } else {
+    langs.forEach(l => {
+      const pct = clamp(Number(l.percent || 0), 0, 100);
+      const col = l.color || '#f6a936';
+      const c = document.createElement('div');
+      c.className = 'donut';
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+      svg.setAttribute('viewBox','0 0 100 100');
+      const bg = document.createElementNS(svg.namespaceURI,'circle');
+      bg.setAttribute('cx','50'); bg.setAttribute('cy','50'); bg.setAttribute('r','40'); bg.setAttribute('fill','none');
+      bg.setAttribute('stroke','#183333'); bg.setAttribute('stroke-width','18'); svg.appendChild(bg);
+
+      const arc = document.createElementNS(svg.namespaceURI,'circle');
+      arc.setAttribute('cx','50'); arc.setAttribute('cy','50'); arc.setAttribute('r','40'); arc.setAttribute('fill','none');
+      arc.setAttribute('stroke',col); arc.setAttribute('stroke-width','18');
+      arc.setAttribute('stroke-linecap','round');
+      const circumference = 2*Math.PI*40;
+      const offset = circumference * (1 - (pct/100));
+      arc.setAttribute('stroke-dasharray', `${circumference} ${circumference}`);
+      arc.setAttribute('stroke-dashoffset', `${offset}`);
+      svg.appendChild(arc);
+
+      c.appendChild(svg);
+      const inner = document.createElement('div');
+      inner.className = 'inner';
+      inner.style.width = '46%';
+      inner.style.height = '46%';
+      inner.style.borderRadius = '50%';
+      inner.style.background = 'rgba(10,20,20,0.9)';
+      inner.style.display = 'flex';
+      inner.style.alignItems = 'center';
+      inner.style.justifyContent = 'center';
+      inner.style.flexDirection = 'column';
+      inner.style.zIndex = '2';
+      inner.innerHTML = `<div style="font-size:12px;font-weight:700;color:#fff">${l.name}</div><div style="font-size:12px;color:#ffd86b;margin-top:4px">${Math.round(pct)}%</div>`;
+      c.appendChild(inner);
+      donuts.appendChild(c);
+    });
+  }
 </script>
 </body>
 </html>
