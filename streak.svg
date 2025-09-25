@@ -1,63 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="254 day streak">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
   <style>
-    :root { --bg: #0f2527; --gold1:#ffd86b; --gold2:#f39a2e; --accent:#ffb347; --text:#f6a936; }
-    .bg { fill: var(--bg); }
-    .card { rx: 18; fill: var(--bg); }
-    .num { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 900; font-size: 220px; text-anchor: middle; fill: url(#numGrad); filter: drop-shadow(0 14px 0 rgba(0,0,0,0.35)); }
-    .label { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-size: 40px; text-anchor: middle; fill: var(--text); font-weight: 700; letter-spacing: 0.6px; }
-    .flame { transform-origin: 360px 140px; animation: float 2.6s ease-in-out infinite; }
-    .particle { opacity: 0.85; animation: rise 2.2s linear infinite; }
-    .glow { filter: drop-shadow(0 0 14px rgba(255,180,71,0.6)); animation: glow 1.6s ease-in-out infinite alternate; }
-    .flicker { animation: flicker 0.18s steps(2) infinite; }
-    @keyframes float { 0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);} }
-    @keyframes rise { 0%{ transform: translateY(0) scale(0.9); opacity:0.9 } 100%{ transform: translateY(-36px) scale(1); opacity:0 } }
-    @keyframes glow { from { filter: drop-shadow(0 0 8px rgba(255,140,0,0.35)); } to { filter: drop-shadow(0 0 22px rgba(255,90,0,0.55)); } }
-    @keyframes flicker {
-      0% { fill: var(--gold1); }
-      40% { fill: #ffd56a; }
-      60% { fill: #ffb94a; }
-      100% { fill: var(--gold2); }
-    }
-
-    /* small responsive tweaks if displayed narrow */
-    @media (max-width:900px) {
-      .num { font-size: 120px; }
-      .label { font-size: 22px; }
-    }
+    .bg { fill: #0f2527; }
+    .flame { transform-origin: 450px 90px; animation: float 2.4s infinite ease-in-out; }
+    .drop { transform-origin: 450px 32px; animation: drip 2.6s infinite ease-in-out; }
+    .num { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-weight: 700; font-size: 200px; text-anchor: middle; fill: url(#numGrad); filter: drop-shadow(0 12px 0 rgba(0,0,0,0.25)); }
+    .label { font-family: 'Segoe UI', Roboto, Arial, sans-serif; font-size: 36px; text-anchor: middle; fill: #f6a936; font-weight: 700; }
+    @keyframes float { 0%{transform:translateY(0);} 50%{transform:translateY(-10px);} 100%{transform:translateY(0);} }
+    @keyframes drip { 0%{transform:translateY(0) scale(1);opacity:1;} 80%{transform:translateY(22px) scale(0.9);opacity:0.6;} 100%{transform:translateY(0) scale(1);opacity:1;} }
   </style>
 
-  <rect width="100%" height="100%" class="bg"/>
-  <g transform="translate(80,36)">
-    <rect class="card" width="1040" height="408" rx="18"/>
+  <rect width="100%" height="100%" rx="12" class="bg"/>
 
-    <!-- flame group -->
-    <g class="flame" transform="translate(120,18) scale(1)">
-      <!-- shadow -->
-      <ellipse cx="140" cy="220" rx="120" ry="26" fill="rgba(0,0,0,0.36)"/>
-      <!-- particles -->
-      <g transform="translate(110,26)">
-        <circle class="particle" cx="10" cy="0" r="6" fill="#ffb347" style="animation-delay:0s"/>
-        <circle class="particle" cx="36" cy="0" r="4" fill="#ffd86b" style="animation-delay:0.4s"/>
-        <circle class="particle" cx="58" cy="0" r="5" fill="#ffcf6a" style="animation-delay:0.8s"/>
-      </g>
+  <defs>
+    <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd86b"/>
+      <stop offset="100%" stop-color="#f39a2e"/>
+    </linearGradient>
+  </defs>
 
-      <!-- outer flame shape (glow + flicker) -->
-      <g class="glow">
-        <path class="flicker" d="M220 60 C190 0 120 -10 90 40 C60 95 70 160 120 160 C170 160 240 120 220 60 Z" fill="#ffd86b"/>
-        <path d="M190 98 C174 82 150 90 142 110 C138 120 152 132 170 126 C182 122 192 114 190 98 Z" fill="#fff3d8"/>
-      </g>
-    </g>
-
-    <!-- big number -->
-    <defs>
-      <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="#ffd86b"/>
-        <stop offset="100%" stop-color="#f39a2e"/>
-      </linearGradient>
-    </defs>
-
-    <text x="540" y="240" class="num">254</text>
-    <text x="540" y="320" class="label">day streak</text>
+  <g class="flame" transform="translate(300,8) scale(1.0)">
+    <ellipse cx="150" cy="160" rx="110" ry="24" fill="rgba(0,0,0,0.35)"/>
+    <path d="M250 60 C220 10 170 -10 130 40 C95 85 100 160 150 160 C210 160 270 120 250 60 Z" fill="#ffd86b"/>
+    <path d="M210 88 C192 68 165 74 154 96 C150 106 166 122 190 116 C202 112 214 104 210 88 Z" fill="#fff3d8"/>
+    <path d="M198 40 C188 30 170 32 164 46 C160 56 172 64 184 58 C192 54 200 48 198 40 Z" fill="#ffe08a" opacity="0.9"/>
   </g>
+
+  <g class="drop" transform="translate(430,12)">
+    <ellipse cx="0" cy="0" rx="9" ry="12" fill="#f39a2e"/>
+  </g>
+
+  <text x="450" y="300" class="num">254</text>
+  <text x="450" y="352" class="label">day streak</text>
 </svg>
