@@ -26,50 +26,50 @@
     </linearGradient>
 
     <style>
-      .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:#5a4a20; font-weight:700; font-size:20px; text-anchor:middle; letter-spacing:1px; }
-      .big { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.18)); }
-      .sub { fill:#666; font-size:16px; text-anchor:middle; letter-spacing:0.5px; }
-      .egg-shadow { fill: rgba(0,0,0,0.12); }
-      .flame-anim { animation: floaty 2800ms ease-in-out infinite; transform-origin: 80px 60px; }
-      .flame-flicker { animation: flicker 1600ms ease-in-out infinite; transform-origin: 80px 60px; }
-      @keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
-      @keyframes flicker { 0%{transform:scale(1)} 50%{transform:scale(0.99)} 100%{transform:scale(1)} }
+      .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; font-smoothing:antialiased; }
+      .title { fill:#5a4a20; font-weight:700; font-size:22px; text-anchor:middle; letter-spacing:1px; }
+      .big { fill:url(#numGrad); font-weight:900; font-size:92px; text-anchor:middle; filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2)); }
+      .sub { fill:#666; font-size:18px; text-anchor:middle; letter-spacing:0.5px; }
+      .egg-shadow { fill: rgba(0,0,0,0.15); }
+      .flame-anim { animation: floaty 2800ms ease-in-out infinite; transform-origin: 50px 80px; }
+      .flame-flicker { animation: flicker 1600ms ease-in-out infinite; transform-origin: 50px 80px; }
+      @keyframes floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-8px)} 100%{transform:translateY(0)} }
+      @keyframes flicker { 0%{transform:scale(1)} 50%{transform:scale(0.98)} 100%{transform:scale(1)} }
     </style>
   </defs>
 
-  <!-- sticky card body with subtle texture -->
-  <g filter="url(#cardShadow)">
-    <path d="M20 16 h320 a24 24 0 0 1 24 24 v140 a24 24 0 0 1 -24 24 h-160 q-10 6 -20 6 t-20 -6 h-160 a24 24 0 0 1 -24 -24 v-140 a24 24 0 0 1 24 -24 z"
+  <!-- sticky card body with subtle texture, centered -->
+  <g filter="url(#cardShadow)" transform="translate(0, 20)">
+    <path d="M30 0 h360 a20 20 0 0 1 20 20 v160 a20 20 0 0 1 -20 20 h-180 q-10 5 -20 5 t-20 -5 h-180 a20 20 0 0 1 -20 -20 v-160 a20 20 0 0 1 20 -20 z"
           fill="url(#cardGrad)" stroke="#f0e0a0" stroke-width="1.5"/>
-    <path d="M340 60 q-8 16 -24 24" stroke="#f5e0a0" stroke-width="1.5" fill="none" opacity="0.7"/>
-    <ellipse cx="316" cy="40" rx="8" ry="4" fill="#fff9e0" opacity="0.8"/>
+    <path d="M370 40 q-10 15 -25 20" stroke="#f5e0a0" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <ellipse cx="345" cy="20" rx="8" ry="4" fill="#fff9e0" opacity="0.8"/>
   </g>
 
-  <!-- left flame (moved slightly left and up so it stays inside) -->
-  <g transform="translate(44,32)">
-    <ellipse class="egg-shadow" cx="28" cy="86" rx="70" ry="18" opacity="0.12"/>
-    <g class="flame-anim" transform="translate(0,-6) scale(0.95)">
-      <g class="flame-flicker" transform="translate(0,0)">
-        <path d="M90 20 C70 -4 46 -4 32 20 C20 38 24 88 60 94 C96 100 110 60 90 20 Z" fill="#ffca28"/>
-        <path d="M78 52 C70 40 56 40 48 52 C44 60 52 72 66 68 C76 66 86 60 78 52 Z" fill="#fff3d8" opacity="0.95"/>
-        <path d="M72 14 C66 8 54 10 50 16 C48 22 54 28 62 26 C68 24 74 18 72 14 Z" fill="#ffe082" opacity="0.97"/>
+  <!-- left flame, adjusted for centering -->
+  <g transform="translate(40, 60)">
+    <ellipse class="egg-shadow" cx="30" cy="90" rx="60" ry="20" opacity="0.12"/>
+    <g class="flame-anim" transform="translate(0, -8)">
+      <g class="flame-flicker" transform="translate(0, 0) scale(0.9)">
+        <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 88 40 94 C66 100 80 60 70 20 Z" fill="#ffca28"/>
+        <path d="M58 52 C50 40 46 40 38 52 C34 60 42 72 56 68 C66 66 76 60 58 52 Z" fill="#fff3d8" opacity="0.95"/>
+        <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#ffe082" opacity="0.97"/>
       </g>
     </g>
   </g>
 
-  <!-- top-right mini flame (moved slightly lower to avoid overlap) -->
-  <g transform="translate(342, 50) scale(0.62)" class="flame-anim">
-    <ellipse cx="0" cy="26" rx="22" ry="7" fill="rgba(0,0,0,0.12)" />
-    <path d="M20 -8 C12 -20 -6 -22 -12 -8 C-18 2 -12 26 6 28 C24 30 30 10 20 -8 Z" fill="#ffca28"/>
-    <path d="M12 6 C8 0 0 0 -4 6 C-6 10 -2 14 6 14 C12 14 18 10 12 6 Z" fill="#fff3d8" opacity="0.92"/>
+  <!-- top-right mini flame -->
+  <g transform="translate(330, 70) scale(0.5)" class="flame-anim">
+    <ellipse cx="0" cy="26" rx="24" ry="8" fill="rgba(0,0,0,0.15)" />
+    <path d="M22 -8 C14 -20 -6 -22 -14 -8 C-20 2 -14 28 8 30 C26 32 32 12 22 -8 Z" fill="#ffca28"/>
+    <path d="M14 6 C10 0 0 0 -4 6 C-6 10 -2 16 6 16 C12 16 18 12 14 6 Z" fill="#fff3d8" opacity="0.92"/>
   </g>
 
-  <!-- centered texts -->
-  <g class="card-font">
-    <text x="210" y="66" class="title">GitHub Streak</text>
-    <text x="210" y="150" class="big">254</text>
-    <text x="210" y="186" class="sub">day streak</text>
+  <!-- centered texts, adjusted for better alignment -->
+  <g class="card-font" transform="translate(0, 20)">
+    <text x="210" y="40" class="title">GitHub Streak</text>
+    <text x="210" y="130" class="big">254</text>
+    <text x="210" y="190" class="sub">Days</text>
   </g>
 
   <!-- clickable link -->
