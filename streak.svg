@@ -10,32 +10,25 @@
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <!-- Softer, warmer card gradient (for optional filled mode) -->
     <linearGradient id="cardGrad" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%"   stop-color="#fff5c9"/>
-      <stop offset="100%" stop-color="#ffe09a"/>
+      <stop offset="0%" stop-color="#fff6c7"/>
+      <stop offset="100%" stop-color="#ffe29a"/>
     </linearGradient>
 
-    <!-- Number/Title gradient with a touch more contrast -->
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%"   stop-color="#fff2c9"/>
-      <stop offset="55%"  stop-color="#ffc960"/>
-      <stop offset="100%" stop-color="#e36c07"/>
+      <stop offset="0%"   stop-color="#fff8df"/>
+      <stop offset="55%"  stop-color="#ffd26a"/>
+      <stop offset="100%" stop-color="#e66a00"/>
     </linearGradient>
-
-    <!-- Subtle glow for text to read well on dark/light -->
-    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="rgba(0,0,0,0.25)"/>
-    </filter>
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; filter:url(#textGlow); }
-      .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter:url(#textGlow); }
+      .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
+      .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
       .sub   { fill:#444; font-size:16px; text-anchor:middle; }
 
-      .floaty  { animation: floaty 7200ms ease-in-out infinite; transform-origin: center; }
-      .flicker { animation: flicker 5600ms ease-in-out infinite; transform-origin: center; }
+      .floaty  { animation: floaty 7000ms ease-in-out infinite; transform-origin: center; }
+      .flicker { animation: flicker 5200ms linear infinite; transform-origin: center; }
 
       @keyframes floaty {
         0%   { transform: translateY(0); }
@@ -43,15 +36,15 @@
         100% { transform: translateY(0); }
       }
       @keyframes flicker {
-        0%   { transform: scale(1);     opacity:1;    filter:brightness(1); }
-        35%  { transform: scale(0.992); opacity:0.94; filter:brightness(0.96); }
-        70%  { transform: scale(1.01);  opacity:1;    filter:brightness(1.05); }
-        100% { transform: scale(1);     opacity:1;    filter:brightness(1); }
+        0%   { transform: scale(1);     opacity:1;   filter:brightness(1); }
+        40%  { transform: scale(0.992); opacity:0.92;filter:brightness(0.96); }
+        80%  { transform: scale(1.01);  opacity:1;   filter:brightness(1.05); }
+        100% { transform: scale(1);     opacity:1;   filter:brightness(1); }
       }
     </style>
   </defs>
 
-  <!-- Transparent card outline (leave fill none). Uncomment ONE rect below to use filled background. -->
+  <!-- Transparent card outline (uncomment one fill to use a solid card) -->
   <g filter="url(#cardShadow)">
     <rect x="20" y="20" width="380" height="260" rx="22" ry="22"
           fill="none" stroke="#e6d09a" stroke-width="1.2"/>
@@ -62,6 +55,7 @@
     -->
   </g>
 
+  <!-- No clipPath -> nothing can be accidentally clipped -->
   <!-- Text -->
   <g class="card-font">
     <text x="210" y="70"  class="title">GitHub Streak</text>
@@ -69,21 +63,21 @@
     <text x="210" y="190" class="sub">Days</text>
   </g>
 
-  <!-- Small flame (inside, near the title; nudged inward a bit) -->
-  <g transform="translate(152, 90) scale(0.50)" class="floaty">
+  <!-- Small flame (inside, near the title) -->
+  <g transform="translate(146, 88) scale(0.50)" class="floaty">
     <g class="flicker">
-      <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb45a"/>
-      <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff3d6" opacity="0.55"/>
+      <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
+      <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
     </g>
   </g>
 
-  <!-- BIG flame (bottom-center; drawn last; gentle orange core + red heart) -->
-  <g transform="translate(210, 248) scale(0.94)" class="floaty">
+  <!-- BIG flame (original bottom-center placement; drawn last so it stays visible) -->
+  <g transform="translate(210, 250) scale(0.92)" class="floaty">
     <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
     <g class="flicker">
-      <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9b2d" opacity="0.98"/>
-      <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4a00" opacity="0.92"/>
-      <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff5dc" opacity="0.28"/>
+      <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
+      <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#ff4b00" opacity="0.94"/>
+      <path d="M8 -2 C6 -8 0 -10 -4 -2 C-4 0 -1 4 6 4 C9 4 12 2 8 -2 Z" fill="#fff7de" opacity="0.28"/>
     </g>
   </g>
 
