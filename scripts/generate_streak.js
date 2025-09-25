@@ -171,7 +171,7 @@ function makeStreakSVG(streak) {
 
     <style>
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:#3b2f14; font-weight:700; font-size:20px; text-anchor:middle; }
+      .title { fill:#1a1a1a; font-weight:700; font-size:20px; text-anchor:middle; }
       .big { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
       .sub  { fill:#444; font-size:16px; text-anchor:middle; }
 
@@ -213,7 +213,7 @@ function makeStreakSVG(streak) {
 
     <!-- Small flame: near title, slightly above; vertically aligned over the big flame, a bit left -->
     <!-- Adjust here if needed: translate(X, Y) -->
-    <g transform="translate(${width/2 - 42}, 56) scale(0.46)" class="floaty">
+    <g transform="translate(${width/2 - 86}, 84) scale(0.46)" class="floaty">
       <g class="flicker">
         <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ffb95a"/>
         <path d="M10 6 C7 1 0 1 -2 6 C-3 9 0 14 6 14 C10 14 14 12 10 6 Z" fill="#fff6d8" opacity="0.50"/>
@@ -222,7 +222,7 @@ function makeStreakSVG(streak) {
 
     <!-- BIG flame: draw LAST so it’s always visible and not clipped -->
     <!-- If you still don’t see it, increase the second value (Y) slightly (e.g., 236, 240) -->
-    <g transform="translate(${width/2}, 232) scale(1.02)" class="floaty">
+    <g transform="translate(${width/2}, 248) scale(1.08)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)"/>
       <g class="flicker">
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ff9a2a" opacity="0.98"/>
