@@ -2,10 +2,8 @@
   "name": "someshdiwan-profile",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "dependencies": {
-    "@octokit/graphql": "^5.0.0",
-    "node-fetch": "^3.4.0"
+    "@octokit/graphql": "^5.0.0"
   },
   "scripts": {
     "generate:streak": "node ./scripts/generate_streak.js",
