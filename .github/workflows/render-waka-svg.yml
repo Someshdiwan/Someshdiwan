@@ -2,7 +2,7 @@ name: Render WakaTime SVG (nightly)
 
 on:
   schedule:
-    - cron: '0 3 * * *'   # 00:00 UTC daily
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 concurrency:
