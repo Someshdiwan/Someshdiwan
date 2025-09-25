@@ -100,7 +100,7 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
-
+/** UI-only: sticky-card style, transparent by default, with gentle flames */
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -130,10 +130,30 @@ function makeStreakSVG(streak) {
     </linearGradient>
 
     <style>
-      .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
-      .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
-      .sub   { fill:#444; font-size:16px; text-anchor:middle; }
+  .card-font { 
+    font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; 
+    -webkit-font-smoothing:antialiased; 
+  }
+  .title { 
+    fill:url(#numGrad); 
+    font-weight:700; 
+    font-size:20px; 
+    text-anchor:middle; 
+    filter: drop-shadow(0 2px 3px rgba(0,0,0,0.18)); 
+  }
+  .big { 
+    fill:url(#numGrad); 
+    font-weight:900; 
+    font-size:80px; 
+    text-anchor:middle; 
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); 
+  }
+  .sub { 
+    fill:#444; 
+    font-size:16px; 
+    text-anchor:middle; 
+  }
+</style>
 
       .floaty  { animation: floaty 7000ms ease-in-out infinite; transform-origin: center; }
       .flicker { animation: flicker 5200ms linear infinite; transform-origin: center; }
