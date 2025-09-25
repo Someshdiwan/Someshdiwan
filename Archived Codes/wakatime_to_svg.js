@@ -105,7 +105,7 @@ async function renderPngFromData(data) {
     const injectedHtml = htmlTemplate.replace('window.__WAKA_DATA__ || { hours: \'0.0\', projects:0, languages: [] }',
         JSON.stringify(data));
 
-    const tmpHtml = path.join(TEMPLATE_DIR, '_waka_render.html');
+    const tmpHtml = path.join(TEMPLATE_DIR, 'waka.html');
     fs.writeFileSync(tmpHtml, injectedHtml, 'utf8');
 
     const browser = await puppeteer.launch({ args: ['--no-sandbox','--disable-setuid-sandbox'] });

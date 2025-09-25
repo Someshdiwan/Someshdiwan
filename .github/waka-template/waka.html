@@ -1,10 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0f2527;
+      color: #fff;
+      width: 1200px;
+      height: 360px;
+    }
+    .card {
+      width: 1100px;
+      margin: 20px auto;
+      padding: 24px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #092022, #0f2c2e);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+    .title {
+      font-size: 26px;
+      color: #ffd86b;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .hours {
+      font-size: 60px;
+      margin: 10px 0 30px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    }
+    .langs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .lang-box {
+      background: #112c2e;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease;
+    }
+    .lang-box:hover { transform: translateY(-4px); }
+    .lang-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .bar {
+      height: 10px;
+      border-radius: 6px;
+      background: #333;
+      overflow: hidden;
+    }
+    .fill {
+      height: 10px;
+      border-radius: 6px;
+      background: #f6a936;
+    }
+    .percent {
+      font-size: 13px;
+      margin-top: 6px;
+      color: #ffd86b;
+      font-weight: 500;
+    }
+  </style>
 </head>
 <body>
-
+<div class="card">
+  <div class="title">WakaTime (All Time)</div>
+  <div class="hours" id="hours">0 hrs</div>
+  <div class="langs" id="langs"></div>
+</div>
+<script>
+  const DATA = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
+  document.getElementById('hours').textContent = DATA.hours + ' hrs';
+  const langsDiv = document.getElementById('langs');
+  DATA.languages.slice(0,6).forEach(lang => {
+    const box = document.createElement('div');
+    box.className = 'lang-box';
+    box.innerHTML = `
+      <div class="lang-name">${lang.name}</div>
+      <div class="bar"><div class="fill" style="width:${lang.percent}%; background:${lang.color || '#f6a936'}"></div></div>
+      <div class="percent">${Math.round(lang.percent)}%</div>
+    `;
+    langsDiv.appendChild(box);
+  });
+</script>
 </body>
 </html>
