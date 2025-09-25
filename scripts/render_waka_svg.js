@@ -36,9 +36,7 @@ async function fetchJsonWithRetries(url, headers = {}, retries = 3, timeoutMs = 
             if (attempt < retries) {
                 const backoff = Math.round((Math.pow(2, attempt) * 500) + Math.random() * 400);
                 await new Promise(r => setTimeout(r, backoff));
-            } else {
-                throw err;
-            }
+            } else throw err;
         }
     }
 }
@@ -53,46 +51,42 @@ function normalizeRaw(raw) {
             : (totalSec > 0 ? (l.total_seconds || 0) / totalSec * 100 : 0);
         return { name: l.name, percent: Math.round(percent * 10) / 10, color: languageColor(l.name) };
     });
-    return {
-        hours: totalHours.toFixed(1),
-        projects: (d.projects || []).length || 0,
-        languages
-    };
+    return { hours: totalHours.toFixed(1), projects: (d.projects || []).length || 0, languages };
 }
 
-// build SVG string (sticky note card + donuts)
+function escapeXml(s) {
+    if (s == null) return '';
+    return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
+}
+
+// build SVG string
 function makeWakaSVG(normalized, username = 'SomeshDiwan') {
     const w = 420;
     const h = 300;
     const hours = normalized.hours || '0.0';
     const langs = (normalized.languages || []).slice(0,3);
-    // top-left sticky path and drop shadow are baked in
+
     const donutsSvg = langs.map((l, i) => {
         const pct = Math.max(0, Math.min(100, Number(l.percent || 0)));
         const color = l.color || '#f6a936';
-        // circle constants
-        const cx = 120 + i * 84; // positions center-ish
-        const cy = 200;
         const r = 30;
         const stroke = 12;
         const circumference = 2 * Math.PI * r;
         const offset = circumference * (1 - pct / 100);
-        // but to keep layout fixed we will place groups relative inside an inner group
+
         return `
-      <g transform="translate(${70 + i*100}, ${180})">
-        <circle cx="0" cy="0" r="${r}" fill="none" stroke="#efe0bd" stroke-width="${stroke}"></circle>
+      <g transform="translate(${120 + i*100}, ${190})">
+        <circle cx="0" cy="0" r="${r}" fill="none" stroke="#efe0bd" stroke-width="${stroke}"/>
         <circle cx="0" cy="0" r="${r}" fill="none" stroke="${color}" stroke-width="${stroke}"
                 stroke-linecap="round"
                 stroke-dasharray="${circumference} ${circumference}"
-                stroke-dashoffset="${offset}" transform="rotate(-90)"></circle>
-        <circle cx="0" cy="0" r="${r * 0.48}" fill="#fff4cf"></circle>
-        <text x="0" y="-4" font-family="Segoe UI, Roboto, Arial" font-size="10" font-weight="700" fill="#2b2b2b" text-anchor="middle">${escapeXml(l.name)}</text>
-        <text x="0" y="12" font-family="Segoe UI, Roboto, Arial" font-size="10" fill="#806015" text-anchor="middle">${Math.round(pct)}%</text>
-      </g>
-    `;
+                stroke-dashoffset="${offset}" transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="${r * 0.48}" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">${escapeXml(l.name)}</text>
+        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" fill="#806015" text-anchor="middle">${Math.round(pct)}%</text>
+      </g>`;
     }).join('\n');
 
-    // SVG overall
     return `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="WakaTime all time ${hours} hours">
   <defs>
@@ -105,66 +99,48 @@ function makeWakaSVG(normalized, username = 'SomeshDiwan') {
     </linearGradient>
   </defs>
 
-  <!-- sticky note with shadow -->
   <g filter="url(#sdrop)">
-    <path d="M18 18 h320 a16 16 0 0 1 16 16 v160 a16 16 0 0 1 -16 16 h-148 q-12 8 -24 8 t-24 -8 h-144 z"
-          fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2" />
+    <path d="M18 18 h384 a16 16 0 0 1 16 16 v200 a16 16 0 0 1 -16 16 h-184 q-12 8 -24 8 t-24 -8 h-176 z"
+          fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2"/>
     <path d="M330 162 q0 10 -10 18 l-24 12 q-10 8 -18 6" fill="#ffee9e" opacity="0.95"/>
     <path d="M328 34 q-4 16 -18 24" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
     <ellipse cx="310" cy="36" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
   </g>
 
-  <!-- overlay content -->
-  <g transform="translate(0,0)" font-family="Segoe UI, Roboto, Arial">
-    <text x="${w/2}" y="70" font-size="15" font-weight="700" fill="#6b5a1f" text-anchor="middle">WakaTime (All Time)</text>
-    <text x="${w/2}" y="110" font-size="44" font-weight="800" fill="#2b2b2b" text-anchor="middle">${escapeXml(hours)}</text>
-    <text x="${w/2}" y="130" font-size="12" fill="#6b6b6b" text-anchor="middle">hrs coding</text>
-
+  <g font-family="Comic Sans MS, cursive, sans-serif" text-anchor="middle">
+    <text x="${w/2}" y="70" font-size="16" font-weight="700" fill="#6b5a1f">WakaTime (All Time)</text>
+    <text x="${w/2}" y="120" font-size="48" font-weight="800" fill="#2b2b2b">${escapeXml(hours)}</text>
+    <text x="${w/2}" y="145" font-size="13" fill="#6b6b6b">hrs coding</text>
     ${donutsSvg}
-
-    <text x="${w/2}" y="${h - 18}" font-size="10" fill="#7a7a7a" text-anchor="middle">Click to view full WakaTime profile</text>
-
-    <!-- clickable link overlay: when used on GitHub raw it won't be clickable, but in some viewers it is -->
-    <a xlink:href="https://wakatime.com/@${encodeURIComponent(username)}" target="_blank" rel="noopener"></a>
   </g>
 </svg>`;
 }
 
-function escapeXml(s) {
-    if (s == null) return '';
-    return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
-}
-
 (async () => {
     let raw = null;
-    // try all_time
     try {
         raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/all_time',
             { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
-        const totalSecAll = raw?.data?.total_seconds ?? raw?.data?.total_seconds_all ?? 0;
-        if (!totalSecAll) raw = null;
-    } catch (err) {
-        raw = null;
-    }
+        if (!(raw?.data?.total_seconds || raw?.data?.total_seconds_all)) raw = null;
+    } catch { raw = null; }
 
-    // fallback last_7_days
     if (!raw) {
         try {
             raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/last_7_days',
                 { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
-        } catch (err) {
-            raw = null;
-        }
+        } catch { raw = null; }
     }
 
-    // try cache
     if (!raw && fs.existsSync(CACHE_FILE)) {
-        try { raw = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')); } catch(e){ raw = null; }
+        try { raw = JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')); } catch { raw = null; }
     }
 
     if (!raw) raw = { data: { total_seconds: 0, languages: [], projects: [] } };
     else {
-        try { if (!fs.existsSync(TEMPLATE_DIR)) fs.mkdirSync(TEMPLATE_DIR, { recursive: true }); fs.writeFileSync(CACHE_FILE, JSON.stringify(raw, null, 2), 'utf8'); } catch(e){ console.warn('Could not write cache:', e.message); }
+        try {
+            if (!fs.existsSync(TEMPLATE_DIR)) fs.mkdirSync(TEMPLATE_DIR, { recursive: true });
+            fs.writeFileSync(CACHE_FILE, JSON.stringify(raw, null, 2), 'utf8');
+        } catch {}
     }
 
     const normalized = normalizeRaw(raw);
