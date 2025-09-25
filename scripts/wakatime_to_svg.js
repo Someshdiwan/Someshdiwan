@@ -12,8 +12,9 @@ if (!apiKey) {
 }
 
 async function fetchWaka(url) {
+    const authHeader = Buffer.from(apiKey).toString('base64'); // base64 encode the raw API key
     const res = await fetch(url, {
-        headers: { Authorization: `Bearer ${apiKey}` },
+        headers: { Authorization: `Basic ${authHeader}` },
     });
     if (!res.ok) throw new Error(`WakaTime API error: ${res.status} ${res.statusText}`);
     return res.json();
