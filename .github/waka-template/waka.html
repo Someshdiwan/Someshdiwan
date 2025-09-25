@@ -1,49 +1,10 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f2527;
-      color: white;
-      width: 1200px;
-      height: 360px;
-    }
-    .card {
-      width: 1100px;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 12px;
-      background: #072021;
-    }
-    .title { font-size: 24px; color: #ffd86b; font-weight: bold; }
-    .hours { font-size: 64px; margin: 20px 0; font-weight: bold; }
-    .lang { margin: 6px 0; }
-    .bar { height: 14px; border-radius: 6px; background: #444; overflow: hidden; margin-top: 4px; }
-    .fill { height: 14px; border-radius: 6px; background: #f6a936; }
-  </style>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-<div class="card">
-  <div class="title">WakaTime (All Time)</div>
-  <div class="hours" id="hours">0 hrs</div>
-  <div id="langs"></div>
-</div>
-<script>
-  const DATA = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
-  document.getElementById('hours').textContent = DATA.hours + ' hrs';
-  const langsDiv = document.getElementById('langs');
-  DATA.languages.slice(0,6).forEach(lang => {
-    const row = document.createElement('div');
-    row.className = 'lang';
-    row.innerHTML = `
-        <div>${lang.name} — ${Math.round(lang.percent)}%</div>
-        <div class="bar"><div class="fill" style="width:${lang.percent}%;"></div></div>
-      `;
-    langsDiv.appendChild(row);
-  });
-</script>
+
 </body>
 </html>

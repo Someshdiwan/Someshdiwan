@@ -19,7 +19,7 @@ const OUT_FILE = path.join(process.cwd(), 'wakatime.png');
 
 const apiKey = process.env.WAKATIME_API_KEY;
 if (!apiKey) {
-    console.error('WAKATIME_API_KEY not set');
+    console.error('WAKATIME_API_KEY not set - aborting');
     process.exit(1);
 }
 
@@ -111,37 +111,38 @@ async function renderFromData(normalized) {
 (async () => {
     let raw = null;
 
+    // Try all_time first
     try {
-        // 1) try all_time
+        console.log('Attempting all_time endpoint...');
         const urlAll = 'https://wakatime.com/api/v1/users/current/stats/all_time';
-        console.log('Fetching all_time...');
         raw = await fetchJsonWithRetries(urlAll, { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
+        console.log('Raw all_time head:', JSON.stringify(raw?.data ? { total_seconds: raw.data.total_seconds, languages: (raw.data.languages || []).length } : raw).slice(0,400));
         const totalSecAll = raw?.data?.total_seconds ?? raw?.data?.total_seconds_all ?? 0;
         if (!totalSecAll) {
-            console.log('all_time returned 0; falling back to last_7_days');
+            console.log('all_time returned zero; will fallback to last_7_days.');
             raw = null;
         } else {
-            console.log(`all_time total_seconds=${totalSecAll}`);
+            console.log(`all_time returned ${totalSecAll} seconds`);
         }
     } catch (err) {
         console.warn('all_time fetch failed:', err.message);
         raw = null;
     }
 
-    // 2) fallback to last_7_days if needed
+    // Fallback: last_7_days
     if (!raw) {
         try {
+            console.log('Attempting last_7_days endpoint...');
             const url7 = 'https://wakatime.com/api/v1/users/current/stats/last_7_days';
-            console.log('Fetching last_7_days...');
             raw = await fetchJsonWithRetries(url7, { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
-            console.log('last_7_days fetched');
+            console.log('Raw last_7_days head:', JSON.stringify(raw?.data ? { total_seconds: raw.data.total_seconds, languages: (raw.data.languages || []).length } : raw).slice(0,400));
         } catch (err) {
             console.warn('last_7_days fetch failed:', err.message);
             raw = null;
         }
     }
 
-    // 3) try cache if live fetchs failed
+    // Try cache if still no raw
     if (!raw) {
         if (fs.existsSync(CACHE_FILE)) {
             try {
@@ -154,12 +155,12 @@ async function renderFromData(normalized) {
         }
     }
 
-    // 4) if still no raw, use placeholder
+    // If still nothing, placeholder
     if (!raw) {
         console.warn('No WakaTime data available; using placeholder.');
         raw = { data: { total_seconds: 0, languages: [], projects: [] } };
     } else {
-        // save cache for future fallback
+        // Save raw API JSON to cache (important: write the actual JSON we fetched)
         try {
             if (!fs.existsSync(TEMPLATE_DIR)) fs.mkdirSync(TEMPLATE_DIR, { recursive: true });
             fs.writeFileSync(CACHE_FILE, JSON.stringify(raw, null, 2), 'utf8');
@@ -169,7 +170,7 @@ async function renderFromData(normalized) {
         }
     }
 
-    // normalize and render
+    // Normalize and render
     const normalized = normalizeRaw(raw);
     console.log('Normalized data:', normalized.hours, 'hrs, languages:', normalized.languages.length);
 
