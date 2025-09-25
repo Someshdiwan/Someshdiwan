@@ -4,203 +4,119 @@
   <meta charset="utf-8" />
   <style>
     :root{
-      --bg: rgba(0,0,0,0);
-      --page-w: 1200px;
-      --page-h: 360px;
-      --card-w: 420px;
+      --w: 600px;
+      --h: 360px;
     }
-    html,body{height:100%;margin:0;padding:0;background:var(--bg);}
+    html,body{height:100%;margin:0;padding:0;background:transparent;}
     body{
-      width:var(--page-w);
-      height:var(--page-h);
+      width:var(--w);
+      height:var(--h);
       display:flex;
       align-items:center;
       justify-content:center;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family:"Segoe UI",Roboto,Arial,sans-serif;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
     }
-
-    .wrap{
-      width:var(--card-w);
-      border-radius:20px;
-      padding:22px;
-      box-sizing:border-box;
+    .frame{
+      width:420px;
+      height:300px;
       position:relative;
       display:flex;
-      flex-direction:column;
       align-items:center;
-      gap:14px;
-      backdrop-filter: blur(4px);
+      justify-content:center;
     }
-
-    svg.sticky-bg{
+    svg.sticky{
       position:absolute;
       inset:0;
       width:100%;
       height:100%;
       pointer-events:none;
     }
-
-    /* sticky notes group positions */
-    .sticky-a{ position:absolute; left:-68px; top:-42px; transform: rotate(-12deg) scale(.78); opacity:.95; }
-    .sticky-b{ position:absolute; right:-64px; top:-56px; transform: rotate(8deg) scale(.84); opacity:.95; }
-    .sticky-c{ position:absolute; left:28px; bottom:-56px; transform: rotate(6deg) scale(.68); opacity:.9; }
-
-    .title { font-size:18px; color:#c89d2b; font-weight:700; letter-spacing:.2px; text-align:center; }
-    .hours { font-size:44px; color:#ffffff; font-weight:800; text-shadow:0 6px 18px rgba(0,0,0,0.45); }
-    .hrs-sub { font-size:12px; color:#a7c6c3; margin-top:-6px; }
-
-    .donuts {
-      width:100%;
+    .card {
+      width:86%;
+      height:78%;
       display:flex;
-      justify-content:center;
-      gap:12px;
-      padding-top:4px;
-    }
-
-    .donut {
-      width:84px;
-      height:84px;
-      border-radius:50%;
-      background:linear-gradient(180deg,#0b2b2c,#0f2f31);
-      display:flex;
+      flex-direction:column;
       align-items:center;
       justify-content:center;
-      position:relative;
-      box-shadow:0 4px 18px rgba(3,10,10,0.6);
-    }
-
-    .donut svg { position:absolute; inset:0; width:100%; height:100%; transform: rotate(-90deg); }
-    .donut .inner {
-      width:50%;
-      height:50%;
-      border-radius:50%;
-      background:rgba(15,20,20,0.85);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:2;
-      color:#fff;
-      font-weight:700;
-      font-size:13px;
-      text-shadow:0 2px 4px rgba(0,0,0,0.6);
-    }
-
-    .note-legend {
-      font-size:11px;
-      color:#9fb3b1;
-      margin-top:6px;
+      z-index:3;
+      color:#012;
       text-align:center;
     }
-
-    /* responsive-ish clamping for image output */
-    @media (max-width:1200px){ body{transform:scale(.9);} }
+    .title { font-size:15px; color:#6b5a1f; font-weight:700; letter-spacing:0.2px; margin-bottom:6px; }
+    .hours { font-size:44px; color:#2b2b2b; font-weight:800; margin:4px 0; }
+    .sub { font-size:12px; color:#6b6b6b; margin-top:6px; }
+    .donuts { display:flex; gap:12px; margin-top:12px; justify-content:center; }
+    .donut { width:72px; height:72px; position:relative; display:flex; align-items:center; justify-content:center; border-radius:50%; background:transparent; }
+    .donut svg{ width:72px;height:72px; transform:rotate(-90deg); }
+    .donut .inner{ position:absolute; width:36px; height:36px; border-radius:50%; background:#fff8e6; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#2b2b2b;}
+    .note-click { font-size:11px; color:rgba(43,43,43,0.65); margin-top:10px; }
   </style>
 </head>
 <body>
-<div class="wrap" role="img" aria-label="WakaTime card">
-  <!-- sticky note SVGs (3 variations) -->
-  <svg class="sticky-bg sticky-a" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+<div class="frame" role="img" aria-label="WakaTime sticky">
+  <svg class="sticky" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <filter id="sdrop" x="-50%" y="-50%" width="200%" height="200%">
-        <feDropShadow dx="6" dy="8" stdDeviation="12" flood-color="#001818" flood-opacity="0.6"/>
+      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+        <feDropShadow dx="6" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
       </filter>
     </defs>
-    <g filter="url(#sdrop)">
-      <path d="M12 12 h164 a12 12 0 0 1 12 12 v120 a12 12 0 0 1 -12 12 h-80 q-12 8 -24 8 t-24 -8 h-40 z"
-            fill="#fff1b9" stroke="#f0dfa0" stroke-width="1.2"/>
-      <path d="M156 132 q18 -4 26 -12 v-60 q0 -6 -6 -6 h-18 q-6 0 -6 6 v66z" fill="#ffeab0" opacity=".95"/>
-      <path d="M150 18 q10 12 0 26" stroke="#fde4a2" stroke-width="2" fill="none" opacity=".3"/>
-      <ellipse cx="120" cy="28" rx="8" ry="4" fill="#fff8d8" opacity=".7"/>
+
+    <g filter="url(#shadow)">
+      <path d="M18 18 h320 a16 16 0 0 1 16 16 v160 a16 16 0 0 1 -16 16 h-148 q-12 8 -24 8 t-24 -8 h-144 z" fill="#fff4b8" stroke="#f0dfa0" stroke-width="1.2"/>
+      <path d="M330 162 q0 10 -10 18 l-24 12 q-10 8 -18 6" fill="#ffee9e" opacity="0.95"/>
+      <path d="M328 34 q-4 16 -18 24" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
+      <path d="M328 34 q6 6 6 14" stroke="#f8e9b0" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M254 234 q10 -4 22 -12" stroke="#f2e3a0" stroke-width="1" fill="none" opacity="0.4"/>
     </g>
+
+    <g transform="translate(290,28) rotate(12)">
+      <path d="M0 0 q18 10 0 40 q-10 12 -30 12" fill="#fff0a8" opacity="0.95"/>
+    </g>
+
+    <ellipse cx="310" cy="36" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
   </svg>
 
-  <svg class="sticky-bg sticky-b" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#sdrop)">
-      <path d="M12 12 h164 a12 12 0 0 1 12 12 v120 a12 12 0 0 1 -12 12 h-164 z" fill="#fff8d2" stroke="#f7e9b0" stroke-width="1"/>
-      <path d="M172 14 q-8 8 -6 22 l18 6" fill="none" stroke="#f1d98e" stroke-width="1.4" opacity=".6"/>
-      <path d="M24 160 q10 8 24 8 h100" stroke="#f2e0a8" stroke-width="1" fill="none" opacity=".6"/>
-    </g>
-  </svg>
-
-  <svg class="sticky-bg sticky-c" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#sdrop)">
-      <path d="M12 12 h132 a12 12 0 0 1 12 12 v92 q-6 6 -18 10 l-8 2 q-10 4 -16 4 h-102 z"
-            fill="#fff6c8" stroke="#f0e2a5" stroke-width="1.1"/>
-      <path d="M120 120 q20 -6 36 -6" stroke="#f5e8b0" stroke-width="2" fill="none" opacity=".5"/>
-    </g>
-  </svg>
-
-  <!-- main content over sticky notes; transparent background preserved -->
-  <div style="position:relative; z-index:6; width:100%; display:flex; flex-direction:column; align-items:center;">
+  <div class="card">
     <div class="title">WakaTime (All Time)</div>
-    <div style="display:flex;flex-direction:column;align-items:center;">
-      <div class="hours" id="hours">0.0</div>
-      <div class="hrs-sub" id="hrs-sub">hrs coding</div>
-    </div>
+    <div class="hours" id="hours">0.0</div>
+    <div class="sub" id="sub">hrs coding</div>
 
     <div class="donuts" id="donuts"></div>
-    <div class="note-legend">Click image to open WakaTime profile</div>
+    <div class="note-click">Click image to open WakaTime profile</div>
   </div>
 </div>
 
 <script>
-  // window.__WAKA_DATA__ will be injected by the renderer (render_waka_png.js)
-  const D = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
+  const DATA = window.__WAKA_DATA__ || { hours: "0.0", languages: [] };
+  const hoursEl = document.getElementById('hours');
+  const subEl = document.getElementById('sub');
+  hoursEl.textContent = (DATA.hours || "0.0");
+  subEl.textContent = 'hrs coding';
 
-  function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
-
-  document.getElementById('hours').textContent = (D.hours || "0.0");
-  const secs = D.hours && D.hours.toString().includes(":") ? D.hours : D.hours;
-  document.getElementById('hrs-sub').textContent = 'hrs coding';
-
-  const donuts = document.getElementById('donuts');
-  const langs = (D.languages || []).slice(0,3);
-  if(langs.length===0){
-    const empty = document.createElement('div');
-    empty.style.color = '#9fb3b1';
-    empty.style.fontSize = '13px';
-    empty.textContent = 'No language data';
-    donuts.appendChild(empty);
+  const donutsWrap = document.getElementById('donuts');
+  const langs = (DATA.languages || []).slice(0,3);
+  if (langs.length === 0) {
+    const p = document.createElement('div'); p.style.color = '#6b6b6b'; p.style.fontSize='13px'; p.textContent = 'No data';
+    donutsWrap.appendChild(p);
   } else {
-    langs.forEach(l => {
-      const pct = clamp(Number(l.percent || 0), 0, 100);
-      const col = l.color || '#f6a936';
-      const c = document.createElement('div');
-      c.className = 'donut';
-
-      const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
-      svg.setAttribute('viewBox','0 0 100 100');
-      const bg = document.createElementNS(svg.namespaceURI,'circle');
-      bg.setAttribute('cx','50'); bg.setAttribute('cy','50'); bg.setAttribute('r','40'); bg.setAttribute('fill','none');
-      bg.setAttribute('stroke','#183333'); bg.setAttribute('stroke-width','18'); svg.appendChild(bg);
-
-      const arc = document.createElementNS(svg.namespaceURI,'circle');
-      arc.setAttribute('cx','50'); arc.setAttribute('cy','50'); arc.setAttribute('r','40'); arc.setAttribute('fill','none');
-      arc.setAttribute('stroke',col); arc.setAttribute('stroke-width','18');
-      arc.setAttribute('stroke-linecap','round');
-      const circumference = 2*Math.PI*40;
-      const offset = circumference * (1 - (pct/100));
-      arc.setAttribute('stroke-dasharray', `${circumference} ${circumference}`);
-      arc.setAttribute('stroke-dashoffset', `${offset}`);
+    langs.forEach(lang => {
+      const pct = Math.max(0, Math.min(100, Number(lang.percent || 0)));
+      const color = lang.color || '#f6a936';
+      const donut = document.createElement('div'); donut.className = 'donut';
+      const svgNS = 'http://www.w3.org/2000/svg';
+      const svg = document.createElementNS(svgNS,'svg'); svg.setAttribute('viewBox','0 0 100 100');
+      const bg = document.createElementNS(svgNS,'circle'); bg.setAttribute('cx','50'); bg.setAttribute('cy','50'); bg.setAttribute('r','40'); bg.setAttribute('fill','none'); bg.setAttribute('stroke','#efe0bd'); bg.setAttribute('stroke-width','18'); svg.appendChild(bg);
+      const arc = document.createElementNS(svgNS,'circle'); arc.setAttribute('cx','50'); arc.setAttribute('cy','50'); arc.setAttribute('r','40'); arc.setAttribute('fill','none'); arc.setAttribute('stroke',color); arc.setAttribute('stroke-width','18'); arc.setAttribute('stroke-linecap','round');
+      const circumference = 2*Math.PI*40; const offset = circumference * (1 - pct/100);
+      arc.setAttribute('stroke-dasharray', `${circumference} ${circumference}`); arc.setAttribute('stroke-dashoffset', `${offset}`);
       svg.appendChild(arc);
-
-      c.appendChild(svg);
-      const inner = document.createElement('div');
-      inner.className = 'inner';
-      inner.style.width = '46%';
-      inner.style.height = '46%';
-      inner.style.borderRadius = '50%';
-      inner.style.background = 'rgba(10,20,20,0.9)';
-      inner.style.display = 'flex';
-      inner.style.alignItems = 'center';
-      inner.style.justifyContent = 'center';
-      inner.style.flexDirection = 'column';
-      inner.style.zIndex = '2';
-      inner.innerHTML = `<div style="font-size:12px;font-weight:700;color:#fff">${l.name}</div><div style="font-size:12px;color:#ffd86b;margin-top:4px">${Math.round(pct)}%</div>`;
-      c.appendChild(inner);
-      donuts.appendChild(c);
+      donut.appendChild(svg);
+      const inner = document.createElement('div'); inner.className='inner'; inner.style.width='36px'; inner.style.height='36px'; inner.style.borderRadius='50%'; inner.style.background='#fff4cf'; inner.style.display='flex'; inner.style.alignItems='center'; inner.style.justifyContent='center'; inner.style.flexDirection='column'; inner.style.fontSize='11px'; inner.style.fontWeight='700'; inner.style.color='#2b2b2b';
+      inner.innerHTML = `<div>${lang.name}</div><div style="color:#806015;margin-top:4px;font-size:11px">${Math.round(pct)}%</div>`;
+      donut.appendChild(inner);
+      donutsWrap.appendChild(donut);
     });
   }
 </script>
