@@ -1,6 +1,9 @@
 // scripts/wakatime_to_svg.js
-// Fetch last 7-day summary from WakaTime and render basic SVG.
-// Requires WAKATIME_API_KEY in GitHub Secrets.
+/**
+ * Generates a polished wakatime.svg showing ALL-TIME total hours and top languages.
+ * - Uses WAKATIME_API_KEY secret (Basic auth with key: blank_password)
+ * - Creates clickable SVG linking to your WakaTime profile
+ */
 
 const fs = require('fs');
 const path = require('path');
@@ -12,53 +15,98 @@ if (!apiKey) {
 }
 
 async function fetchWaka(url) {
-    // WakaTime accepts Basic auth with key as username and blank password:
+    // WakaTime expects Basic auth with key as username and blank password
     const authHeader = Buffer.from(`${apiKey}:`).toString('base64');
     const res = await fetch(url, {
-        headers: { Authorization: `Basic ${authHeader}` },
+        headers: { Authorization: `Basic ${authHeader}` }
     });
-    if (!res.ok) throw new Error(`WakaTime API error: ${res.status} ${res.statusText}`);
+    if (!res.ok) {
+        throw new Error(`WakaTime API error: ${res.status} ${res.statusText}`);
+    }
     return res.json();
 }
 
+function px(n) { return `${n}px`; }
 
-function makeWakaSVG(totalHours, languages) {
-    const width = 900, height = 220;
-    const topLangs = languages.slice(0, 4);
-    const langLines = topLangs.map((l, i) => {
-        const y = 80 + i * 30;
-        const pct = Math.round(l.percent);
-        return `<text x="230" y="${y}" font-size="18" fill="#ffffff">${l.name}</text>
-            <text x="560" y="${y}" font-size="18" fill="#f6a936">${pct}%</text>`;
+function makeWakaSVG(totalHours, languages, username) {
+    // Layout sizes
+    const w = 1000;
+    const h = 260;
+    const leftPad = 40;
+    const topPad = 30;
+
+    const topLangs = languages.slice(0, 6);
+    // language bars: max width scaled to 420
+    const maxBar = 420;
+
+    const langRows = topLangs.map((l, i) => {
+        const y = 130 + i * 26;
+        const pct = Math.round(l.percent || 0);
+        const barW = Math.round((pct / 100) * maxBar);
+        return `
+      <text x="${leftPad + 8}" y="${y}" font-size="15" fill="#ffffff" font-family="Segoe UI, Roboto, Arial">${l.name}</text>
+      <rect x="${leftPad + 120}" y="${y - 14}" width="${barW}" height="12" rx="6" fill="#f6a936" />
+      <text x="${leftPad + 560}" y="${y}" font-size="15" fill="#ffd86b" font-family="Segoe UI, Roboto, Arial">${pct}%</text>
+    `;
     }).join('\n');
 
+    // clickable SVG wrapper using xlink:href
+    const profileLink = `https://wakatime.com/@${username}`;
+
     return `<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
-  <rect width="100%" height="100%" fill="#0f2527" rx="8"/>
-  <text x="40" y="50" font-size="20" fill="#ffd86b" font-weight="700">WakaTime (last 7 days)</text>
-  <text x="40" y="95" font-size="48" fill="#ffffff" font-weight="700">${totalHours} hrs</text>
-  ${langLines}
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="WakaTime all-time ${totalHours} hours">
+  <style>
+    .bg{fill:#0f2527}
+    .card{rx:12; fill:#0f2527}
+    .title{font-family: 'Segoe UI', Roboto, Arial; font-size:20px; fill:#ffd86b; font-weight:700}
+    .hours{font-family: Georgia, 'Times New Roman', serif; font-size:60px; fill:#ffffff; font-weight:700}
+    .lang{font-family: 'Segoe UI', Roboto, Arial; font-size:15px; fill:#ffffff}
+    .pct{font-family: 'Segoe UI', Roboto, Arial; font-size:15px; fill:#ffd86b; font-weight:700}
+  </style>
+
+  <a xlink:href="${profileLink}" target="_blank">
+    <rect width="100%" height="100%" fill="#0f2527" rx="12"/>
+    <g transform="translate(${leftPad},${topPad})">
+      <text class="title" x="0" y="26">WakaTime (All time)</text>
+      <text class="hours" x="0" y="86">${totalHours} hrs</text>
+
+      <!-- language bars -->
+      ${langRows}
+
+      <!-- small footer -->
+      <text x="0" y="${h - 18}" font-size="12" fill="#9fb3b3" font-family="Segoe UI, Roboto, Arial">Click to view full WakaTime profile</text>
+    </g>
+  </a>
 </svg>`;
 }
 
 (async () => {
     try {
-        const url = 'https://wakatime.com/api/v1/users/current/stats/last_7_days';
+        // ALL-TIME endpoint
+        const url = 'https://wakatime.com/api/v1/users/current/stats/all_time';
         const data = await fetchWaka(url);
-        const totalSec = data.data.total_seconds || 0;
-        const totalHours = (totalSec / 3600).toFixed(1);
 
+        // total_seconds: sometimes nested in data.data.total_seconds or data.data
+        const totalSec = data.data.total_seconds || data.data.total_seconds_all || 0;
+        const totalHours = ((totalSec / 3600) || 0).toFixed(1);
+
+        // languages array: name, percent or total_seconds
         const languages = (data.data.languages || []).map(l => ({
             name: l.name,
             percent: l.percent || (l.total_seconds ? (l.total_seconds / totalSec) * 100 : 0),
             total_seconds: l.total_seconds || 0
         }));
 
-        const svg = makeWakaSVG(totalHours, languages);
+        // determine username for link path from user object or environment fallback
+        const username = (data.data.username || '').replace('@', '') || process.env.WAKATIME_USERNAME || 'SomeshDiwan';
+
+        const svg = makeWakaSVG(totalHours, languages, username);
         fs.writeFileSync(path.join(process.cwd(), 'wakatime.svg'), svg, 'utf8');
         console.log('wakatime.svg written:', totalHours, 'hrs');
     } catch (err) {
-        console.error('Error:', err);
+        console.error('Error in wakatime_to_svg:', err);
         process.exit(1);
     }
 })();
