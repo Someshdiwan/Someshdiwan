@@ -128,6 +128,7 @@ function safeFontFamily() {
    - subtle notch & drop shadow under the card
 */
 
+
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -142,7 +143,6 @@ function makeStreakSVG(streak) {
       <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"/>
     </clipPath>
 
-    <!-- soft shadow for the card -->
     <filter id="cardShadow" x="-50%" y="-50%" width="220%" height="220%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
       <feOffset dx="4" dy="12" result="offsetblur"/>
@@ -150,13 +150,11 @@ function makeStreakSVG(streak) {
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
 
-    <!-- card gradient -->
     <linearGradient id="cardGrad" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0%" stop-color="#fff6c7"/>
       <stop offset="100%" stop-color="#ffe29a"/>
     </linearGradient>
 
-    <!-- number gradient — softer/brighter -->
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#fff0a8"/>
       <stop offset="55%" stop-color="#ffd06a"/>
@@ -170,7 +168,6 @@ function makeStreakSVG(streak) {
       .sub { fill:#444; font-size:16px; text-anchor:middle; }
       .egg-shadow { fill: rgba(0,0,0,0.12); }
 
-      /* slower, gentler animations */
       .floaty { animation: floaty 4800ms ease-in-out infinite; transform-origin: center; }
       .flicker { animation: flicker 4200ms ease-in-out infinite; transform-origin: center; }
 
@@ -188,7 +185,6 @@ function makeStreakSVG(streak) {
     </style>
   </defs>
 
-  <!-- card + shadow -->
   <g filter="url(#cardShadow)">
     <rect x="20" y="20" width="${width - 40}" height="${height - 40}" rx="22" ry="22"
           fill="url(#cardGrad)" stroke="#e6d09a" stroke-width="1.2"/>
@@ -197,23 +193,20 @@ function makeStreakSVG(streak) {
 
   <g clip-path="url(#cardClip)">
 
-    <!-- Left big flame (main decorative egg/flame) -->
+    <!-- Left flame -->
     <g transform="translate(60,70)">
       <ellipse class="egg-shadow" cx="30" cy="90" rx="50" ry="16" opacity="0.12"/>
       <g class="floaty">
         <g class="flicker">
-          <!-- outer soft orange -->
           <path d="M70 20 C50 -4 36 -4 22 20 C10 38 14 88 40 94 C66 100 80 60 70 20 Z" fill="#ffc84a"/>
-          <!-- mid highlight -->
           <path d="M58 52 C50 40 46 40 38 52 C34 60 42 72 56 68 C66 66 76 60 58 52 Z" fill="#fff7df" opacity="0.92"/>
-          <!-- core richer orange/red -->
           <path d="M52 14 C46 8 44 10 40 16 C38 22 44 28 52 26 C58 24 64 18 52 14 Z" fill="#ff7a2e" opacity="0.98"/>
         </g>
       </g>
     </g>
 
-    <!-- Small top-right flame (moved further inside so it isn't cut off) -->
-    <g transform="translate(${width - 130}, 60) scale(0.58)" class="floaty">
+    <!-- Small top-right flame (moved more inward & scaled down) -->
+    <g transform="translate(${width - 160}, 60) scale(0.45)" class="floaty">
       <ellipse cx="0" cy="20" rx="18" ry="6" fill="rgba(0,0,0,0.12)" />
       <g class="flicker">
         <path d="M18 -6 C12 -16 -4 -18 -10 -6 C-14 2 -10 22 6 24 C20 26 26 10 18 -6 Z" fill="#ff9e2a"/>
@@ -228,25 +221,31 @@ function makeStreakSVG(streak) {
       <text x="${width/2}" y="190" class="sub">Days</text>
     </g>
 
-    <!-- Medium flame centered below number (moved slightly lower) -->
+    <!-- Medium flame below number -->
     <g transform="translate(${width/2}, 250) scale(0.92)" class="floaty">
       <ellipse cx="0" cy="18" rx="36" ry="10" fill="rgba(0,0,0,0.10)" />
       <g class="flicker">
         <path d="M36 -8 C26 -24 -8 -28 -18 -8 C-26 6 -18 34 12 36 C36 38 44 16 36 -8 Z" fill="#ffb43f" opacity="0.98"/>
         <path d="M24 8 C18 2 6 2 2 8 C0 12 4 18 12 18 C18 18 26 14 24 8 Z" fill="#fff8df" opacity="0.95"/>
-        <!-- small core red tongue -->
         <path d="M12 -2 C8 -10 0 -12 -6 -2 C-6 0 -2 6 6 6 C10 6 14 4 12 -2 Z" fill="#ff6a2e" opacity="0.95"/>
       </g>
     </g>
 
   </g>
 
-  <!-- clickable overlay -->
   <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener">
     <rect x="0" y="0" width="${width}" height="${height}" fill="none"/>
   </a>
 </svg>`;
 }
+
+
+
+
+
+
+
+
 
 
 
