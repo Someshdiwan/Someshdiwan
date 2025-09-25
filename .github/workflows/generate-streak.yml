@@ -1,18 +1,21 @@
-name: Generate WakaTime SVG
+name: Generate Streak SVG
 
 on:
   schedule:
-    - cron: '0 1 * * *'   # daily at 01:00 UTC (choose time)
+    - cron: '0 0 * * *' # run daily at midnight UTC
   workflow_dispatch:
+  push:
+    branches: [ main ]
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  build-and-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           persist-credentials: true
 
@@ -21,22 +24,22 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies (if any)
-        run: npm ci || npm install || echo "no deps"
+      - name: Install dependencies
+        run: npm ci || npm install
 
-      - name: Generate wakatime.svg
+      - name: Generate streak.svg
         env:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: node ./scripts/wakatime_to_svg.js
+        run: node ./scripts/generate_streak.js
 
-      - name: Commit if changed
+      - name: Commit generated SVG if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add wakatime.svg || true
+          git add streak.svg || true
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update wakatime svg"
+            git commit -m "chore: update streak svg"
             git push
           else
             echo "No changes to commit"
