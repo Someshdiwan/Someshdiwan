@@ -8,7 +8,7 @@
   },
   "scripts": {
     "generate:streak": "node ./scripts/generate_streak.js",
-    "generate:wakatime": "node ./scripts/wakatime_to_svg.js",
+    "generate:wakatime": "node \"Archived Codes/wakatime_to_svg.js\"",
     "render:waka": "node ./scripts/render_waka_png.js"
   }
 }
