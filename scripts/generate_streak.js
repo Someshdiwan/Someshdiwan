@@ -1,15 +1,4 @@
 // scripts/generate_streak.js
-/**
- * Generates an animated SVG 'streak.svg' for your GitHub profile.
- * Uses GitHub GraphQL via the action-provided GITHUB_TOKEN.
- *
- * This version supports "resume" mode: if a streak_state.json exists with a
- * previously recorded streak and date, the script will attempt to continue
- * that streak if there were no contribution gaps between the saved date and
- * the latest calendar day. Otherwise it falls back to the calendar-computed
- * streak.
- */
-
 const { graphql } = require('@octokit/graphql');
 const fs = require('fs');
 const path = require('path');
@@ -68,7 +57,6 @@ function flattenDays(calendar) {
 }
 
 function calendarStreakFromLastDay(days) {
-    // count consecutive >0 days starting from the last available day backwards
     let i = days.length - 1;
     let streak = 0;
     for (; i >= 0; i--) {
@@ -79,11 +67,10 @@ function calendarStreakFromLastDay(days) {
 }
 
 function datesBetweenInclusive(startDateStr, endDateStr) {
-    // returns array of YYYY-MM-DD strings from startDate (exclusive) to endDate (inclusive)
     const res = [];
     let cur = new Date(startDateStr + 'T00:00:00Z');
     const end = new Date(endDateStr + 'T00:00:00Z');
-    cur.setUTCDate(cur.getUTCDate() + 1); // start from next day after startDate
+    cur.setUTCDate(cur.getUTCDate() + 1);
     while (cur <= end) {
         res.push(cur.toISOString().slice(0, 10));
         cur.setUTCDate(cur.getUTCDate() + 1);
@@ -112,96 +99,79 @@ function writeState(obj) {
     fs.writeFileSync(STATE_FILE, JSON.stringify(obj, null, 2), 'utf8');
 }
 
-/**
- * makeStreakSVG: replaced UI only.
- * Produces a 420x300 "sticky note" card visually matching the WakaTime card.
- * No logic changes elsewhere.
- */
+/* ---------------------- UI only: makeStreakSVG ----------------------
+   This function was changed to produce a sticky-note style card
+   that visually matches the WakaTime sticky card:
+   - pale yellow gradient card
+   - rounded corners, soft drop shadow
+   - large centered number with gradient fill
+   - flame illustration at top-left
+   - NO donuts / contrib / commit visuals
+   Logic outside this function is unchanged.
+----------------------------------------------------------------------*/
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
-    const hoursText = String(streak);
+    const txt = String(streak);
     return `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${hoursText} days">
+     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(txt)} days">
   <defs>
     <filter id="sdrop" x="-60%" y="-60%" width="220%" height="220%">
-      <feDropShadow dx="6" dy="18" stdDeviation="14" flood-color="#000" flood-opacity="0.32"/>
+      <feDropShadow dx="6" dy="14" stdDeviation="12" flood-color="#000" flood-opacity="0.32"/>
     </filter>
+
     <linearGradient id="cardGrad" x1="0" x2="1">
-      <stop offset="0%" stop-color="#fff6c7"/>
+      <stop offset="0%" stop-color="#fff7d0"/>
       <stop offset="100%" stop-color="#fff1b8"/>
     </linearGradient>
+
     <linearGradient id="numGrad" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#ffd86b"/>
       <stop offset="100%" stop-color="#f39a2e"/>
     </linearGradient>
+
     <style>
-      .card-font { font-family: "Comic Sans MS", "Segoe UI", Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:#6b5a1f; font-weight:700; font-size:18px; }
-      .big { fill:url(#numGrad); font-weight:800; font-size:96px; text-anchor:middle; filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)); }
-      .sub { fill:#6b6b6b; font-size:14px; text-anchor:middle; }
-      .donut-label { fill:#2b2b2b; font-weight:700; font-size:12px; text-anchor:middle; }
-      .donut-pct { fill:#806015; font-size:12px; text-anchor:middle; }
+      .font-play { font-family: "Comic Sans MS", "Segoe UI", Roboto, Arial, sans-serif; -webkit-font-smoothing:antialiased; }
+      .title { fill:#6b5a1f; font-size:18px; font-weight:700; }
+      .big { font-size:96px; font-weight:800; text-anchor:middle; fill:url(#numGrad); filter: drop-shadow(0 6px 0 rgba(0,0,0,0.12)); }
+      .label { font-size:14px; fill:#6b6b6b; text-anchor:middle; }
     </style>
   </defs>
 
-  <!-- sticky card body -->
+  <!-- sticky note base with shadow -->
   <g filter="url(#sdrop)">
-    <path d="M20 20 h300 a20 20 0 0 1 20 20 v160 a20 20 0 0 1 -20 20 h-134 q-12 8 -24 8 t-24 -8 h-144 z"
+    <path d="M18 18 h320 a24 24 0 0 1 24 24 v160 a24 24 0 0 1 -24 24 h-148 q-12 10 -24 10 t-24 -10 h-144 z"
           fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2" />
     <!-- peeled corner highlight -->
-    <path d="M322 62 q-6 18 -22 26" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
-    <ellipse cx="305" cy="46" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
+    <path d="M338 56 q-6 18 -22 26" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <ellipse cx="312" cy="44" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
+  </g>
+
+  <!-- flame element (top-left) -->
+  <g transform="translate(88,32) scale(0.9)" opacity="0.98">
+    <g transform="translate(0,0)">
+      <ellipse cx="30" cy="96" rx="60" ry="12" fill="rgba(0,0,0,0.16)"/>
+      <path d="M98 32 C86 6 60 -6 42 24 C28 48 32 88 60 92 C92 96 116 70 98 32 Z" fill="#ffd86b"/>
+      <path d="M78 56 C70 44 54 48 48 62 C46 70 54 80 68 76 C76 74 84 68 78 56 Z" fill="#fff3d8"/>
+      <path d="M74 22 C68 14 56 16 52 26 C50 34 58 40 66 36 C72 33 76 28 74 22 Z" fill="#ffe08a" opacity="0.95"/>
+    </g>
   </g>
 
   <!-- content -->
-  <g class="card-font" transform="translate(0,0)">
-    <text x="${width/2}" y="64" class="title">GitHub streak</text>
+  <g transform="translate(0,0)" class="font-play">
+    <text x="${width/2}" y="62" class="title">GitHub streak</text>
+    <text x="${width/2}" y="150" class="big">${escapeXml(txt)}</text>
+    <text x="${width/2}" y="178" class="label">day streak</text>
 
-    <text x="${width/2}" y="150" class="big">${escapeXml(hoursText)}</text>
-
-    <text x="${width/2}" y="178" class="sub">day streak</text>
-
-    <!-- three small decorative donuts (visual symmetry only) -->
-    <g transform="translate(70,220)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="75"
-              transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
-      <text x="0" y="-2" class="donut-label">Contrib</text>
-      <text x="0" y="14" class="donut-pct">—</text>
+    <!-- subtle flame drip (decorative) -->
+    <g transform="translate(280,18)">
+      <ellipse cx="0" cy="0" rx="8" ry="10" fill="#f39a2e" opacity="0.95"/>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,6;0,0" dur="2.6s" repeatCount="indefinite" />
     </g>
 
-    <g transform="translate(210,220)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="120"
-              transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
-      <text x="0" y="-2" class="donut-label">Commit</text>
-      <text x="0" y="14" class="donut-pct">—</text>
-    </g>
-
-    <g transform="translate(350,220)">
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"></circle>
-      <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
-              stroke-linecap="round"
-              stroke-dasharray="188.49555921538757 188.49555921538757"
-              stroke-dashoffset="150"
-              transform="rotate(-90)"></circle>
-      <circle cx="0" cy="0" r="14.4" fill="#fff4cf"></circle>
-      <text x="0" y="-2" class="donut-label">Days</text>
-      <text x="0" y="14" class="donut-pct">—</text>
-    </g>
-
-    <!-- clickable overlay anchor (won't be active in raw preview but safe) -->
+    <!-- clickable anchor (safe to include) -->
     <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
   </g>
 </svg>`;
@@ -218,30 +188,24 @@ function escapeXml(s) {
         const days = flattenDays(calendar);
         if (!days.length) throw new Error('No contribution data found.');
 
-        // debug: show last 12 days
         console.log('last12:', days.slice(-12).map(d => `${d.date}:${d.count}`).join(', '));
 
         const { streak: calendarStreak, lastDayDate } = calendarStreakFromLastDay(days);
         console.log('calendarStreak:', calendarStreak, 'lastDayDate:', lastDayDate);
 
-        // attempt resume from saved state
         const state = readState();
         let finalStreak = calendarStreak;
         if (state && state.streak != null && state.date) {
             try {
                 const savedDate = state.date;
-                // If saved date is same as lastDayDate, use saved streak (no change)
                 if (savedDate === lastDayDate) {
                     finalStreak = state.streak;
                     console.log('Using saved state (same day):', state);
                 } else {
-                    // Check each date between savedDate (exclusive) and lastDayDate (inclusive)
                     const range = datesBetweenInclusive(savedDate, lastDayDate);
                     const dayMap = buildDayMap(days);
-                    // Are all days in range present and >0?
                     const allHaveContrib = range.length > 0 && range.every(d => (dayMap.get(d) || 0) > 0);
                     if (allHaveContrib) {
-                        // continue streak
                         finalStreak = state.streak + range.length;
                         console.log('Continuing saved streak. added days:', range.length, '->', finalStreak);
                     } else {
@@ -257,7 +221,6 @@ function escapeXml(s) {
             console.log('No saved state found — using calendar streak.');
         }
 
-        // write svg and state
         const svg = makeStreakSVG(finalStreak);
         const outPath = path.join(process.cwd(), 'streak.svg');
         fs.writeFileSync(outPath, svg, 'utf8');
