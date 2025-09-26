@@ -1,5 +1,9 @@
 ![Somesh Diwan — Software Engineering | Java | Machine Learning](my.svg)
 
+### Hello there 👋
+
+- 💻 I'm somesh, a Software Developer from India. (Setup is going on..)
+- 
 ### Languages & Tools 🛠
 
 <div align="center">
