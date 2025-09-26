@@ -59,7 +59,19 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
-// makeStreakSVG: UNCHANGED UI
+// ---- minimal fixes: provide repoOwner & makeWakaSVG (no UI changes) ----
+let repoOwner = '';
+
+function makeWakaSVG(normalized, username) {
+    // keep your existing anchor working
+    repoOwner = username || process.env.WAKATIME_USERNAME || '';
+    // feed an existing numeric value; no UI logic touched
+    const value = Number(normalized?.hours ?? 0);
+    return makeStreakSVG(value);
+}
+// -----------------------------------------------------------------------
+
+// build SVG string (UNCHANGED)
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
@@ -145,18 +157,6 @@ function makeStreakSVG(streak) {
   </g>
 </svg>`;
 }
-
-// ---- minimal fixes start here ----
-let repoOwner = ''; // so the existing template reference does not throw
-
-function makeWakaSVG(normalized, username) {
-    // Set the variable your SVG template already references. No UI changes.
-    repoOwner = username || process.env.WAKATIME_USERNAME || '';
-    // Feed the existing SVG with a number. Keep it simple and non-invasive.
-    const value = (normalized && normalized.hours != null) ? normalized.hours : 0;
-    return makeStreakSVG(value);
-}
-// ---- minimal fixes end here ----
 
 (async () => {
     let raw = null;
