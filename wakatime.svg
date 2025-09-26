@@ -68,8 +68,4 @@
       </g>
   </g>
 
-  <!-- clickable overlay (safe for GitHub rendering) -->
-  <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-    <rect x="0" y="0" width="420" height="300" fill="none"/>
-  </a>
 </svg>
