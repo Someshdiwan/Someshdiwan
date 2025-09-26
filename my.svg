@@ -1,0 +1,82 @@
+<svg width="1536" height="522" viewBox="0 0 1536 522" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+    <title id="t">Somesh Diwan — Software Developer | Java | Machine Learning</title>
+    <desc id="d">Soft teal background, cream card, sunflower notch, rounded display title and handwritten-style subtitle, penguin with handheld device.</desc>
+
+    <defs>
+        <style>
+            .title{
+            font: 900 120px/1 "Baloo 2","Lilita One","Arial Rounded MT Bold","Nunito",system-ui,sans-serif;
+            letter-spacing: 6px;
+            fill: #2E4756;
+            }
+            .sub{
+            font: 600 40px/1.25 "Kalam","Patrick Hand","Comic Sans MS",system-ui,cursive;
+            fill: #3F5563;
+            }
+        </style>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity=".12"/>
+        </filter>
+        <g id="sun">
+            <circle r="22" fill="#FFE37A"/>
+            <g fill="#F7D24C">
+                <path d="M0,-52 12,-18 -12,-18Z"/>
+                <path d="M37,-37 12,-12 -12,-12Z"/>
+                <path d="M52,0 18,-12 18,12Z"/>
+                <path d="M37,37 12,12 -12,12Z"/>
+                <path d="M0,52 -12,18 12,18Z"/>
+                <path d="M-37,37 -12,12 12,12Z"/>
+                <path d="M-52,0 -18,12 -18,-12Z"/>
+                <path d="M-37,-37 -12,-12 12,-12Z"/>
+            </g>
+            <path d="M-30,-40 Q-70,-60 -80,-30 Q-60,-20 -30,-30Z" fill="#19A565" transform="rotate(-20)"/>
+        </g>
+    </defs>
+    <!-- Background -->
+    <rect width="1536" height="522" fill="#A8CFCF"/>
+    <!-- Card -->
+    <g filter="url(#shadow)">
+        <rect x="64" y="56" width="1376" height="410" rx="22" ry="22" fill="#F6F7EE"/>
+        <path d="M64,108 a52,52 0 0 1 52,-52 h120 v52 z" fill="#F6F7EE"/>
+    </g>
+    <!-- Sunflower -->
+    <g transform="translate(136,108)">
+        <use href="#sun"/>
+    </g>
+    <!-- Text -->
+    <g>
+        <text x="220" y="222" class="title">SOMESH DIWAN</text>
+        <text x="228" y="290" class="sub">Software Developer | Java | Machine Learning</text>
+    </g>
+    <!-- Penguin mascot (rounded cartoon style) -->
+    <g transform="translate(1370,320) scale(0.85)">
+        <!-- Body -->
+        <ellipse cx="0" cy="80" rx="140" ry="190" fill="#D7E9F4"/>
+        <ellipse cx="0" cy="80" rx="120" ry="165" fill="#EFF7FB"/>
+
+        <!-- Head -->
+        <circle cx="0" cy="-20" r="110" fill="#D7E9F4"/>
+        <circle cx="0" cy="-20" r="95" fill="#EFF7FB"/>
+
+        <!-- Beak -->
+        <path d="M -60 10 Q 0 50 60 10 Q 0 -10 -60 10Z" fill="#FFE37A"/>
+        <path d="M -50 15 Q 0 40 50 15 Q 0 10 -50 15Z" fill="#F7D24C"/>
+
+        <!-- Eyes (curved arcs) -->
+        <path d="M -50 -30 Q -30 -50 -10 -30" stroke="#2E4756" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M 10 -30 Q 30 -50 50 -30" stroke="#2E4756" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+        <!-- Arms -->
+        <ellipse cx="-120" cy="70" rx="40" ry="55" fill="#D7E9F4"/>
+        <ellipse cx="120" cy="70" rx="40" ry="55" fill="#D7E9F4"/>
+
+        <!-- Gadget -->
+        <g transform="translate(0,120)">
+            <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20" fill="#1F2A33"/>
+            <rect x="-100" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
+            <rect x="30" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
+            <rect x="-12" y="-15" width="24" height="35" rx="6" ry="6" fill="#19A565"/>
+            <rect x="-170" y="28" width="340" height="10" fill="#19A565"/>
+        </g>
+    </g>
+</svg>
