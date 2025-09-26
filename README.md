@@ -112,10 +112,15 @@
   <a href="https://ollama.com/" target="_blank">
     <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/>
   </a>
-  <!-- Local LLM (gold text SVG from your repo) -->
-  <img src="local-llm.svg" alt="Local LLM" width="120" height="32"/>
+ <!-- Hugging Face (transparent SVG) -->
+<a href="https://huggingface.co/" target="_blank">
+  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="huggingface" width="40" height="40"/>
+</a>
+  <!-- Local LLM (gold SVG, clickable to your Hugging Face profile) -->
+  <a href="https://huggingface.co/CodeWithSomesh" target="_blank">
+    <img src="local-llm.svg" alt="Local LLM" width="120" height="32"/>
+  </a>
 </p>
-
 <h4>Design tools</h4>
       <p>
         <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/></a>
