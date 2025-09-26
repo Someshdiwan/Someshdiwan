@@ -1,3 +1,4 @@
+// scripts/render_waka_svg.js
 const fs = require('fs');
 const path = require('path');
 const fetch = globalThis.fetch || require('node-fetch');
@@ -76,8 +77,10 @@ function makeWakaSVG(data, username) {
     return `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <style>
-    .title { font: bold 16px sans-serif; fill: #444; }
-    .subtitle { font: 14px sans-serif; fill: #666; }
+    /* Apply Comic Sans MS to all text */
+    text { font-family: "Comic Sans MS", "Segoe UI", Roboto, Arial, sans-serif; }
+    .title { font-weight: 700; font-size: 16px; fill: #444; }
+    .subtitle { font-size: 14px; fill: #666; }
   </style>
 
   <rect width="100%" height="100%" fill="#fffbea" stroke="#f0e0a0" stroke-width="1.5" rx="12"/>
