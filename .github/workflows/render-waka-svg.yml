@@ -2,7 +2,7 @@ name: Render WakaTime SVG
 
 on:
   schedule:
-    - cron: '5 3 * * *'        # 03:05 UTC daily (slightly offset from streak)
+    - cron: '5 3 * * *'   # 03:05 UTC daily
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -38,7 +38,7 @@ jobs:
       - name: Render WakaTime SVG
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }} # optional
+          WAKATIME_USERNAME: ${{ secrets.WAKATIME_USERNAME }}
         run: node ./scripts/render_waka_svg.js
 
       - name: Bust README cache for wakatime.svg
@@ -48,16 +48,23 @@ jobs:
 
       - name: Commit if changed
         run: |
-          git config user.name "github-actions[bot]"
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add wakatime.svg README.md || true
+
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
+
           git commit -m "chore: update wakatime.svg"
-          git fetch origin main
-          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-          git pull --rebase origin main
-          git stash pop || true
-          git push origin main
+
+          # safer push with retry loop
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && break || {
+              echo "Push failed, retrying ($i/3)..."
+              sleep 3
+            }
+          done
