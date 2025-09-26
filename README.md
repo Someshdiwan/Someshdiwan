@@ -104,15 +104,8 @@
         <a href="https://lmstudio.ai/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="lm studio" width="40" height="40"/></a>
         <!-- Ollama (reliable icon) -->
         <a href="https://ollama.com/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/></a>
-        <!-- Local LLM text as SVG -->
-<img src="data:image/svg+xml;utf8,
-<svg xmlns='http://www.w3.org/2000/svg' width='120' height='32'>
-  <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'
-        font-family='Comic Sans MS, cursive' font-size='18' fill='gold'>
-    Local LLM
-  </text>
-</svg>" alt="Local LLM"/>
-</p>
+      <img alt="Local LLM" width="120" height="32"
+  src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='32'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Comic Sans MS, cursive' font-size='18' fill='gold'%3ELocal LLM%3C/text%3E%3C/svg%3E" />
       <h4>Design tools</h4>
       <p>
         <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/></a>
