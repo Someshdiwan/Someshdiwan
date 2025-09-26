@@ -96,17 +96,28 @@
   </p>
 </td>
     <td align="center" valign="top">
-      <h4>AI tools</h4>
-      <p>
-        <a href="https://cursor.sh/" target="_blank"><img src="https://avatars.githubusercontent.com/u/126759922?s=200&v=4" alt="cursor" width="40" height="40"/></a>
-        <a href="https://claude.ai/" target="_blank"><img src="https://avatars.githubusercontent.com/u/76263028?s=200&v=4" alt="claude" width="40" height="40"/></a>
-        <!-- LM Studio (reliable icon) -->
-        <a href="https://lmstudio.ai/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="lm studio" width="40" height="40"/></a>
-        <!-- Ollama (reliable icon) -->
-        <a href="https://ollama.com/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/></a>
-      <img alt="Local LLM" width="120" height="32"
-  src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='32'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Comic Sans MS, cursive' font-size='18' fill='gold'%3ELocal LLM%3C/text%3E%3C/svg%3E" />
-      <h4>Design tools</h4>
+<h4>AI tools</h4>
+<p>
+  <a href="https://cursor.sh/" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/126759922?s=200&v=4" alt="cursor" width="40" height="40"/>
+  </a>
+  <a href="https://claude.ai/" target="_blank">
+    <img src="https://avatars.githubusercontent.com/u/76263028?s=200&v=4" alt="claude" width="40" height="40"/>
+  </a>
+  <!-- LM Studio -->
+  <a href="https://lmstudio.ai/" target="_blank">
+    <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="lm studio" width="40" height="40"/>
+  </a>
+  <!-- Ollama -->
+  <a href="https://ollama.com/" target="_blank">
+    <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/>
+  </a>
+  <!-- Local LLM (gold Comic Sans text as inline SVG) -->
+<img alt="Local LLM" width="120" height="32"
+src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='32'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Comic Sans MS, cursive' font-size='18' fill='gold'%3ELocal LLM%3C/text%3E%3C/svg%3E" />
+</p>
+
+<h4>Design tools</h4>
       <p>
         <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/></a>
         <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="miro" width="40" height="40"/></a>
