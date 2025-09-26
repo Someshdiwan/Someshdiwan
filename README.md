@@ -132,7 +132,7 @@ src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12
     <tr>
       <td align="center" valign="top" style="padding-right:12px;">
         <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18036786954" alt="GitHub streak" width="420"/>
+          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18036828427" alt="GitHub streak" width="420"/>
         </a>
       </td>
       <td align="center" valign="top" style="padding-left:12px;">
