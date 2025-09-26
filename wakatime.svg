@@ -10,6 +10,7 @@
     </linearGradient>
   </defs>
 
+  <!-- sticky card with shadow + peel -->
   <g filter="url(#sdrop)">
     <path d="M18 18 h384 a16 16 0 0 1 16 16 v200 a16 16 0 0 1 -16 16 h-184 q-12 8 -24 8 t-24 -8 h-176 z"
           fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2"/>
@@ -18,7 +19,8 @@
     <ellipse cx="310" cy="36" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
   </g>
 
-  <g font-family="Comic Sans MS, cursive, sans-serif" text-anchor="middle">
+  <!-- center content -->
+  <g font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" text-anchor="middle">
     <text x="210" y="70" font-size="16" font-weight="700" fill="#6b5a1f">WakaTime (All Time)</text>
     <text x="210" y="120" font-size="48" font-weight="800" fill="#2b2b2b">486.0</text>
     <text x="210" y="145" font-size="13" fill="#6b6b6b">hrs coding</text>
@@ -27,33 +29,36 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
         <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
                 stroke-linecap="round"
-                stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="101.78760197630929" transform="rotate(-90)"/>
-        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
-        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Other</text>
-        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" fill="#806015" text-anchor="middle">46%</text>
+                stroke-dasharray="188.49555921538757 188.49555921538757" stroke-dashoffset="101.78760197630929"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.40" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Other</text>
+        <text x="0" y="14" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" fill="#806015" text-anchor="middle">46%</text>
       </g>
 
       <g transform="translate(220, 190)">
         <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
         <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
                 stroke-linecap="round"
-                stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="119.50618454255573" transform="rotate(-90)"/>
-        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
-        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Java</text>
-        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" fill="#806015" text-anchor="middle">37%</text>
+                stroke-dasharray="188.49555921538757 188.49555921538757" stroke-dashoffset="119.50618454255573"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.40" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Java</text>
+        <text x="0" y="14" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" fill="#806015" text-anchor="middle">37%</text>
       </g>
 
       <g transform="translate(320, 190)">
         <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
         <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
                 stroke-linecap="round"
-                stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="178.8822856954028" transform="rotate(-90)"/>
-        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
-        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Text</text>
-        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif" font-size="11" fill="#806015" text-anchor="middle">5%</text>
+                stroke-dasharray="188.49555921538757 188.49555921538757" stroke-dashoffset="178.8822856954028"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.40" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Text</text>
+        <text x="0" y="14" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="11" fill="#806015" text-anchor="middle">5%</text>
       </g>
   </g>
+
+  <!-- (optional) clickable overlay for some renderers -->
+  <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener"></a>
 </svg>
