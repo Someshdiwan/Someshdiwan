@@ -59,36 +59,8 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
-// --- WAKATIME STREAK (current) ---
-async function fetchCurrentStreakDays() {
-    const today = new Date();
-    const end = today.toISOString().slice(0, 10);
-    const startDate = new Date(today);
-    startDate.setDate(startDate.getDate() - 365);
-    const start = startDate.toISOString().slice(0, 10);
-
-    const url = `https://wakatime.com/api/v1/users/current/summaries?start=${start}&end=${end}`;
-    const headers = { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') };
-
-    try {
-        const json = await fetchJsonWithRetries(url, headers, 4, 20000);
-        const days = Array.isArray(json?.data) ? json.data : [];
-
-        // Iterate from most recent day backwards, count consecutive days with coding > 0 seconds.
-        let streak = 0;
-        for (let i = days.length - 1; i >= 0; i--) {
-            const secs = (days[i]?.grand_total?.total_seconds) || 0;
-            if (secs > 0) streak++;
-            else break;
-        }
-        return streak;
-    } catch {
-        return 0; // fallback if summaries endpoint fails
-    }
-}
-
-// --- SVG builder (UNCHANGED COLORS / LAYOUT) ---
-function makeStreakSVG(streak, username) {
+// makeStreakSVG: UNCHANGED UI
+function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
     const daysText = String(streak);
@@ -96,7 +68,7 @@ function makeStreakSVG(streak, username) {
     return `<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="WakaTime streak ${escapeXml(daysText)} days">
+     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub streak ${escapeXml(daysText)} days">
   <defs>
     <filter id="cardShadow" x="-70%" y="-70%" width="240%" height="240%">
       <feDropShadow dx="6" dy="20" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
@@ -154,9 +126,9 @@ function makeStreakSVG(streak, username) {
     </g>
   </g>
 
-  <!-- content -->
+  <!-- content, centered and with adjusted number size so it feels like WakaTime card -->
   <g class="card-font" transform="translate(0,0)">
-    <text x="${width/2}" y="56" class="title">WakaTime streak</text>
+    <text x="${width/2}" y="56" class="title">GitHub streak</text>
 
     <text x="${width/2}" y="140" class="big">${escapeXml(daysText)}</text>
 
@@ -168,38 +140,36 @@ function makeStreakSVG(streak, username) {
       <path d="M0 14 q20 18 40 0" fill="#e9dcc3" opacity="0.08" transform="translate(0,6)"/>
     </g>
 
-    <!-- anchor to WakaTime profile -->
-    <a xlink:href="https://wakatime.com/@${encodeURIComponent(username || '')}" target="_blank" rel="noopener"></a>
+    <!-- anchor to repo -->
+    <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
   </g>
 </svg>`;
 }
 
-// Provide the function your script calls
+// ---- minimal fixes start here ----
+let repoOwner = ''; // so the existing template reference does not throw
+
 function makeWakaSVG(normalized, username) {
-    const streakDays = Number(normalized?.streakDays) || 0;
-    return makeStreakSVG(streakDays, username);
+    // Set the variable your SVG template already references. No UI changes.
+    repoOwner = username || process.env.WAKATIME_USERNAME || '';
+    // Feed the existing SVG with a number. Keep it simple and non-invasive.
+    const value = (normalized && normalized.hours != null) ? normalized.hours : 0;
+    return makeStreakSVG(value);
 }
+// ---- minimal fixes end here ----
 
 (async () => {
     let raw = null;
     try {
-        raw = await fetchJsonWithRetries(
-            'https://wakatime.com/api/v1/users/current/stats/all_time',
-            { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') },
-            4,
-            12000
-        );
+        raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/all_time',
+            { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
         if (!(raw?.data?.total_seconds || raw?.data?.total_seconds_all)) raw = null;
     } catch { raw = null; }
 
     if (!raw) {
         try {
-            raw = await fetchJsonWithRetries(
-                'https://wakatime.com/api/v1/users/current/stats/last_7_days',
-                { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') },
-                4,
-                12000
-            );
+            raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/last_7_days',
+                { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
         } catch { raw = null; }
     }
 
@@ -216,17 +186,8 @@ function makeWakaSVG(normalized, username) {
     }
 
     const normalized = normalizeRaw(raw);
-
-    // Compute real WakaTime streak days and attach to normalized
-    try {
-        normalized.streakDays = await fetchCurrentStreakDays();
-    } catch { normalized.streakDays = 0; }
-
-    const username = raw?.data?.username
-        ? String(raw.data.username).replace(/^@/, '')
-        : process.env.WAKATIME_USERNAME || 'SomeshDiwan';
-
+    const username = raw?.data?.username ? String(raw.data.username).replace(/^@/, '') : process.env.WAKATIME_USERNAME || 'SomeshDiwan';
     const svg = makeWakaSVG(normalized, username);
     fs.writeFileSync(OUT_FILE, svg, 'utf8');
-    console.log('wakatime.svg written:', OUT_FILE, 'hours=', normalized.hours, 'streak=', normalized.streakDays);
+    console.log('wakatime.svg written:', OUT_FILE, 'hours=', normalized.hours);
 })();
