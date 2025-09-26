@@ -8,7 +8,7 @@
       </td>
       <td align="center" valign="top" style="padding-left:12px;">
         <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="./wakatime.svg?v=0" alt="WakaTime (all time)" width="420"/>
+          <img src="./wakatime.svg?v=18024012142" alt="WakaTime (all time)" width="420"/>
         </a>
       </td>
     </tr>
