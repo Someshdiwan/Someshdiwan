@@ -3,7 +3,7 @@
     <tr>
       <td align="center" valign="top" style="padding-right:12px;">
         <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="./streak.svg?v=18023966459" alt="GitHub streak" width="420"/>
+          <img src="./streak.svg?v=18024012141" alt="GitHub streak" width="420"/>
         </a>
       </td>
       <td align="center" valign="top" style="padding-left:12px;">
