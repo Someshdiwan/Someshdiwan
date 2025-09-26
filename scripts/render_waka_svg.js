@@ -128,10 +128,6 @@ function makeWakaSVG(normalized, username = 'SomeshDiwan') {
     ${donutGroups}
   </g>
 
-  <!-- clickable overlay (safe for GitHub rendering) -->
-  <a xlink:href="https://wakatime.com/@${encodeURIComponent(String(username).replace(/^@/, ''))}" target="_blank" rel="noopener">
-    <rect x="0" y="0" width="${w}" height="${h}" fill="none"/>
-  </a>
 </svg>`;
 }
 
