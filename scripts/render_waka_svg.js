@@ -5,7 +5,7 @@ const fetch = globalThis.fetch || require('node-fetch');
 
 const TEMPLATE_DIR = path.join(process.cwd(), '.github', 'waka-template');
 const CACHE_FILE = path.join(TEMPLATE_DIR, 'waka_data.json');
-const OUT_FILE = path.join(process.cwd(), 'wakatime.svg');
+const OUT_FILE   = path.join(process.cwd(), 'wakatime.svg');
 
 const apiKey = process.env.WAKATIME_API_KEY;
 if (!apiKey) {
@@ -14,7 +14,7 @@ if (!apiKey) {
 }
 
 function languageColor(name) {
-    const colors = ["#f39a2e","#ffd86b","#29a3a3","#f67280","#6a5acd","#20b2aa","#ff6f61","#87ceeb","#9bdeac","#a68cff"];
+    const colors = ['#f39a2e','#ffd86b','#29a3a3','#f67280','#6a5acd','#20b2aa','#ff6f61','#87ceeb','#9bdeac','#a68cff'];
     let h = 0;
     for (let i = 0; i < (name || '').length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
     return colors[Math.abs(h) % colors.length];
@@ -29,7 +29,7 @@ async function fetchJsonWithRetries(url, headers = {}, retries = 3, timeoutMs = 
             clearTimeout(id);
             if (!res.ok) {
                 const txt = await res.text().catch(() => '');
-                throw new Error(`HTTP ${res.status} ${res.statusText} ${txt ? `| ${txt.slice(0,200)}` : ''}`);
+                throw new Error(`HTTP ${res.status} ${res.statusText}${txt ? ` | ${txt.slice(0,200)}` : ''}`);
             }
             return await res.json();
         } catch (err) {
@@ -45,12 +45,10 @@ async function fetchJsonWithRetries(url, headers = {}, retries = 3, timeoutMs = 
 
 function normalizeRaw(raw) {
     const d = raw && raw.data ? raw.data : {};
-    const totalSec = d.total_seconds || d.total_seconds_all || 0;
+    const totalSec   = d.total_seconds || d.total_seconds_all || 0;
     const totalHours = totalSec ? (totalSec / 3600) : 0;
-    const languages = (d.languages || []).map(l => {
-        const percent = (l.percent != null)
-            ? l.percent
-            : (totalSec > 0 ? (l.total_seconds || 0) / totalSec * 100 : 0);
+    const languages  = (d.languages || []).map(l => {
+        const percent = (l.percent != null) ? l.percent : (totalSec > 0 ? (l.total_seconds || 0) / totalSec * 100 : 0);
         return { name: l.name, percent: Math.round(percent * 10) / 10, color: languageColor(l.name) };
     });
     return { hours: totalHours.toFixed(1), projects: (d.projects || []).length || 0, languages };
@@ -75,9 +73,7 @@ function makeWakaSVG(normalized, username = 'SomeshDiwan') {
         const stroke = 12;
         const circumference = 2 * Math.PI * r;
         const offset = circumference * (1 - pct / 100);
-
-        // positions: 120, 220, 320 along x visually centered
-        const x = 120 + i * 100;
+        const x = 120 + i * 100; // 120, 220, 320
         const y = 190;
 
         return `
@@ -163,7 +159,7 @@ function makeWakaSVG(normalized, username = 'SomeshDiwan') {
         try {
             if (!fs.existsSync(TEMPLATE_DIR)) fs.mkdirSync(TEMPLATE_DIR, { recursive: true });
             fs.writeFileSync(CACHE_FILE, JSON.stringify(raw, null, 2), 'utf8');
-        } catch {/* ignore cache write errors */}
+        } catch { /* ignore cache write errors */ }
     }
 
     const normalized = normalizeRaw(raw);
