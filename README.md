@@ -5,7 +5,37 @@
 
 ---
 
-### Languages & Tools 🛠
+<img src="connect.svg" alt="Connect With Me" width="210"/>
+
+<p align="center">
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 12px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+         alt="LinkedIn" width="48" height="48"/>
+  </a>
+
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 12px;">
+    <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
+         alt="LeetCode" width="48" height="48"/>
+  </a>
+
+  <!-- CodeChef -->
+  <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" style="margin: 0 12px;">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codechef.svg" 
+         alt="CodeChef" width="48" height="48"/>
+  </a>
+
+  <!-- Codeforces -->
+  <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" style="margin: 0 12px;">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codeforces.svg" 
+         alt="Codeforces" width="48" height="48"/>
+  </a>
+</p>
+
+---
+
+<img src="languages.svg" alt="Languages & Tools"/>
 
 <div align="center">
 
@@ -149,6 +179,7 @@
   </table>
 </p>
 
+<img src="thanks.svg" alt="Thank You"/>
 
 <p align="center">
   <!-- Light mode -->
@@ -159,3 +190,5 @@
          src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg">
   </picture>
 </p>
+
+---

@@ -52,15 +52,17 @@
     <text x="40" y="285" class="bullet">📊 Familiar with databases like MySQL, PostgreSQL, and MongoDB.</text>
     <text x="40" y="315" class="bullet">🚀 Exploring ML, AI agents, and LLM-powered applications.</text>
     <text x="40" y="345" class="bullet">🌱 Always learning and contributing where software meets intelligence.</text>
+    <text x="40" y="395" class="bullet">🌱 I’m currently learning Competitive Programming.</text>
+
 
     <!-- Philosophy -->
-    <text x="40" y="390" class="philosophy">
+    <text x="40" y="440" class="philosophy">
         ✨ A lifelong learner &amp; refactoring enthusiast —
     </text>
-    <text x="40" y="415" class="philosophy">
+    <text x="40" y="470" class="philosophy">
         always seeking the right names in code and simplifying complexity
     </text>
-    <text x="40" y="440" class="philosophy">
+    <text x="40" y="500" class="philosophy">
         through clean abstractions.
     </text>
 </svg>

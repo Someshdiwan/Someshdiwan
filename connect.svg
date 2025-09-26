@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="50">
+    <style>
+        .title {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #20B2AA; /* teal - trust + creativity */
+        text-anchor: start;
+        dominant-baseline: middle;
+        }
+    </style>
+
+    <!-- Left-aligned Text -->
+    <text x="0" y="50%" class="title">🤝 Connect With Me</text>
+</svg>
