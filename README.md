@@ -1,11 +1,11 @@
-![Somesh Diwan — Software Engineering | Java | Machine Learning](my.svg)
+![Somesh Diwan — Software Engineering | Java | Machine Learning](Assets/my.svg)
 
 
-<img src="Intro.svg" alt="Intro Section" width="1000"/>
+<img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
 ---
 
-<img src="connect.svg" alt="Connect With Me" width="210"/>
+<img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
 
 <p align="center">
   <!-- LinkedIn -->
@@ -35,7 +35,7 @@
 
 ---
 
-<img src="languages.svg" alt="Languages & Tools"/>
+<img src="Assets/languages.svg" alt="Languages & Tools"/>
 
 <div align="center">
 
@@ -149,7 +149,7 @@
 </a>
   <!-- Local LLM (gold SVG, clickable to your Hugging Face profile) -->
   <a href="https://huggingface.co/CodeWithSomesh" target="_blank">
-    <img src="local-llm.svg" alt="Local LLM" width="120" height="32"/>
+    <img src="Assets/local-llm.svg" alt="Local LLM" width="120" height="32"/>
   </a>
 </p>
 <h4>Design tools</h4>
@@ -179,7 +179,7 @@
   </table>
 </p>
 
-<img src="thanks.svg" alt="Thank You"/>
+<img src="Assets/thanks.svg" alt="Thank You"/>
 
 <p align="center">
   <!-- Light mode -->
