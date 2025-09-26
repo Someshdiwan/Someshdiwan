@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="WakaTime streak 0 days">
+     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 486.0 days">
   <defs>
     <filter id="cardShadow" x="-70%" y="-70%" width="240%" height="240%">
       <feDropShadow dx="6" dy="20" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
@@ -59,11 +59,11 @@
     </g>
   </g>
 
-  <!-- content -->
+  <!-- content, centered and with adjusted number size so it feels like WakaTime card -->
   <g class="card-font" transform="translate(0,0)">
-    <text x="210" y="56" class="title">WakaTime streak</text>
+    <text x="210" y="56" class="title">GitHub streak</text>
 
-    <text x="210" y="140" class="big">0</text>
+    <text x="210" y="140" class="big">486.0</text>
 
     <text x="210" y="176" class="sub">day streak</text>
 
@@ -73,7 +73,7 @@
       <path d="M0 14 q20 18 40 0" fill="#e9dcc3" opacity="0.08" transform="translate(0,6)"/>
     </g>
 
-    <!-- anchor to WakaTime profile -->
-    <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener"></a>
+    <!-- anchor to repo -->
+    <a xlink:href="https://github.com/SomeshDiwan" target="_blank" rel="noopener"></a>
   </g>
 </svg>
