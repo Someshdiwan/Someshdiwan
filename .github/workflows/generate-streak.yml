@@ -1,17 +1,17 @@
-name: Generate Streak SVG (nightly)
+name: Generate Streak SVG
 
 on:
   schedule:
-    - cron: '0 3 * * *'        # every day at 03:00 UTC
-  workflow_dispatch:           # manual run button
-  push:                        # also run on pushes to main
+    - cron: '0 3 * * *'        # 03:00 UTC daily
+  workflow_dispatch:
+  push:
     branches: [ main ]
     paths-ignore:
       - 'streak.svg'
       - 'streak_state.json'
 
 concurrency:
-  group: generate-streak-svg
+  group: generate-streak
   cancel-in-progress: true
 
 permissions:
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci || npm install
 
       - name: Generate streak.svg
@@ -41,34 +41,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node ./scripts/generate_streak.js
 
-      - name: Commit assets if changed
+      - name: Bust README cache for streak.svg
+        run: |
+          RUN_ID="${{ github.run_id }}"
+          sed -i -E 's#(streak\.svg)(\?v=[0-9]+)?#\1?v='"$RUN_ID"'#' README.md
+
+      - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # stage only the generated file(s)
-          git add streak.svg || true
-
-          # exit early if nothing staged
+          git add streak.svg streak_state.json README.md || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-
-          # commit staged changes
           git commit -m "chore: update streak.svg"
-
-          # fetch remote and safely rebase by stashing local unstaged/untracked changes
           git fetch origin main
-
-          # stash any remaining local changes (untracked included) so pull --rebase can run cleanly
           git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-
-          # rebase on top of remote main
           git pull --rebase origin main
-
-          # attempt to pop stash (optional; will not fail the job)
           git stash pop || true
-
-          # push commit to main
           git push origin main
