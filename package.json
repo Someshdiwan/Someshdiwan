@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "@octokit/graphql": "^5.0.6",
-    "puppeteer": "^24.22.3"
+    "puppeteer": "^24.22.3",
+    "node-fetch": "^3.3.2"
   },
   "scripts": {
-    "generate:streak": "node ./scripts/generate_streak.js",
-    "generate:wakatime": "node \"Archived Codes/wakatime_to_svg.js\"",
-    "render:waka": "node Archived Codes/render_waka_png.js"
+    "generate:streak": "node scripts/generate_streak.js",
+    "render:waka:svg": "node scripts/render_waka_svg.js",
+    "render:waka:png": "node \"Archived Codes/render_waka_png.js\""
   }
 }
