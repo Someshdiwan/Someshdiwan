@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 486.0 days">
+     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 486 days">
   <defs>
     <filter id="cardShadow" x="-70%" y="-70%" width="240%" height="240%">
       <feDropShadow dx="6" dy="20" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
@@ -63,7 +63,7 @@
   <g class="card-font" transform="translate(0,0)">
     <text x="210" y="56" class="title">GitHub streak</text>
 
-    <text x="210" y="140" class="big">486.0</text>
+    <text x="210" y="140" class="big">486</text>
 
     <text x="210" y="176" class="sub">day streak</text>
 
