@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32">
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+          font-family="Comic Sans MS, cursive"
+          font-size="18" fill="gold">
+        Local LLM
+    </text>
+</svg>

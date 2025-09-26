@@ -112,9 +112,8 @@
   <a href="https://ollama.com/" target="_blank">
     <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/>
   </a>
-  <!-- Local LLM (gold Comic Sans text as inline SVG) -->
-<img alt="Local LLM" width="120" height="32"
-src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='32'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Comic Sans MS, cursive' font-size='18' fill='gold'%3ELocal LLM%3C/text%3E%3C/svg%3E" />
+  <!-- Local LLM (gold text SVG from your repo) -->
+  <img src="local-llm.svg" alt="Local LLM" width="120" height="32"/>
 </p>
 
 <h4>Design tools</h4>
