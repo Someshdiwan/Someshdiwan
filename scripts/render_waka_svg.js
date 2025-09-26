@@ -60,7 +60,7 @@ function escapeXml(s) {
 }
 
 // build SVG string
-function makeStreakSVG(streak, username) {
+function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
     const daysText = String(streak);
@@ -140,39 +140,25 @@ function makeStreakSVG(streak, username) {
       <path d="M0 14 q20 18 40 0" fill="#e9dcc3" opacity="0.08" transform="translate(0,6)"/>
     </g>
 
-    <!-- anchor to profile -->
-    <a xlink:href="https://github.com/${encodeURIComponent(username || '')}" target="_blank" rel="noopener"></a>
+    <!-- anchor to repo -->
+    <a xlink:href="https://github.com/${encodeURIComponent(repoOwner)}" target="_blank" rel="noopener"></a>
   </g>
 </svg>`;
 }
 
-// alias that preserves your existing call site without changing UI/colors
-function makeWakaSVG(normalized, username) {
-    const hrs = Number(normalized?.hours) || 0;
-    const streakDays = Math.max(0, Math.floor(hrs / 24)); // coarse mapping hours -> "days"
-    return makeStreakSVG(streakDays, username);
-}
 
 (async () => {
     let raw = null;
     try {
-        raw = await fetchJsonWithRetries(
-            'https://wakatime.com/api/v1/users/current/stats/all_time',
-            { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') },
-            4,
-            12000
-        );
+        raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/all_time',
+            { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
         if (!(raw?.data?.total_seconds || raw?.data?.total_seconds_all)) raw = null;
     } catch { raw = null; }
 
     if (!raw) {
         try {
-            raw = await fetchJsonWithRetries(
-                'https://wakatime.com/api/v1/users/current/stats/last_7_days',
-                { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') },
-                4,
-                12000
-            );
+            raw = await fetchJsonWithRetries('https://wakatime.com/api/v1/users/current/stats/last_7_days',
+                { Authorization: 'Basic ' + Buffer.from(apiKey + ':').toString('base64') }, 4, 12000);
         } catch { raw = null; }
     }
 
