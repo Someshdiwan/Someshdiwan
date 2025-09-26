@@ -1,40 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220">
-  <style>
-    /* Apply Comic Sans MS to all text */
-    text { font-family: "Comic Sans MS", "Segoe UI", Roboto, Arial, sans-serif; }
-    .title { font-weight: 700; font-size: 16px; fill: #444; }
-    .subtitle { font-size: 14px; fill: #666; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="WakaTime all time 486.0 hours">
+  <defs>
+    <filter id="sdrop" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="6" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fff6c7"/>
+      <stop offset="100%" stop-color="#fff1b8"/>
+    </linearGradient>
+  </defs>
 
-  <rect width="100%" height="100%" fill="#fffbea" stroke="#f0e0a0" stroke-width="1.5" rx="12"/>
-  <text x="20" y="30" class="title">WakaTime Stats for SomeshDiwan</text>
-  <text x="20" y="50" class="subtitle">Total Hours: 486.0h • Projects: 78</text>
+  <!-- rounded card w/ soft shadow -->
+  <g filter="url(#sdrop)">
+    <path d="M18 18 h384 a16 16 0 0 1 16 16 v200 a16 16 0 0 1 -16 16 h-184 q-12 8 -24 8 t-24 -8 h-176 z"
+          fill="url(#cardGrad)" stroke="#f0dfa0" stroke-width="1.2"/>
+    <path d="M330 162 q0 10 -10 18 l-24 12 q-10 8 -18 6" fill="#ffee9e" opacity="0.95"/>
+    <path d="M328 34 q-4 16 -18 24" stroke="#f5e0a0" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <ellipse cx="310" cy="36" rx="6" ry="3" fill="#fff8d8" opacity="0.7"/>
+  </g>
 
-  
-        <g transform="translate(20, 70)">
-            <rect width="14" height="14" fill="#6a5acd" rx="3" ry="3"/>
-            <text x="22" y="12" font-size="14" fill="#333">Other — 46%</text>
-        </g>
+  <!-- content -->
+  <g font-family="Comic Sans MS, cursive, sans-serif" text-anchor="middle">
+    <text x="210" y="70" font-size="16" font-weight="700" fill="#6b5a1f">WakaTime (All Time)</text>
+    <text x="210" y="120" font-size="48" font-weight="800" fill="#2b2b2b">486.0</text>
+    <text x="210" y="145" font-size="13" fill="#6b6b6b">hrs coding</text>
     
-        <g transform="translate(20, 98)">
-            <rect width="14" height="14" fill="#ff6f61" rx="3" ry="3"/>
-            <text x="22" y="12" font-size="14" fill="#333">Java — 36.6%</text>
-        </g>
-    
-        <g transform="translate(20, 126)">
-            <rect width="14" height="14" fill="#ffd86b" rx="3" ry="3"/>
-            <text x="22" y="12" font-size="14" fill="#333">Text — 5.1%</text>
-        </g>
-    
-        <g transform="translate(20, 154)">
-            <rect width="14" height="14" fill="#20b2aa" rx="3" ry="3"/>
-            <text x="22" y="12" font-size="14" fill="#333">Markdown — 3.8%</text>
-        </g>
-    
-        <g transform="translate(20, 182)">
-            <rect width="14" height="14" fill="#ffd86b" rx="3" ry="3"/>
-            <text x="22" y="12" font-size="14" fill="#333">JavaScript — 2%</text>
-        </g>
-    
+      <g transform="translate(120, 190)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="101.78760197630929"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Other</text>
+        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" fill="#806015" text-anchor="middle">46%</text>
+      </g>
+
+      <g transform="translate(220, 190)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="119.50618454255573"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Java</text>
+        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" fill="#806015" text-anchor="middle">37%</text>
+      </g>
+
+      <g transform="translate(320, 190)">
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#efe0bd" stroke-width="12"/>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
+                stroke-linecap="round"
+                stroke-dasharray="188.49555921538757 188.49555921538757"
+                stroke-dashoffset="178.8822856954028"
+                transform="rotate(-90)"/>
+        <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
+        <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" font-weight="700" fill="#2b2b2b" text-anchor="middle">Text</text>
+        <text x="0" y="14" font-family="Comic Sans MS, cursive, sans-serif"
+              font-size="11" fill="#806015" text-anchor="middle">5%</text>
+      </g>
+  </g>
+
+  <!-- clickable overlay (safe for GitHub rendering) -->
+  <a xlink:href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
+    <rect x="0" y="0" width="420" height="300" fill="none"/>
+  </a>
 </svg>
