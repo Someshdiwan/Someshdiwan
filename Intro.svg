@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="950" height="500">
+    <style>
+        .header {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 32px;
+        font-weight: bold;
+        fill: #2E4756;
+        }
+        .title {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #2E4756;
+        }
+        .text {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        fill: #3F5563;
+        }
+        .bullet {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        fill: #3F5563;
+        }
+        .philosophy {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 18px;
+        font-style: italic;
+        fill: #B8860B; /* golden brown */
+        }
+    </style>
+
+    <!-- Header -->
+    <text x="20" y="40" class="header">Hello there 👋</text>
+
+    <!-- Intro -->
+    <text x="20" y="80" class="text">
+        I'm Somesh Diwan, a Software Engineer from India 🇮🇳
+    </text>
+    <text x="20" y="110" class="text">
+        I enjoy building reliable backend systems in Java &amp; Spring Boot,
+    </text>
+    <text x="20" y="140" class="text">
+        and I’m deeply interested in Machine Learning, Deep Learning, and AI Agents.
+    </text>
+
+    <!-- About Me -->
+    <text x="20" y="190" class="title">🧑‍💻 About Me</text>
+
+    <text x="40" y="225" class="bullet">💻 Skilled in Java, Python, JavaScript, and SQL.</text>
+    <text x="40" y="255" class="bullet">🛠 Experienced with Spring Boot, Node.js, React, and Express.js.</text>
+    <text x="40" y="285" class="bullet">📊 Familiar with databases like MySQL, PostgreSQL, and MongoDB.</text>
+    <text x="40" y="315" class="bullet">🚀 Exploring ML, AI agents, and LLM-powered applications.</text>
+    <text x="40" y="345" class="bullet">🌱 Always learning and contributing where software meets intelligence.</text>
+
+    <!-- Philosophy -->
+    <text x="40" y="390" class="philosophy">
+        ✨ A lifelong learner &amp; refactoring enthusiast —
+    </text>
+    <text x="40" y="415" class="philosophy">
+        always seeking the right names in code and simplifying complexity
+    </text>
+    <text x="40" y="440" class="philosophy">
+        through clean abstractions.
+    </text>
+</svg>

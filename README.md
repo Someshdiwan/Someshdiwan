@@ -1,9 +1,10 @@
 ![Somesh Diwan — Software Engineering | Java | Machine Learning](my.svg)
 
-### Hello there 👋
 
-- 💻 I'm somesh, a Software Developer from India. (Setup is going on.)
-- 
+<img src="Intro.svg" alt="Intro Section" width="1000"/>
+
+---
+
 ### Languages & Tools 🛠
 
 <div align="center">
