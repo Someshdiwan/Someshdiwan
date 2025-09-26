@@ -104,7 +104,6 @@
         <a href="https://lmstudio.ai/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="lm studio" width="40" height="40"/></a>
         <!-- Ollama (reliable icon) -->
         <a href="https://ollama.com/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/></a>
-        <!-- Local LLM (badge fallback) -->
         <!-- Local LLM text as SVG -->
 <img src="data:image/svg+xml;utf8,
 <svg xmlns='http://www.w3.org/2000/svg' width='120' height='32'>
