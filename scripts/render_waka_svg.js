@@ -59,18 +59,6 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
-// ---- minimal fixes only: provide repoOwner & makeWakaSVG (no UI changes) ----
-let repoOwner = '';
-
-function makeWakaSVG(normalized, username) {
-    // keep your existing anchor working
-    repoOwner = username || process.env.WAKATIME_USERNAME || '';
-    // feed a number to the existing SVG
-    const value = Number(normalized?.hours ?? 0);
-    return makeStreakSVG(value);
-}
-// ---------------------------------------------------------------------------
-
 // build SVG string
 function makeStreakSVG(streak) {
     const width = 420;
@@ -157,6 +145,7 @@ function makeStreakSVG(streak) {
   </g>
 </svg>`;
 }
+
 
 (async () => {
     let raw = null;
