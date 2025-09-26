@@ -1,3 +1,5 @@
+![Somesh Diwan — Software Engineering | Java | Machine Learning](my.svg)
+
 ### Languages & Tools 🛠
 
 <div align="center">
