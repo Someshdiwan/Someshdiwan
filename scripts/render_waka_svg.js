@@ -59,19 +59,19 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
-// ---- minimal fixes: provide repoOwner & makeWakaSVG (no UI changes) ----
+// ---- minimal fixes only: provide repoOwner & makeWakaSVG (no UI changes) ----
 let repoOwner = '';
 
 function makeWakaSVG(normalized, username) {
     // keep your existing anchor working
     repoOwner = username || process.env.WAKATIME_USERNAME || '';
-    // feed an existing numeric value; no UI logic touched
+    // feed a number to the existing SVG
     const value = Number(normalized?.hours ?? 0);
     return makeStreakSVG(value);
 }
-// -----------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 
-// build SVG string (UNCHANGED)
+// build SVG string
 function makeStreakSVG(streak) {
     const width = 420;
     const height = 300;
