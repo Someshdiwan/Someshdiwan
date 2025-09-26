@@ -3,12 +3,12 @@
     <tr>
       <td align="center" valign="top" style="padding-right:12px;">
         <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18024290147" alt="GitHub streak" width="420"/>
+          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18024420617" alt="GitHub streak" width="420"/>
         </a>
       </td>
       <td align="center" valign="top" style="padding-left:12px;">
         <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/wakatime.svg?v=18024271606" alt="WakaTime (all time)" width="420"/>
+          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/wakatime.svg?v=18024420629" alt="WakaTime (all time)" width="420"/>
         </a>
       </td>
     </tr>
