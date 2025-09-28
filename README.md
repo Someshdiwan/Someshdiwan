@@ -58,11 +58,11 @@
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
          alt="Anki" width="48" height="48"/>
   </a>
-  <!-- Duolingo -->
+  <!-- Duolingo (HQ official green) -->
   <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link"
-     target="_blank" rel="noopener" title="Duolingo Profile" style="margin: 0 25px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/duolingo.svg"
-         alt="Duolingo" width="48" height="48" style="filter: invert(43%) sepia(95%) saturate(2133%) hue-rotate(72deg) brightness(95%) contrast(92%);"/>
+   target="_blank" rel="noopener" title="Duolingo Profile" style="margin: 0 25px;">
+  <img src="https://cdn.simpleicons.org/duolingo/58CC02"
+       alt="Duolingo" width="48" height="48" />
   </a>
 </p>
 
