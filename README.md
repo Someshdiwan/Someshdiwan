@@ -9,37 +9,37 @@
 
 <p align="center">
   <!-- X (Twitter) -->
-  <a href="https://x.com/someshdiwanX" target="_blank" style="margin: 0 15px;">
+  <a href="https://x.com/someshdiwanX" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" 
          alt="X (Twitter)" width="48" height="48"/>
   </a>
 
   <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 15px;">
+  <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
          alt="LinkedIn" width="48" height="48"/>
   </a>
 
   <!-- LeetCode -->
-  <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 15px;">
+  <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 20px;">
     <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
          alt="LeetCode" width="48" height="48"/>
   </a>
 
   <!-- CodeChef -->
-  <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" style="margin: 0 15px;">
+  <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codechef.svg" 
          alt="CodeChef" width="48" height="48"/>
   </a>
 
   <!-- Codeforces -->
-  <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" style="margin: 0 15px;">
+  <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codeforces.svg" 
          alt="Codeforces" width="48" height="48"/>
   </a>
 
   <!-- WakaTime -->
-  <a href="https://wakatime.com/@SomeshDiwan" target="_blank" style="margin: 0 15px;">
+  <a href="https://wakatime.com/@SomeshDiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
          alt="WakaTime" width="48" height="48"/>
   </a>
@@ -50,18 +50,18 @@
 <p align="center">
   <!-- Notion (Vocabulary Vault) -->
   <a href="https://vocabulary-english.notion.site/Vocabulary-Vault-21ce0aa0c4d380b7b73af79235b5016c?source=copy_link"
-     target="_blank" rel="noopener" title="Notion – Vocabulary Vault" style="margin: 0 15px;">
+     target="_blank" rel="noopener" title="Notion – Vocabulary Vault" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
          alt="Notion" width="48" height="48"/>
   </a>
   <!-- Hugging Face -->
-  <a href="https://huggingface.co/CodeWithSomesh" target="_blank" style="margin: 0 15px;">
+  <a href="https://huggingface.co/CodeWithSomesh" target="_blank" style="margin: 0 20px;">
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
          alt="Hugging Face" width="48" height="48"/>
   </a>
 
   <!-- Anki -->
-  <a href="https://ankiweb.net/shared/info/1362166383" target="_blank" style="margin: 0 15px;">
+  <a href="https://ankiweb.net/shared/info/1362166383" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
          alt="Anki" width="48" height="48"/>
   </a>
