@@ -1,3 +1,4 @@
 node_modules/
 npm-debug.log*
 .env
+/Archived Codes/render_waka_png.js

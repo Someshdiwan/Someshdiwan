@@ -8,6 +8,12 @@
 <img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
 
 <p align="center">
+  <!-- X (Twitter) -->
+  <a href="https://x.com/someshdiwanX" target="_blank" style="margin: 0 12px;">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" 
+       alt="X (Twitter)" width="48" height="48"/>
+  </a>
+  
   <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 12px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
