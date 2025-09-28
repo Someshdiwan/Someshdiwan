@@ -1,6 +1,5 @@
 ![Somesh Diwan — Software Engineering | Java | Machine Learning](Assets/my.svg)
 
-
 <img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
 ---
@@ -13,32 +12,27 @@
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" 
          alt="X (Twitter)" width="48" height="48"/>
   </a>
-
   <!-- LinkedIn -->
   <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
          alt="LinkedIn" width="48" height="48"/>
   </a>
-
   <!-- LeetCode -->
   <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 20px;">
     <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
          alt="LeetCode" width="48" height="48"/>
   </a>
-
   <!-- CodeChef -->
   <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codechef.svg" 
          alt="CodeChef" width="48" height="48"/>
   </a>
-
   <!-- Codeforces -->
   <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codeforces.svg" 
          alt="Codeforces" width="48" height="48"/>
   </a>
-
-  <!-- WakaTime -->
+ <!-- WakaTime -->
   <a href="https://wakatime.com/@SomeshDiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
          alt="WakaTime" width="48" height="48"/>
@@ -59,11 +53,16 @@
     <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
          alt="Hugging Face" width="48" height="48"/>
   </a>
-
   <!-- Anki -->
   <a href="https://ankiweb.net/shared/info/1362166383" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
          alt="Anki" width="48" height="48"/>
+  </a>
+  <!-- Duolingo -->
+  <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link"
+     target="_blank" rel="noopener" title="Duolingo Profile" style="margin: 0 20px;">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/duolingo.svg"
+         alt="Duolingo" width="48" height="48" style="filter: invert(43%) sepia(95%) saturate(2133%) hue-rotate(72deg) brightness(95%) contrast(92%);"/>
   </a>
 </p>
 
