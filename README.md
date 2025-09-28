@@ -37,7 +37,15 @@
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codeforces.svg" 
          alt="Codeforces" width="48" height="48"/>
   </a>
+
+  <!-- WakaTime -->
+  <a href="https://wakatime.com/@SomeshDiwan" target="_blank" style="margin: 0 12px;">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+         alt="WakaTime" width="48" height="48"/>
+  </a>
 </p>
+
+
 
 ---
 
