@@ -22,11 +22,6 @@
     <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
          alt="LeetCode" width="48" height="48"/>
   </a>
-  <!-- CodeChef -->
-  <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codechef.svg" 
-         alt="CodeChef" width="48" height="48"/>
-  </a>
   <!-- Codeforces -->
   <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/codeforces.svg" 
