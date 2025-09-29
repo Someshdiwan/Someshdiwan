@@ -30,7 +30,7 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
                 stroke-linecap="round"
                 stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="100.0911419433708"
+                stroke-dashoffset="99.33715970650925"
                 transform="rotate(-90)"/>
         <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
         <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
@@ -44,7 +44,7 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#ff6f61" stroke-width="12"
                 stroke-linecap="round"
                 stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="120.63715789784806"
+                stroke-dashoffset="121.20264457549422"
                 transform="rotate(-90)"/>
         <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
         <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
@@ -58,7 +58,7 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
                 stroke-linecap="round"
                 stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="179.0707812546182"
+                stroke-dashoffset="179.25927681383357"
                 transform="rotate(-90)"/>
         <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
         <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
