@@ -110,112 +110,169 @@ function escapeXml(s) {
         .replace(/'/g, "&apos;");
 }
 
+
+
+
+
+
+
+
+
+
+
+function escapeXml(s){
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;");
+}
+
 /**
- * Returns an SVG string for a Duolingo-like streak card.
- * @param {number|string} streak - number of days (e.g., 139)
- * @param {object} opts - optional tweaks
- *   { width=420, height=360, title="day streak" }
+ * Duolingo-like streak card → animated SVG string.
+ * - Per-digit wobble (staggered)
+ * - Flame bob + flicker
+ * - Dark card; warm gradient number; "day streak" subtitle
  */
-function makeStreakSVG(streak, opts = {}) {
-    const width  = opts.width  ?? 420;
-    const height = opts.height ?? 360;
-    const title  = opts.title  ?? "day streak";
-    const daysText = escapeXml(String(streak));
+function makeStreakSVG(streak, {width=420, height=360, title="day streak"} = {}) {
+    const digits = String(streak).split("");
+    const fs = Math.min(112, width*0.26);      // number font-size
+    const monoFactor = 0.62;                   // rough glyph width multiplier
+    const track = fs*0.08;                     // tracking between digits
+    const charW = fs*monoFactor;
+    const totalW = digits.length*charW + (digits.length-1)*track;
+    const startX = width/2 - totalW/2;
+    const baselineY = height/2 + 28;
+
+    const digitNodes = digits.map((d, i) => {
+        const x = startX + i*(charW+track);
+        const delay = (i*0.12).toFixed(2);       // stagger per digit
+        return `<text x="${x.toFixed(2)}" y="${baselineY}"
+                  class="num digit" style="animation-delay:${delay}s">${escapeXml(d)}</text>`;
+    }).join("\n");
 
     return `<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="${width}" height="${height}" viewBox="0 0 ${width} ${height}"
-     role="img" aria-label="${daysText} ${escapeXml(title)}">
+<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"
+     viewBox="0 0 ${width} ${height}" role="img"
+     aria-label="${escapeXml(String(streak))} ${escapeXml(title)}">
   <defs>
-    <!-- shadows -->
+    <!-- Soft card shadow -->
     <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="12"/>
-      <feOffset dx="0" dy="10" result="off"/>
+      <feOffset dy="10"/>
       <feComponentTransfer><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
+    <!-- Number glow/shadow -->
     <filter id="textShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
-      <feOffset dx="0" dy="3"/>
-      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.3"/>
+      <feOffset dy="3"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- gradients -->
+    <!-- Warm gradient for digits -->
     <linearGradient id="numGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#FFE9B0"/>
-      <stop offset="55%" stop-color="#FFB12E"/>
-      <stop offset="100%" stop-color="#F36A00"/>
+      <stop offset="0%"   stop-color="#FFF2C7"/>
+      <stop offset="55%"  stop-color="#FFB53B"/>
+      <stop offset="100%" stop-color="#E66600"/>
     </linearGradient>
-
+    <!-- Flame glow -->
     <radialGradient id="glow" cx="50%" cy="40%" r="65%">
-      <stop offset="0%"  stop-color="#ffdf86" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#ff9a2a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#FFD46A" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#FF9A2A" stop-opacity="0"/>
     </radialGradient>
 
     <style>
-      .font { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
-      .num { fill: url(#numGrad); font-weight: 900; text-anchor: middle; filter: url(#textShadow); }
-      .sub { fill: #ffb54a; opacity: 0.95; font-weight: 700; text-anchor: middle; letter-spacing: 0.6px; }
+      .ui { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif; }
+      .num { fill:url(#numGrad); font-weight:900; font-size:${fs}px; text-anchor:start; filter:url(#textShadow); }
+      .sub { fill:#FFB54A; opacity:0.96; font-weight:700; font-size:20px; text-anchor:middle; letter-spacing:.6px; }
 
-      .floaty { animation: bob 6s ease-in-out infinite; transform-origin: center; }
-      .flicker { animation: flicker 2.8s ease-in-out infinite; transform-origin: center; }
-      .pulse { animation: pulse 3.2s ease-in-out infinite; }
+      .floaty { animation: bob 6s ease-in-out infinite; transform-origin:center; }
+      .flicker { animation: flicker 2.8s ease-in-out infinite; transform-origin:center; }
+      .digit { animation: wobble 2.6s ease-in-out infinite; transform-origin: center bottom; }
 
-      @keyframes bob {
-        0%   { transform: translateY(0px); }
-        50%  { transform: translateY(-6px); }
-        100% { transform: translateY(0px); }
-      }
+      @keyframes bob { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
       @keyframes flicker {
-        0%   { filter: brightness(1);   opacity: 1;   transform: scale(1); }
-        25%  { filter: brightness(0.95);opacity: 0.94;transform: scale(0.995); }
-        50%  { filter: brightness(1.06);opacity: 1;   transform: scale(1.01); }
-        75%  { filter: brightness(0.98);opacity: 0.97;transform: scale(0.997); }
-        100% { filter: brightness(1);   opacity: 1;   transform: scale(1); }
+        0%{filter:brightness(1);opacity:1;transform:scale(1)}
+        45%{filter:brightness(.95);opacity:.94;transform:scale(.994)}
+        55%{filter:brightness(1.06);opacity:1;transform:scale(1.01)}
+        100%{filter:brightness(1);opacity:1;transform:scale(1)}
       }
-      @keyframes pulse {
-        0%   { opacity: 0.18; }
-        50%  { opacity: 0.42; }
-        100% { opacity: 0.18; }
+      @keyframes wobble {
+        0%,100% { transform: translateY(0) rotate(0deg) }
+        25%     { transform: translateY(-2.5px) rotate(-0.8deg) }
+        50%     { transform: translateY(0.5px) rotate(0.6deg) }
+        75%     { transform: translateY(-1.5px) rotate(-0.4deg) }
       }
     </style>
   </defs>
 
-  <!-- dark rounded card -->
+  <!-- Dark rounded card -->
   <g filter="url(#cardShadow)">
-    <rect x="14" y="14" width="${width-28}" height="${height-28}" rx="28" ry="28" fill="#0f1720" stroke="#0b1118" stroke-width="1.5"/>
+    <rect x="14" y="14" width="${width-28}" height="${height-28}" rx="28" ry="28"
+          fill="#0F141C" stroke="#0B1118" stroke-width="1.2"/>
   </g>
 
-  <!-- subtle flame glow -->
-  <ellipse class="pulse" cx="${width/2}" cy="96" rx="120" ry="70" fill="url(#glow)"/>
+  <!-- Flame glow -->
+  <ellipse cx="${width/2}" cy="96" rx="120" ry="70" fill="url(#glow)"/>
 
-  <!-- flame group -->
+  <!-- Flame -->
   <g class="floaty" transform="translate(${width/2}, 92)">
     <ellipse cx="0" cy="42" rx="40" ry="12" fill="rgba(0,0,0,0.22)"/>
     <g class="flicker">
       <!-- outer flame -->
-      <path d="M24 -6 C16 -22 -10 -26 -18 -8 C-24 4 -16 36 10 40 C34 44 42 18 24 -6 Z"
-            fill="#ffb135"/>
+      <path d="M26 -8 C18 -24 -10 -28 -18 -8 C-24 6 -16 36 10 40 C34 44 44 16 26 -8 Z"
+            fill="#FFB135"/>
       <!-- mid flame -->
-      <path d="M10 4 C4 -2 -8 -2 -12 8 C-14 16 -4 28 8 28 C20 28 28 18 10 4 Z"
-            fill="#ff7a12"/>
+      <path d="M12 4 C6 -2 -8 -2 -12 8 C-14 16 -4 28 8 28 C20 28 30 16 12 4 Z"
+            fill="#FF7A12"/>
       <!-- inner drop -->
-      <path d="M-1 -4 C-6 -10 -12 -4 -12 3 C-12 10 -6 14 0 12 C6 10 10 4 -1 -4 Z"
-            fill="#fff5cf" opacity="0.82"/>
+      <path d="M-1 -4 C-6 -10 -12 -4 -12 3 C-12 10 -6 14 0 12 C6 10 12 4 -1 -4 Z"
+            fill="#FFF5CF" opacity="0.86"/>
     </g>
   </g>
 
-  <!-- number -->
-  <g class="font">
-    <text x="${width/2}" y="${height/2 + 25}"
-          class="num"
-          font-size="${Math.min(112, width * 0.26)}">${daysText}</text>
-    <text x="${width/2}" y="${height/2 + 64}" class="sub" font-size="20">${escapeXml(title)}</text>
+  <!-- Number (split into animated digits) -->
+  <g class="ui">
+    ${digitNodes}
+    <text x="${width/2}" y="${baselineY + 40}" class="sub">${escapeXml(title)}</text>
   </g>
 </svg>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
