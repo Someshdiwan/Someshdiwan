@@ -2,7 +2,7 @@ name: Render WakaTime SVG (nightly)
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '0 3 * * *'       # 03:00 UTC (08:30 IST). For 03:00 IST use: 30 21 * * *
   workflow_dispatch:
 
 concurrency:
@@ -15,12 +15,17 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Kolkata
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           persist-credentials: true
           fetch-depth: 0
+
+      - name: Small random jitter (API friendly)
+        run: sleep $(( RANDOM % 90 ))
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -41,42 +46,53 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node ./scripts/generate_streak.js || echo "streak generator failed"
 
-      - name: Commit assets if changed
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add wakatime.svg streak.svg || true
-
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          git commit -m "chore: update generated assets"
-
-          git fetch origin main
-          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-          git pull --rebase origin main
-          git stash pop || true
-          git push origin main
-
       - name: Sanitize generated SVGs
-        run: |
-          node .github/sanitize_svg.js wakatime.svg streak.svg || true
+        run: node .github/sanitize_svg.js wakatime.svg streak.svg || true
 
-      - name: Commit assets if changed
+      - name: Commit & push if changed (amend bot-only)
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
+          set -euo pipefail
+
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add wakatime.png wakatime.svg streak.svg || true
-          if git diff --staged --quiet; then
+
+          # Stage only our managed files (png is optional if you produce it)
+          git add -N wakatime.svg streak.svg wakatime.png 2>/dev/null || true
+          if git diff --quiet -- wakatime.svg streak.svg wakatime.png; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: update generated assets"
+
+          git add wakatime.svg streak.svg wakatime.png 2>/dev/null || true
+
+          # Rebase on latest main (handles parallel edits), stash just in case
           git fetch origin main
-          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-          git pull --rebase origin main
-          git stash pop || true
-          git push origin main
+          git stash push --include-untracked -m "gha/stash" || true
+          git pull --rebase origin main || true
+          git stash pop || true || true
+
+          # If last commit is our bot and only touched our files, amend it
+          LAST_AUTHOR="$(git log -1 --pretty=format:'%an <%ae>')"
+          ONLY_OURS="false"
+          MODS="$(git show --name-only --pretty='' HEAD 2>/dev/null || true)"
+          if [[ "$LAST_AUTHOR" == "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" ]]; then
+            BAD="no"
+            for f in $MODS; do
+              case "$f" in
+                wakatime.svg|streak.svg|wakatime.png) ;;
+                *) BAD="yes"; break;;
+              esac
+            done
+            [[ "$BAD" == "no" ]] && ONLY_OURS="true"
+          fi
+
+          if [[ "$ONLY_OURS" == "true" ]]; then
+            git commit --amend --no-edit || true
+            git push --force-with-lease origin main
+            echo "Amended previous bot commit."
+          else
+            git commit -m "chore: update generated assets"
+            git push origin main
+            echo "Pushed new bot commit."
+          fi
