@@ -8,10 +8,12 @@
      Featured Repositories
 ======================= -->
 <details>
-  <!-- Keep summary unstyled so GitHub shows the native dropdown triangle -->
+  <!-- Keep the summary unstyled so GitHub shows the native dropdown triangle -->
   <summary align="center" title="Expand / collapse featured repositories">
-    <!-- Slimmer banner to match your layout rhythm -->
+  <!-- Slimmer banner to match your layout rhythm -->
+  <a href="https://github.com/Someshdiwan?tab=repositories" target="_blank" aria-label="Explore all repositories on Someshdiwan's profile">
     <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520"/>
+  </a>
   </summary>
   <!-- subtle spacing below the summary -->
   <div style="height:8px;"></div>
@@ -78,12 +80,15 @@
       </td>
     </tr>
   </table>
+  <!-- 
   <p align="center">
   <a href="https://github.com/Someshdiwan?tab=repositories" target="_blank" aria-label="Explore all repositories on Someshdiwan's profile">
     <img src="Assets/Explore.svg" alt="Explore all repos on my profile"/>
   </a>
   </p>
+  -->
 </details>
+
 
 ---
 
