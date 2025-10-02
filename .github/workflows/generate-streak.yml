@@ -1,17 +1,9 @@
 name: Generate Streak SVG
 
 on:
-  # 3:00 AM, 3:00 PM, 9:00 PM IST -> 21:30, 09:30, 15:30 UTC (runs every day, no end date)
   schedule:
-    - cron: "30 21 * * *"  # 03:00 IST
-    - cron: "30 9 * * *"   # 15:00 IST
-    - cron: "30 15 * * *"  # 21:00 IST
+    - cron: '0 3 * * *'
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Run generation but do NOT commit/push"
-        required: false
-        default: "false"
   push:
     branches: [ main ]
     paths-ignore:
@@ -23,173 +15,49 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write  # allow commits/pushes
+  contents: write
 
 jobs:
   generate:
-    # Allow schedule/workflow_dispatch to run as the bot,
-    # but prevent infinite push-trigger loops from bot commits.
-    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
-
-    env:
-      TZ: Asia/Kolkata
-      STREAK_SVG: streak.svg
-      STREAK_STATE: streak_state.json
-      README: README.md
-      CACHE_KEY_FILE: streak.svg
-      DRY_RUN: ${{ inputs.dry_run || 'false' }}
-
     steps:
-      - name: Checkout (shallow but enough)
+      - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 50
           persist-credentials: true
-
-      - name: Small random jitter (API friendly)
-        run: sleep $(( RANDOM % 120 ))
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies (reproducible)
-        run: |
-          if [[ -f package-lock.json ]]; then
-            npm ci --ignore-scripts
-          else
-            npm install --ignore-scripts
-          fi
+      - name: Install deps
+        run: npm ci || npm install
 
-      - name: Baseline content hashes
-        id: before
-        shell: bash
-        run: |
-          set -euo pipefail
-          hash() { test -f "$1" && sha256sum "$1" | awk '{print $1}' || echo "missing"; }
-          echo "svg=$(hash "$STREAK_SVG")"     >> "$GITHUB_OUTPUT"
-          echo "state=$(hash "$STREAK_STATE")" >> "$GITHUB_OUTPUT"
-          echo "readme=$(hash "$README")"      >> "$GITHUB_OUTPUT"
-
-      - name: Generate streak.svg (capture logs)
-        id: gen
+      - name: Generate streak.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        shell: bash
+        run: node ./scripts/generate_streak.js
+
+      - name: Bust README cache for streak.svg
         run: |
-          set -euo pipefail
-          LOG=gen_streak.log
-          ( node ./scripts/generate_streak.js ) 2>&1 | tee "$LOG"
-          echo "log=$LOG" >> "$GITHUB_OUTPUT"
+          RUN_ID="${{ github.run_id }}"
+          sed -i -E 's#(streak\.svg)(\?v=[0-9]+)?#\1?v='"$RUN_ID"'#' README.md
 
-      - name: Post-generation hashes & cache key
-        id: after
-        shell: bash
+      - name: Commit if changed
         run: |
-          set -euo pipefail
-          hash() { test -f "$1" && sha256sum "$1" | awk '{print $1}' || echo "missing"; }
-          SVG_HASH="$(hash "$STREAK_SVG")"
-          STATE_HASH="$(hash "$STREAK_STATE")"
-          echo "svg=$SVG_HASH"     >> "$GITHUB_OUTPUT"
-          echo "state=$STATE_HASH" >> "$GITHUB_OUTPUT"
-          echo "cb=${SVG_HASH:0:10}" >> "$GITHUB_OUTPUT"
-
-      - name: Update README cache-buster (only if SVG changed)
-        if: steps.before.outputs.svg != steps.after.outputs.svg
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [[ -f "$README" ]]; then
-            sed -i -E "s#(streak\.svg)(\?v=[a-zA-Z0-9]+)?#\1?v=${{ steps.after.outputs.cb }}#g" "$README"
-          fi
-
-      - name: Decide if anything meaningful changed
-        id: diff
-        shell: bash
-        run: |
-          set -euo pipefail
-          git add -N "$STREAK_SVG" "$STREAK_STATE" "$README" >/dev/null 2>&1 || true
-          CHANGED="no"
-          if ! git diff --quiet -- "$STREAK_SVG" "$STREAK_STATE" "$README"; then
-            CHANGED="yes"
-          fi
-          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
-
-      - name: Short summary
-        shell: bash
-        run: |
-          {
-            echo "### Streak generation summary"
-            echo ""
-            echo "- SVG changed: $([[ '${{ steps.before.outputs.svg }}' != '${{ steps.after.outputs.svg }}' ]] && echo '✅' || echo '❌')"
-            echo "- State changed: $([[ '${{ steps.before.outputs.state }}' != '${{ steps.after.outputs.state }}' ]] && echo '✅' || echo '❌')"
-            echo "- Will commit: $([[ '${{ steps.diff.outputs.changed }}' == 'yes' && env.DRY_RUN != 'true' ]] && echo '✅' || echo '❌')"
-            echo ""
-            echo "| File | Before | After |"
-            echo "|------|--------|-------|"
-            echo "| $STREAK_SVG | \`${{ steps.before.outputs.svg }}\` | \`${{ steps.after.outputs.svg }}\` |"
-            echo "| $STREAK_STATE | \`${{ steps.before.outputs.state }}\` | \`${{ steps.after.outputs.state }}\` |"
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Upload logs when generation fails
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: streak-generation-logs
-          path: ${{ steps.gen.outputs.log }}
-          if-no-files-found: ignore
-          retention-days: 7
-
-      - name: Stop on dry-run / no changes
-        if: env.DRY_RUN == 'true' || steps.diff.outputs.changed != 'yes'
-        shell: bash
-        run: |
-          if [[ "${DRY_RUN}" == "true" ]]; then
-            echo "Dry-run enabled: skipping commit/push."
-          else
-            echo "No meaningful changes: nothing to commit."
-          fi
-
-      - name: Commit & push (amend when previous is bot-only)
-        if: env.DRY_RUN != 'true' && steps.diff.outputs.changed == 'yes'
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add "$STREAK_SVG" "$STREAK_STATE" "$README" || true
-
+          git add streak.svg streak_state.json README.md || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update streak.svg"
           git fetch origin main
           git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-          git pull --rebase origin main || true
-          git stash pop || true || true
-
-          LAST_AUTHOR="$(git log -1 --pretty=format:'%an <%ae>')"
-          ONLY_OURS="false"
-          set +e
-          MODS="$(git show --name-only --pretty='' HEAD 2>/dev/null)"
-          set -e
-          if [[ "$LAST_AUTHOR" == "github-actions[bot] <github-actions[bot]@users.noreply.github.com>" ]]; then
-            BAD="no"
-            for f in $MODS; do
-              case "$f" in
-                "$STREAK_SVG"|"$STREAK_STATE"|"$README") ;;
-                *) BAD="yes"; break;;
-              esac
-            done
-            if [[ "$BAD" == "no" ]]; then ONLY_OURS="true"; fi
-          fi
-
-          if [[ "$ONLY_OURS" == "true" ]]; then
-            git commit --amend --no-edit || true
-            git push --force-with-lease origin main
-            echo "Amended previous bot commit (force-with-lease)."
-          else
-            git commit -m "chore: update streak.svg"
-            git push origin main
-            echo "Pushed new bot commit."
-          fi
+          git pull --rebase origin main
+          git stash pop || true
+          git push origin main
