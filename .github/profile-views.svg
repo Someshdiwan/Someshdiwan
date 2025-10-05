@@ -1,56 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="280" height="36" viewBox="0 0 280 36" role="img" aria-label="Profile views">
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="36" viewBox="0 0 320 36" role="img" aria-label="Profile views">
   <defs>
-    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#1e90ff"/>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#1e90ff"/>
     </linearGradient>
-    <filter id="f1" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="b"/>
-      <feBlend in="SourceGraphic" in2="b"/>
-    </filter>
-    <style>
-      .label { font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-size:13px; fill:#ffffff; opacity:0.95; }
-      .value { font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial; font-size:14px; font-weight:700; fill:#ffffff; }
-      .heart { transform-origin: center; animation: beat 1.4s infinite; }
-      @keyframes beat {
-        0% { transform: scale(1); }
-        25% { transform: scale(1.08); }
-        50% { transform: scale(1); }
-        75% { transform: scale(1.06); }
-        100% { transform: scale(1); }
-      }
-    </style>
   </defs>
 
   <!-- background -->
-  <rect width="280" height="36" rx="8" fill="url(#g1)"/>
+  <rect rx="8" width="320" height="36" fill="url(#g)"/>
 
   <!-- left label -->
-  <text class="label" x="18" y="22">Profile views</text>
+  <text x="18" y="22" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">Profile views</text>
 
-  <!-- value -->
-  <text class="value" x="150" y="22">1,191</text>
+  <!-- numeric value -->
+  <text x="170" y="22" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="14" fill="#ffffff">1,191</text>
 
-  <!-- heart + likes group -->
-  <g transform="translate(210,18)">
-    <!-- pulsing heart path -->
-    <path class="heart" d="M8 0.5
-      C5.5 -0.5 2.5 -0.3 1.1 1.7
-      C-0.9 4.9 3.5 9 8 12
-      C12.5 9 17 4.9 15 1.7
-      C13.6 -0.3 10.6 -0.5 8 0.5Z"
-      fill="#ff6b81" stroke="#fff" stroke-opacity="0.15" stroke-width="0.6"/>
-    <!-- sparkle: a small circle that briefly brightens and scales -->
-    <circle cx="26" cy="-6" r="2" fill="#fff" opacity="0.0">
-      <!-- brighten + scale quickly, then fade -->
-      <animate attributeName="opacity" values="0;0.9;0" dur="0.9s" begin="0s; spark.end+2s" fill="freeze"/>
-      <animate attributeName="r" values="1;5;1" dur="0.9s" begin="0s; spark.end+2s" fill="freeze"/>
-      <!-- tiny id to coordinate repeats -->
-      <set id="spark" attributeName="visibility" to="visible" begin="0s" />
-    </circle>
+  <!-- heart icon (static) -->
+  <g transform="translate(230,8)">
+    <path d="M8 0.6 C5.6-0.2 3-0.1 1.6 1.7 C-0.7 5 3.6 9.2 8 12 C12.4 9.2 16.7 5 15.4 1.7 C14 -0.1 11.4-0.2 8 0.6 Z" fill="#ff6b81" stroke="#ffffff" stroke-opacity="0.12" stroke-width="0.6"/>
   </g>
 
-  <!-- likes number -->
-  <text class="label" x="240" y="22"> 0</text>
+  <!-- likes count -->
+  <text x="260" y="22" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff">0</text>
 
 </svg>
