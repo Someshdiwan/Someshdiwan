@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="20" viewBox="0 0 220 20" role="img" aria-label="Profile views">
+  <rect width="220" height="20" rx="3" fill="#555"></rect>
+  <rect x="100" width="120" height="20" rx="3" fill="#0e75b6"></rect>
+  <g fill="#fff" font-family="Verdana,Arial,Helvetica,sans-serif" font-size="11">
+    <text x="10" y="14">Profile views</text>
+    <text x="110" y="14">1191</text>
+  </g>
+  <!-- optional small heart on right -->
+  <g transform="translate(190,2)">
+    <path d="M8 2c-1.657 0-3 1.343-3 3 0 3 6 6.5 6 6.5s6-3.5 6-6.5c0-1.657-1.343-3-3-3-1.042 0-1.947.6-2.5 1.453C9.947 2.6 9.042 2 8 2z" fill="#fff" opacity="0.85"/>
+  </g>
+</svg>
