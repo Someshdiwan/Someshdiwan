@@ -1,0 +1,56 @@
+name: Fetch profile views (daily at 00:00 IST)
+
+on:
+  schedule:
+    # 00:00 Asia/Kolkata = 18:30 UTC previous day
+    - cron: '30 18 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install requests
+        run: python -m pip install --upgrade pip requests
+
+      - name: Run fetch_views script
+        env:
+          KOMAREV_USERNAME: 'Someshdiwan'    # edit if needed
+          OUTPUT_PATH: '.github/profile-views.json'
+        run: |
+          # choose correct path for your script:
+          # if your script is at .github/scripts/fetch_views.py:
+          SCRIPT_PATH=".github/scripts/fetch_views.py"
+          # if you currently have it under .github/workflows/scripts, change as needed:
+          if [ ! -f "$SCRIPT_PATH" ]; then
+            echo "Trying alternate path .github/workflows/scripts/fetch_views.py"
+            SCRIPT_PATH=".github/workflows/scripts/fetch_views.py"
+          fi
+
+          echo "Using script: $SCRIPT_PATH"
+          python "$SCRIPT_PATH" --username "$KOMAREV_USERNAME" --output "$OUTPUT_PATH"
+
+      - name: Commit and push generated JSON (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/profile-views.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update profile views (auto)"
+            git push
+          fi
