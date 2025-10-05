@@ -6,3 +6,21 @@ npm-debug.log*
 /Archived Codes/FRCodeArchived.md
 /Archived Codes/l.md
 /Archived Codes/repos-summary.svg
+
+*.iml
+.idea/
+
+.DS_Store
+
+target/
+build/
+*.log
+
+.env.local
+*.env
+!sample.env
+
+*.class
+*.jar
+*.war
+*.ear
