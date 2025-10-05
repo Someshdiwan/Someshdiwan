@@ -1,44 +1,87 @@
 name: Fetch profile views (00:00 IST)
 
+concurrency:
+  group: fetch-profile-views
+  cancel-in-progress: true
+
 on:
   schedule:
-    - cron: '30 18 * * *'   # 00:00 Asia/Kolkata = 18:30 UTC previous day
+    # 00:00 Asia/Kolkata = 18:30 UTC previous day
+    - cron: '30 18 * * *'
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+env:
+  SCRIPT_PATH: .github/workflows/scripts/fetch_views.py
+  OUTPUT_PATH: .github/profile-views.json
+  SVG_PATH: .github/profile-views.svg
+
 jobs:
   update-views:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
           persist-credentials: true
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install deps
+      - name: Install dependencies
         run: python -m pip install --upgrade pip requests
 
       - name: Run fetch script (writes JSON + SVG)
         env:
-          USERNAME: 'Someshdiwan'   # <-- set your username
+          USERNAME: 'Someshdiwan'   # <-- set your username if needed
         run: |
-          python .github/workflows/scripts/fetch_views.py --username "$USERNAME" --output .github/profile-views.json --svg .github/profile-views.svg
+          echo "Script path: $SCRIPT_PATH"
+          if [ ! -f "$SCRIPT_PATH" ]; then
+            echo "Error: script not found at $SCRIPT_PATH"
+            exit 2
+          fi
+          python "$SCRIPT_PATH" --username "$USERNAME" --output "$OUTPUT_PATH" --svg "$SVG_PATH"
 
-      - name: Commit results if changed
+      - name: Commit & push results (safe rebase + retry)
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/profile-views.json .github/profile-views.svg README.md || true
+
+          # ensure we have latest remote branch head for safe rebase
+          git fetch origin "$BRANCH"
+
+          # Stage any generated files
+          git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
+
+          # If there are no staged changes, exit early
           if git diff --cached --quiet; then
             echo "No changes to commit"
-          else
-            git commit -m "chore: update profile views JSON+SVG"
-            git push
+            exit 0
           fi
+
+          # Try to commit
+          git commit -m "chore: update profile views JSON+SVG (auto)" || true
+
+          # Try a push; if it fails due to non-fast-forward, rebase on remote and retry
+          set -o pipefail
+          if git push origin "HEAD:$BRANCH"; then
+            echo "Pushed successfully"
+            exit 0
+          fi
+
+          echo "Push failed — attempting rebase on origin/$BRANCH and retry push"
+          git fetch origin "$BRANCH"
+          git rebase "origin/$BRANCH" || (echo "Rebase failed — attempting merge" && git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
+          # retry commit in case rebase introduced changed merge state
+          git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
+          git commit -m "chore: update profile views JSON+SVG (auto, post-rebase)" || true
+
+          # final retry
+          git push origin "HEAD:$BRANCH" || (echo "Final push attempt failed — aborting with error" && exit 1)
