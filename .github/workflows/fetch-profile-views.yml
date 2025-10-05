@@ -36,15 +36,11 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip requests
 
-      - name: Run fetch script (writes JSON + SVG)
+      - name: Fetch and write profile views
         env:
-          USERNAME: 'Someshdiwan'   # <-- set your username if needed
+          USERNAME: 'Someshdiwan'
         run: |
-          echo "Script path: $SCRIPT_PATH"
-          if [ ! -f "$SCRIPT_PATH" ]; then
-            echo "Error: script not found at $SCRIPT_PATH"
-            exit 2
-          fi
+          echo "Running fetch_views.py for $USERNAME ..."
           python "$SCRIPT_PATH" --username "$USERNAME" --output "$OUTPUT_PATH" --svg "$SVG_PATH"
 
       - name: Commit & push results (safe rebase + retry)
@@ -54,34 +50,25 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # ensure we have latest remote branch head for safe rebase
           git fetch origin "$BRANCH"
-
-          # Stage any generated files
           git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
 
-          # If there are no staged changes, exit early
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          # Try to commit
           git commit -m "chore: update profile views JSON+SVG (auto)" || true
 
-          # Try a push; if it fails due to non-fast-forward, rebase on remote and retry
           set -o pipefail
           if git push origin "HEAD:$BRANCH"; then
-            echo "Pushed successfully"
+            echo "✅ Pushed successfully"
             exit 0
           fi
 
-          echo "Push failed — attempting rebase on origin/$BRANCH and retry push"
+          echo "Push failed — attempting rebase/merge retry..."
           git fetch origin "$BRANCH"
-          git rebase "origin/$BRANCH" || (echo "Rebase failed — attempting merge" && git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
-          # retry commit in case rebase introduced changed merge state
+          git rebase "origin/$BRANCH" || (git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
           git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
           git commit -m "chore: update profile views JSON+SVG (auto, post-rebase)" || true
-
-          # final retry
-          git push origin "HEAD:$BRANCH" || (echo "Final push attempt failed — aborting with error" && exit 1)
+          git push origin "HEAD:$BRANCH" || (echo "❌ Final push attempt failed" && exit 1)

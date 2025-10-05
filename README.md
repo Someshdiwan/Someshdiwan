@@ -92,13 +92,11 @@
 
 ---
 
-<!-- PROFILE_VIEWS_BADGE_START -->
-![Profile views](.github/profile-views.svg)
-<!-- PROFILE_VIEWS_BADGE_END -->
-
-Like this profile? Comment `+1` or `❤️` on [this issue](https://github.com/Someshdiwan/Someshdiwan/issues/1).
-
----
+<!-- PROFILE_VIEWS_START -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views counter" />
+</p>
+<!-- PROFILE_VIEWS_END -->
 
 <img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
 
