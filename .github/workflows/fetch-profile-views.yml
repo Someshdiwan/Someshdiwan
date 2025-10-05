@@ -15,8 +15,10 @@ permissions:
 
 env:
   SCRIPT_PATH: .github/workflows/scripts/fetch_views.py
-  OUTPUT_PATH: .github/profile-views.json
+  SNAPSHOT_PATH: .github/profile-views.json
+  HISTORY_PATH: .github/profile-views-history.json
   SVG_PATH: .github/profile-views.svg
+  USERNAME: 'Someshdiwan'   # <-- change if needed
 
 jobs:
   update-views:
@@ -36,12 +38,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip requests
 
-      - name: Fetch and write profile views
-        env:
-          USERNAME: 'Someshdiwan'
+      - name: Run fetch script (writes snapshot, history, svg)
         run: |
-          echo "Running fetch_views.py for $USERNAME ..."
-          python "$SCRIPT_PATH" --username "$USERNAME" --output "$OUTPUT_PATH" --svg "$SVG_PATH"
+          if [ ! -f "${{ env.SCRIPT_PATH }}" ]; then
+            echo "Script not found at $SCRIPT_PATH"
+            exit 2
+          fi
+          python "${{ env.SCRIPT_PATH }}" \
+            --username "${{ env.USERNAME }}" \
+            --snapshot "${{ env.SNAPSHOT_PATH }}" \
+            --history "${{ env.HISTORY_PATH }}" \
+            --svg "${{ env.SVG_PATH }}"
 
       - name: Commit & push results (safe rebase + retry)
         env:
@@ -51,14 +58,14 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git fetch origin "$BRANCH"
-          git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
+          git add "${{ env.SNAPSHOT_PATH }}" "${{ env.HISTORY_PATH }}" "${{ env.SVG_PATH }}" README.md || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
 
-          git commit -m "chore: update profile views JSON+SVG (auto)" || true
+          git commit -m "chore: update profile views snapshot+history+svg (auto)" || true
 
           set -o pipefail
           if git push origin "HEAD:$BRANCH"; then
@@ -69,6 +76,6 @@ jobs:
           echo "Push failed — attempting rebase/merge retry..."
           git fetch origin "$BRANCH"
           git rebase "origin/$BRANCH" || (git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
-          git add "$OUTPUT_PATH" "$SVG_PATH" README.md || true
-          git commit -m "chore: update profile views JSON+SVG (auto, post-rebase)" || true
+          git add "${{ env.SNAPSHOT_PATH }}" "${{ env.HISTORY_PATH }}" "${{ env.SVG_PATH }}" README.md || true
+          git commit -m "chore: update profile views snapshot+history+svg (auto, post-rebase)" || true
           git push origin "HEAD:$BRANCH" || (echo "❌ Final push attempt failed" && exit 1)

@@ -92,13 +92,15 @@
 
 ---
 
-<!-- PROFILE_VIEWS_START -->
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views counter" />
-</p>
-<!-- PROFILE_VIEWS_END -->
-
 <img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
+
+<!-- Profile Views (left-aligned directly below) -->
+<div align="left">
+  <img
+    src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
+    alt="Profile views counter"
+  />
+</div>
 
 <p align="center">
   <!-- X (Twitter) -->
