@@ -96,6 +96,8 @@
 ![Profile views](.github/profile-views.svg)
 <!-- PROFILE_VIEWS_BADGE_END -->
 
+You can like this profile by commenting `+1` or `❤️` on [this issue](https://github.com/Someshdiwan/Someshdiwan/issues/1).
+
 ---
 
 <img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
