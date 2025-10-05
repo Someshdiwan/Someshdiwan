@@ -2,15 +2,14 @@ name: Fetch profile views (00:00 IST)
 
 on:
   schedule:
-    # 00:00 Asia/Kolkata = 18:30 UTC (previous day)
-    - cron: '30 18 * * *'
+    - cron: '30 18 * * *'   # 00:00 Asia/Kolkata = 18:30 UTC previous day
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 jobs:
-  pull-views:
+  update-views:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,23 +25,20 @@ jobs:
       - name: Install deps
         run: python -m pip install --upgrade pip requests
 
-      - name: Fetch & write JSON
+      - name: Run fetch script (writes JSON + SVG)
         env:
-          USERNAME: 'Someshdiwan'                      # <- your username
-          OUTPUT: '.github/profile-views.json'         # <- required path
+          USERNAME: 'Someshdiwan'   # <-- set your username
         run: |
-          python .github/workflows/scripts/fetch_views.py \
-            --username "$USERNAME" \
-            --output "$OUTPUT"
+          python .github/workflows/scripts/fetch_views.py --username "$USERNAME" --output .github/profile-views.json --svg .github/profile-views.svg
 
-      - name: Commit if changed
+      - name: Commit results if changed
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .github/profile-views.json || true
+          git add .github/profile-views.json .github/profile-views.svg README.md || true
           if git diff --cached --quiet; then
-            echo "No changes"
+            echo "No changes to commit"
           else
-            git commit -m "chore: update profile views (auto)"
+            git commit -m "chore: update profile views JSON+SVG"
             git push
           fi

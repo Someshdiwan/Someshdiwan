@@ -92,6 +92,11 @@
 
 ---
 
+<!-- PROFILE_VIEWS_BADGE_START -->
+![Profile views](.github/profile-views.svg)
+<!-- PROFILE_VIEWS_BADGE_END -->
+
+---
 
 <img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
 
