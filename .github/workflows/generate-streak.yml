@@ -46,52 +46,18 @@ jobs:
           RUN_ID="${{ github.run_id }}"
           sed -i -E 's#(streak\.svg)(\?v=[0-9]+)?#\1?v='"$RUN_ID"'#' README.md
 
-      - name: Commit & push if changed (safe, auto-resolve README conflicts)
-        env:
-          BRANCH: ${{ github.ref_name }}
+      - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          # Make sure we have up-to-date refs
-          git fetch origin "${BRANCH}" --depth=1 || true
-
-          # Merge remote main into workspace BEFORE committing.
-          # Use "-X theirs" so remote wins on conflicts (avoids the typical README cache-bust race).
-          # If merge fails for some reason, fall back to a non-failing merge attempt.
-          if git merge --no-edit -s recursive -X theirs "origin/${BRANCH}"; then
-            echo "Merged origin/${BRANCH} (theirs wins for conflicts)."
-          else
-            echo "Merge reported conflicts; attempting graceful fallback..."
-            git merge --no-edit "origin/${BRANCH}" || true
-          fi
-
-          # Stage the files the workflow changes (adjust paths if needed)
           git add streak.svg streak_state.json README.md || true
-
-          # If nothing changed, exit cleanly.
-          if git diff --cached --quiet; then
+          if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-
-          # Commit the generated assets + README in one commit
-          git commit -m "chore: update generated assets (auto)" || true
-
-          # Push. If push fails (race), try to pull+reapply quickly:
-          if git push origin "HEAD:${BRANCH}"; then
-            echo "✅ Pushed successfully"
-            exit 0
-          fi
-
-          echo "Push failed — trying rebase/pull retry..."
-          git fetch origin "${BRANCH}"
-          # Attempt safe rebase; if it fails, abort and try merge
-          if git pull --rebase origin "${BRANCH}"; then
-            git push origin "HEAD:${BRANCH}" && exit 0
-          else
-            git rebase --abort || true
-            # As a last resort, merge with "theirs" strategy to keep origin main's conflict hunks
-            git merge --no-edit -s recursive -X theirs "origin/${BRANCH}" || true
-            git push origin "HEAD:${BRANCH}" || (echo "❌ Final push attempt failed" && exit 1)
-          fi
+          git commit -m "chore: update streak.svg"
+          git fetch origin main
+          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
+          git pull --rebase origin main
+          git stash pop || true
+          git push origin main
