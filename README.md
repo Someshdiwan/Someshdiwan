@@ -294,6 +294,12 @@
 
 ---
 
+<p align="center">
+  <img src="assets/contrib-monthly.svg" alt="Monthly contributions by month" />
+</p>
+
+---
+
 <img src="Assets/thanks.svg" alt="Thank You"/>
 
 <p align="center">
