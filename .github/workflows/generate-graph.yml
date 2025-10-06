@@ -29,8 +29,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # run from repo root; adjust path if you moved the script
-          node .github/workflows/scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
+          node scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
 
       - name: Commit & push if changed
         run: |
