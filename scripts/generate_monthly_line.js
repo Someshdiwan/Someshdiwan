@@ -1,15 +1,4 @@
 #!/usr/bin/env node
-/**
- * generate_monthly_line.js
- * Fetches GitHub contributions for a year, aggregates per month,
- * and renders a smooth area/line SVG (12 months).
- *
- * Usage:
- *   PH_TOKEN=... node scripts/generate_monthly_line.js --user Someshdiwan --year 2025 --out Assets/contrib-monthly-line.svg
- *
- * Dependencies:
- *   npm i @octokit/graphql date-fns
- */
 
 const { graphql } = require('@octokit/graphql');
 const {
@@ -63,11 +52,8 @@ async function fetchContributions(client, login, from, to) {
 }
 
 // Catmull-Rom to Bezier conversion for smooth path
-// Returns array of cubic Bezier segments given points [{x,y}, ...]
 function catmullRom2bezier(points, alpha = 0.5) {
-    // if few points, return straight lines
     if (points.length < 2) return [];
-
     const beziers = [];
     for (let i = 0; i < points.length - 1; i++) {
         const p0 = points[i - 1] || points[i];
@@ -75,7 +61,6 @@ function catmullRom2bezier(points, alpha = 0.5) {
         const p2 = points[i + 1];
         const p3 = points[i + 2] || p2;
 
-        // tension (can change alpha)
         const t1x = (p2.x - p0.x) * alpha;
         const t1y = (p2.y - p0.y) * alpha;
         const t2x = (p3.x - p1.x) * alpha;
@@ -131,14 +116,14 @@ async function run() {
         });
     });
 
-    // Ensure all days in year present with 0 default
+    // Ensure all days in year present
     const allDays = eachDayOfInterval({ start: parseISO(from), end: parseISO(to) });
     allDays.forEach(dt => {
         const key = format(dt, 'yyyy-MM-dd');
         if (!counts.has(key)) counts.set(key, 0);
     });
 
-    // Aggregate per month 0..11
+    // Aggregate per month
     const months = Array.from({ length: 12 }, () => 0);
     counts.forEach((v, k) => {
         const dt = parseISO(k);
@@ -146,92 +131,138 @@ async function run() {
         months[m] += v;
     });
 
-    // Prepare points for plotting
-    // margins and canvas
+    // Canvas & layout
     const width = 1200;
-    const height = 320;
-    const padding = { top: 36, right: 40, bottom: 48, left: 64 };
+    const height = 340;
+    const padding = { top: 44, right: 48, bottom: 60, left: 72 };
     const plotW = width - padding.left - padding.right;
     const plotH = height - padding.top - padding.bottom;
 
     const maxVal = Math.max(...months, 1);
     const points = months.map((val, idx) => {
         const x = padding.left + (idx / 11) * plotW;
-        // Invert y: larger values up
         const y = padding.top + plotH - (val / maxVal) * plotH;
         return { x, y, v: val, m: idx };
     });
 
-    // build path: move to first point, then bezier segments
     const beziers = catmullRom2bezier(points);
 
-    // Build SVG path for curve
+    // Build path D
     let pathD = `M ${points[0].x.toFixed(2)} ${points[0].y.toFixed(2)} `;
     for (let i = 0; i < beziers.length; i++) {
         const b = beziers[i];
         pathD += `C ${b.x1.toFixed(2)} ${b.y1.toFixed(2)}, ${b.x2.toFixed(2)} ${b.y2.toFixed(2)}, ${b.x.toFixed(2)} ${b.y.toFixed(2)} `;
     }
 
-    // Build area path (close to baseline)
     const baselineY = padding.top + plotH;
     const areaPath = `${pathD} L ${points[points.length - 1].x.toFixed(2)} ${baselineY.toFixed(2)} L ${points[0].x.toFixed(2)} ${baselineY.toFixed(2)} Z`;
 
-    // Month labels
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
-    // Theme
-    const bg = '#1f2933';
-    const grid = 'rgba(255,255,255,0.06)';
-    const axis = 'rgba(255,255,255,0.16)';
-    const stroke = '#7dd3fc'; // light cyan line
-    const fill = 'rgba(125,211,252,0.12)';
-    const dotFill = '#7be0ff';
+    // Theme & colors
+    const bg = '#0f1720'; // slightly darker
+    const grid = 'rgba(255,255,255,0.04)';
+    const axis = 'rgba(255,255,255,0.10)';
+    const stroke = '#60a5fa';      // main line
+    const strokeShadow = '#60a5fa';
+    const fill = 'url(#areaGradient)';
+    const dotFill = '#9be7ff';
+    const textColor = '#e6eef6';
 
-    // Build SVG
+    // Build SVG with animation CSS
     const svgParts = [];
     svgParts.push(`<?xml version="1.0" encoding="utf-8"?>`);
     svgParts.push(`<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly contributions ${year}">`);
-    svgParts.push(`<rect width="100%" height="100%" rx="12" fill="${bg}" />`);
+    svgParts.push(`<defs>
+    <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .title { font-family: Inter, Arial, sans-serif; font-size:18px; fill:${textColor}; font-weight:700; }
+      .label { font-family: Inter, Arial, sans-serif; font-size:11px; fill:#c7d2da; }
+      .monthLabel { font-family: Inter, Arial, sans-serif; font-size:12px; fill:#cfe8ff; }
+      .axis { stroke:${axis}; stroke-width:1; }
+      .grid { stroke:${grid}; stroke-width:1; stroke-dasharray:4 4; }
+      .curve { fill:none; stroke:${stroke}; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
+      .curve-glow { fill:none; stroke:${strokeShadow}; stroke-width:12; stroke-opacity:0.06; stroke-linecap:round; stroke-linejoin:round; filter:url(#softGlow); }
+      .area { fill:${fill}; opacity:0.95; }
+      /* draw animation */
+      .draw {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: drawLine 1.6s ease-out forwards;
+      }
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+      .fadeIn {
+        opacity: 0;
+        animation: fadeInArea 1.2s ease-out 0.2s forwards;
+      }
+      @keyframes fadeInArea {
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>`);
 
-    // Title
-    svgParts.push(`<text x="${width/2}" y="${padding.top/1.2}" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fff" font-weight="700">Contributions — ${year}</text>`);
+    svgParts.push(`<rect width="100%" height="100%" rx="12" fill="${bg}" />`);
+    svgParts.push(`<text x="${width/2}" y="${padding.top/1.2}" text-anchor="middle" class="title">Contributions — ${year}</text>`);
+
+    // vertical month grid lines (subtle)
+    points.forEach((p, idx) => {
+        svgParts.push(`<line x1="${p.x.toFixed(2)}" x2="${p.x.toFixed(2)}" y1="${padding.top}" y2="${baselineY}" class="grid" />`);
+    });
 
     // Horizontal grid lines (5)
     const gridLines = 5;
     for (let i = 0; i <= gridLines; i++) {
         const gy = padding.top + (i / gridLines) * plotH;
-        svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${gy}" y2="${gy}" stroke="${grid}" stroke-width="1" stroke-dasharray="4 4" />`);
+        svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${gy}" y2="${gy}" class="grid" />`);
     }
 
     // Y-axis labels (0..max)
     for (let i = 0; i <= gridLines; i++) {
         const val = Math.round((1 - i / gridLines) * maxVal);
         const gy = padding.top + (i / gridLines) * plotH;
-        svgParts.push(`<text x="${padding.left - 12}" y="${gy+4}" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">${val}</text>`);
+        svgParts.push(`<text x="${padding.left - 12}" y="${gy+4}" text-anchor="end" class="label">${val}</text>`);
     }
 
-    // X-axis month labels
+    // Month labels
     points.forEach((p, idx) => {
-        svgParts.push(`<text x="${p.x}" y="${height - 12}" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">${monthNames[idx]}</text>`);
+        svgParts.push(`<text x="${p.x.toFixed(2)}" y="${height - 18}" text-anchor="middle" class="monthLabel">${monthNames[idx]}</text>`);
     });
 
-    // Area
-    svgParts.push(`<path d="${areaPath}" fill="${fill}" stroke="none" opacity="1" />`);
+    // Area (with fade-in)
+    svgParts.push(`<path d="${areaPath}" class="area fadeIn" />`);
 
-    // Stroke (slightly thicker, shadow)
-    svgParts.push(`<path d="${pathD}" fill="none" stroke="${stroke}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />`);
-    // Glow (low-opacity thicker stroke for glow effect)
-    svgParts.push(`<path d="${pathD}" fill="none" stroke="${stroke}" stroke-width="8" stroke-opacity="0.06" stroke-linejoin="round" stroke-linecap="round" />`);
+    // Glow stroke under the main line
+    svgParts.push(`<path d="${pathD}" class="curve-glow" />`);
 
-    // Points (circles)
+    // Main animated stroke (draw)
+    svgParts.push(`<path d="${pathD}" class="curve draw" />`);
+
+    // Points + numeric labels for months with contributions
     points.forEach(p => {
-        svgParts.push(`<circle cx="${p.x}" cy="${p.y}" r="4.5" fill="${dotFill}" stroke="#083344" stroke-width="1" />`);
+        svgParts.push(`<circle cx="${p.x}" cy="${p.y}" r="4.5" fill="${dotFill}" stroke="#063241" stroke-width="1" />`);
         svgParts.push(`<title>${monthNames[p.m]} ${year}: ${p.v} contributions</title>`);
+        // render small value labels if non-zero (avoid clutter)
+        if (p.v > 0) {
+            const labelY = p.y - 12;
+            svgParts.push(`<text x="${p.x}" y="${labelY}" text-anchor="middle" class="label">${p.v}</text>`);
+        }
     });
 
-    // X and Y axis lines
-    svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${baselineY}" y2="${baselineY}" stroke="${axis}" stroke-width="1" />`);
-    svgParts.push(`<line x1="${padding.left}" x2="${padding.left}" y1="${padding.top}" y2="${baselineY}" stroke="${axis}" stroke-width="1" />`);
+    // Axis lines
+    svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${baselineY}" y2="${baselineY}" class="axis" />`);
+    svgParts.push(`<line x1="${padding.left}" x2="${padding.left}" y1="${padding.top}" y2="${baselineY}" class="axis" />`);
 
     svgParts.push(`</svg>`);
 

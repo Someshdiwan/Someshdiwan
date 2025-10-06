@@ -2,7 +2,10 @@ name: Generate Monthly Contribution SVG
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    # run on 15th (UTC 03:00)
+    - cron: '0 3 15 * *'
+    # run on days 28-31 then validate last day inside the job
+    - cron: '0 3 28-31 * *'
   workflow_dispatch:
 
 concurrency:
@@ -39,19 +42,39 @@ jobs:
           fi
           echo "PH_TOKEN present (masked)."
 
+      - name: Check schedule -- proceed only on 15 or last day (skip for manual)
+        if: ${{ github.event_name != 'workflow_dispatch' }}
+        run: |
+          # GitHub runner uses UTC. Adjust if you want local timezone checks.
+          TODAY=$(date -u +%d)
+          MONTH=$(date -u +%m)
+          YEAR=$(date -u +%Y)
+          echo "UTC date: ${YEAR}-${MONTH}-${TODAY}"
+          # If it's the 15th we proceed
+          if [ "$TODAY" = "15" ]; then
+            echo "It's the 15th — proceeding."
+            exit 0
+          fi
+          # If day is 28-31, check if it's the last day of the month
+          if [ "$TODAY" -ge 28 ]; then
+            # compute tomorrow's day; if tomorrow day is 01 => today is last day
+            TOMORROW=$(date -u -d "tomorrow" +%d)
+            if [ "$TOMORROW" = "01" ]; then
+              echo "Today is last day of month — proceeding."
+              exit 0
+            else
+              echo "Not last day (today ${TODAY}). Exiting."
+              exit 0   # we exit 0 to treat this as a no-op scheduled run
+            fi
+          fi
+          echo "Not a scheduled run target day (not 15 or last day). Exiting."
+          exit 0
+
       - name: Generate monthly contribution SVG (monthly line)
         env:
           PH_TOKEN: ${{ secrets.PH_TOKEN }}
           GH_TOKEN: ${{ secrets.PH_TOKEN }}   # map into GH_TOKEN in case scripts expect it
         run: |
-          # ensure script exists and is executable
-          if [ ! -f "scripts/generate_monthly_line.js" ]; then
-            echo "Error: scripts/generate_monthly_line.js not found; listing files:"
-            ls -la
-            exit 3
-          fi
-
-          # create destination dir and run
           mkdir -p Assets
           node scripts/generate_monthly_line.js --user Someshdiwan --year $(date +%Y) --out Assets/contrib-monthly-line.svg
 
@@ -69,7 +92,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # fetch latest and add the exact path we generate
           git fetch origin "$BRANCH"
           git add Assets/contrib-monthly-line.svg || true
 
@@ -80,7 +102,6 @@ jobs:
 
           git commit -m "chore: update monthly contribution svg (auto)" || true
 
-          # push and attempt rebase/merge on failure
           if git push origin "HEAD:$BRANCH"; then
             echo "✅ Pushed successfully"
             exit 0
