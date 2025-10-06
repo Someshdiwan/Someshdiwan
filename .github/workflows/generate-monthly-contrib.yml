@@ -102,16 +102,23 @@ jobs:
             exit 0
           fi
 
-      - name: Commit & push if changed (safe)
+      - name: Commit & push if changed (robust)
         env:
           BRANCH: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git fetch origin "$BRANCH"
-          git add Assets/contrib-monthly-line.svg || true
+          # Ensure we have latest refs
+          git fetch origin "$BRANCH" || true
 
+          # Stage exact files we change
+          git add Assets/contrib-monthly-line.svg README.md || true
+
+          # If no staged changes, exit 0
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
@@ -119,14 +126,34 @@ jobs:
 
           git commit -m "chore: update monthly contribution svg (auto)" || true
 
-          if git push origin "HEAD:$BRANCH"; then
-            echo "✅ Pushed successfully"
-            exit 0
-          fi
+          # Push via token-authenticated URL with retries
+          PUSH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git"
+          echo "Using push URL: ${PUSH_URL/[A-Za-z0-9_\-]*/<redacted_token>} (token hidden)"
 
-          echo "Push failed — attempting rebase/merge retry..."
-          git fetch origin "$BRANCH"
-          git rebase "origin/$BRANCH" || (git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
-          git add Assets/contrib-monthly-line.svg || true
-          git commit -m "chore: update monthly contribution svg (auto, post-rebase)" || true
-          git push origin "HEAD:$BRANCH" || (echo "❌ Final push attempt failed" && exit 1)
+          max_attempts=3
+          attempt=1
+          until [ $attempt -gt $max_attempts ]; do
+            echo "Attempt $attempt of $max_attempts to push..."
+            if git push "${PUSH_URL}" "HEAD:${BRANCH}"; then
+              echo "✅ Pushed successfully on attempt $attempt"
+              exit 0
+            fi
+
+            echo "Push failed on attempt $attempt."
+            attempt=$((attempt + 1))
+            sleep_time=$((attempt * 5))
+            echo "Sleeping ${sleep_time}s before retry..."
+            sleep $sleep_time
+          done
+
+          echo "Push failed after ${max_attempts} attempts — printing git remote info & last 200 lines of git log for debugging."
+          git remote -v || true
+          echo "---- last git log (200 lines) ----"
+          git --no-pager log -n 50 --pretty=oneline || true
+
+          # Last resort: try a simple curl to GitHub to show status (not authoritative)
+          echo "Performing quick GitHub API check..."
+          curl -sSf -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/repos/${REPO}" || true
+
+          echo "❌ Final push attempt failed."
+          exit 1
