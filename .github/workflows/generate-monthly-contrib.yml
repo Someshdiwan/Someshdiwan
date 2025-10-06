@@ -42,19 +42,53 @@ jobs:
       - name: Generate monthly contribution SVG (monthly line)
         env:
           PH_TOKEN: ${{ secrets.PH_TOKEN }}
-          GH_TOKEN: ${{ secrets.PH_TOKEN }}   # optional: map to GH_TOKEN for backward compatibility
+          GH_TOKEN: ${{ secrets.PH_TOKEN }}   # map into GH_TOKEN in case scripts expect it
         run: |
+          # ensure script exists and is executable
+          if [ ! -f "scripts/generate_monthly_line.js" ]; then
+            echo "Error: scripts/generate_monthly_line.js not found; listing files:"
+            ls -la
+            exit 3
+          fi
+
+          # create destination dir and run
           mkdir -p Assets
           node scripts/generate_monthly_line.js --user Someshdiwan --year $(date +%Y) --out Assets/contrib-monthly-line.svg
 
-      - name: Commit & push if changed
+      - name: Sanity output (debug)
+        run: |
+          echo "Listing Assets folder:"
+          ls -la Assets || true
+          echo "Head of generated SVG (first 20 lines):"
+          head -n 20 Assets/contrib-monthly-line.svg || true
+
+      - name: Commit & push if changed (safe)
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/contrib-monthly.svg || true
-          if git diff --staged --quiet; then
-            echo "No change"
+
+          # fetch latest and add the exact path we generate
+          git fetch origin "$BRANCH"
+          git add Assets/contrib-monthly-line.svg || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
             exit 0
           fi
-          git commit -m "chore: update monthly contribution svg"
-          git push origin HEAD:main
+
+          git commit -m "chore: update monthly contribution svg (auto)" || true
+
+          # push and attempt rebase/merge on failure
+          if git push origin "HEAD:$BRANCH"; then
+            echo "✅ Pushed successfully"
+            exit 0
+          fi
+
+          echo "Push failed — attempting rebase/merge retry..."
+          git fetch origin "$BRANCH"
+          git rebase "origin/$BRANCH" || (git rebase --abort || true && git merge --no-edit "origin/$BRANCH")
+          git add Assets/contrib-monthly-line.svg || true
+          git commit -m "chore: update monthly contribution svg (auto, post-rebase)" || true
+          git push origin "HEAD:$BRANCH" || (echo "❌ Final push attempt failed" && exit 1)
