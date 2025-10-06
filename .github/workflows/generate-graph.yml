@@ -2,7 +2,7 @@ name: Generate Monthly Contribution SVG
 
 on:
   schedule:
-    - cron: '0 3 * * *' # daily at 03:00 UTC (adjust if needed)
+    - cron: '0 3 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,7 +29,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          node ./scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
+          # run from repo root; adjust path if you moved the script
+          node .github/workflows/scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
 
       - name: Commit & push if changed
         run: |
