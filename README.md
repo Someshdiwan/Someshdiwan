@@ -295,7 +295,7 @@
 ---
 
 <p align="center">
-  <img src="assets/contrib-monthly.svg" alt="Monthly contributions by month" />
+  <img src="Assets/contrib-monthly-line.svg" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ---

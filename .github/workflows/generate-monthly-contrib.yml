@@ -39,20 +39,13 @@ jobs:
           fi
           echo "PH_TOKEN present (masked)."
 
-      - name: Generate monthly contribution SVG
+      - name: Generate monthly contribution SVG (monthly line)
         env:
-          # Map PH_TOKEN into GH_TOKEN for backward compatibility with script
-          GH_TOKEN: ${{ secrets.PH_TOKEN }}
-          # Optional: expose PH_TOKEN directly as well
           PH_TOKEN: ${{ secrets.PH_TOKEN }}
+          GH_TOKEN: ${{ secrets.PH_TOKEN }}   # optional: map to GH_TOKEN for backward compatibility
         run: |
-          if [ ! -f "scripts/generate_monthly_graph.js" ]; then
-            echo "Error: scripts/generate_monthly_graph.js not found; listing files:"
-            ls -la
-            exit 3
-          fi
-          mkdir -p assets
-          node scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
+          mkdir -p Assets
+          node scripts/generate_monthly_line.js --user Someshdiwan --year $(date +%Y) --out Assets/contrib-monthly-line.svg
 
       - name: Commit & push if changed
         run: |
