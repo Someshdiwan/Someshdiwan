@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="381" height="640" viewBox="0 0 381 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub contributions (2025) - month by month">
+  <style>
+    .label { font-family: Inter, Arial, sans-serif; font-size:12px; fill:#222; }
+    .small { font-size:10px; fill:#666; }
+    .month-name { font-family: Inter, Arial, sans-serif; font-size:13px; fill:#0b1220; font-weight:600; }
+    .cell { rx: 2; ry: 2; }
+  </style>
+
+<g transform="translate(24, 24)">
+<text class="month-name" x="0" y="12">January 2025</text>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-01 — 15 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-02 — 8 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-03 — 3 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-04 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-05 — 5 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-06 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-07 — 31 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-08 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-09 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-10 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-11 — 13 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-12 — 102 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-13 — 19 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-14 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-15 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-16 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-17 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-18 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-19 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-20 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-21 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-22 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-23 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-24 — 7 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-25 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-26 — 4 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-27 — 9 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-28 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-29 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-30 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-01-31 — 8 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(143, 24)">
+<text class="month-name" x="0" y="12">February 2025</text>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-01 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-02 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-03 — 5 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-04 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-05 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-06 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-07 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-08 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-09 — 16 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-10 — 5 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-11 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-12 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-13 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-14 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-15 — 5 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-16 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-17 — 12 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-18 — 8 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-19 — 54 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-20 — 29 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-21 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-22 — 8 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-23 — 5 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-24 — 4 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-25 — 5 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-26 — 5 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-27 — 6 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-02-28 — 3 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(262, 24)">
+<text class="month-name" x="0" y="12">March 2025</text>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-01 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-02 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-03 — 7 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-04 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-05 — 25 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-06 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-07 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-08 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-09 — 6 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-10 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-11 — 50 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-12 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-13 — 5 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-14 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-15 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-16 — 42 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-17 — 18 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-18 — 34 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-19 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-20 — 19 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-21 — 16 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-22 — 24 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-23 — 22 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-24 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-25 — 25 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-26 — 9 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-27 — 6 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-28 — 4 contributions</title>
+</rect>
+<rect class="cell" x="60" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-29 — 18 contributions</title>
+</rect>
+<rect class="cell" x="75" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-30 — 5 contributions</title>
+</rect>
+<rect class="cell" x="75" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-03-31 — 15 contributions</title>
+</rect>
+<g transform="translate(95, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(24, 178)">
+<text class="month-name" x="0" y="12">April 2025</text>
+<rect class="cell" x="0" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-01 — 11 contributions</title>
+</rect>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-02 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-03 — 5 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-04 — 4 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-05 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-06 — 8 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-07 — 107 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-08 — 15 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-09 — 18 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-10 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-11 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-12 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-13 — 7 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-14 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-15 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-16 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-17 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-18 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-19 — 11 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-20 — 17 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-21 — 24 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-22 — 11 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-23 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-24 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-25 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-26 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-27 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-28 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-29 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-04-30 — 2 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(143, 178)">
+<text class="month-name" x="0" y="12">May 2025</text>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-01 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-02 — 4 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-03 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-04 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-05 — 5 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-06 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-07 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-08 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-09 — 4 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-10 — 5 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-11 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-12 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-13 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-14 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-15 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-16 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-17 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-18 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-19 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-20 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-21 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-22 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-23 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-24 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-25 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-26 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-27 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-28 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-29 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-30 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-05-31 — 1 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(262, 178)">
+<text class="month-name" x="0" y="12">June 2025</text>
+<rect class="cell" x="0" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-01 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-02 — 3 contributions</title>
+</rect>
+<rect class="cell" x="0" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-03 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-04 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-05 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-06 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-07 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-08 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-09 — 8 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-10 — 66 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-11 — 49 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-12 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-13 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-14 — 61 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-15 — 103 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-16 — 45 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-17 — 27 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-18 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-19 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-20 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-21 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-22 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-23 — 4 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-24 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-25 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-26 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-27 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-28 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-29 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-06-30 — 1 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(24, 332)">
+<text class="month-name" x="0" y="12">July 2025</text>
+<rect class="cell" x="0" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-01 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-02 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-03 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-04 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-05 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-06 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-07 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-08 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-09 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-10 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-11 — 6 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-12 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-13 — 4 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-14 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-15 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-16 — 6 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-17 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-18 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-19 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-20 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-21 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-22 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-23 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-24 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-25 — 3 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-26 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-27 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-28 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-29 — 5 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-30 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-07-31 — 2 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(143, 332)">
+<text class="month-name" x="0" y="12">August 2025</text>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-01 — 3 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-02 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-03 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-04 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-05 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-06 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-07 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-08 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-09 — 3 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-10 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-11 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-12 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-13 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-14 — 2 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-15 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-16 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-17 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-18 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-19 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-20 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-21 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-22 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-23 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-24 — 6 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-25 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-26 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-27 — 2 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-28 — 6 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-29 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-30 — 2 contributions</title>
+</rect>
+<rect class="cell" x="75" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-08-31 — 2 contributions</title>
+</rect>
+<g transform="translate(95, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(262, 332)">
+<text class="month-name" x="0" y="12">September 2025</text>
+<rect class="cell" x="0" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-01 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-02 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-03 — 15 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-04 — 41 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-05 — 1 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-06 — 1 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-07 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-08 — 2 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-09 — 25 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-10 — 20 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-11 — 20 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-12 — 26 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-13 — 40 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-14 — 25 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-15 — 27 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-16 — 8 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-17 — 99 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-18 — 1 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-19 — 12 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-20 — 30 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-21 — 80 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-22 — 62 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-23 — 102 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-24 — 1 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-25 — 318 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-26 — 2 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-27 — 1 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-28 — 3 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-29 — 43 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-09-30 — 41 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(24, 486)">
+<text class="month-name" x="0" y="12">October 2025</text>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-01 — 21 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-02 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-03 — 2 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-04 — 10 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-05 — 34 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-06 — 3 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-07 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-08 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-09 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-10 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-11 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-12 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-13 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-14 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-15 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-16 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-17 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-18 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-19 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-20 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-21 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-22 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-23 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-24 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-25 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-26 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-27 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-28 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-29 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-30 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-10-31 — 0 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(143, 486)">
+<text class="month-name" x="0" y="12">November 2025</text>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-01 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-02 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-03 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-04 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-05 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-06 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-07 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-08 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-09 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-10 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-11 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-12 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-13 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-14 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-15 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-16 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-17 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-18 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-19 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-20 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-21 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-22 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-23 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-24 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-25 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-26 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-27 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-28 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-29 — 0 contributions</title>
+</rect>
+<rect class="cell" x="75" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-11-30 — 0 contributions</title>
+</rect>
+<g transform="translate(95, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+<g transform="translate(262, 486)">
+<text class="month-name" x="0" y="12">December 2025</text>
+<rect class="cell" x="0" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-01 — 0 contributions</title>
+</rect>
+<rect class="cell" x="0" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-02 — 0 contributions</title>
+</rect>
+<rect class="cell" x="0" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-03 — 0 contributions</title>
+</rect>
+<rect class="cell" x="0" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-04 — 0 contributions</title>
+</rect>
+<rect class="cell" x="0" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-05 — 0 contributions</title>
+</rect>
+<rect class="cell" x="0" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-06 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-07 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-08 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-09 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-10 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-11 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-12 — 0 contributions</title>
+</rect>
+<rect class="cell" x="15" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-13 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-14 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-15 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-16 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-17 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-18 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-19 — 0 contributions</title>
+</rect>
+<rect class="cell" x="30" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-20 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-21 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-22 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-23 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-24 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="78" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-25 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="93" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-26 — 0 contributions</title>
+</rect>
+<rect class="cell" x="45" y="108" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-27 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="18" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-28 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="33" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-29 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="48" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-30 — 0 contributions</title>
+</rect>
+<rect class="cell" x="60" y="63" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5">
+<title>2025-12-31 — 0 contributions</title>
+</rect>
+<g transform="translate(80, 18)">
+<text class="small" x="0" y="-6">Less</text>
+<rect x="0" y="-4" width="12" height="12" fill="#ebedf0" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="14" y="-4" width="12" height="12" fill="#c6e48b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="28" y="-4" width="12" height="12" fill="#7bc96f" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="42" y="-4" width="12" height="12" fill="#239a3b" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<rect x="56" y="-4" width="12" height="12" fill="#196127" stroke="rgba(0,0,0,0.06)" stroke-width="0.4" />
+<text class="small" x="76" y="6">More</text>
+</g>
+</g>
+</svg>
