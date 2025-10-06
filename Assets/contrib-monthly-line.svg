@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly contributions 2025">
+<rect width="100%" height="100%" rx="12" fill="#1f2933" />
+<text x="600" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#fff" font-weight="700">Contributions — 2025</text>
+<line x1="64" x2="1160" y1="36" y2="36" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<line x1="64" x2="1160" y1="83.2" y2="83.2" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<line x1="64" x2="1160" y1="130.4" y2="130.4" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<line x1="64" x2="1160" y1="177.6" y2="177.6" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<line x1="64" x2="1160" y1="224.8" y2="224.8" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<line x1="64" x2="1160" y1="272" y2="272" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />
+<text x="52" y="40" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">1051</text>
+<text x="52" y="87.2" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">841</text>
+<text x="52" y="134.4" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">631</text>
+<text x="52" y="181.6" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">420</text>
+<text x="52" y="228.8" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">210</text>
+<text x="52" y="276" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="11" fill="#c7d2da">0</text>
+<text x="64" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Jan</text>
+<text x="163.63636363636363" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Feb</text>
+<text x="263.27272727272725" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Mar</text>
+<text x="362.9090909090909" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Apr</text>
+<text x="462.54545454545456" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">May</text>
+<text x="562.1818181818182" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Jun</text>
+<text x="661.8181818181818" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Jul</text>
+<text x="761.4545454545455" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Aug</text>
+<text x="861.0909090909091" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Sep</text>
+<text x="960.7272727272727" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Oct</text>
+<text x="1060.3636363636365" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Nov</text>
+<text x="1160" y="308" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#dbeafe">Dec</text>
+<path d="M 64.00 213.62 C 80.61 215.71, 130.42 230.95, 163.64 226.19 C 196.85 221.44, 230.06 188.06, 263.27 185.10 C 296.48 182.14, 329.70 197.30, 362.91 208.45 C 396.12 219.61, 429.33 256.54, 462.55 252.02 C 495.76 247.49, 528.97 180.38, 562.18 181.28 C 595.39 182.18, 628.61 244.79, 661.82 257.40 C 695.03 270.02, 728.24 293.86, 761.45 256.96 C 794.67 220.05, 827.88 36.19, 861.09 36.00 C 894.30 35.81, 927.52 216.50, 960.73 255.83 C 993.94 295.17, 1027.15 269.31, 1060.36 272.00 C 1093.58 274.69, 1143.39 272.00, 1160.00 272.00  L 1160.00 272.00 L 64.00 272.00 Z" fill="rgba(125,211,252,0.12)" stroke="none" opacity="1" />
+<path d="M 64.00 213.62 C 80.61 215.71, 130.42 230.95, 163.64 226.19 C 196.85 221.44, 230.06 188.06, 263.27 185.10 C 296.48 182.14, 329.70 197.30, 362.91 208.45 C 396.12 219.61, 429.33 256.54, 462.55 252.02 C 495.76 247.49, 528.97 180.38, 562.18 181.28 C 595.39 182.18, 628.61 244.79, 661.82 257.40 C 695.03 270.02, 728.24 293.86, 761.45 256.96 C 794.67 220.05, 827.88 36.19, 861.09 36.00 C 894.30 35.81, 927.52 216.50, 960.73 255.83 C 993.94 295.17, 1027.15 269.31, 1060.36 272.00 C 1093.58 274.69, 1143.39 272.00, 1160.00 272.00 " fill="none" stroke="#7dd3fc" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M 64.00 213.62 C 80.61 215.71, 130.42 230.95, 163.64 226.19 C 196.85 221.44, 230.06 188.06, 263.27 185.10 C 296.48 182.14, 329.70 197.30, 362.91 208.45 C 396.12 219.61, 429.33 256.54, 462.55 252.02 C 495.76 247.49, 528.97 180.38, 562.18 181.28 C 595.39 182.18, 628.61 244.79, 661.82 257.40 C 695.03 270.02, 728.24 293.86, 761.45 256.96 C 794.67 220.05, 827.88 36.19, 861.09 36.00 C 894.30 35.81, 927.52 216.50, 960.73 255.83 C 993.94 295.17, 1027.15 269.31, 1060.36 272.00 C 1093.58 274.69, 1143.39 272.00, 1160.00 272.00 " fill="none" stroke="#7dd3fc" stroke-width="8" stroke-opacity="0.06" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="64" cy="213.6175071360609" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Jan 2025: 260 contributions</title>
+<circle cx="163.63636363636363" cy="226.19219790675547" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Feb 2025: 204 contributions</title>
+<circle cx="263.27272727272725" cy="185.0999048525214" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Mar 2025: 387 contributions</title>
+<circle cx="362.9090909090909" cy="208.45290199809705" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Apr 2025: 283 contributions</title>
+<circle cx="462.54545454545456" cy="252.01522359657469" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>May 2025: 89 contributions</title>
+<circle cx="562.1818181818182" cy="181.2825880114177" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Jun 2025: 404 contributions</title>
+<circle cx="661.8181818181818" cy="257.4043767840152" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Jul 2025: 65 contributions</title>
+<circle cx="761.4545454545455" cy="256.95528068506184" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Aug 2025: 67 contributions</title>
+<circle cx="861.0909090909091" cy="36" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Sep 2025: 1051 contributions</title>
+<circle cx="960.7272727272727" cy="255.8325404376784" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Oct 2025: 72 contributions</title>
+<circle cx="1060.3636363636365" cy="272" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Nov 2025: 0 contributions</title>
+<circle cx="1160" cy="272" r="4.5" fill="#7be0ff" stroke="#083344" stroke-width="1" />
+<title>Dec 2025: 0 contributions</title>
+<line x1="64" x2="1160" y1="272" y2="272" stroke="rgba(255,255,255,0.16)" stroke-width="1" />
+<line x1="64" x2="64" y1="36" y2="272" stroke="rgba(255,255,255,0.16)" stroke-width="1" />
+</svg>
