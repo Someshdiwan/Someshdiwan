@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
+    <style>
+        .title {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 20px;
+        font-weight: bold;
+        fill: #FF8C00; /* orange tone = energy + creativity */
+        text-anchor: start;
+        dominant-baseline: middle;
+        }
+    </style>
+    <text x="0" y="50%" class="title">🌟 Monthly Contributions</text>
+</svg>

@@ -9,7 +9,7 @@
 ======================= -->
 <details>
   <!-- Keep the summary unstyled so GitHub shows the native dropdown triangle -->
-  <summary align="center" title="Expand / collapse featured repositories">
+  <summary align="left" title="Expand / collapse featured repositories">
   <!-- Slimmer banner to match your layout rhythm -->
   <a href="https://github.com/Someshdiwan?tab=repositories" target="_blank" aria-label="Explore all repositories on Someshdiwan's profile">
     <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520"/>
@@ -294,9 +294,10 @@
 
 ---
 
-## Monthly Contributions (auto-updating)
-
-<p align="center">
+<a>
+    <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
+</a>
+<p align="left">
   <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
   <img src="Assets/contrib-monthly-line.svg?v=1" alt="Monthly contributions (line)" width="1000" />
 </p>
