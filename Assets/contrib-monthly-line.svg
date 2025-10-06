@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg width="1200" height="340" viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly contributions 2025">
-<defs>
+  <defs>
     <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.02"/>
@@ -13,107 +13,107 @@
       </feMerge>
     </filter>
     <style>
-      .title { font-family: Inter, Arial, sans-serif; font-size:18px; fill:#e6eef6; font-weight:700; }
-      .label { font-family: Inter, Arial, sans-serif; font-size:11px; fill:#c7d2da; }
-      .monthLabel { font-family: Inter, Arial, sans-serif; font-size:12px; fill:#cfe8ff; }
-      .axis { stroke:rgba(255,255,255,0.10); stroke-width:1; }
-      .grid { stroke:rgba(255,255,255,0.04); stroke-width:1; stroke-dasharray:4 4; }
-      .curve { fill:none; stroke:#60a5fa; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke; }
-      .curve-glow { fill:none; stroke:#60a5fa; stroke-width:12; stroke-opacity:0.06; stroke-linecap:round; stroke-linejoin:round; filter:url(#softGlow); }
+      .curve { fill:none; stroke:#60a5fa; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; filter:url(#softGlow); }
+      .curve-glow { fill:none; stroke:#60a5fa; stroke-width:10; stroke-opacity:0.06; stroke-linecap:round; stroke-linejoin:round; }
       .area { fill:url(#areaGradient); opacity:0.95; }
-      /* draw animation */
+
+      /* Slow looping draw animation with breathing effect */
       .draw {
-        stroke-dasharray: 2000;
-        stroke-dashoffset: 2000;
-        animation: drawLine 1.6s ease-out forwards;
+        stroke-dasharray: 2200;
+        stroke-dashoffset: 2200;
+        animation: drawLine 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
       }
       @keyframes drawLine {
-        to { stroke-dashoffset: 0; }
+        0% { stroke-dashoffset: 2200; opacity: 0.3; }
+        20% { opacity: 1; }
+        70% { stroke-dashoffset: 0; opacity: 1; }
+        85% { opacity: 0.8; }
+        100% { stroke-dashoffset: 0; opacity: 0.3; }
       }
-      .fadeIn {
-        opacity: 0;
-        animation: fadeInArea 1.2s ease-out 0.2s forwards;
+
+      /* Fading area reveal */
+      .fadeIn { opacity: 0; animation: fadeInArea 2s ease-in-out 0.8s forwards; }
+      @keyframes fadeInArea { to { opacity: 1; } }
+
+      /* Glow pulse */
+      @keyframes pulseGlow {
+        0%, 100% { stroke-opacity: 0.05; }
+        50% { stroke-opacity: 0.15; }
       }
-      @keyframes fadeInArea {
-        to { opacity: 1; }
+      .curve-glow { animation: pulseGlow 8s ease-in-out infinite; }
+
+      /* Particle animation following the path */
+      .particle {
+        fill: #7dd3fc;
+        stroke: #083344;
+        stroke-width: 1.2;
+        r: 6;
+        animation: moveParticle 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      }
+      @keyframes moveParticle {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 1; }
+        70% { offset-distance: 100%; opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
       }
     </style>
   </defs>
 <rect width="100%" height="100%" rx="12" fill="#0f1720" />
-<text x="600" y="36.66666666666667" text-anchor="middle" class="title">Contributions — 2025</text>
-<line x1="72.00" x2="72.00" y1="44" y2="280" class="grid" />
-<line x1="170.18" x2="170.18" y1="44" y2="280" class="grid" />
-<line x1="268.36" x2="268.36" y1="44" y2="280" class="grid" />
-<line x1="366.55" x2="366.55" y1="44" y2="280" class="grid" />
-<line x1="464.73" x2="464.73" y1="44" y2="280" class="grid" />
-<line x1="562.91" x2="562.91" y1="44" y2="280" class="grid" />
-<line x1="661.09" x2="661.09" y1="44" y2="280" class="grid" />
-<line x1="759.27" x2="759.27" y1="44" y2="280" class="grid" />
-<line x1="857.45" x2="857.45" y1="44" y2="280" class="grid" />
-<line x1="955.64" x2="955.64" y1="44" y2="280" class="grid" />
-<line x1="1053.82" x2="1053.82" y1="44" y2="280" class="grid" />
-<line x1="1152.00" x2="1152.00" y1="44" y2="280" class="grid" />
-<line x1="72" x2="1152" y1="44" y2="44" class="grid" />
-<line x1="72" x2="1152" y1="91.2" y2="91.2" class="grid" />
-<line x1="72" x2="1152" y1="138.4" y2="138.4" class="grid" />
-<line x1="72" x2="1152" y1="185.6" y2="185.6" class="grid" />
-<line x1="72" x2="1152" y1="232.8" y2="232.8" class="grid" />
-<line x1="72" x2="1152" y1="280" y2="280" class="grid" />
-<text x="60" y="48" text-anchor="end" class="label">1051</text>
-<text x="60" y="95.2" text-anchor="end" class="label">841</text>
-<text x="60" y="142.4" text-anchor="end" class="label">631</text>
-<text x="60" y="189.6" text-anchor="end" class="label">420</text>
-<text x="60" y="236.8" text-anchor="end" class="label">210</text>
-<text x="60" y="284" text-anchor="end" class="label">0</text>
-<text x="72.00" y="322" text-anchor="middle" class="monthLabel">Jan</text>
-<text x="170.18" y="322" text-anchor="middle" class="monthLabel">Feb</text>
-<text x="268.36" y="322" text-anchor="middle" class="monthLabel">Mar</text>
-<text x="366.55" y="322" text-anchor="middle" class="monthLabel">Apr</text>
-<text x="464.73" y="322" text-anchor="middle" class="monthLabel">May</text>
-<text x="562.91" y="322" text-anchor="middle" class="monthLabel">Jun</text>
-<text x="661.09" y="322" text-anchor="middle" class="monthLabel">Jul</text>
-<text x="759.27" y="322" text-anchor="middle" class="monthLabel">Aug</text>
-<text x="857.45" y="322" text-anchor="middle" class="monthLabel">Sep</text>
-<text x="955.64" y="322" text-anchor="middle" class="monthLabel">Oct</text>
-<text x="1053.82" y="322" text-anchor="middle" class="monthLabel">Nov</text>
-<text x="1152.00" y="322" text-anchor="middle" class="monthLabel">Dec</text>
-<path d="M 72.00 221.62 C 88.36 223.71, 137.45 238.95, 170.18 234.19 C 202.91 229.44, 235.64 196.06, 268.36 193.10 C 301.09 190.14, 333.82 205.30, 366.55 216.45 C 399.27 227.61, 432.00 264.54, 464.73 260.02 C 497.45 255.49, 530.18 188.38, 562.91 189.28 C 595.64 190.18, 628.36 252.79, 661.09 265.40 C 693.82 278.02, 726.55 301.86, 759.27 264.96 C 792.00 228.05, 824.73 44.22, 857.45 44.00 C 890.18 43.78, 922.91 224.27, 955.64 263.61 C 988.36 302.94, 1021.09 277.27, 1053.82 280.00 C 1086.55 282.73, 1135.64 280.00, 1152.00 280.00  L 1152.00 280.00 L 72.00 280.00 Z" class="area fadeIn" />
-<path d="M 72.00 221.62 C 88.36 223.71, 137.45 238.95, 170.18 234.19 C 202.91 229.44, 235.64 196.06, 268.36 193.10 C 301.09 190.14, 333.82 205.30, 366.55 216.45 C 399.27 227.61, 432.00 264.54, 464.73 260.02 C 497.45 255.49, 530.18 188.38, 562.91 189.28 C 595.64 190.18, 628.36 252.79, 661.09 265.40 C 693.82 278.02, 726.55 301.86, 759.27 264.96 C 792.00 228.05, 824.73 44.22, 857.45 44.00 C 890.18 43.78, 922.91 224.27, 955.64 263.61 C 988.36 302.94, 1021.09 277.27, 1053.82 280.00 C 1086.55 282.73, 1135.64 280.00, 1152.00 280.00 " class="curve-glow" />
-<path d="M 72.00 221.62 C 88.36 223.71, 137.45 238.95, 170.18 234.19 C 202.91 229.44, 235.64 196.06, 268.36 193.10 C 301.09 190.14, 333.82 205.30, 366.55 216.45 C 399.27 227.61, 432.00 264.54, 464.73 260.02 C 497.45 255.49, 530.18 188.38, 562.91 189.28 C 595.64 190.18, 628.36 252.79, 661.09 265.40 C 693.82 278.02, 726.55 301.86, 759.27 264.96 C 792.00 228.05, 824.73 44.22, 857.45 44.00 C 890.18 43.78, 922.91 224.27, 955.64 263.61 C 988.36 302.94, 1021.09 277.27, 1053.82 280.00 C 1086.55 282.73, 1135.64 280.00, 1152.00 280.00 " class="curve draw" />
-<circle cx="72" cy="221.6175071360609" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Jan 2025: 260 contributions</title>
-<text x="72" y="209.6175071360609" text-anchor="middle" class="label">260</text>
-<circle cx="170.1818181818182" cy="234.19219790675547" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Feb 2025: 204 contributions</title>
-<text x="170.1818181818182" y="222.19219790675547" text-anchor="middle" class="label">204</text>
-<circle cx="268.3636363636364" cy="193.0999048525214" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Mar 2025: 387 contributions</title>
-<text x="268.3636363636364" y="181.0999048525214" text-anchor="middle" class="label">387</text>
-<circle cx="366.5454545454545" cy="216.45290199809705" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Apr 2025: 283 contributions</title>
-<text x="366.5454545454545" y="204.45290199809705" text-anchor="middle" class="label">283</text>
-<circle cx="464.72727272727275" cy="260.0152235965747" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>May 2025: 89 contributions</title>
-<text x="464.72727272727275" y="248.01522359657469" text-anchor="middle" class="label">89</text>
-<circle cx="562.9090909090909" cy="189.2825880114177" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Jun 2025: 404 contributions</title>
-<text x="562.9090909090909" y="177.2825880114177" text-anchor="middle" class="label">404</text>
-<circle cx="661.090909090909" cy="265.4043767840152" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Jul 2025: 65 contributions</title>
-<text x="661.090909090909" y="253.4043767840152" text-anchor="middle" class="label">65</text>
-<circle cx="759.2727272727273" cy="264.95528068506184" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Aug 2025: 67 contributions</title>
-<text x="759.2727272727273" y="252.95528068506184" text-anchor="middle" class="label">67</text>
-<circle cx="857.4545454545455" cy="44" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Sep 2025: 1051 contributions</title>
-<text x="857.4545454545455" y="32" text-anchor="middle" class="label">1051</text>
-<circle cx="955.6363636363637" cy="263.6079923882017" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Oct 2025: 73 contributions</title>
-<text x="955.6363636363637" y="251.6079923882017" text-anchor="middle" class="label">73</text>
-<circle cx="1053.8181818181818" cy="280" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Nov 2025: 0 contributions</title>
-<circle cx="1152" cy="280" r="4.5" fill="#9be7ff" stroke="#063241" stroke-width="1" />
-<title>Dec 2025: 0 contributions</title>
-<line x1="72" x2="1152" y1="280" y2="280" class="axis" />
-<line x1="72" x2="72" y1="44" y2="280" class="axis" />
+<text x="600" y="36.66666666666667" text-anchor="middle" font-family="Inter, Arial" font-size="18" fill="#e6eef6" font-weight="700">Contributions — 2025</text>
+<line x1="72" x2="1152" y1="44" y2="44" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="48" text-anchor="end" font-size="11" fill="#c7d2da">1051</text>
+<line x1="72" x2="1152" y1="91.2" y2="91.2" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="95.2" text-anchor="end" font-size="11" fill="#c7d2da">841</text>
+<line x1="72" x2="1152" y1="138.4" y2="138.4" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="142.4" text-anchor="end" font-size="11" fill="#c7d2da">631</text>
+<line x1="72" x2="1152" y1="185.6" y2="185.6" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="189.6" text-anchor="end" font-size="11" fill="#c7d2da">420</text>
+<line x1="72" x2="1152" y1="232.8" y2="232.8" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="236.8" text-anchor="end" font-size="11" fill="#c7d2da">210</text>
+<line x1="72" x2="1152" y1="280" y2="280" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="284" text-anchor="end" font-size="11" fill="#c7d2da">0</text>
+<text x="72" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Jan</text>
+<text x="170.1818181818182" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Feb</text>
+<text x="268.3636363636364" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Mar</text>
+<text x="366.5454545454545" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Apr</text>
+<text x="464.72727272727275" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">May</text>
+<text x="562.9090909090909" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Jun</text>
+<text x="661.090909090909" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Jul</text>
+<text x="759.2727272727273" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Aug</text>
+<text x="857.4545454545455" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Sep</text>
+<text x="955.6363636363637" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Oct</text>
+<text x="1053.8181818181818" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Nov</text>
+<text x="1152" y="322" text-anchor="middle" font-size="12" fill="#cfe8ff">Dec</text>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.71328893117666, 137.45454545454547 238.94513162067872, 170.1818181818182 234.19219790675547 C 202.9090909090909 229.4392641928322, 235.63636363636365 196.05645417063113, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.14335553441168, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 44.22454804947669, 857.4545454545455 44 C 890.1818181818182 43.77545195052331, 922.909090909091 224.27465905486835, 955.6363636363637 263.6079923882017 C 988.3636363636365 302.941325721535, 1021.090909090909 277.26799873136696, 1053.8181818181818 280 C 1086.5454545454545 282.73200126863304, 1135.6363636363635 280, 1152 280  L 1152 280 L 72 280 Z" class="area fadeIn"/>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.71328893117666, 137.45454545454547 238.94513162067872, 170.1818181818182 234.19219790675547 C 202.9090909090909 229.4392641928322, 235.63636363636365 196.05645417063113, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.14335553441168, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 44.22454804947669, 857.4545454545455 44 C 890.1818181818182 43.77545195052331, 922.909090909091 224.27465905486835, 955.6363636363637 263.6079923882017 C 988.3636363636365 302.941325721535, 1021.090909090909 277.26799873136696, 1053.8181818181818 280 C 1086.5454545454545 282.73200126863304, 1135.6363636363635 280, 1152 280 " class="curve-glow"/>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.71328893117666, 137.45454545454547 238.94513162067872, 170.1818181818182 234.19219790675547 C 202.9090909090909 229.4392641928322, 235.63636363636365 196.05645417063113, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.14335553441168, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 44.22454804947669, 857.4545454545455 44 C 890.1818181818182 43.77545195052331, 922.909090909091 224.27465905486835, 955.6363636363637 263.6079923882017 C 988.3636363636365 302.941325721535, 1021.090909090909 277.26799873136696, 1053.8181818181818 280 C 1086.5454545454545 282.73200126863304, 1135.6363636363635 280, 1152 280 " class="curve draw" id="mainPath"/>
+<circle class="particle" path="url(#mainPath)">
+    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#mainPath"/>
+    </animateMotion>
+  </circle>
+<circle cx="72" cy="221.6175071360609" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="72" y="211.6175071360609" text-anchor="middle" font-size="11" fill="#c7d2da">260</text>
+<circle cx="170.1818181818182" cy="234.19219790675547" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="170.1818181818182" y="224.19219790675547" text-anchor="middle" font-size="11" fill="#c7d2da">204</text>
+<circle cx="268.3636363636364" cy="193.0999048525214" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="268.3636363636364" y="183.0999048525214" text-anchor="middle" font-size="11" fill="#c7d2da">387</text>
+<circle cx="366.5454545454545" cy="216.45290199809705" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="366.5454545454545" y="206.45290199809705" text-anchor="middle" font-size="11" fill="#c7d2da">283</text>
+<circle cx="464.72727272727275" cy="260.0152235965747" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="464.72727272727275" y="250.01522359657469" text-anchor="middle" font-size="11" fill="#c7d2da">89</text>
+<circle cx="562.9090909090909" cy="189.2825880114177" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="562.9090909090909" y="179.2825880114177" text-anchor="middle" font-size="11" fill="#c7d2da">404</text>
+<circle cx="661.090909090909" cy="265.4043767840152" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="661.090909090909" y="255.4043767840152" text-anchor="middle" font-size="11" fill="#c7d2da">65</text>
+<circle cx="759.2727272727273" cy="264.95528068506184" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="759.2727272727273" y="254.95528068506184" text-anchor="middle" font-size="11" fill="#c7d2da">67</text>
+<circle cx="857.4545454545455" cy="44" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="857.4545454545455" y="34" text-anchor="middle" font-size="11" fill="#c7d2da">1051</text>
+<circle cx="955.6363636363637" cy="263.6079923882017" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="955.6363636363637" y="253.6079923882017" text-anchor="middle" font-size="11" fill="#c7d2da">73</text>
+<circle cx="1053.8181818181818" cy="280" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<circle cx="1152" cy="280" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<line x1="72" x2="1152" y1="280" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<line x1="72" x2="72" y1="44" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
 </svg>
