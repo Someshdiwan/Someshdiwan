@@ -91,6 +91,7 @@ async function run() {
     const from = startOfYear(new Date(year, 0, 1)).toISOString();
     const to = endOfYear(new Date(year, 11, 31)).toISOString();
 
+    // --- fetch contributions via GraphQL
     let resp;
     try {
         resp = await fetchContributions(graphqlWithAuth, args.user, from, to);
@@ -100,18 +101,28 @@ async function run() {
     }
 
     const weeks = resp?.user?.contributionsCollection?.contributionCalendar?.weeks || [];
-    const counts = new Map();
-    weeks.forEach(w => (w.contributionDays || []).forEach(d => d?.date && counts.set(d.date, d.contributionCount || 0)));
 
+    // Build date -> count map (ensure correctness)
+    const counts = new Map();
+    weeks.forEach(w => (w.contributionDays || []).forEach(d => {
+        if (d?.date) counts.set(d.date, d.contributionCount || 0);
+    }));
+
+    // Ensure all days in year present (fill 0 where missing)
     const allDays = eachDayOfInterval({ start: parseISO(from), end: parseISO(to) });
     allDays.forEach(dt => {
         const key = format(dt, 'yyyy-MM-dd');
         if (!counts.has(key)) counts.set(key, 0);
     });
 
+    // Aggregate per month (0..11)
     const months = Array.from({ length: 12 }, () => 0);
-    counts.forEach((v, k) => months[getMonth(parseISO(k))] += v);
+    counts.forEach((v, k) => {
+        const dt = parseISO(k);
+        months[getMonth(dt)] += v;
+    });
 
+    // Layout
     const width = 1200, height = 340;
     const padding = { top: 44, right: 48, bottom: 60, left: 72 };
     const plotW = width - padding.left - padding.right;
@@ -132,14 +143,18 @@ async function run() {
     const areaPath = `${pathD} L ${points[points.length - 1].x} ${baselineY} L ${points[0].x} ${baselineY} Z`;
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+    // Theme & fonts
     const bg = '#0f1720', grid = 'rgba(255,255,255,0.04)', axis = 'rgba(255,255,255,0.1)';
     const stroke = '#60a5fa', strokeShadow = '#60a5fa', fill = 'url(#areaGradient)';
     const dotFill = '#9be7ff', textColor = '#e6eef6';
+    const fontFamily = `'Comic Sans MS', 'Comic Sans', cursive`; // requested font with fallbacks
 
+    // Build SVG
     const svgParts = [];
     svgParts.push(`<?xml version="1.0" encoding="utf-8"?>`);
-    svgParts.push(`<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly contributions ${year}">
-  <defs>
+    svgParts.push(`<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle">`);
+    svgParts.push(`<title id="svgTitle">Monthly contributions for ${year} — ${args.user}</title>`);
+    svgParts.push(`<defs>
     <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.02"/>
@@ -152,6 +167,12 @@ async function run() {
       </feMerge>
     </filter>
     <style>
+      /* fonts: Comic Sans MS requested. If viewer doesn't have it, fallback to Comic Sans or cursive. */
+      text, .label, .monthLabel { font-family: ${fontFamily}; }
+      .title { font-family: ${fontFamily}; font-size:18px; fill:${textColor}; font-weight:700; }
+      .label { font-size:11px; fill:#c7d2da; }
+      .monthLabel { font-size:12px; fill:#cfe8ff; }
+
       .curve { fill:none; stroke:${stroke}; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; filter:url(#softGlow); }
       .curve-glow { fill:none; stroke:${strokeShadow}; stroke-width:10; stroke-opacity:0.06; stroke-linecap:round; stroke-linejoin:round; }
       .area { fill:${fill}; opacity:0.95; }
@@ -175,68 +196,61 @@ async function run() {
       @keyframes fadeInArea { to { opacity: 1; } }
 
       /* Glow pulse */
-      @keyframes pulseGlow {
-        0%, 100% { stroke-opacity: 0.05; }
-        50% { stroke-opacity: 0.15; }
-      }
+      @keyframes pulseGlow { 0%,100% { stroke-opacity: 0.05; } 50% { stroke-opacity: 0.15; } }
       .curve-glow { animation: pulseGlow 8s ease-in-out infinite; }
 
       /* Particle animation following the path */
-      .particle {
-        fill: #7dd3fc;
-        stroke: #083344;
-        stroke-width: 1.2;
-        r: 6;
-        animation: moveParticle 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-      }
-      @keyframes moveParticle {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 1; }
-        70% { offset-distance: 100%; opacity: 1; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
+      .particle { fill: #7dd3fc; stroke: #083344; stroke-width: 1.2; }
     </style>
   </defs>`);
 
     svgParts.push(`<rect width="100%" height="100%" rx="12" fill="${bg}" />`);
-    svgParts.push(`<text x="${width / 2}" y="${padding.top / 1.2}" text-anchor="middle" font-family="Inter, Arial" font-size="18" fill="${textColor}" font-weight="700">Contributions — ${year}</text>`);
+    svgParts.push(`<text x="${width / 2}" y="${padding.top / 1.2}" text-anchor="middle" class="title">Contributions — ${year}</text>`);
 
-    // Grid and labels
+    // Grid and Y-axis labels
     for (let i = 0; i <= 5; i++) {
         const gy = padding.top + (i / 5) * plotH;
         svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${gy}" y2="${gy}" stroke="${grid}" stroke-width="1" stroke-dasharray="4 4"/>`);
         const val = Math.round((1 - i / 5) * maxVal);
-        svgParts.push(`<text x="${padding.left - 12}" y="${gy + 4}" text-anchor="end" font-size="11" fill="#c7d2da">${val}</text>`);
+        svgParts.push(`<text x="${padding.left - 12}" y="${gy + 4}" text-anchor="end" class="label">${val}</text>`);
     }
 
-    points.forEach((p, i) => svgParts.push(`<text x="${p.x}" y="${height - 18}" text-anchor="middle" font-size="12" fill="#cfe8ff">${monthNames[i]}</text>`));
+    // Month labels
+    points.forEach((p, i) => svgParts.push(`<text x="${p.x}" y="${height - 18}" text-anchor="middle" class="monthLabel">${monthNames[i]}</text>`));
 
-    // Paths
+    // Paths + animation
     svgParts.push(`<path d="${areaPath}" class="area fadeIn"/>`);
     svgParts.push(`<path d="${pathD}" class="curve-glow"/>`);
     svgParts.push(`<path d="${pathD}" class="curve draw" id="mainPath"/>`);
 
-    // Particle following the path
-    svgParts.push(`<circle class="particle" path="url(#mainPath)">
+    // animated particle that follows mainPath using SMIL <animateMotion>
+    svgParts.push(`<circle r="6" class="particle">
     <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
       <mpath href="#mainPath"/>
     </animateMotion>
   </circle>`);
 
-    // Dots + labels
+    // Points + numeric labels
     points.forEach(p => {
         svgParts.push(`<circle cx="${p.x}" cy="${p.y}" r="4" fill="${dotFill}" stroke="#063241" stroke-width="1"/>`);
-        if (p.v > 0) svgParts.push(`<text x="${p.x}" y="${p.y - 10}" text-anchor="middle" font-size="11" fill="#c7d2da">${p.v}</text>`);
+        if (p.v > 0) svgParts.push(`<text x="${p.x}" y="${p.y - 10}" text-anchor="middle" class="label">${p.v}</text>`);
     });
 
+    // Axes
     svgParts.push(`<line x1="${padding.left}" x2="${width - padding.right}" y1="${baselineY}" y2="${baselineY}" stroke="${axis}" stroke-width="1"/>`);
     svgParts.push(`<line x1="${padding.left}" x2="${padding.left}" y1="${padding.top}" y2="${baselineY}" stroke="${axis}" stroke-width="1"/>`);
+
     svgParts.push(`</svg>`);
 
     const svg = svgParts.join('\n');
     fs.mkdirSync(path.dirname(args.out), { recursive: true });
     fs.writeFileSync(args.out, svg, 'utf8');
     console.log('✅ Wrote', args.out);
+
+    // Optional quick validation output for CI logs (small sanity check)
+    const total = months.reduce((s, v) => s + v, 0);
+    console.log(`Totals per month: ${months.join(', ')}`);
+    console.log(`Total contributions in ${year}: ${total}`);
 }
 
 run().catch(err => { console.error('Unhandled error:', err); process.exit(99); });
