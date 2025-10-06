@@ -102,23 +102,26 @@ jobs:
             exit 0
           fi
 
-      - name: Commit & push if changed (robust)
+      - name: Commit & push if changed (rebase -> fallback PR)
         env:
           BRANCH: ${{ github.ref_name }}
           REPO: ${{ github.repository }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_ID: ${{ github.run_id }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          echo "Branch: $BRANCH, repo: $REPO, run: $RUN_ID"
+
           # Ensure we have latest refs
           git fetch origin "$BRANCH" || true
 
-          # Stage exact files we change
+          # Stage files we regenerate - adjust list if you also change README or other assets
           git add Assets/contrib-monthly-line.svg README.md || true
 
-          # If no staged changes, exit 0
+          # If nothing to commit, exit cleanly
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
@@ -126,34 +129,72 @@ jobs:
 
           git commit -m "chore: update monthly contribution svg (auto)" || true
 
-          # Push via token-authenticated URL with retries
-          PUSH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git"
-          echo "Using push URL: ${PUSH_URL/[A-Za-z0-9_\-]*/<redacted_token>} (token hidden)"
+          # Try to rebase onto the remote branch (preferred: keeps linear history)
+          echo "Attempting to rebase on origin/$BRANCH..."
+          set +e
+          git rebase origin/"$BRANCH"
+          REBASE_EXIT=$?
+          set -e
 
+          if [ $REBASE_EXIT -ne 0 ]; then
+            echo "Rebase failed (code $REBASE_EXIT). Aborting and attempting merge fallback..."
+            git rebase --abort || true
+            # Merge fallback: merge remote and prefer remote changes where necessary, but keep our generated files.
+            # Use a normal merge first (no strategy) so conflicts surface for human review if necessary.
+            set +e
+            git merge origin/"$BRANCH" --no-edit
+            MERGE_EXIT=$?
+            set -e
+            if [ $MERGE_EXIT -ne 0 ]; then
+              echo "Merge had conflicts (code $MERGE_EXIT). Attempting auto-resolve favoring remote for non-generated files and keeping ours for Assets..."
+              # Strategy: checkout remote versions then re-apply our generated files
+              git merge --abort || true
+              # Reset to remote branch, then re-apply our generated files on top (safe when generated files are the only changes)
+              git reset --hard origin/"$BRANCH"
+              git checkout -b "auto/update-contrib-${RUN_ID}"
+              git add Assets/contrib-monthly-line.svg README.md || true
+              git commit -m "chore: update monthly contribution svg (auto) [branch fallback]" || true
+              echo "Created fallback branch auto/update-contrib-${RUN_ID} with generated assets."
+              # Try push fallback branch
+              PUSH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git"
+              git push "${PUSH_URL}" "HEAD:refs/heads/auto/update-contrib-${RUN_ID}"
+              echo "Pushed fallback branch. Creating PR..."
+              # Create a PR via REST API
+              BODY=$( jq -n --arg b "auto/update-contrib-${RUN_ID}" --arg base "$BRANCH" --arg title "Auto: update contrib svg (${RUN_ID})" --arg body "Auto-generated update of monthly contribution svg. Please review." '{head:$b, base:$base, title:$title, body:$body}' )
+              PR=$(curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${REPO}/pulls" -d "$BODY")
+              echo "Created PR: $(echo "$PR" | jq -r .html_url // "PR creation failed")"
+              exit 0
+            else
+              echo "Merge succeeded. Proceeding to push merged commit."
+            fi
+          else
+            echo "Rebase successful."
+          fi
+
+          # At this point, either rebase succeeded or merge succeeded and we can push
+          PUSH_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${REPO}.git"
+          echo "Pushing to ${BRANCH}..."
           max_attempts=3
           attempt=1
           until [ $attempt -gt $max_attempts ]; do
-            echo "Attempt $attempt of $max_attempts to push..."
             if git push "${PUSH_URL}" "HEAD:${BRANCH}"; then
-              echo "✅ Pushed successfully on attempt $attempt"
+              echo "✅ Pushed successfully to ${BRANCH}"
               exit 0
             fi
-
-            echo "Push failed on attempt $attempt."
+            echo "Push attempt $attempt failed, retrying..."
             attempt=$((attempt + 1))
-            sleep_time=$((attempt * 5))
-            echo "Sleeping ${sleep_time}s before retry..."
-            sleep $sleep_time
+            sleep $((attempt * 5))
           done
 
-          echo "Push failed after ${max_attempts} attempts — printing git remote info & last 200 lines of git log for debugging."
-          git remote -v || true
-          echo "---- last git log (200 lines) ----"
-          git --no-pager log -n 50 --pretty=oneline || true
+          echo "Push to ${BRANCH} failed after ${max_attempts} attempts. Creating fallback branch + PR."
 
-          # Last resort: try a simple curl to GitHub to show status (not authoritative)
-          echo "Performing quick GitHub API check..."
-          curl -sSf -H "Authorization: token ${GITHUB_TOKEN}" "https://api.github.com/repos/${REPO}" || true
+          # Fallback: push to a new branch and open a PR so maintainers can review
+          BR="auto/update-contrib-${RUN_ID}"
+          git branch -M "$BR" || true
+          git push "${PUSH_URL}" "HEAD:refs/heads/${BR}"
 
-          echo "❌ Final push attempt failed."
-          exit 1
+          # Create PR
+          BODY=$( jq -n --arg b "$BR" --arg base "$BRANCH" --arg title "Auto: update contrib svg (${RUN_ID})" --arg body "Auto-generated update of monthly contribution svg. Please review and merge." '{head:$b, base:$base, title:$title, body:$body}' )
+          PR=$(curl -s -X POST -H "Authorization: token ${GITHUB_TOKEN}" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/${REPO}/pulls" -d "$BODY")
+          echo "Created PR: $(echo "$PR" | jq -r .html_url // "PR creation failed")"
+          exit 0
