@@ -85,6 +85,23 @@ jobs:
           echo "Head of generated SVG (first 20 lines):"
           head -n 20 Assets/contrib-monthly-line.svg || true
 
+      - name: Bust README cache for contrib image
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          README=README.md
+          IMG="Assets/contrib-monthly-line.svg"
+          # Replace existing ?v=... or append ?v=<run_id> if not present.
+          if grep -q "${IMG}" "$README"; then
+            # Use perl for cross-platform robust replacement
+            perl -0777 -pe "s#(${IMG})(\\?v=)[0-9]+#\$1?v=${RUN_ID}#sg; s#(${IMG})(?!\\?v=)#\$1?v=${RUN_ID}#sg;" -i "$README"
+            echo "Updated $README with cache-bust ?v=${RUN_ID}"
+            git add "$README"
+          else
+            echo "Image path ${IMG} not found in $README — please ensure README contains the <img src=\"${IMG}\" /> block."
+            exit 0
+          fi
+
       - name: Commit & push if changed (safe)
         env:
           BRANCH: ${{ github.ref_name }}

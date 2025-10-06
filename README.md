@@ -294,8 +294,11 @@
 
 ---
 
+## Monthly Contributions (auto-updating)
+
 <p align="center">
-  <img src="Assets/contrib-monthly-line.svg" alt="Monthly contributions (line)" width="1000" />
+  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
+  <img src="Assets/contrib-monthly-line.svg?v=1" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ---
