@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+
 const { graphql } = require('@octokit/graphql');
 const {
     parseISO,
@@ -91,7 +92,6 @@ async function run() {
     const from = startOfYear(new Date(year, 0, 1)).toISOString();
     const to = endOfYear(new Date(year, 11, 31)).toISOString();
 
-    // --- fetch contributions via GraphQL
     let resp;
     try {
         resp = await fetchContributions(graphqlWithAuth, args.user, from, to);
@@ -108,14 +108,14 @@ async function run() {
         if (d?.date) counts.set(d.date, d.contributionCount || 0);
     }));
 
-    // Ensure all days in year present (fill 0 where missing)
+    // Ensure all days in year present
     const allDays = eachDayOfInterval({ start: parseISO(from), end: parseISO(to) });
     allDays.forEach(dt => {
         const key = format(dt, 'yyyy-MM-dd');
         if (!counts.has(key)) counts.set(key, 0);
     });
 
-    // Aggregate per month (0..11)
+    // Aggregate per month
     const months = Array.from({ length: 12 }, () => 0);
     counts.forEach((v, k) => {
         const dt = parseISO(k);
@@ -147,7 +147,10 @@ async function run() {
     const bg = '#0f1720', grid = 'rgba(255,255,255,0.04)', axis = 'rgba(255,255,255,0.1)';
     const stroke = '#60a5fa', strokeShadow = '#60a5fa', fill = 'url(#areaGradient)';
     const dotFill = '#9be7ff', textColor = '#e6eef6';
-    const fontFamily = `'Comic Sans MS', 'Comic Sans', cursive`; // requested font with fallbacks
+    const fontFamily = `'Comic Sans MS', 'Comic Sans', cursive`;
+
+    // Animation durations (single source of truth for sync)
+    const dur = '8s';
 
     // Build SVG
     const svgParts = [];
@@ -167,7 +170,7 @@ async function run() {
       </feMerge>
     </filter>
     <style>
-      /* fonts: Comic Sans MS requested. If viewer doesn't have it, fallback to Comic Sans or cursive. */
+      /* fonts */
       text, .label, .monthLabel { font-family: ${fontFamily}; }
       .title { font-family: ${fontFamily}; font-size:18px; fill:${textColor}; font-weight:700; }
       .label { font-size:11px; fill:#c7d2da; }
@@ -181,7 +184,7 @@ async function run() {
       .draw {
         stroke-dasharray: 2200;
         stroke-dashoffset: 2200;
-        animation: drawLine 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+        animation: drawLine ${dur} cubic-bezier(0.65, 0, 0.35, 1) infinite;
       }
       @keyframes drawLine {
         0% { stroke-dashoffset: 2200; opacity: 0.3; }
@@ -197,10 +200,10 @@ async function run() {
 
       /* Glow pulse */
       @keyframes pulseGlow { 0%,100% { stroke-opacity: 0.05; } 50% { stroke-opacity: 0.15; } }
-      .curve-glow { animation: pulseGlow 8s ease-in-out infinite; }
+      .curve-glow { animation: pulseGlow ${dur} ease-in-out infinite; }
 
-      /* Particle animation following the path */
-      .particle { fill: #7dd3fc; stroke: #083344; stroke-width: 1.2; }
+      /* Particle styling (the animated orb) */
+      .particle { fill: #7dd3fc; stroke: #083344; stroke-width: 1.2; filter: url(#softGlow); }
     </style>
   </defs>`);
 
@@ -223,14 +226,34 @@ async function run() {
     svgParts.push(`<path d="${pathD}" class="curve-glow"/>`);
     svgParts.push(`<path d="${pathD}" class="curve draw" id="mainPath"/>`);
 
-    // animated particle that follows mainPath using SMIL <animateMotion>
-    svgParts.push(`<circle r="6" class="particle">
-    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
-      <mpath href="#mainPath"/>
-    </animateMotion>
-  </circle>`);
+    // Particle: animateMotion + synchronized pulses (radius, fill-opacity, stroke-opacity)
+    // Using SMIL animate elements: same dur as the main draw animation, repeatCount indefinite.
+    svgParts.push(`
+    <g>
+      <circle id="particle" r="6" class="particle">
+        <animate attributeName="r"
+                 values="6;10;12;10;6"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="${dur}"
+                 repeatCount="indefinite" />
+        <animate attributeName="fill-opacity"
+                 values="0.2;0.9;1;0.9;0.2"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="${dur}"
+                 repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity"
+                 values="0.2;0.9;1;0.9;0.2"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="${dur}"
+                 repeatCount="indefinite" />
+        <animateMotion dur="${dur}" repeatCount="indefinite" rotate="auto">
+          <mpath href="#mainPath" />
+        </animateMotion>
+      </circle>
+    </g>
+  `);
 
-    // Points + numeric labels
+    // Dots + numeric labels
     points.forEach(p => {
         svgParts.push(`<circle cx="${p.x}" cy="${p.y}" r="4" fill="${dotFill}" stroke="#063241" stroke-width="1"/>`);
         if (p.v > 0) svgParts.push(`<text x="${p.x}" y="${p.y - 10}" text-anchor="middle" class="label">${p.v}</text>`);
@@ -247,7 +270,7 @@ async function run() {
     fs.writeFileSync(args.out, svg, 'utf8');
     console.log('✅ Wrote', args.out);
 
-    // Optional quick validation output for CI logs (small sanity check)
+    // CI-friendly totals log for quick verification
     const total = months.reduce((s, v) => s + v, 0);
     console.log(`Totals per month: ${months.join(', ')}`);
     console.log(`Total contributions in ${year}: ${total}`);
