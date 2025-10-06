@@ -1,18 +1,4 @@
 #!/usr/bin/env node
-/**
- * generate_monthly_graph.js
- * Fetches GitHub contribution days for a year and renders a month-by-month SVG.
- *
- * Usage:
- *   GH_TOKEN=... node scripts/generate_monthly_graph.js --user Someshdiwan --year 2025 --out ./assets/contrib-monthly.svg
- *
- * Dependencies:
- *   npm i @octokit/graphql date-fns
- *
- * Notes:
- * - This file intentionally uses a zero-dependency small arg parser to avoid extra CI installs.
- * - It includes simple retry logic for the GraphQL call and basic validation/error messages.
- */
 
 const { graphql } = require("@octokit/graphql");
 const {
@@ -27,28 +13,15 @@ const {
 const fs = require("fs");
 const path = require("path");
 
-/* ---------------------- tiny arg parser (no external deps) ---------------------- */
+/* tiny arg parser (no external deps) */
 function parseArgs(argv) {
     const args = { user: undefined, out: "./assets/contrib-monthly.svg", year: new Date().getFullYear() };
     let i = 0;
     while (i < argv.length) {
         const a = argv[i];
-        if ((a === "-u" || a === "--user") && argv[i + 1]) {
-            args.user = argv[i + 1];
-            i += 2;
-            continue;
-        }
-        if ((a === "-o" || a === "--out") && argv[i + 1]) {
-            args.out = argv[i + 1];
-            i += 2;
-            continue;
-        }
-        if ((a === "-y" || a === "--year") && argv[i + 1]) {
-            args.year = Number(argv[i + 1]);
-            i += 2;
-            continue;
-        }
-        // support --key=value style
+        if ((a === "-u" || a === "--user") && argv[i + 1]) { args.user = argv[i + 1]; i += 2; continue; }
+        if ((a === "-o" || a === "--out") && argv[i + 1]) { args.out = argv[i + 1]; i += 2; continue; }
+        if ((a === "-y" || a === "--year") && argv[i + 1]) { args.year = Number(argv[i + 1]); i += 2; continue; }
         if (a.startsWith("--") && a.includes("=")) {
             const [k, v] = a.replace(/^--/, "").split("=");
             if (k === "user") args.user = v;
@@ -59,21 +32,16 @@ function parseArgs(argv) {
     }
     return args;
 }
-/* ------------------------------------------------------------------------------- */
 
 async function graphqlRetry(client, query, vars, opts = {}) {
     const retries = opts.retries ?? 3;
     const delayMs = opts.delayMs ?? 800;
     let lastErr = null;
     for (let attempt = 1; attempt <= retries; attempt++) {
-        try {
-            return await client(query, vars);
-        } catch (err) {
+        try { return await client(query, vars); }
+        catch (err) {
             lastErr = err;
-            const shouldRetry = attempt < retries && (
-                // network-ish or rate limit messages
-                err.status >= 500 || (err.errors && err.errors.some(e => /rate limit|timeout/i.test(e.message)))
-            );
+            const shouldRetry = attempt < retries && (err.status >= 500 || (err.errors && err.errors.some(e => /rate limit|timeout/i.test(e.message))));
             if (!shouldRetry) break;
             const sleep = ms => new Promise(r => setTimeout(r, ms));
             await sleep(delayMs * attempt);
@@ -90,9 +58,10 @@ async function run() {
         process.exit(1);
     }
 
-    const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+    // Prefer PH_TOKEN, fall back to GH_TOKEN, then GITHUB_TOKEN
+    const token = process.env.PH_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
     if (!token) {
-        console.error("Error: GH_TOKEN or GITHUB_TOKEN environment variable required.");
+        console.error("Error: PH_TOKEN or GH_TOKEN or GITHUB_TOKEN environment variable required.");
         process.exit(2);
     }
 
@@ -135,95 +104,58 @@ async function run() {
 
     const weeks = resp.user.contributionsCollection.contributionCalendar.weeks || [];
 
-    // Flatten contributionDays into a map date -> count
+    // Flatten into map
     const counts = new Map();
     weeks.forEach(w => {
-        (w.contributionDays || []).forEach(d => {
-            if (d && d.date) counts.set(d.date, d.contributionCount || 0);
-        });
+        (w.contributionDays || []).forEach(d => { if (d && d.date) counts.set(d.date, d.contributionCount || 0); });
     });
 
     // Ensure every day is present
     const allDays = eachDayOfInterval({ start: parseISO(from), end: parseISO(to) });
-    allDays.forEach(dt => {
-        const key = format(dt, "yyyy-MM-dd");
-        if (!counts.has(key)) counts.set(key, 0);
-    });
+    allDays.forEach(dt => { const key = format(dt, "yyyy-MM-dd"); if (!counts.has(key)) counts.set(key, 0); });
 
-    // Group by month index (0..11)
+    // Group by month
     const months = Array.from({ length: 12 }, () => []);
-    counts.forEach((value, key) => {
-        const dt = parseISO(key);
-        const m = getMonth(dt);
-        months[m].push({ date: key, count: value, dt });
-    });
+    counts.forEach((value, key) => { const dt = parseISO(key); const m = getMonth(dt); months[m].push({ date: key, count: value, dt }); });
 
-    // Palette (git-like greens). Adjust to taste.
-    const colorSteps = [
-        "#ebedf0", // 0
-        "#c6e48b",
-        "#7bc96f",
-        "#239a3b",
-        "#196127", // highest
-    ];
-
-    // Map counts to palette using linear scale (0 => index 0). For more pleasing visuals,
-    // a quantile-based mapping could be used instead (not done here by default).
+    const colorSteps = ["#ebedf0","#c6e48b","#7bc96f","#239a3b","#196127"];
     const allCounts = Array.from(counts.values());
     const max = Math.max(...allCounts, 1);
-    const mapToColor = (n) => {
-        if (!n || n <= 0) return colorSteps[0];
-        const idx = Math.min(colorSteps.length - 1, Math.ceil((n / max) * (colorSteps.length - 1)));
-        return colorSteps[idx];
-    };
+    const mapToColor = (n) => { if (!n || n <= 0) return colorSteps[0]; const idx = Math.min(colorSteps.length - 1, Math.ceil((n / max) * (colorSteps.length - 1))); return colorSteps[idx]; };
 
-    // Layout params (tweak these to change density)
-    const cell = 12;
-    const gap = 3;
-    const monthPadding = 24;
-    const monthsPerRow = 3;
+    const cell = 12, gap = 3, monthPadding = 24, monthsPerRow = 3;
 
     function renderMonth(monthIndex, monthDays) {
         const yearStart = new Date(year, monthIndex, 1);
-        const firstWeekday = getDay(yearStart); // 0..6 (Sunday..Saturday)
+        const firstWeekday = getDay(yearStart);
         const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
         const totalCells = firstWeekday + daysInMonth;
         const cols = Math.ceil(totalCells / 7);
-
         const squares = [];
         const map = new Map(monthDays.map(m => [format(m.dt, "yyyy-MM-dd"), m.count]));
-
         for (let d = 1; d <= daysInMonth; d++) {
             const dt = new Date(year, monthIndex, d);
-            const weekday = getDay(dt); // 0..6
+            const weekday = getDay(dt);
             const dayNumberOffset = d + firstWeekday - 1;
             const weekIndex = Math.floor(dayNumberOffset / 7);
-
             const x = weekIndex * (cell + gap);
             const y = weekday * (cell + gap);
-
             const key = format(dt, "yyyy-MM-dd");
             const count = map.get(key) || 0;
             const color = mapToColor(count);
-
             squares.push({ x, y, color, count, date: key });
         }
-
         return { cols, rows: 7, squares, colsPx: cols * (cell + gap) - gap, rowsPx: 7 * (cell + gap) - gap };
     }
 
     const monthRenders = months.map((m, i) => ({ i, monthName: format(new Date(year, i, 1), "LLLL"), ...renderMonth(i, m) }));
-
     const colWidth = Math.max(...monthRenders.map(mr => mr.colsPx)) + 8;
     const rowHeight = monthRenders[0].rowsPx + 28;
-
     const cols = monthsPerRow;
     const rows = Math.ceil(12 / monthsPerRow);
-
     const svgWidth = cols * colWidth + (cols + 1) * monthPadding;
     const svgHeight = rows * rowHeight + (rows + 1) * monthPadding;
 
-    // Build SVG
     const header = `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub contributions (${year}) - month by month">
   <style>
@@ -235,16 +167,13 @@ async function run() {
 `;
 
     const parts = [header];
-
     monthRenders.forEach((mr, idx) => {
         const col = idx % monthsPerRow;
         const row = Math.floor(idx / monthsPerRow);
         const originX = monthPadding + col * (colWidth + monthPadding);
         const originY = monthPadding + row * (rowHeight + monthPadding);
-
         parts.push(`<g transform="translate(${originX}, ${originY})">`);
         parts.push(`<text class="month-name" x="0" y="12">${mr.monthName} ${year}</text>`);
-
         const offsetY = 18;
         const offsetX = 0;
         mr.squares.forEach(sq => {
@@ -254,8 +183,6 @@ async function run() {
             parts.push(`<title>${sq.date} — ${sq.count} contributions</title>`);
             parts.push(`</rect>`);
         });
-
-        // small legend for the month block
         parts.push(`<g transform="translate(${mr.colsPx + 8}, ${offsetY})">`);
         parts.push(`<text class="small" x="0" y="-6">Less</text>`);
         colorSteps.forEach((c, ci) => {
@@ -265,13 +192,11 @@ async function run() {
         });
         parts.push(`<text class="small" x="${colorSteps.length * (cell + 2) + 6}" y="6">More</text>`);
         parts.push(`</g>`);
-
         parts.push("</g>");
     });
 
     parts.push("</svg>");
     const svg = parts.join("\n");
-
     const outPath = path.resolve(args.out);
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, svg, "utf8");

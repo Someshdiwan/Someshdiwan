@@ -5,8 +5,12 @@ on:
     - cron: '0 3 * * *'
   workflow_dispatch:
 
+concurrency:
+  group: generate-monthly-contrib
+  cancel-in-progress: true
+
 permissions:
-  contents: write   # needed to push the generated SVG
+  contents: write
 
 jobs:
   generate:
@@ -25,10 +29,29 @@ jobs:
       - name: Install deps
         run: npm ci || npm install
 
+      - name: Validate PH_TOKEN presence (debug)
+        env:
+          PH_TOKEN: ${{ secrets.PH_TOKEN }}
+        run: |
+          if [ -z "${PH_TOKEN}" ]; then
+            echo "PH_TOKEN secret is not set!"
+            exit 2
+          fi
+          echo "PH_TOKEN present (masked)."
+
       - name: Generate monthly contribution SVG
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Map PH_TOKEN into GH_TOKEN for backward compatibility with script
+          GH_TOKEN: ${{ secrets.PH_TOKEN }}
+          # Optional: expose PH_TOKEN directly as well
+          PH_TOKEN: ${{ secrets.PH_TOKEN }}
         run: |
+          if [ ! -f "scripts/generate_monthly_graph.js" ]; then
+            echo "Error: scripts/generate_monthly_graph.js not found; listing files:"
+            ls -la
+            exit 3
+          fi
+          mkdir -p assets
           node scripts/generate_monthly_graph.js --user Someshdiwan --year $(date +%Y) --out ./assets/contrib-monthly.svg
 
       - name: Commit & push if changed
