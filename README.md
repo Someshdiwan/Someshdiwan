@@ -123,6 +123,12 @@
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
          alt="WakaTime" width="48" height="48"/>
   </a>
+  <!-- My Medium Article -->
+  <a href="https://medium.com/@SomeshDiwan/building-a-multi-threaded-reverse-echo-server-in-java-edc86210920a" 
+   target="_blank" style="margin: 0 20px;">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg" 
+       alt="Medium" width="48" height="48"/>
+  </a>
 </p>
 
 <br/>
