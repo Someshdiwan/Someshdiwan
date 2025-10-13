@@ -104,7 +104,7 @@
 
 <p align="center">
   <!-- X (Twitter) -->
-  <a href="https://x.com/someshdiwanX" target="_blank" style="margin: 0 20px;">
+  <a href="https://x.com/Someshdiwan_" target="_blank" style="margin: 0 20px;">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" 
          alt="X (Twitter)" width="48" height="48"/>
   </a>
