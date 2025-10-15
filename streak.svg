@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
    <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
-     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 0 days">
+     width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="GitHub streak 274 days">
   <defs>
     <clipPath id="cardClip">
       <rect x="20" y="20" width="380" height="260" rx="22" ry="22"/>
@@ -90,7 +90,7 @@
     <!-- Centered texts -->
     <g class="card-font">
       <text x="210" y="70" class="title">GitHub Streak</text>
-      <text x="210" y="150" class="big">0</text>
+      <text x="210" y="150" class="big">274</text>
       <text x="210" y="190" class="sub">Days</text>
     </g>
 
