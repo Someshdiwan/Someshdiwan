@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="WakaTime all time 572.6 hours">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="300" viewBox="0 0 420 300" role="img" aria-label="WakaTime all time 573.9 hours">
   <defs>
     <filter id="sdrop" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="6" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.45"/>
@@ -22,7 +22,7 @@
   <!-- content -->
   <g font-family="Comic Sans MS, cursive, sans-serif" text-anchor="middle">
     <text x="210" y="70" font-size="16" font-weight="700" fill="#6b5a1f">WakaTime (All Time)</text>
-    <text x="210" y="120" font-size="48" font-weight="800" fill="#2b2b2b">572.6</text>
+    <text x="210" y="120" font-size="48" font-weight="800" fill="#2b2b2b">573.9</text>
     <text x="210" y="145" font-size="13" fill="#6b6b6b">hrs coding</text>
     
       <g transform="translate(120, 190)">
@@ -30,7 +30,7 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#6a5acd" stroke-width="12"
                 stroke-linecap="round"
                 stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="95.00176184455533"
+                stroke-dashoffset="95.19025740377073"
                 transform="rotate(-90)"/>
         <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
         <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
@@ -58,7 +58,7 @@
         <circle cx="0" cy="0" r="30" fill="none" stroke="#ffd86b" stroke-width="12"
                 stroke-linecap="round"
                 stroke-dasharray="188.49555921538757 188.49555921538757"
-                stroke-dashoffset="179.82476349147973"
+                stroke-dashoffset="179.63626793226436"
                 transform="rotate(-90)"/>
         <circle cx="0" cy="0" r="14.399999999999999" fill="#fff4cf"/>
         <text x="0" y="-2" font-family="Comic Sans MS, cursive, sans-serif"
