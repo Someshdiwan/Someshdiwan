@@ -22,7 +22,7 @@
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
-              1️⃣ <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">JavaEvolution – Learning • Growing • Mastering ↗</a>
+              <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">JavaEvolution – Learning • Growing • Mastering ↗</a>
             </h4>
             <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
               <img src="https://img.shields.io/github/stars/Someshdiwan/JavaEvolution-Learning-Growing-Mastering?style=social" alt="stars">
@@ -48,7 +48,7 @@
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-              1️⃣ <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
+              <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
             </h4>
             <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
               <img src="https://img.shields.io/github/stars/Someshdiwan/Artificial-Neural-Networks-ANNs?style=social" alt="stars">
@@ -65,7 +65,7 @@
           </li>
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-              2️⃣ <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
+               <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
             </h4>
             <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
               <img src="https://img.shields.io/github/stars/Someshdiwan/Convolutional-Neural-Network?style=social" alt="stars">
@@ -82,7 +82,7 @@
           </li>
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-              3️⃣ <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
+               <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
             </h4>
             <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
               <img src="https://img.shields.io/github/stars/Someshdiwan/Emotion-Recognition-System?style=social" alt="stars">
@@ -116,16 +116,6 @@
 </div>
 
 <p align="center">
-  <!-- X (Twitter) -->
-  <a href="https://x.com/Someshdiwan_" target="_blank" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" 
-         alt="X (Twitter)" width="48" height="48"/>
-  </a>
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/someshdiwan" target="_blank" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
-         alt="LinkedIn" width="48" height="48"/>
-  </a>
   <!-- LeetCode -->
   <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 20px;">
     <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
@@ -299,7 +289,7 @@
     <tr>
       <td align="center" valign="top" style="padding-right:12px;">
         <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18890649001" alt="GitHub streak" width="420"/>
+          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18890436008" alt="GitHub streak" width="420"/>
         </a>
       </td>
     </tr>
@@ -314,7 +304,7 @@
 </a>
 <p align="left">
   <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=18890652173" alt="Monthly contributions (line)" width="1000" />
+  <img src="Assets/contrib-monthly-line.svg?v=18890218300" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ---
