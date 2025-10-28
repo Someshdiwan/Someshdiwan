@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32">
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
-          font-family="Comic Sans MS, cursive"
-          font-size="18" fill="gold">
-        Local LLM
-    </text>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32">
+    <defs>
+        <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#fbd65b"/>
+            <stop offset="100%" stop-color="#f7a600"/>
+        </linearGradient>
+    </defs>
+    <rect x="0.5" y="0.5" rx="8" ry="8" width="119" height="31" fill="url(#g)" stroke="#b37600" stroke-opacity="0.6"/>
+    <text x="60" y="21" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="14" font-weight="bold" fill="#000">Local LLM</text>
 </svg>

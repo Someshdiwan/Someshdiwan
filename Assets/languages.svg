@@ -9,7 +9,6 @@
         dominant-baseline: middle;
         }
     </style>
-
     <!-- Left-aligned Text -->
-    <text x="0" y="50%" class="title">Languages &amp; Tools 🛠</text>
+    <text x="0" y="50%" class="title">My Tech Stacks 🛠</text>
 </svg>
