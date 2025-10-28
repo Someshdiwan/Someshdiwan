@@ -1,0 +1,13 @@
+<!-- header-backend.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180">
+    <defs>
+        <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0%" stop-color="#ff8a00"/>
+            <stop offset="50%" stop-color="#e52e71"/>
+            <stop offset="100%" stop-color="#6a11cb"/>
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" rx="16" fill="url(#g)"/>
+    <text x="50%" y="55%" text-anchor="middle" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="40" fill="#ffffff">🛠️ Backend Engineering</text>
+    <text x="50%" y="78%" text-anchor="middle" font-family="Comic Sans MS, Segoe UI, Roboto, Arial, sans-serif" font-size="18" fill="#ffffff" opacity="0.9">Building systems that scale with clarity</text>
+</svg>
