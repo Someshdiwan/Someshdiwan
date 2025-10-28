@@ -6,87 +6,88 @@
 
 <!-- ======================
      Featured Projects
-     Two Columns • Clean Layout • Smart Taglines
 ======================= -->
 <details>
-  <summary align="left" title="Expand / collapse featured repositories">
+  <summary align="left">
     <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520">
   </summary>
   <div style="height:10px;"></div>
-  <table align="center" width="100%" style="max-width: 980px;">
+  <table align="center" width="100%" style="max-width:980px;">
     <tr>
-      <!-- LEFT COLUMN -->
-      <td valign="top" width="50%" style="padding:16px 18px;">
-        <h3 align="center" style="margin:10px 0; font-size:18px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+      <!-- Backend -->
+      <td valign="top" width="50%" style="padding:16px 20px;">
+        <h3 align="center" style="margin:10px 0; font-size:18px; 
+        font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
           🛠️ Backend & Engineering
         </h3>
-        <ul style="list-style:none; padding-left:4px; margin:12px 0;">
-          <!-- Project 1 -->
-          <li style="margin:14px 0;">
-            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+        <ul style="list-style:none; padding-left:0; margin:14px 0;">
+          <li style="margin:16px 0;">
+            <h4 style="margin:4px 0; font-size:16px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               1️⃣ <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">
               JavaEvolution – Learning • Growing • Mastering</a>
             </h4>
-            <p style="margin:4px 0;">
-              <img src="https://img.shields.io/badge/Primary-Java" alt="Java">
-              <img src="https://img.shields.io/badge/Focus-Clean%20Code" alt="Clean Code">
-              <img src="https://img.shields.io/badge/Status-Active" alt="Active">
-              <img src="https://img.shields.io/badge/Docs-Guide" alt="Guide">
+            <p style="margin:3px 0 6px 0; font-size:13px;
+            font-family:'Comic Sans MS','Segoe UI'; color:#555;">
+              ▹ Java • Clean Code • Actively Updated • Developer Guide
             </p>
-            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+            <p style="margin:0; font-size:14px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               Where Java turns into **engineering clarity**.
             </p>
           </li>
         </ul>
       </td>
-      <!-- RIGHT COLUMN -->
-      <td valign="top" width="50%" style="padding:16px 18px; border-left:1px solid #E5E5E5;">
-        <h3 align="center" style="margin:10px 0; font-size:18px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+      <!-- AI & ML -->
+      <td valign="top" width="50%" style="padding:16px 20px; 
+      border-left:1px solid #eee;">
+        <h3 align="center" style="margin:10px 0; font-size:18px; 
+        font-family:'Comic Sans MS','Segoe UI';">
           🤖 AI & Machine Learning
         </h3>
-        <ul style="list-style:none; padding-left:4px; margin:12px 0;">
-          <!-- Project 1 -->
-          <li style="margin:14px 0;">
-            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+        <ul style="list-style:none; padding-left:0; margin:14px 0;">
+          <li style="margin:16px 0;">
+            <h4 style="margin:4px 0; font-size:16px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               1️⃣ <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">
               Artificial Neural Networks (ANNs)</a>
             </h4>
-            <p style="margin:4px 0;">
-              <img src="https://img.shields.io/badge/Domain-ML" alt="ML">
-              <img src="https://img.shields.io/badge/Language-Python" alt="Python">
-              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            <p style="margin:3px 0 6px 0; font-size:13px; 
+            font-family:'Comic Sans MS','Segoe UI'; color:#555;">
+              ▹ ML • Python • MIT License
             </p>
-            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+            <p style="margin:0; font-size:14px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               Neural basics built **clear and experimental**.
             </p>
           </li>
-          <!-- Project 2 -->
-          <li style="margin:14px 0;">
-            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+          <li style="margin:16px 0;">
+            <h4 style="margin:4px 0; font-size:16px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               2️⃣ <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">
               Convolutional Neural Network</a>
             </h4>
-            <p style="margin:4px 0;">
-              <img src="https://img.shields.io/badge/Domain-CV" alt="CV">
-              <img src="https://img.shields.io/badge/Framework-PyTorch" alt="PyTorch">
-              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            <p style="margin:3px 0 6px 0; font-size:13px; 
+            font-family:'Comic Sans MS','Segoe UI'; color:#555;">
+              ▹ Computer Vision • PyTorch • MIT License
             </p>
-            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+            <p style="margin:0; font-size:14px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               Understand vision by **building vision**.
             </p>
           </li>
-          <!-- Project 3 -->
-          <li style="margin:14px 0;">
-            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+          <li style="margin:16px 0;">
+            <h4 style="margin:4px 0; font-size:16px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               3️⃣ <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">
               Emotion Recognition System</a>
             </h4>
-            <p style="margin:4px 0;">
-              <img src="https://img.shields.io/badge/Task-Emotion%20Classification" alt="Emotion">
-              <img src="https://img.shields.io/badge/Dataset-FER2013" alt="FER2013">
-              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            <p style="margin:3px 0 6px 0; font-size:13px; 
+            font-family:'Comic Sans MS','Segoe UI'; color:#555;">
+              ▹ Emotion AI • FER2013 • MIT License
             </p>
-            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+            <p style="margin:0; font-size:14px; 
+            font-family:'Comic Sans MS','Segoe UI';">
               A small model with **smart emotional insight**.
             </p>
           </li>
