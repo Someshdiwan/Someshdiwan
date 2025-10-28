@@ -3,16 +3,16 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      viewBox="0 0 420 300"
      role="img"
-     aria-labelledby="streakb2bc2j-title streakb2bc2j-desc">
-  <title id="streakb2bc2j-title">GitHub Streak</title>
-  <desc id="streakb2bc2j-desc">GitHub streak counter for your-github: 287 Days.</desc>
+     aria-labelledby="streakl65mzm-title streakl65mzm-desc">
+  <title id="streakl65mzm-title">GitHub Streak</title>
+  <desc id="streakl65mzm-desc">GitHub streak counter for your-github: 287 Days.</desc>
 
   <defs>
-    <clipPath id="streakb2bc2j-cardClip">
+    <clipPath id="streakl65mzm-cardClip">
       <rect x="20" y="20" width="380" height="260" rx="22" ry="22"/>
     </clipPath>
 
-    <filter id="streakb2bc2j-cardShadow" x="-50%" y="-50%" width="220%" height="220%">
+    <filter id="streakl65mzm-cardShadow" x="-50%" y="-50%" width="220%" height="220%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
       <feOffset dx="4" dy="12" result="offsetblur"/>
       <feComponentTransfer><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
@@ -20,12 +20,12 @@
     </filter>
 
     <!-- Light warm gradient OR used for warm bg -->
-    <linearGradient id="streakb2bc2j-cardGrad" x1="0" x2="1" y1="0" y2="1">
+    <linearGradient id="streakl65mzm-cardGrad" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0%" stop-color="#fff6c7"/>
       <stop offset="100%" stop-color="#ffe29a"/>
     </linearGradient>
 
-    <linearGradient id="streakb2bc2j-numGrad" x1="0" x2="0" y1="0" y2="1">
+    <linearGradient id="streakl65mzm-numGrad" x1="0" x2="0" y1="0" y2="1">
       <stop offset="0%" stop-color="#fff8df"/>
       <stop offset="55%" stop-color="#ffd26a"/>
       <stop offset="100%" stop-color="#e66a00"/>
@@ -43,15 +43,15 @@
       }
 
       .card-font { font-family: 'Permanent Marker','Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
-      .title { fill:url(#streakb2bc2j-numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
-      .big   { fill:url(#streakb2bc2j-numGrad); font-weight:900; font-size:80px; text-anchor:middle;
+      .title { fill:url(#streakl65mzm-numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
+      .big   { fill:url(#streakl65mzm-numGrad); font-weight:900; font-size:80px; text-anchor:middle;
                filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
       .sub   { fill: var(--sub); font-size:16px; text-anchor:middle; }
       .egg-shadow { fill: rgba(0,0,0,0.12); }
-      .floaty { animation: streakb2bc2j-floaty 7000ms ease-in-out infinite; transform-origin: center; }
-      .flicker { animation: streakb2bc2j-flicker 5200ms linear infinite; transform-origin: center; }
-      @keyframes streakb2bc2j-floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
-      @keyframes streakb2bc2j-flicker {
+      .floaty { animation: streakl65mzm-floaty 7000ms ease-in-out infinite; transform-origin: center; }
+      .flicker { animation: streakl65mzm-flicker 5200ms linear infinite; transform-origin: center; }
+      @keyframes streakl65mzm-floaty { 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
+      @keyframes streakl65mzm-flicker {
         0% { transform:scale(1); opacity:1; filter:brightness(1); }
         40%{ transform:scale(.992); opacity:.92; filter:brightness(.96); }
         80%{ transform:scale(1.01); opacity:1; filter:brightness(1.05); }
@@ -62,11 +62,11 @@
   </defs>
 
   <!-- Card body -->
-  <g filter="url(#streakb2bc2j-cardShadow)">
+  <g filter="url(#streakl65mzm-cardShadow)">
     <rect x="20" y="20" width="380" height="260" rx="22" ry="22" fill="none" stroke="#e6d09a" stroke-width="1.2"/>
   </g>
 
-  <g clip-path="url(#streakb2bc2j-cardClip)">
+  <g clip-path="url(#streakl65mzm-cardClip)">
     <!-- Left flame shadow -->
     <g transform="translate(58,76)">
       <ellipse class="egg-shadow" cx="30" cy="86" rx="46" ry="14" opacity="0.10"/>
