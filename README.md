@@ -314,7 +314,7 @@
 </a>
 <p align="left">
   <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=18890218300" alt="Monthly contributions (line)" width="1000" />
+  <img src="Assets/contrib-monthly-line.svg?v=18890652173" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ---
