@@ -9,7 +9,7 @@
         dominant-baseline: middle;
         }
     </style>
-
-    <!-- Left-aligned Text -->
-    <text x="0" y="50%" class="title">🤝 Connect With Me</text>
+    <image href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzRqdDRsMGtkZmt1cGJ2MXhuNmdvdXdxbjNtZmswbGdtbHN3b2gwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iY8CRBdQXODJSCERIr/giphy.gif"
+           x="0" y="5" width="40" height="40" />
+    <text x="50" y="50%" class="title">Connect With Me</text>
 </svg>

@@ -5,88 +5,95 @@
 ---
 
 <!-- ======================
-     Featured Repositories
+     Featured Projects
+     Two Columns • Clean Layout • Smart Taglines
 ======================= -->
 <details>
-  <!-- Keep the summary unstyled so GitHub shows the native dropdown triangle -->
   <summary align="left" title="Expand / collapse featured repositories">
-  <!-- Slimmer banner to match your layout rhythm -->
-  <a href="https://github.com/Someshdiwan?tab=repositories" target="_blank" aria-label="Explore all repositories on Someshdiwan's profile">
-    <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520"/>
-  </a>
+    <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520">
   </summary>
-  <!-- subtle spacing below the summary -->
-  <div style="height:8px;"></div>
-  <!-- 2×2 grid, centered, comfortable max width -->
-  <table align="center" width="100%" style="max-width: 900px;">
+  <div style="height:10px;"></div>
+  <table align="center" width="100%" style="max-width: 980px;">
     <tr>
-      <td valign="top" width="50%" style="padding: 8px 12px;">
-        <h4 style="margin:6px 0; font-size:16px; line-height:1.35; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
-          <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">
-            JavaEvolution – Learning • Growing • Mastering
-          </a>
-        </h4>
-        <p style="margin:6px 0;">
-          <img src="https://img.shields.io/badge/Primary-Java-ED8B00?logo=java&logoColor=white" alt="Java"/>
-          <img src="https://img.shields.io/badge/Focus-Clean%20Code-4ECDC4" alt="Clean Code"/>
-          <img src="https://img.shields.io/badge/Status-Active-2F855A" alt="Active"/>
-          <img src="https://img.shields.io/badge/Docs-Guide-007ACC" alt="Guide"/>
-        </p>
-        <p style="margin-top:6px;">A polished, living guide for mastering Java—projects, patterns, clean code, and curated resources.</p>
+      <!-- LEFT COLUMN -->
+      <td valign="top" width="50%" style="padding:16px 18px;">
+        <h3 align="center" style="margin:10px 0; font-size:18px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+          🛠️ Backend & Engineering
+        </h3>
+        <ul style="list-style:none; padding-left:4px; margin:12px 0;">
+          <!-- Project 1 -->
+          <li style="margin:14px 0;">
+            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+              1️⃣ <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">
+              JavaEvolution – Learning • Growing • Mastering</a>
+            </h4>
+            <p style="margin:4px 0;">
+              <img src="https://img.shields.io/badge/Primary-Java" alt="Java">
+              <img src="https://img.shields.io/badge/Focus-Clean%20Code" alt="Clean Code">
+              <img src="https://img.shields.io/badge/Status-Active" alt="Active">
+              <img src="https://img.shields.io/badge/Docs-Guide" alt="Guide">
+            </p>
+            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+              Where Java turns into **engineering clarity**.
+            </p>
+          </li>
+        </ul>
       </td>
-      <td valign="top" width="50%" style="padding: 8px 12px;">
-        <h4 style="margin:6px 0; font-size:16px; line-height:1.35; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
-          <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">
-            Artificial Neural Networks (ANNs)
-          </a>
-        </h4>
-        <p style="margin:6px 0;">
-          <img src="https://img.shields.io/badge/ML-ANNs-8A2BE2" alt="ANNs"/>
-          <img src="https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white" alt="Python"/>
-          <img src="https://img.shields.io/badge/Focus-Training%20Loops-20B2AA" alt="Training Loops"/>
-          <img src="https://img.shields.io/badge/License-MIT-2F855A" alt="MIT"/>
-        </p>
-        <p style="margin-top:6px;">Core ANN concepts and implementations: perceptrons, activations, loss, training, and experiments.</p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="top" width="50%" style="padding: 8px 12px;">
-        <h4 style="margin:6px 0; font-size:16px; line-height:1.35; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
-          <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">
-            Convolutional Neural Network
-          </a>
-        </h4>
-        <p style="margin:6px 0;">
-          <img src="https://img.shields.io/badge/CV-CNN-FF6F61" alt="CNN"/>
-          <img src="https://img.shields.io/badge/Framework-PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch"/>
-          <img src="https://img.shields.io/badge/Focus-Conv%20Blocks-6A5ACD" alt="Conv Blocks"/>
-          <img src="https://img.shields.io/badge/License-MIT-2F855A" alt="MIT"/>
-        </p>
-        <p style="margin-top:6px;">End-to-end CNN work: conv/pooling blocks, training loops, metrics, and visualization utilities.</p>
-      </td>
-      <td valign="top" width="50%" style="padding: 8px 12px;">
-        <h4 style="margin:6px 0; font-size:16px; line-height:1.35; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
-          <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">
-            Emotion Recognition System
-          </a>
-        </h4>
-        <p style="margin:6px 0;">
-          <img src="https://img.shields.io/badge/AI-Emotion%20Recognition-20B2AA" alt="Emotion Recognition"/>
-          <img src="https://img.shields.io/badge/Dataset-FER2013-6A5ACD" alt="FER2013"/>
-          <img src="https://img.shields.io/badge/Focus-Inference%20Pipeline-009688" alt="Inference"/>
-          <img src="https://img.shields.io/badge/License-MIT-2F855A" alt="MIT"/>
-        </p>
-        <p style="margin-top:6px;">Classifies facial emotions with a compact model and clean, reproducible inference pipeline.</p>
+      <!-- RIGHT COLUMN -->
+      <td valign="top" width="50%" style="padding:16px 18px; border-left:1px solid #E5E5E5;">
+        <h3 align="center" style="margin:10px 0; font-size:18px; font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+          🤖 AI & Machine Learning
+        </h3>
+        <ul style="list-style:none; padding-left:4px; margin:12px 0;">
+          <!-- Project 1 -->
+          <li style="margin:14px 0;">
+            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+              1️⃣ <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">
+              Artificial Neural Networks (ANNs)</a>
+            </h4>
+            <p style="margin:4px 0;">
+              <img src="https://img.shields.io/badge/Domain-ML" alt="ML">
+              <img src="https://img.shields.io/badge/Language-Python" alt="Python">
+              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            </p>
+            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+              Neural basics built **clear and experimental**.
+            </p>
+          </li>
+          <!-- Project 2 -->
+          <li style="margin:14px 0;">
+            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+              2️⃣ <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">
+              Convolutional Neural Network</a>
+            </h4>
+            <p style="margin:4px 0;">
+              <img src="https://img.shields.io/badge/Domain-CV" alt="CV">
+              <img src="https://img.shields.io/badge/Framework-PyTorch" alt="PyTorch">
+              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            </p>
+            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+              Understand vision by **building vision**.
+            </p>
+          </li>
+          <!-- Project 3 -->
+          <li style="margin:14px 0;">
+            <h4 style="margin:4px 0; font-size:16px; font-family:'Comic Sans MS','Segoe UI';">
+              3️⃣ <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">
+              Emotion Recognition System</a>
+            </h4>
+            <p style="margin:4px 0;">
+              <img src="https://img.shields.io/badge/Task-Emotion%20Classification" alt="Emotion">
+              <img src="https://img.shields.io/badge/Dataset-FER2013" alt="FER2013">
+              <img src="https://img.shields.io/badge/License-MIT" alt="MIT">
+            </p>
+            <p style="margin:0; font-size:14px; font-family:'Comic Sans MS','Segoe UI';">
+              A small model with **smart emotional insight**.
+            </p>
+          </li>
+        </ul>
       </td>
     </tr>
   </table>
-  <!-- 
-  <p align="center">
-  <a href="https://github.com/Someshdiwan?tab=repositories" target="_blank" aria-label="Explore all repositories on Someshdiwan's profile">
-    <img src="Assets/Explore.svg" alt="Explore all repos on my profile"/>
-  </a>
-  </p>
-  -->
 </details>
 
 
