@@ -9,54 +9,98 @@
         dominant-baseline: middle;
         }
     </style>
+
     <defs>
-        <radialGradient id="halo" cx="50%" cy="50%" r="60%">
-            <stop offset="0" stop-color="#20B2AA" stop-opacity="0.45"/>
-            <stop offset="1" stop-color="#20B2AA" stop-opacity="0"/>
+        <!-- Improved halo for emoji (visible in light & dark) -->
+        <radialGradient id="halo" cx="50%" cy="50%" r="65%">
+            <stop offset="0" stop-color="#20B2AA" stop-opacity="0.85"/>
+            <stop offset="1" stop-color="#147a73" stop-opacity="0"/>
         </radialGradient>
+
+        <!-- Static teal (base underline) -->
         <linearGradient id="ul" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stop-color="#20B2AA"/>
             <stop offset="1" stop-color="#7ce7df"/>
         </linearGradient>
+
+        <!-- Moving highlight slice (continuous underline shimmer) -->
+        <linearGradient id="sweep" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0"    stop-color="#20B2AA" stop-opacity="0"/>
+            <stop offset="0.35" stop-color="#20B2AA" stop-opacity="0"/>
+            <stop offset="0.50" stop-color="#7ce7df" stop-opacity="1"/>
+            <stop offset="0.65" stop-color="#20B2AA" stop-opacity="0"/>
+            <stop offset="1"    stop-color="#20B2AA" stop-opacity="0"/>
+            <animateTransform attributeName="gradientTransform"
+                              type="translate"
+                              from="-260 0" to="260 0"
+                              dur="2.6s"
+                              repeatCount="indefinite"/>
+        </linearGradient>
+
+        <!-- Sparkle color gradient (teal → light-teal) -->
+        <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#7ce7df"/>
+            <stop offset="1" stop-color="#20B2AA"/>
+        </linearGradient>
     </defs>
-    <!-- soft halo -->
-    <circle cx="24" cy="28" r="16" fill="url(#halo)" opacity="0.7">
-        <animate attributeName="r" values="14;16;14" dur="2.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.5;0.75;0.5" dur="2.6s" repeatCount="indefinite"/>
+
+    <!-- Halo pulse (slightly stronger for light mode) -->
+    <circle cx="24" cy="28" r="18" fill="url(#halo)" opacity="0.85">
+        <animate attributeName="r" values="16;19;16" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.6s" repeatCount="indefinite"/>
     </circle>
-    <!-- animated emoji -->
-    <g transform="translate(0,0)">
-        <g>
-            <text x="16" y="50%" class="title">🤝</text>
-            <animateTransform attributeName="transform" type="rotate"
-                              values="-7 24 28; 7 24 28; -7 24 28" dur="3s" repeatCount="indefinite"/>
-            <animateTransform attributeName="transform" type="translate" additive="sum"
-                              values="0 0; 0 -1; 0 0; 0 1; 0 0" dur="2.2s" repeatCount="indefinite"/>
+
+    <!-- 🤝 emoji with tilt + bob -->
+    <g>
+        <text x="16" y="50%" class="title">🤝</text>
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-7 24 28; 7 24 28; -7 24 28"
+                          dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" additive="sum"
+                          values="0 0; 0 -1; 0 0; 0 1; 0 0"
+                          dur="2.2s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- Micro-sparkles near the emoji (GitHub-safe: opacity + scale only) -->
+    <!-- Sparkle shape: simple 4-point star (two thin crosses), no filters -->
+    <g fill="url(#spark)" opacity="0.0">
+        <!-- upper-right sparkle -->
+        <g transform="translate(38,14)">
+            <path d="M0,-2 L0,2 M-2,0 L2,0" stroke="url(#spark)" stroke-width="1.6" stroke-linecap="round"/>
+            <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="scale" values="1;1.35;1" dur="2.8s" repeatCount="indefinite"/>
+        </g>
+        <!-- lower-left sparkle (offset timing) -->
+        <g transform="translate(12,40)">
+            <path d="M0,-1.8 L0,1.8 M-1.8,0 L1.8,0" stroke="url(#spark)" stroke-width="1.4" stroke-linecap="round"/>
+            <animate attributeName="opacity" values="0;1;0" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
+            <animateTransform attributeName="transform" type="scale" values="1;1.4;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
         </g>
     </g>
+
+    <!-- Title -->
     <text x="56" y="50%" class="title">Connect With Me</text>
-    <!-- Underline: always visible + continuous sweep -->
+
+    <!-- Underline: base shadow + static teal + continuous shimmer -->
     <g transform="translate(56,0)">
-        <!-- shadow/base for contrast on light mode -->
+        <!-- shadow for light mode contrast -->
         <path d="M0,42 L260,42"
               fill="none"
               stroke="#0b3d3a"
               stroke-opacity="0.35"
-              stroke-width="5"
+              stroke-width="6"
               stroke-linecap="round"/>
-        <!-- teal line with endless draw/erase sweep -->
+        <!-- static teal line (always visible) -->
         <path d="M0,42 L260,42"
               fill="none"
               stroke="url(#ul)"
               stroke-width="3"
-              stroke-linecap="round"
-              stroke-dasharray="260"
-              stroke-dashoffset="260">
-            <!-- loop: draw (260→0), then continue past left (0→-260), repeat -->
-            <animate attributeName="stroke-dashoffset"
-                     values="260;0;-260"
-                     dur="2.4s"
-                     repeatCount="indefinite"/>
-        </path>
+              stroke-linecap="round"/>
+        <!-- moving highlight slice (infinite) -->
+        <path d="M0,42 L260,42"
+              fill="none"
+              stroke="url(#sweep)"
+              stroke-width="3"
+              stroke-linecap="round"/>
     </g>
 </svg>

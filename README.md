@@ -4,10 +4,6 @@
 
 ---
 
-<!-- ======================
-     Featured Projects • Theme-aware button • Expandable items • Micro-stats
-     GitHub-safe HTML (no trailing spaces)
-======================= -->
 <details>
   <summary align="center" style="cursor:pointer;list-style:none;">
     <picture>
@@ -109,7 +105,7 @@
 
 ---
 
-<img src="Assets/connect.svg" alt="Connect With Me" width="310"/>
+<img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310"/>
 
 <!-- Profile Views (left-aligned directly below) -->
 <div align="left">
