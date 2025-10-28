@@ -4,7 +4,7 @@
         font-family: "Comic Sans MS", cursive;
         font-size: 24px;
         font-weight: bold;
-        fill: #20B2AA; /* teal - trust + creativity */
+        fill: #20B2AA;
         text-anchor: start;
         dominant-baseline: middle;
         }
