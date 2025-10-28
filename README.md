@@ -286,7 +286,7 @@
     <tr>
       <td align="center" valign="top" style="padding-right:12px;">
         <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18863295967" alt="GitHub streak" width="420"/>
+          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18884657362" alt="GitHub streak" width="420"/>
         </a>
       </td>
       <td align="center" valign="top" style="padding-left:12px;">
