@@ -2,7 +2,8 @@ name: Generate Streak SVG
 
 on:
   schedule:
-    - cron: '0 3 * * *'
+    # 03:00 IST = 21:30 UTC previous day
+    - cron: '30 21 * * *'
   workflow_dispatch:
   push:
     branches: [ main ]
@@ -19,7 +20,7 @@ permissions:
 
 jobs:
   generate:
-    if: github.actor != 'github-actions[bot]'
+    # Allow schedule/dispatch to run even when actor is the bot.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -32,32 +33,44 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install deps
-        run: npm ci || npm install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Generate streak.svg
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          STREAK_THEME: auto
+          STREAK_BG: warm
+          STREAK_SIZE: md
+          STREAK_REDUCE_MOTION: "false"
         run: node ./scripts/generate_streak.js
 
       - name: Bust README cache for streak.svg
         run: |
           RUN_ID="${{ github.run_id }}"
-          sed -i -E 's#(streak\.svg)(\?v=[0-9]+)?#\1?v='"$RUN_ID"'#' README.md
+          if [ -f README.md ]; then
+            # replace any existing ?v=digits with the new run id, or append if missing
+            perl -0777 -pe 's#(streak\.svg)(\?v=\d+)?#${1}?v='${RUN_ID}'#g' -i README.md
+          fi
 
       - name: Commit if changed
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add streak.svg streak_state.json README.md || true
+          git add streak.svg streak_state.json README.md 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0
           fi
           git commit -m "chore: update streak.svg"
-          git fetch origin main
-          git stash push --include-untracked -m "gh-actions/pre-pull-stash" || true
-          git pull --rebase origin main
-          git stash pop || true
-          git push origin main
+          # Try a rebase pull to avoid races with human pushes
+          git pull --rebase origin main || true
+          git push origin HEAD:main
