@@ -5,12 +5,12 @@
 ---
 
 <!-- ======================
-     Featured Projects • Inline SVG headers • Expandable items • Micro-stats
+     Featured Projects • External SVG headers • Expandable items • Micro-stats
      Clean GitHub-safe HTML (no trailing spaces)
 ======================= -->
 <details>
-  <summary align="left" title="Expand / collapse featured repositories">
-    <img src="Assets/repos.svg" alt="🌟 Featured Repositories" width="520">
+  <summary align="center" style="cursor:pointer;list-style:none;">
+    <img src="Assets/featured-button.svg" width="460" height="90" alt="Featured Projects">
   </summary>
   <div style="height:12px;"></div>
   <table align="center" width="100%" style="max-width:980px;">
@@ -18,12 +18,7 @@
       <!-- LEFT: Backend & Engineering -->
       <td valign="top" width="50%" style="padding:16px 18px;">
         <p align="center" style="margin:0 0 8px 0;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
-            <style>
-              .title{font-family:"Comic Sans MS",cursive;font-size:20px;font-weight:bold;fill:#FF8C00;text-anchor:start;dominant-baseline:middle}
-            </style>
-            <text x="0" y="50%" class="title">🛠️ Backend & Engineering</text>
-          </svg>
+          <img src="Assets/backend.svg" alt="🛠️ Backend & Engineering" width="480" height="42">
         </p>
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
           <li style="margin:18px 0;">
@@ -49,12 +44,7 @@
       <!-- RIGHT: AI & ML -->
       <td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
         <p align="center" style="margin:0 0 8px 0;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
-            <style>
-              .title{font-family:"Comic Sans MS",cursive;font-size:20px;font-weight:bold;fill:#FF8C00;text-anchor:start;dominant-baseline:middle}
-            </style>
-            <text x="0" y="50%" class="title">🤖 AI & Machine Learning</text>
-          </svg>
+          <img src="Assets/aiml.svg" alt="🤖 AI & Machine Learning" width="480" height="42">
         </p>
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
           <li style="margin:18px 0;">
@@ -114,10 +104,9 @@
   </table>
 </details>
 
-
 ---
 
-<img src="Assets/connect.svg" alt="Connect With Me" width="210"/>
+<img src="Assets/connect.svg" alt="Connect With Me" width="310"/>
 
 <!-- Profile Views (left-aligned directly below) -->
 <div align="left">
