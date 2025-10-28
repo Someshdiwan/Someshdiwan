@@ -94,6 +94,10 @@ function escapeXml(s) {
     return String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&apos;','"':'&quot;'}[c]));
 }
 
+
+
+
+
 /**
  * makeStreakSVG v2 — safer, themeable, accessible, responsive
  *
@@ -297,6 +301,8 @@ function makeStreakSVG(streak, {
   </a>
 </svg>`;
 }
+
+
 
 
 

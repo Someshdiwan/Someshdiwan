@@ -302,14 +302,10 @@
           <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18888557943" alt="GitHub streak" width="420"/>
         </a>
       </td>
-      <td align="center" valign="top" style="padding-left:12px;">
-        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/wakatime.svg?v=18025067974" alt="WakaTime (all time)" width="420"/>
-        </a>
-      </td>
     </tr>
   </table>
 </p>
+
 
 ---
 
