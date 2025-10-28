@@ -5,17 +5,20 @@
 ---
 
 <!-- ======================
-     Featured Projects • External SVG headers • Expandable items • Micro-stats
-     Clean GitHub-safe HTML (no trailing spaces)
+     Featured Projects • Theme-aware button • Expandable items • Micro-stats
+     GitHub-safe HTML (no trailing spaces)
 ======================= -->
 <details>
   <summary align="center" style="cursor:pointer;list-style:none;">
-    <img src="Assets/featured-button.svg" width="460" height="90" alt="Featured Projects">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="Assets/featured-button-glass-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="Assets/featured-button-glass-light.svg">
+      <img src="Assets/featured-button-glass-universal.svg" width="460" height="90" alt="Featured Projects">
+    </picture>
   </summary>
   <div style="height:12px;"></div>
   <table align="center" width="100%" style="max-width:980px;">
     <tr>
-      <!-- LEFT: Backend & Engineering -->
       <td valign="top" width="50%" style="padding:16px 18px;">
         <p align="center" style="margin:0 0 8px 0;">
           <img src="Assets/backend.svg" alt="🛠️ Backend & Engineering" width="480" height="42">
@@ -39,9 +42,9 @@
               </div>
             </details>
           </li>
+          <!-- Add more backend items here to balance columns -->
         </ul>
       </td>
-      <!-- RIGHT: AI & ML -->
       <td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
         <p align="center" style="margin:0 0 8px 0;">
           <img src="Assets/aiml.svg" alt="🤖 AI & Machine Learning" width="480" height="42">
