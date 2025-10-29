@@ -183,10 +183,9 @@
   </table>
 </details>
 
----
 
 <details>
-  <summary style="cursor:default; list-style:none; padding:66px 0; display:flex; justify-content:center; align-items:center;">
+  <summary style="cursor:default; list-style:none; padding:66px 0; display:flex; justify-content:right; align-items:center;">
     <!-- The SVG is the *only* clickable element -->
     <img src="Assets/connect.svg?v=4"
          alt="Connect With Me"
