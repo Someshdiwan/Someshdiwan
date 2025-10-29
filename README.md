@@ -278,20 +278,17 @@
 ---
 
 
-<div align="center">
+
 <!-- Section Heading -->
 <img src="Assets/languages.svg" alt="Languages & Tools" width="370"/>
 <br>
-</div>
 
-<div align="center">
 <!-- Programming Languages Subsection -->
-
-<p align="center">
 <img align="center" src="Assets/programming-languages.svg" alt="Programming Languages" width="500"/>
 
-<p align="center">
+<div align="center">
 
+<p align="center">
 <!-- Java Icon (Static in GitHub README — but perfect compatibility) -->
 <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
   <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
@@ -425,7 +422,6 @@
 ---
 
 <a>
-    <p align="center">
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
 </a>
 <p align="left">
@@ -455,14 +451,9 @@
          width="300"/>
   </a>
 </div>
-
----
-
 <br/>
 <!-- Thank You -->
-<div align="center" style="margin-top: 20px;">
+<div align="center" style="margin-top: 2px;">
   <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="500"/>
 </div>
 <br/>
-
----
