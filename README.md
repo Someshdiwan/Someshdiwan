@@ -394,17 +394,13 @@
 </table>
 </div>
 <br/>
-<!-- GitHub Streak Stats -->
-<div align="center">
-<table align="center">
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-        <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18896830172" alt="GitHub Streak Stats" width="300"/>
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- GitHub Streak Stats (no table, no border) -->
+<div align="center" style="margin-top: 20px;">
+  <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
+    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18896830172"
+         alt="GitHub Streak Stats"
+         width="300"/>
+  </a>
 </div>
 
 
