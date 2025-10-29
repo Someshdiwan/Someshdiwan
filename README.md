@@ -515,7 +515,7 @@
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">
   <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18909174165"
+    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18909242572"
          alt="GitHub Streak Stats"
          width="300"/>
   </a>
