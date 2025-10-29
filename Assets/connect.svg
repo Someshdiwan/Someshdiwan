@@ -15,7 +15,6 @@
             <stop offset="0" stop-color="#20B2AA" stop-opacity="0.85"/>
             <stop offset="1" stop-color="#147a73" stop-opacity="0"/>
         </radialGradient>
-
         <!-- Static teal (base underline) -->
         <linearGradient id="ul" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stop-color="#20B2AA"/>

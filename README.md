@@ -178,23 +178,12 @@
   </details>
 </li>
 </ul>
-
 </td>
     </tr>
   </table>
 </details>
 
 ---
-
-
-
-
-
-
-
-
-
-
 
 <details>
   <summary style="cursor:pointer; display:flex; justify-content:center; align-items:center; list-style:none; padding:66px 0;">
@@ -278,42 +267,7 @@
   </div>
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <img src="Assets/languages.svg" alt="Languages & Tools"/>
 
@@ -344,7 +298,6 @@
     <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
 </a>
 </p>
-
 
 <!-- Tech Stack Table -->
 <div align="center">
@@ -455,13 +408,7 @@
 <br/>
 </div>
 
-
 ---
-
-
-
-
-
 
 <a>
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
@@ -485,9 +432,6 @@
 
 ---
 
-
-
-
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">
   <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
@@ -498,10 +442,6 @@
 </div>
 
 ---
-
-
-
-
 
 <br/>
 <!-- Thank You -->
