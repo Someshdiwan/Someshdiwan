@@ -252,9 +252,9 @@
 <img src="Assets/programming-languages.svg" alt="Programming Languages"/>
 <p align="center">
 
-<!-- Java Animated Inline ⚡ GitHub-Safe -->
+<!-- Java Icon (Static in GitHub README — but perfect compatibility) -->
 <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
-  <img src="Assets/java-anim.apng" width="65" height="65" alt="Java"/>
+  <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
 </a>
 
 <!-- Python -->
