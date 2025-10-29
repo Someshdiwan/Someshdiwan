@@ -475,22 +475,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 <br/>
 <!-- Thank You / Follow CTA -->
-<div align="center" style="margin-top: 25px;">
-  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="500"/>
+<div align="center" style="margin-top: 20px;">
+  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="700"/>
 </div>
 <br/>
 

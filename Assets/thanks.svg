@@ -2,7 +2,7 @@
 <style>
     .title {
     font-family: "Comic Sans MS", cursive;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     fill: #FF8C00; /* orange tone = energy + creativity */
     text-anchor: start;
