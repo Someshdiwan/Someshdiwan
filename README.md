@@ -188,15 +188,83 @@
 
 
 
+---
+
+<details>
+  <summary style="cursor:pointer; display:flex; justify-content:center; align-items:center; list-style:none; padding:66px 0;">
+    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310" style="display:block;">
+  </summary>
+  <!-- Responsive SVG Container with Embedded Styles -->
+  <svg viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto; display:block; margin:18px auto;">
+    <foreignObject x="0" y="0" width="920" height="400">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="max-width:920px; margin:18px auto; padding:12px; box-sizing:border-box;">
+        <!-- Profile views -->
+        <div style="display:flex; justify-content:flex-start; gap:12px; align-items:center; margin:10px 0 18px 0;" aria-hidden="false">
+          <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views counter" style="height:22px;">
+        </div>
+        <!-- Links grid -->
+        <div style="display:flex; gap:36px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+          <!-- LEFT COLUMN -->
+          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
+            <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" rel="noopener noreferrer" title="CodeChef — someshdiwan7" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://img.icons8.com/color/96/codechef.png" alt="CodeChef logo" width="108" height="88" style="display:block;">
+            </a>
+            <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener" title="Hugging Face" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:48px; height:48px; display:block;">
+            </a>
+            <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link" target="_blank" rel="noopener noreferrer" title="Duolingo — Somesh99" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://img.icons8.com/color/96/duolingo-logo.png" alt="Duolingo logo" width="48" height="48" style="display:block;">
+            </a>
+          </div>
+          <!-- MIDDLE COLUMN -->
+          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
+            <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards" target="_blank" rel="noopener noreferrer" title="Anki — Vocabulary Vault (Search results)" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg" alt="Anki — Vocabulary Vault" width="48" height="48" loading="lazy" style="display:block;">
+            </a>
+            <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener" title="Product Hunt" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://cdn.simpleicons.org/producthunt/DA552F" alt="Product Hunt logo" style="width:48px; height:48px; display:block;">
+            </a>
+            <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg" alt="WakaTime logo" style="width:48px; height:48px; display:block;">
+            </a>
+          </div>
+          <!-- RIGHT COLUMN -->
+          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
+            <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" alt="LeetCode logo" style="width:48px; height:48px; display:block;">
+            </a>
+            <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener" title="Medium" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg" alt="Medium logo" style="width:48px; height:48px; display:block;">
+            </a>
+            <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener" title="Notion - Vocabulary Vault" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion logo" style="width:48px; height:48px; display:block;">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Embedded Responsive Styles (GitHub allows this inside SVG) -->
+      <style>
+        a:hover { transform: translateY(-4px); opacity: .95; }
+        .link-label { font-size:12px; color:#4b5563; margin-top:4px; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; }
+        @media (max-width:740px) {
+          div[style*="gap:36px"] { gap:22px !important; }
+          div[style*="flex:1 1 160px"] { min-width:120px !important; gap:14px !important; max-width:33% !important; }
+        }
+      </style>
+    </foreignObject>
+  </svg>
+  <!-- Accessibility wrapper (non-rendered) -->
+  <div role="region" aria-label="Connect links" style="display:none;"></div>
+</details>
+
+---
 
 
 
+---
 
 
-
-
-
-
+---
 
 
 <details>
@@ -317,8 +385,6 @@
     <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
 </a>
 </p>
-
-
 
 
 <!-- Tech Stack Table -->
@@ -479,80 +545,10 @@
 
 
 <br/>
-<!-- Thank You / Follow CTA -->
+<!-- Thank You -->
 <div align="center" style="margin-top: 20px;">
   <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="700"/>
 </div>
 <br/>
-
----
-
-<details>
-  <summary style="cursor:pointer; display:flex; justify-content:center; align-items:center; list-style:none; padding:66px 0;">
-    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310" style="display:block;">
-  </summary>
-
-  <!-- Responsive SVG Container with Embedded Styles -->
-  <svg viewBox="0 0 920 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto; display:block; margin:18px auto;">
-    <foreignObject x="0" y="0" width="920" height="400">
-      <div xmlns="http://www.w3.org/1999/xhtml" style="max-width:920px; margin:18px auto; padding:12px; box-sizing:border-box;">
-        <!-- Profile views -->
-        <div style="display:flex; justify-content:flex-start; gap:12px; align-items:center; margin:10px 0 18px 0;" aria-hidden="false">
-          <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views counter" style="height:22px;">
-        </div>
-        <!-- Links grid -->
-        <div style="display:flex; gap:36px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
-          <!-- LEFT COLUMN -->
-          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
-            <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" rel="noopener noreferrer" title="CodeChef — someshdiwan7" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://img.icons8.com/color/96/codechef.png" alt="CodeChef logo" width="108" height="88" style="display:block;">
-            </a>
-            <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener" title="Hugging Face" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face logo" style="width:48px; height:48px; display:block;">
-            </a>
-            <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link" target="_blank" rel="noopener noreferrer" title="Duolingo — Somesh99" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://img.icons8.com/color/96/duolingo-logo.png" alt="Duolingo logo" width="48" height="48" style="display:block;">
-            </a>
-          </div>
-          <!-- MIDDLE COLUMN -->
-          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
-            <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards" target="_blank" rel="noopener noreferrer" title="Anki — Vocabulary Vault (Search results)" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg" alt="Anki — Vocabulary Vault" width="48" height="48" loading="lazy" style="display:block;">
-            </a>
-            <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener" title="Product Hunt" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://cdn.simpleicons.org/producthunt/DA552F" alt="Product Hunt logo" style="width:48px; height:48px; display:block;">
-            </a>
-            <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg" alt="WakaTime logo" style="width:48px; height:48px; display:block;">
-            </a>
-          </div>
-          <!-- RIGHT COLUMN -->
-          <div style="display:flex; flex-direction:column; gap:18px; align-items:center; flex:1 1 160px; max-width:220px; min-width:140px;">
-            <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" alt="LeetCode logo" style="width:48px; height:48px; display:block;">
-            </a>
-            <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener" title="Medium" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg" alt="Medium logo" style="width:48px; height:48px; display:block;">
-            </a>
-            <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener" title="Notion - Vocabulary Vault" style="display:flex; flex-direction:column; align-items:center; text-decoration:none; color:inherit; gap:10px; transition:transform .12s ease, opacity .12s ease;">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg" alt="Notion logo" style="width:48px; height:48px; display:block;">
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Embedded Responsive Styles (GitHub allows this inside SVG) -->
-      <style>
-        a:hover { transform: translateY(-4px); opacity: .95; }
-        .link-label { font-size:12px; color:#4b5563; margin-top:4px; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; }
-        @media (max-width:740px) {
-          div[style*="gap:36px"] { gap:22px !important; }
-          div[style*="flex:1 1 160px"] { min-width:120px !important; gap:14px !important; max-width:33% !important; }
-        }
-      </style>
-    </foreignObject>
-  </svg>
-  <!-- Accessibility wrapper (non-rendered) -->
-  <div role="region" aria-label="Connect links" style="display:none;"></div>
-</details>
 
 ---
