@@ -413,7 +413,9 @@
         <a href="https://huggingface.co/" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="50" height="50" style="margin: 10px 10px;"/></a>
       </p>
       <p>
-        <a href="https://huggingface.co/CodeWithSomesh" target="_blank"><img src="Assets/local-llm.svg" alt="Local LLM" width="140" height="38" style="margin: 10px 0;"/></a>
+<a href="https://www.jan.ai/" target="_blank" title="Jan AI">
+  <img src="Assets/jan-wave.svg" alt="Jan AI" width="190" style="margin:10px 0;"/>
+</a>
       </p>
       <br/>
     </td>
