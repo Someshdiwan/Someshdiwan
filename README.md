@@ -1,5 +1,3 @@
-![Somesh Diwan — Software Engineering | Java | Machine Learning](Assets/my.svg)
-
 <img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
 
