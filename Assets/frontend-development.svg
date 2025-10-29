@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
+    <defs>
+        <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#FF8C00;stop-opacity:1">
+                <animate attributeName="stop-color" values="#FF8C00;#00CED1;#FF8C00" dur="3s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="50%" style="stop-color:#00CED1;stop-opacity:1">
+                <animate attributeName="stop-color" values="#00CED1;#FFD700;#00CED1" dur="3s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1">
+                <animate attributeName="stop-color" values="#FFD700;#FF8C00;#FFD700" dur="3s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <style>
+        .title {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 22px;
+        font-weight: bold;
+        fill: url(#gradient4);
+        text-anchor: start;
+        dominant-baseline: middle;
+        filter: url(#glow);
+        }
+        .emoji {
+        font-size: 24px;
+        }
+    </style>
+    <text x="0" y="50%" class="title">
+        <tspan class="emoji">💻✨</tspan>
+        <tspan dx="5"> Frontend Development</tspan>
+        <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+    </text>
+</svg>

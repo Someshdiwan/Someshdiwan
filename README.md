@@ -186,196 +186,226 @@
 
 ---
 
-<img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310"/>
+<details>
+  <summary align="center">
+    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310"/>
+  </summary>
+  <br/>
+  <div align="left">
+    <img
+      src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
+      alt="Profile views counter"
+    />
+  </div>
+  <br/>
+  <!-- Explicitly borderless + custom spacing -->
+  <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; border-spacing: 70px 32px;">
+    <tr>
+      <!-- LEFT COLUMN -->
+      <td align="center">
+        <a href="https://leetcode.com/u/someshdiwan/" target="_blank" title="LeetCode">
+          <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
+               alt="LeetCode" width="50"/>
+        </a>
+        <br/><br/>
+        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" title="WakaTime">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+               alt="WakaTime" width="48"/>
+        </a>
+        <br/><br/>
+        <a href="https://medium.com/@Someshdiwan/building-a-multi-threaded-reverse-echo-server-in-java-edc86210920a"
+           target="_blank" title="Medium">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
+               alt="Medium" width="48"/>
+        </a>
+      </td>
+      <!-- RIGHT COLUMN -->
+      <td align="center">
+        <a href="https://vocabulary-english.notion.site/Vocabulary-Vault-21ce0aa0c4d380b7b73af79235b5016c?source=copy_link"
+           target="_blank" title="Notion – Vocabulary Vault">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
+               alt="Notion" width="48"/>
+        </a>
+        <br/><br/>
+        <a href="https://huggingface.co/CodeWithSomesh" target="_blank" title="Hugging Face">
+          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+               alt="Hugging Face" width="48"/>
+        </a>
+        <br/><br/>
+        <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link"
+           target="_blank" title="Duolingo">
+          <img src="https://cdn.simpleicons.org/duolingo/58CC02"
+               alt="Duolingo" width="48"/>
+        </a>
+      </td>
+    </tr>
+  </table>
+</details>
 
-<!-- Profile Views (left-aligned directly below) -->
-<div align="left">
-  <img
-    src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
-    alt="Profile views counter"
-  />
-</div>
-
-<p align="center">
-  <!-- LeetCode -->
-  <a href="https://leetcode.com/u/someshdiwan/" target="_blank" style="margin: 0 20px;">
-    <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" 
-         alt="LeetCode" width="48" height="48"/>
-  </a>
- <!-- WakaTime -->
-  <a href="https://wakatime.com/@SomeshDiwan" target="_blank" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
-         alt="WakaTime" width="48" height="48"/>
-  </a>
-  <!-- My Medium Article -->
-  <a href="https://medium.com/@SomeshDiwan/building-a-multi-threaded-reverse-echo-server-in-java-edc86210920a" 
-   target="_blank" style="margin: 0 20px;">
-  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg" 
-       alt="Medium" width="48" height="48"/>
-  </a>
-</p>
-
-<br/>
-
-<p align="center">
-  <!-- Notion (Vocabulary Vault) -->
-  <a href="https://vocabulary-english.notion.site/Vocabulary-Vault-21ce0aa0c4d380b7b73af79235b5016c?source=copy_link"
-     target="_blank" rel="noopener" title="Notion – Vocabulary Vault" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
-         alt="Notion" width="48" height="48"/>
-  </a>
-  <!-- Hugging Face -->
-  <a href="https://huggingface.co/CodeWithSomesh" target="_blank" style="margin: 0 20px;">
-    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-         alt="Hugging Face" width="48" height="48"/>
-  </a>
-  <!-- Anki -->
-  <a href="https://ankiweb.net/shared/info/1362166383" target="_blank" style="margin: 0 20px;">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
-         alt="Anki" width="48" height="48"/>
-  </a>
-  <!-- Duolingo (HQ official green) -->
-  <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link"
-   target="_blank" rel="noopener" title="Duolingo Profile" style="margin: 0 25px;">
-  <img src="https://cdn.simpleicons.org/duolingo/58CC02"
-       alt="Duolingo" width="48" height="48" />
-  </a>
-</p>
 
 ---
 
 <img src="Assets/languages.svg" alt="Languages & Tools"/>
-
 <div align="center">
+<!-- Programming Languages Section -->
+<img src="Assets/programming-languages.svg" alt="Programming Languages"/>
 
-#### Programming Languages
-<p>
+<p align="center">
   <!-- Java -->
-  <a href="https://www.java.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
+  <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin: 0 16px;">
+    <svg width="45" height="45" viewBox="0 0 128 128">
+      <defs>
+        <filter id="glowJava" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glowJava)">
+        <image href="https://techstack-generator.vercel.app/java-icon.svg" width="128" height="128"/>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 -3; 0 0" dur="1.8s" begin="0s" repeatCount="indefinite"/>
+      </g>
+    </svg>
   </a>
   <!-- Python -->
-  <a href="https://www.python.org" target="_blank">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/>
+  <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
+    <svg width="45" height="45" viewBox="0 0 128 128">
+      <defs>
+        <filter id="glowPy" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glowPy)">
+        <image href="https://techstack-generator.vercel.app/python-icon.svg" width="128" height="128"/>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 -3; 0 0" dur="1.9s" begin="0s" repeatCount="indefinite"/>
+      </g>
+    </svg>
   </a>
+
   <!-- JavaScript -->
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
+    <svg width="45" height="45" viewBox="0 0 128 128">
+      <defs>
+        <filter id="glowJs" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glowJs)">
+        <image href="https://techstack-generator.vercel.app/js-icon.svg" width="128" height="128"/>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 -3; 0 0" dur="1.7s" begin="0s" repeatCount="indefinite"/>
+      </g>
+    </svg>
   </a>
+
   <!-- C++ -->
-  <a href="https://isocpp.org/" target="_blank">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/>
+  <a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">
+    <svg width="45" height="45" viewBox="0 0 128 128">
+      <defs>
+        <filter id="glowCpp" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glowCpp)">
+        <image href="https://techstack-generator.vercel.app/cpp-icon.svg" width="128" height="128"/>
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 -3; 0 0" dur="1.85s" begin="0s" repeatCount="indefinite"/>
+      </g>
+    </svg>
   </a>
 </p>
-<table>
+<br/>
+
+<!-- Tech Stack Table -->
+<div align="center">
+<table cellspacing="0" cellpadding="30" border="0" style="border-collapse: separate; border-spacing: 40px 20px;">
   <tr>
-    <td align="center" valign="top">
-      <h4>Frontend Development</h4>
+    <td align="center" valign="top" width="45%">
+      <!-- Frontend Development -->
+      <img src="Assets/frontend-development.svg" alt="Frontend Development"/>
+      <br/><br/>
       <p>
-        <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
-        <a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/></a>
-        <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg" alt="nextjs" width="40" height="40"/></a>
-        <a href="https://vitest.dev/" target="_blank"><img src="https://vitest.dev/logo.svg" alt="vitest" width="40" height="40"/></a>
-        <a href="https://jekyllrb.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" alt="jekyll" width="40" height="40"/></a>
-        <a href="https://vitejs.dev/" target="_blank"><img src="https://vitejs.dev/logo.svg" alt="vite" width="40" height="40"/></a>
+        <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg" alt="Next.js" width="50" height="50" style="margin: 0 10px;"/></a>
+      </p>
+      <p>
+        <a href="https://vitest.dev/" target="_blank"><img src="https://vitest.dev/logo.svg" alt="Vitest" width="50" height="50" style="margin: 10px 10px;"/></a>
+        <a href="https://jekyllrb.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" alt="Jekyll" width="50" height="50" style="margin: 10px 10px;"/></a>
+        <a href="https://vitejs.dev/" target="_blank"><img src="https://vitejs.dev/logo.svg" alt="Vite" width="50" height="50" style="margin: 10px 10px;"/></a>
       </p>
     </td>
-    <td align="center" valign="top">
-      <h4>Native App Development</h4>
-      <p>
-        <!-- Swift -->
-        <a href="https://developer.apple.com/swift/" target="_blank">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="swift" width="40" height="40"/>
-        </a>
-        <!-- Kotlin -->
-        <a href="https://kotlinlang.org/" target="_blank">
-          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="kotlin" width="40" height="40"/>
-        </a>
+    <td align="center" valign="top" width="45%">
+      <!-- Native App Development -->
+      <img src="Assets/native-app-development.svg" alt="Native App Development"/>
+      <br/><br/>
+      <p style="margin-top: 30px;">
+        <a href="https://developer.apple.com/swift/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="Swift" width="50" height="50" style="margin: 0 20px;"/></a>
+        <a href="https://kotlinlang.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" width="50" height="50" style="margin: 0 20px;"/></a>
       </p>
     </td>
   </tr>
   <tr>
-    <td align="center" valign="top">
-  <h4>Backend Development</h4>
-  <p>
-    <!-- Java -->
-    <a href="https://www.java.com/" target="_blank">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>
-    </a>
-    <!-- Spring Boot -->
-    <a href="https://spring.io/projects/spring-boot" target="_blank">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="spring boot" width="40" height="40"/>
-    </a>
-    <!-- SQL -->
-    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/sql.png" alt="sql" width="40" height="40"/>
-    </a>
-    <!-- PostgreSQL -->
-    <a href="https://www.postgresql.org/" target="_blank">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/>
-    </a>
-  </p>
-  <p>
-    <!-- MongoDB -->
-    <a href="https://www.mongodb.com/" target="_blank">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/>
-    </a>
-    <!-- Docker -->
-    <a href="https://www.docker.com/" target="_blank">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/>
-    </a>
-    <!-- Vercel -->
-    <a href="https://vercel.com/" target="_blank">
-      <img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="vercel" width="40" height="40"/>
-    </a>
-  </p>
-</td>
-    <td align="center" valign="top">
-<h4>AI tools</h4>
-<p>
-  <a href="https://cursor.sh/" target="_blank">
-    <img src="https://avatars.githubusercontent.com/u/126759922?s=200&v=4" alt="cursor" width="40" height="40"/>
-  </a>
-  <a href="https://claude.ai/" target="_blank">
-    <img src="https://avatars.githubusercontent.com/u/76263028?s=200&v=4" alt="claude" width="40" height="40"/>
-  </a>
-  <!-- LM Studio -->
-  <a href="https://lmstudio.ai/" target="_blank">
-    <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="lm studio" width="40" height="40"/>
-  </a>
-  <!-- Ollama -->
-  <a href="https://ollama.com/" target="_blank">
-    <img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="ollama" width="40" height="40"/>
-  </a>
- <!-- Hugging Face (transparent SVG) -->
-<a href="https://huggingface.co/" target="_blank">
-  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="huggingface" width="40" height="40"/>
-</a>
-  <!-- Local LLM (gold SVG, clickable to your Hugging Face profile) -->
-  <a href="https://huggingface.co/CodeWithSomesh" target="_blank">
-    <img src="Assets/local-llm.svg" alt="Local LLM" width="120" height="32"/>
-  </a>
-</p>
-<h4>Design tools</h4>
+    <td align="center" valign="top" width="45%">
+      <!-- Backend Development -->
+      <img src="Assets/backend-development.svg" alt="Backend Development"/>
+      <br/><br/>
       <p>
-        <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/></a>
-        <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="miro" width="40" height="40"/></a>
+        <a href="https://www.java.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="Spring Boot" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://www.mysql.com/" target="_blank"><img src="https://camo.githubusercontent.com/3ed284d0ecd9fcccabf0711e2cad6bbec412e417bcfb1da25502a1ed9adbaf78/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f6d7973716c2d69636f6e2e737667" alt="MySQL" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://www.postgresql.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="50" height="50" style="margin: 0 10px;"/></a>
+      </p>
+      <p>
+        <a href="https://www.mongodb.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" style="margin: 10px 12px;"/></a>
+        <a href="https://www.docker.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" width="50" height="50" style="margin: 10px 12px;"/></a>
+        <a href="https://vercel.com/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel" width="50" height="50" style="margin: 10px 12px;"/></a>
+      </p>
+    </td>
+    <td align="center" valign="top" width="45%">
+      <!-- AI Tools -->
+      <img src="Assets/ai-tools.svg" alt="AI Tools"/>
+      <br/><br/>
+      <p>
+        <a href="https://claude.ai/" target="_blank"><img src="https://avatars.githubusercontent.com/u/76263028?s=200&v=4" alt="Claude AI" width="50" height="50" style="margin: 0 10px;"/></a>
+        <a href="https://lmstudio.ai/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="LM Studio" width="50" height="50" style="margin: 0 10px;"/></a>
+      </p>
+      <p>
+        <a href="https://ollama.com/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="Ollama" width="50" height="50" style="margin: 10px 10px;"/></a>
+        <a href="https://huggingface.co/" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="50" height="50" style="margin: 10px 10px;"/></a>
+      </p>
+      <p>
+        <a href="https://huggingface.co/CodeWithSomesh" target="_blank"><img src="Assets/local-llm.svg" alt="Local LLM" width="140" height="38" style="margin: 10px 0;"/></a>
+      </p>
+      <br/>
+      <!-- Design Tools -->
+      <img src="Assets/design-tools.svg" alt="Design Tools"/>
+      <br/><br/>
+      <p>
+        <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="50" height="50" style="margin: 0 18px;"/></a>
+        <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="Miro" width="50" height="50" style="margin: 0 18px;"/></a>
       </p>
     </td>
   </tr>
 </table>
 </div>
-<p align="center">
-  <table align="center" cellpadding="0" cellspacing="0" border="0">
-    <tr>
-      <td align="center" valign="top" style="padding-right:12px;">
-        <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-          <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18890818164" alt="GitHub streak" width="420"/>
-        </a>
-      </td>
-    </tr>
-  </table>
-</p>
+<br/>
+<!-- GitHub Streak Stats -->
+<div align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
+        <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18890818164" alt="GitHub Streak Stats" width="400"/>
+      </a>
+    </td>
+  </tr>
+</table>
+</div>
 
 
 ---
