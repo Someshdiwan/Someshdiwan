@@ -413,7 +413,7 @@
         <a href="https://huggingface.co/" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="50" height="50" style="margin: 10px 10px;"/></a>
       </p>
       <p>
-<a href="https://www.jan.ai/" target="_blank" title="Jan AI">
+<a align="center" href="https://www.jan.ai/" target="_blank" title="Jan AI">
   <img src="Assets/jan-wave.svg" alt="Jan AI" width="190" style="margin:10px 0;"/>
 </a>
       </p>
@@ -425,7 +425,6 @@
 <br/>
 </div>
 <br/>
-
 
 ---
 
