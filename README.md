@@ -186,8 +186,13 @@
 ---
 
 <details>
-  <summary style="cursor:pointer; display:flex; justify-content:center; align-items:center; list-style:none; padding:66px 0;">
-    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310" style="display:block;">
+  <summary style="cursor:default; list-style:none; padding:66px 0; display:flex; justify-content:center; align-items:center;">
+    <!-- The SVG is the *only* clickable element -->
+    <img src="Assets/connect.svg?v=4"
+         alt="Connect With Me"
+         width="310"
+         style="display:block; cursor:pointer;"
+         onclick="event.stopPropagation(); this.closest('details').toggleAttribute('open');">
   </summary>
   <!-- Container (same as original .connect-wrap) -->
   <div style="max-width:920px; margin:18px auto; padding:12px; box-sizing:border-box;">
