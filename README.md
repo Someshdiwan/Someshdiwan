@@ -188,12 +188,9 @@
 
 
 
-
-
-
 <details>
   <summary align="center" style="list-style:none;">
-    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310"
+    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="350"
          style="cursor:pointer; display:block; margin:auto;">
   </summary>
   <!-- PROFILE VIEWS -->
@@ -281,14 +278,18 @@
 ---
 
 
-
-<img src="Assets/languages.svg" alt="Languages & Tools"/>
-
-<!-- Everything below stays inside this div until tech stacks end -->
 <div align="center">
+<!-- Section Heading -->
+<img src="Assets/languages.svg" alt="Languages & Tools" width="370"/>
+<br>
+</div>
 
-<!-- Programming Languages Section -->
-<img src="Assets/programming-languages.svg" alt="Programming Languages"/>
+<div align="center">
+<!-- Programming Languages Subsection -->
+
+<p align="center">
+<img align="center" src="Assets/programming-languages.svg" alt="Programming Languages" width="500"/>
+
 <p align="center">
 
 <!-- Java Icon (Static in GitHub README — but perfect compatibility) -->
@@ -424,6 +425,7 @@
 ---
 
 <a>
+    <p align="center">
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
 </a>
 <p align="left">
