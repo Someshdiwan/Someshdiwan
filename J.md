@@ -2,18 +2,18 @@
   <summary style="cursor:pointer; display:flex; justify-content:center; align-items:center; list-style:none; padding:66px 0;">
     <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310" style="display:block;">
   </summary>
-  <!-- ==== MAIN WRAPPER (responsive via max-width) ==== -->
+  <!-- ==== MAIN WRAPPER ==== -->
   <div style="max-width:920px; margin:18px auto; padding:12px; box-sizing:border-box;">
     <!-- Profile views -->
     <div style="display:flex; justify-content:flex-start; gap:12px; align-items:center; margin:10px 0 18px 0;">
       <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
            alt="Profile views counter" style="height:22px;">
     </div>
-    <!-- Links grid – 3 columns -->
-    <div style="display:flex; gap:36px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+    <!-- Links grid -->
+    <div class="connect-grid" style="display:flex; gap:36px; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
       <!-- LEFT COLUMN -->
-      <div style="display:flex; flex-direction:column; gap:18px; align-items:center;
-                  flex:1 1 160px; max-width:220px; min-width:140px;">
+      <div class="connect-col" style="display:flex; flex-direction:column; gap:18px; align-items:center;
+                                   flex:1 1 160px; max-width:220px; min-width:140px;">
         <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" rel="noopener noreferrer"
            title="CodeChef — someshdiwan7"
            style="display:flex; flex-direction:column; align-items:center; text-decoration:none;
@@ -38,8 +38,8 @@
         </a>
       </div>
       <!-- MIDDLE COLUMN -->
-      <div style="display:flex; flex-direction:column; gap:18px; align-items:center;
-                  flex:1 1 160px; max-width:220px; min-width:140px;">
+      <div class="connect-col" style="display:flex; flex-direction:column; gap:18px; align-items:center;
+                                   flex:1 1 160px; max-width:220px; min-width:140px;">
         <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
            target="_blank" rel="noopener noreferrer"
            title="Anki — Vocabulary Vault (Search results)"
@@ -64,8 +64,8 @@
         </a>
       </div>
       <!-- RIGHT COLUMN -->
-      <div style="display:flex; flex-direction:column; gap:18px; align-items:center;
-                  flex:1 1 160px; max-width:220px; min-width:140px;">
+      <div class="connect-col" style="display:flex; flex-direction:column; gap:18px; align-items:center;
+                                   flex:1 1 160px; max-width:220px; min-width:140px;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener"
            title="LeetCode"
            style="display:flex; flex-direction:column; align-items:center; text-decoration:none;
@@ -90,13 +90,15 @@
       </div>
     </div>
   </div>
-  <!-- ==== RESPONSIVE HACK (works on GitHub) ==== -->
-  <div style="display:none;">
-    <!-- This empty div is only here to force a media-query-like behaviour.
-         GitHub allows the `@media` inside a <style> tag *if it is inside a <picture> or <svg>*,
-         but the simplest reliable way is to duplicateify the layout with max-width on the container
-         and let flex-wrap do the rest. The block above already collapses to 1-2 columns
-         on narrow screens. If you really need the exact 22 px / 14 px values, add this
-         tiny <style> **inside an SVG image** (see note below). -->
-  </div>
+  <!-- ==== INVISIBLE SVG WITH REAL @media (GitHub renders this!) ==== -->
+  <svg width="0" height="0" style="position:absolute;">
+    <style>
+      .connect-grid { gap:36px; }
+      .connect-col  { gap:18px; min-width:140px; max-width:220px; }
+      @media (max-width:740px) {
+        .connect-grid { gap:22px !important; }
+        .connect-col  { gap:14px !important; min-width:120px !important; max-width:33% !important; }
+      }
+    </style>
+  </svg>
 </details>
