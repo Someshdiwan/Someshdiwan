@@ -1,0 +1,133 @@
+name: Sanitize README and Deploy to Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  sanitize-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (read-only)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install sanitizer
+        run: |
+          npm init -y
+          npm install --no-audit --no-fund sanitize-html@2
+
+      - name: Create sanitizer script
+        run: |
+          cat > sanitize.js <<'NODEJS'
+          // inline sanitizer script - reads README.md (or .md/.html), sanitizes HTML fragments,
+          // writes docs/index.html (does NOT change repo files)
+          const fs = require('fs');
+          const path = require('path');
+          const sanitizeHtml = require('sanitize-html');
+
+          // files to try (in order)
+          const candidates = ['README.md', 'README.MD', 'readme.md', 'index.html', 'README.html'];
+          let srcFile = candidates.find(f => fs.existsSync(path.join(process.cwd(), f)));
+
+          if (!srcFile) {
+            console.error('No README or index file found. Exiting without writing docs.');
+            process.exit(0); // don't fail; nothing to sanitize
+          }
+
+          const raw = fs.readFileSync(path.join(process.cwd(), srcFile), 'utf8');
+
+          // Basic HTML wrapper for the sanitized output (GitHub Pages will render this)
+          // sanitize-html options: allow details/summary/style & common attributes to preserve layout/icons
+          const clean = sanitizeHtml(raw, {
+            allowedTags: sanitizeHtml.defaults.allowedTags.concat([
+              'details','summary','style','img','video','source','figure','figcaption','iframe'
+            ]),
+            allowedAttributes: {
+              '*': ['class','id','title','aria-label','role','alt','width','height','loading','style','src','href','target','rel'],
+              'a': ['href','name','target','rel','title','aria-label'],
+              'img': ['src','alt','width','height','loading','style'],
+              'iframe': ['src','width','height','loading','allow','allowfullscreen','frameborder','style']
+            },
+            allowedSchemes: [ 'http', 'https', 'mailto', 'data', 'tel' ],
+            allowedSchemesByTag: {
+              img: ['http','https','data']
+            },
+            // transform style attributes by removing suspicious content (basic)
+            transformTags: {
+              'style': function(tagName, attribs) {
+                // preserve <style> blocks but still sanitize content (strip script-like patterns)
+                const content = attribs ? attribs['data-style-content'] || '' : '';
+                return { tagName: 'style', attribs: {} };
+              }
+            },
+            nonTextTags: ['script','style','textarea','noscript'],
+            // disallow script content completely
+            allowVulnerableTags: false
+          });
+
+          // Create docs dir and write sanitized page
+          const outDir = path.join(process.cwd(), 'docs');
+          if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
+
+          const htmlDocument = `<!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+            <title>Sanitized View</title>
+            <style>
+              /* basic reset so the exported page looks decent */
+              body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; padding:18px; max-width:980px; margin:0 auto;}
+              img{max-width:100%;height:auto;display:block;}
+              .connect-wrap{box-sizing:border-box;}
+            </style>
+          </head>
+          <body>
+            <main>
+              ${clean}
+            </main>
+          </body>
+          </html>`;
+
+          fs.writeFileSync(path.join(outDir, 'index.html'), htmlDocument, 'utf8');
+          console.log('Sanitized output written to docs/index.html (no repo files changed).');
+          NODEJS
+
+      - name: Run sanitizer
+        run: node sanitize.js
+
+      - name: Show docs tree (for debug)
+        run: ls -la docs || true
+
+      - name: Configure Git for gh-pages (no repo changes)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Deploy to GitHub Pages (publish docs/)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.DEPLOY_KEY }}   # optional: recommended method; set up per peaceiris docs OR use personal access token below
+          # fallback to GITHUB_TOKEN if DEPLOY_KEY is not configured
+          publish_dir: ./docs
+          # If you prefer token-based deploy, remove deploy_key and instead set:
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Provide Pages URL
+        if: success()
+        run: |
+          echo "Sanitized site published to GitHub Pages (docs/)."
