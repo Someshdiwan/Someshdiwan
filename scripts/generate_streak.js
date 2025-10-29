@@ -126,7 +126,13 @@ function makeStreakSVG(streak) {
       .card-font { font-family: "Permanent Marker","Comic Sans MS","Segoe UI",Roboto,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
       .title { fill:url(#numGrad); font-weight:700; font-size:20px; text-anchor:middle; }
       .big   { fill:url(#numGrad); font-weight:900; font-size:80px; text-anchor:middle; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.14)); }
-      .sub   { fill:#444; font-size:16px; text-anchor:middle; }
+      /* Updated to match the upper 'Streak' colors and style */
+     .sub {
+             fill: url(#numGrad);
+             font-size: 16px;
+             font-weight: 700;
+             text-anchor: middle;
+          }
       .egg-shadow { fill: rgba(0,0,0,0.12); }
 
       /* slower, smoother float + flicker */
