@@ -9,7 +9,6 @@
         dominant-baseline: middle;
         }
     </style>
-
     <defs>
         <!-- Improved halo for emoji (visible in light & dark) -->
         <radialGradient id="halo" cx="50%" cy="50%" r="65%">
@@ -22,7 +21,6 @@
             <stop offset="0" stop-color="#20B2AA"/>
             <stop offset="1" stop-color="#7ce7df"/>
         </linearGradient>
-
         <!-- Moving highlight slice (continuous underline shimmer) -->
         <linearGradient id="sweep" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0"    stop-color="#20B2AA" stop-opacity="0"/>
@@ -36,20 +34,17 @@
                               dur="2.6s"
                               repeatCount="indefinite"/>
         </linearGradient>
-
         <!-- Sparkle color gradient (teal → light-teal) -->
         <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stop-color="#7ce7df"/>
             <stop offset="1" stop-color="#20B2AA"/>
         </linearGradient>
     </defs>
-
     <!-- Halo pulse (slightly stronger for light mode) -->
     <circle cx="24" cy="28" r="18" fill="url(#halo)" opacity="0.85">
         <animate attributeName="r" values="16;19;16" dur="2.6s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.6s" repeatCount="indefinite"/>
     </circle>
-
     <!-- 🤝 emoji with tilt + bob -->
     <g>
         <text x="16" y="50%" class="title">🤝</text>
@@ -60,7 +55,6 @@
                           values="0 0; 0 -1; 0 0; 0 1; 0 0"
                           dur="2.2s" repeatCount="indefinite"/>
     </g>
-
     <!-- Micro-sparkles near the emoji (GitHub-safe: opacity + scale only) -->
     <!-- Sparkle shape: simple 4-point star (two thin crosses), no filters -->
     <g fill="url(#spark)" opacity="0.0">
@@ -77,10 +71,8 @@
             <animateTransform attributeName="transform" type="scale" values="1;1.4;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
         </g>
     </g>
-
     <!-- Title -->
     <text x="56" y="50%" class="title">Connect With Me</text>
-
     <!-- Underline: base shadow + static teal + continuous shimmer -->
     <g transform="translate(56,0)">
         <!-- shadow for light mode contrast -->
