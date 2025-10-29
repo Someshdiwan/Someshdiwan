@@ -247,9 +247,9 @@
 
 <img src="Assets/languages.svg" alt="Languages & Tools"/>
 <div align="center">
+
 <!-- Programming Languages Section -->
 <img src="Assets/programming-languages.svg" alt="Programming Languages"/>
-
 <p align="center">
   <!-- Java -->
   <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin: 0 16px;">
@@ -283,7 +283,6 @@
       </g>
     </svg>
   </a>
-
   <!-- JavaScript -->
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
     <svg width="45" height="45" viewBox="0 0 128 128">
@@ -321,6 +320,7 @@
 <br/>
 
 <!-- Tech Stack Table -->
+
 <div align="center">
 <table cellspacing="0" cellpadding="30" border="0" style="border-collapse: separate; border-spacing: 40px 20px;">
   <tr>
@@ -365,6 +365,13 @@
         <a href="https://www.docker.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" width="50" height="50" style="margin: 10px 12px;"/></a>
         <a href="https://vercel.com/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel" width="50" height="50" style="margin: 10px 12px;"/></a>
       </p>
+      <!-- Design Tools -->
+      <img src="Assets/design-tools.svg" alt="Design Tools"/>
+      <br/><br/>
+      <p>
+        <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="50" height="50" style="margin: 0 18px;"/></a>
+        <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="Miro" width="50" height="50" style="margin: 0 18px;"/></a>
+      </p>
     </td>
     <td align="center" valign="top" width="45%">
       <!-- AI Tools -->
@@ -382,13 +389,6 @@
         <a href="https://huggingface.co/CodeWithSomesh" target="_blank"><img src="Assets/local-llm.svg" alt="Local LLM" width="140" height="38" style="margin: 10px 0;"/></a>
       </p>
       <br/>
-      <!-- Design Tools -->
-      <img src="Assets/design-tools.svg" alt="Design Tools"/>
-      <br/><br/>
-      <p>
-        <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="50" height="50" style="margin: 0 18px;"/></a>
-        <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="Miro" width="50" height="50" style="margin: 0 18px;"/></a>
-      </p>
     </td>
   </tr>
 </table>
