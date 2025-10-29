@@ -14,91 +14,172 @@
   </summary>
   <div style="height:12px;"></div>
   <table align="center" width="100%" style="max-width:980px;">
-    <tr>
-      <td valign="top" width="50%" style="padding:16px 18px;">
-        <p align="center" style="margin:0 0 8px 0;">
+<tr> 
+<td valign="top" width="50%" style="padding:16px 18px;">
+<p align="center" style="margin:0 0 8px 0;">
           <img src="Assets/backend.svg" alt="🛠️ Backend & Engineering" width="480" height="42">
-        </p>
-        <ul style="list-style:none;padding-left:0;margin:14px 0;">
-          <li style="margin:18px 0;">
+</p>
+<ul style="list-style:none;padding-left:0;margin:14px 0;">
+
+<li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">JavaEvolution – Learning • Growing • Mastering ↗</a>
             </h4>
             <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
               <img src="https://img.shields.io/github/stars/Someshdiwan/JavaEvolution-Learning-Growing-Mastering?style=social" alt="stars">
               <img src="https://img.shields.io/github/last-commit/Someshdiwan/JavaEvolution-Learning-Growing-Mastering" alt="last commit">
+            </p> 
+<details>
+<summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
+<div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+    • Core & OOP: methods, recursion, classes/objects, inheritance, abstract classes, interfaces, inner classes, static/final, packages, <code>java.lang</code>, annotations & Javadoc<br>
+    • Java 8 Crash Course: lambdas & functional interfaces, streams (intermediate/terminal, primitive, parallel, pipelines), Optional, CompletableFuture, collectors, I/O & StringTokenizer<br>
+    • Collections Deep Dive: List/ArrayList, LinkedList, Vector/Stack; Map family (HashMap internals, LinkedHashMap & LRU, TreeMap/Red-Black, Identity/Weak/ConcurrentHashMap); Set & Sorted/ Navigable; Queue/Deque, Blocking queues, priority queues — with internals, images & notes<br>
+    • Concurrency & Threading: threads, synchronization, locks (reentrant/RW), deadlocks, thread pools & Executors, CountDownLatch/CyclicBarrier, CompletableFuture use-cases, virtual threads (Loom) visuals<br>
+    • Generics: generic classes/methods, wildcards, bounds, interfaces, exception caveats<br>
+    • Exceptions & Resources: checked vs unchecked, custom exceptions, try-with-resources patterns<br>
+    • Date/Time API: core classes, formatting, zones, practical snippets<br>
+    • Networking & JDBC (SQLite): UDP echo servers/clients, multiclient reverse-echo; JDBC drivers, DDL/DML, prepared/callable statements; schema & SQL notes<br>
+    • Versions Atlas: focused notes & examples for Java 8, 11, 12, 14, 17, 21, 24 (feature PDFs & demos)<br>
+    • Tooling & Site: GitHub Pages (Jekyll) + Actions, Telegram notify workflows, CONTRIBUTING, LICENSE/NOTICE
+</div>
+</details>
+
+
+</li>
+          <!-- ✅ Project 2: Todo List App -->
+          <li style="margin:18px 0;">
+            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+              <a href="https://github.com/Someshdiwan/Todo-List-Application">Todo-List Application ↗</a>
+            </h4>
+            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+              <img src="https://img.shields.io/github/stars/Someshdiwan/Todo-List-Application?style=social" alt="stars">
+              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Todo-List-Application" alt="last commit">
             </p>
             <details>
               <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
-              <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-                • Patterns: Strategy, Factory, Builder, Singleton (with pitfalls)<br>
-                • Code Smells → Refactors: long method, feature envy, data clumps<br>
-                • Testing: JUnit basics, quick CI-friendly structure<br>
-                • Extras: Collections performance notes, tiny GC tips
-              </div>
-            </details>
-          </li>
-          <!-- Add more backend items here to balance columns -->
-        </ul>
-      </td>
+<div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • A cleanly architected Todo Management Platform that helps users capture tasks, track progress, and stay organized in everyday workflows<br>
+  • Designed using Java + Spring Boot with a neat separation of responsibilities across <code>controller</code> and <code>service</code> layers — simple to maintain, flexible to extend<br>
+  • Smart payload handling through DTOs (<code>CreateTodoRequest</code> / <code>UpdateTodoRequest</code>) to ensure reliable data flow and safe state changes<br>
+  • Unified, developer-friendly error responses with <code>GlobalExceptionHandler</code> — improving API predictability and debugging clarity<br>
+  • Self-contained UI included (<code>static/index.html</code>) allowing instant interaction with features without external tooling<br>
+  • Thoughtful engineering notes inside the System Design folder — LLD diagrams, principles, and decisions documented for real-world reasoning<br>
+  • Docker-packaged for effortless deployment across environments, showcasing readiness for cloud and container ecosystems<br>
+  • Well-structured project hygiene: <code>pom.xml</code>, LICENSE, clear README — engineered for collaboration and future enhancements
+</div>
+</details>
+</li>
+
+<li style="margin:18px 0;opacity:0.7;">
+  Expanding this section with new ML projects & open-source contributions — stay tuned! ✨
+</li>
+
+</ul>
+</td>
       <td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
         <p align="center" style="margin:0 0 8px 0;">
           <img src="Assets/aiml.svg" alt="🤖 AI & Machine Learning" width="480" height="42">
         </p>
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
-          <li style="margin:18px 0;">
-            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-              <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
-            </h4>
-            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-              <img src="https://img.shields.io/github/stars/Someshdiwan/Artificial-Neural-Networks-ANNs?style=social" alt="stars">
-              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Artificial-Neural-Networks-ANNs" alt="last commit">
-            </p>
-            <details>
-              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
-              <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-                • Perceptrons, activations, loss functions<br>
-                • Gradient descent + training loops<br>
-                • Sanity checks and tiny experiments
-              </div>
-            </details>
-          </li>
-          <li style="margin:18px 0;">
-            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-               <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
-            </h4>
-            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-              <img src="https://img.shields.io/github/stars/Someshdiwan/Convolutional-Neural-Network?style=social" alt="stars">
-              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Convolutional-Neural-Network" alt="last commit">
-            </p>
-            <details>
-              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
-              <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-                • Conv/pool blocks, metrics, quick visualization<br>
-                • Training scripts and reproducible seeds<br>
-                • Simple experiment tracker (README notes)
-              </div>
-            </details>
-          </li>
-          <li style="margin:18px 0;">
-            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-               <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
-            </h4>
-            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-              <img src="https://img.shields.io/github/stars/Someshdiwan/Emotion-Recognition-System?style=social" alt="stars">
-              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Emotion-Recognition-System" alt="last commit">
-            </p>
-            <details>
-              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
-              <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-                • Compact model and clean inference pipeline<br>
-                • Preprocessing, normalization, basic augmentation<br>
-                • Evaluation notes and confusion matrix
-              </div>
-            </details>
-          </li>
-        </ul>
-      </td>
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Artificial-Neural-Networks-ANNs?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Artificial-Neural-Networks-ANNs" alt="last commit">
+  </p>
+
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Perceptrons • Logic Gates • Backpropagation ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Hands-on learning project demonstrating the fundamentals of Artificial Neural Networks<br>
+      • Builds perceptron models from scratch to classify AND, OR, and NOT gates (no frameworks — pure math)<br>
+      • Implements Multilayer Perceptron (MLP) with backpropagation to solve the nonlinear XOR problem<br>
+      • Visuals included (<code>and_gate.png</code>) to show convergence and decision boundaries<br>
+      • Python scripts show feedforward, weight updates, activation functions & loss behavior step-by-step<br>
+      • Great foundational reference for interviews, ML courses, or transitioning into deep learning frameworks
+    </div>
+  </details>
+</li>
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Convolutional-Neural-Network?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Convolutional-Neural-Network" alt="last commit">
+  </p>
+
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      CNNs • Transfer Learning • Autoencoders ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • End-to-end image classifiers with TensorFlow/Keras (clean training/validation workflow)<br>
+      • Transfer learning & fine-tuning notebook for rapid convergence on small datasets<br>
+      • Autoencoder implementation for representation learning & reconstruction demos<br>
+      • Supporting notebooks: basic perceptron, regression, vector ops, and a simple LSTM for sequence intuition<br>
+      • Reproducible runs (seeds), core metrics (accuracy/loss), quick visualization hooks<br>
+      • Organized as Jupyter notebooks: <code>Image Classifier.ipynb</code>, <code>Implementation of image classifier using CNN.ipynb</code>, <code>Implement Transfer Learning with Fine Tuning.ipynb</code>, <code>Implementation of Autoencoder.ipynb</code>, etc.
+    </div>
+  </details>
+</li>
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Emotion-Recognition-System?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Emotion-Recognition-System" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Speech Emotion AI • MFCCs • Spectrograms ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Deep learning pipeline that classifies human emotions from speech signals (anger, happy, sad, fear, etc.)<br>
+      • Extracts powerful audio features using MFCCs and Spectrograms for emotion-specific acoustic patterns<br>
+      • Includes training notebooks (<code>Emotion Recognition.ipynb</code>) + inference-ready prediction workflow<br>
+      • Data augmentation folder to improve generalization and reduce overfitting on small speech datasets<br>
+      • Evaluation assets like confusion matrices and test predictions for model performance insights<br>
+      • Strong use-case for human–computer interaction, call-center analytics, mental health monitoring & more
+    </div>
+  </details>
+</li>
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/HFTutorial">Text Summarization with HuggingFace Transformers ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/HFTutorial?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/HFTutorial" alt="last commit">
+  </p>
+
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      HuggingFace • BART • Abstractive Summaries ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Demonstrates real-world NLP by summarizing long text using Hugging Face Transformers<br>
+      • Uses the <code>facebook/bart-large-cnn</code> model — a powerful encoder–decoder architecture for abstractive summarization<br>
+      • Simple Python inference script (<code>Main.py</code>) → tokenize → generate → decode → clean output<br>
+      • Includes discussion notes (<code>HFT.txt</code>) explaining how transformer-based models understand language context<br>
+      • Easily extendable into Streamlit/Flask API or dataset-based evaluation workflows<br>
+      • Dependency-managed through <code>Requirements.txt</code> — ready for GPU/Colab deployment
+    </div>
+  </details>
+</li>
+</ul>
+
+</td>
     </tr>
   </table>
 </details>
