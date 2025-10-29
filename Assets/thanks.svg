@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="90">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190">
 <style>
     .title {
     font-family: "Comic Sans MS", cursive;
@@ -9,5 +9,5 @@
     dominant-baseline: middle;
     }
 </style>
-<text x="0" y="50%" class="title">🙏 Appreciate your time — drop a ⭐ and follow!</text>
+<text x="0" y="30%" class="title">Thanks for stopping by my GitHub! Drop a ⭐</text>
 </svg>

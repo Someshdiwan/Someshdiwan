@@ -5,6 +5,36 @@
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
   <summary align="center" style="cursor:pointer;list-style:none;">
     <picture>
@@ -188,9 +218,46 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
   <summary align="center" style="list-style:none;">
-    <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="350"
+    <img src="Assets/connect.svg?v=4" alt="Where to Find Me" width="350"
          style="cursor:pointer; display:block; margin:auto;">
   </summary>
   <!-- PROFILE VIEWS -->
@@ -208,17 +275,18 @@
         </a>
       </td>
       <td align="center" width="180" style="border:none; padding:10px;">
-        <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
-           target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
-               alt="Anki — Vocabulary Vault" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="180" style="border:none; padding:10px;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener">
           <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
                alt="LeetCode logo" width="48" height="48">
         </a>
+      </td>
+      <td align="center" width="180" style="border:none; padding:10px;">
+      <a class="link-card" href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener noreferrer" title="Codeforces — SomeshDiwan">
+           <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" 
+       alt="Codeforces logo"
+       width="48" height="48"
+       style="display:block;" /> 
+      </a>
       </td>
     </tr>
     <tr>
@@ -240,6 +308,13 @@
                alt="Medium logo" width="48" height="48">
         </a>
       </td>
+      <td align="center" width="180" style="border:none; padding:10px;">
+            <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
+                       target="_blank" rel="noopener">
+               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
+           alt="Code Review Stack Exchange Profile" width="48" height="48">
+             </a>
+       </td>
     </tr>
     <tr>
       <td align="center" style="border:none; padding:10px;">
@@ -260,6 +335,13 @@
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
                alt="Notion logo" width="48" height="48">
         </a>
+       <td align="center" width="180" style="border:none; padding:10px;">
+        <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
+           target="_blank" rel="noopener">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
+               alt="My Anki — Vocabulary Vault" width="48" height="48">
+        </a>
+      </td>
       </td>
     </tr>
   </table>
@@ -276,6 +358,50 @@
 
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -309,6 +435,45 @@
     <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
 </a>
 </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Tech Stack Table -->
 <div align="center">
@@ -421,6 +586,53 @@
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <a>
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
 </a>
@@ -430,6 +642,49 @@
 </p>
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <p align="center">
   <!-- Light mode -->
@@ -442,6 +697,54 @@
 </p>
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">

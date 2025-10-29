@@ -4,7 +4,7 @@
         font-family: "Comic Sans MS", cursive;
         font-size: 24px;
         font-weight: bold;
-        fill: #20B2AA; /* teal - trust + creativity */
+        fill: #FF8C00; /* teal - trust + creativity */
         text-anchor: start;
         dominant-baseline: middle;
         }
@@ -12,21 +12,21 @@
     <defs>
         <!-- Improved halo for emoji (visible in light & dark) -->
         <radialGradient id="halo" cx="50%" cy="50%" r="65%">
-            <stop offset="0" stop-color="#20B2AA" stop-opacity="0.85"/>
-            <stop offset="1" stop-color="#147a73" stop-opacity="0"/>
+            <stop offset="0" stop-color="#FF8C00" stop-opacity="0.85"/>
+            <stop offset="1" stop-color="#FF8C" stop-opacity="0"/>
         </radialGradient>
         <!-- Static teal (base underline) -->
         <linearGradient id="ul" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stop-color="#20B2AA"/>
-            <stop offset="1" stop-color="#7ce7df"/>
+            <stop offset="0" stop-color="#FF8C00"/>
+            <stop offset="1" stop-color="#FF8C00"/>
         </linearGradient>
         <!-- Moving highlight slice (continuous underline shimmer) -->
         <linearGradient id="sweep" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
-            <stop offset="0"    stop-color="#20B2AA" stop-opacity="0"/>
-            <stop offset="0.35" stop-color="#20B2AA" stop-opacity="0"/>
-            <stop offset="0.50" stop-color="#7ce7df" stop-opacity="1"/>
-            <stop offset="0.65" stop-color="#20B2AA" stop-opacity="0"/>
-            <stop offset="1"    stop-color="#20B2AA" stop-opacity="0"/>
+            <stop offset="0"    stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="0.35" stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="0.50" stop-color="#FF8C00" stop-opacity="1"/>
+            <stop offset="0.65" stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="1"    stop-color="#FF8C00" stop-opacity="0"/>
             <animateTransform attributeName="gradientTransform"
                               type="translate"
                               from="-260 0" to="260 0"
@@ -35,8 +35,8 @@
         </linearGradient>
         <!-- Sparkle color gradient (teal → light-teal) -->
         <linearGradient id="spark" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#7ce7df"/>
-            <stop offset="1" stop-color="#20B2AA"/>
+            <stop offset="0" stop-color="#FF8C00"/>
+            <stop offset="1" stop-color="#FF8C00"/>
         </linearGradient>
     </defs>
     <!-- Halo pulse (slightly stronger for light mode) -->
@@ -46,7 +46,7 @@
     </circle>
     <!-- 🤝 emoji with tilt + bob -->
     <g>
-        <text x="16" y="50%" class="title">🤝</text>
+        <text x="16" y="50%" class="title">💫</text>
         <animateTransform attributeName="transform" type="rotate"
                           values="-7 24 28; 7 24 28; -7 24 28"
                           dur="3s" repeatCount="indefinite"/>
@@ -71,23 +71,15 @@
         </g>
     </g>
     <!-- Title -->
-    <text x="56" y="50%" class="title">Connect With Me</text>
+    <text x="56" y="50%" class="title">Where to Find Me</text>
     <!-- Underline: base shadow + static teal + continuous shimmer -->
+    <!-- Underline (no shadow): static + moving shimmer -->
     <g transform="translate(56,0)">
-        <!-- shadow for light mode contrast -->
-        <path d="M0,42 L260,42"
-              fill="none"
-              stroke="#0b3d3a"
-              stroke-opacity="0.35"
-              stroke-width="6"
-              stroke-linecap="round"/>
-        <!-- static teal line (always visible) -->
         <path d="M0,42 L260,42"
               fill="none"
               stroke="url(#ul)"
               stroke-width="3"
               stroke-linecap="round"/>
-        <!-- moving highlight slice (infinite) -->
         <path d="M0,42 L260,42"
               fill="none"
               stroke="url(#sweep)"
