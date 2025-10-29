@@ -5,7 +5,7 @@
     <!-- Make the entire SVG clickable -->
     <a xlink:href="https://www.jan.ai/" target="_blank">
         <!-- Jan.ai Logo (local file) -->
-        <image x="100" y="100" width="125" height="32"
+        <image x="290" y="400" width="225" height="32"
                href="Assets/jan-logo.svg"
                xlink:href="Assets/jan-logo.svg"
                preserveAspectRatio="xMinYMid meet" />

@@ -413,10 +413,10 @@
         <a href="https://huggingface.co/" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="50" height="50" style="margin: 10px 10px;"/></a>
       </p>
       <p>
-<a align="center" href="https://www.jan.ai/" target="_blank" title="Jan AI">
-  <img src="Assets/jan-wave.svg" alt="Jan AI" width="190" style="margin:10px 0;"/>
-</a>
+      <p align="center">
+      <img src="Assets/jan-wave.svg" alt="Jan AI" width="300" style="margin:5px 0;"/>
       </p>
+    </p>
       <br/>
     </td>
   </tr>
@@ -424,7 +424,7 @@
 </div>
 <br/>
 </div>
-<br/>
+
 
 ---
 
