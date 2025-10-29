@@ -1,15 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50">
-    <style>
-        .title {
-        font-family: "Comic Sans MS", cursive;
-        font-size: 24px;
-        font-weight: bold;
-        fill: #20B2AA; /* teal - friendly + modern */
-        text-anchor: start;
-        dominant-baseline: middle;
-        }
-    </style>
-
-    <!-- Left-aligned Text -->
-    <text x="0" y="50%" class="title">🙏 Thank you for stopping by</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="50">
+<style>
+    .title {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    fill: #FF8C00; /* orange tone = energy + creativity */
+    text-anchor: start;
+    dominant-baseline: middle;
+    }
+</style>
+<text x="0" y="50%" class="title">🙏 Appreciate your time — drop a ⭐ and follow if you liked what you saw!</text>
 </svg>

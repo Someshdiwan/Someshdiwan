@@ -2,6 +2,7 @@
 
 <img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
+
 ---
 
 <details>
@@ -44,7 +45,6 @@
     • Tooling & Site: GitHub Pages (Jekyll) + Actions, Telegram notify workflows, CONTRIBUTING, LICENSE/NOTICE
 </div>
 </details>
-
 
 </li>
           <!-- ✅ Project 2: Todo List App -->
@@ -186,8 +186,23 @@
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
-  <summary align="center">
+  <!-- Remove default marker + clickable cursor -->
+  <summary align="center"
+           style="cursor:pointer; list-style:none; display:flex; justify-content:center;">
     <img src="Assets/connect.svg?v=4" alt="Connect With Me" width="310"/>
   </summary>
   <br/>
@@ -198,11 +213,15 @@
     />
   </div>
   <br/>
-  <!-- Explicitly borderless + custom spacing -->
-  <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: separate; border-spacing: 70px 32px;">
+  <!-- ✅ No borders, no outlines, clean spacing -->
+  <table align="center"
+         style="border:none !important;
+                outline:none !important;
+                border-collapse:separate;
+                border-spacing:70px 32px;">
     <tr>
       <!-- LEFT COLUMN -->
-      <td align="center">
+      <td align="center" style="border:none !important; outline:none !important;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" title="LeetCode">
           <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
                alt="LeetCode" width="50"/>
@@ -220,7 +239,7 @@
         </a>
       </td>
       <!-- RIGHT COLUMN -->
-      <td align="center">
+      <td align="center" style="border:none !important; outline:none !important;">
         <a href="https://vocabulary-english.notion.site/Vocabulary-Vault-21ce0aa0c4d380b7b73af79235b5016c?source=copy_link"
            target="_blank" title="Notion – Vocabulary Vault">
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
@@ -245,7 +264,28 @@
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <img src="Assets/languages.svg" alt="Languages & Tools"/>
+
+<!-- Everything below stays inside this div until tech stacks end -->
 <div align="center">
 
 <!-- Programming Languages Section -->
@@ -258,59 +298,25 @@
 </a>
 
 <!-- Python -->
-  <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
-    <svg width="45" height="45" viewBox="0 0 128 128">
-      <defs>
-        <filter id="glowPy" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <g filter="url(#glowPy)">
-        <image href="https://techstack-generator.vercel.app/python-icon.svg" width="128" height="128"/>
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -3; 0 0" dur="1.9s" begin="0s" repeatCount="indefinite"/>
-      </g>
-    </svg>
-  </a>
-  <!-- JavaScript -->
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
-    <svg width="45" height="45" viewBox="0 0 128 128">
-      <defs>
-        <filter id="glowJs" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <g filter="url(#glowJs)">
-        <image href="https://techstack-generator.vercel.app/js-icon.svg" width="128" height="128"/>
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -3; 0 0" dur="1.7s" begin="0s" repeatCount="indefinite"/>
-      </g>
-    </svg>
-  </a>
+<a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
+    <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
+</a>
 
-  <!-- C++ -->
-  <a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">
-    <svg width="45" height="45" viewBox="0 0 128 128">
-      <defs>
-        <filter id="glowCpp" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <g filter="url(#glowCpp)">
-        <image href="https://techstack-generator.vercel.app/cpp-icon.svg" width="128" height="128"/>
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -3; 0 0" dur="1.85s" begin="0s" repeatCount="indefinite"/>
-      </g>
-    </svg>
-  </a>
+<!-- JavaScript -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
+    <img src="https://techstack-generator.vercel.app/js-icon.svg" width="48" height="48" alt="JavaScript"/>
+</a>
+
+<!-- C++ -->
+<a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">
+    <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
+</a>
 </p>
-<br/>
+
+
+
 
 <!-- Tech Stack Table -->
-
 <div align="center">
 <table cellspacing="0" cellpadding="30" border="0" style="border-collapse: separate; border-spacing: 40px 20px;">
   <tr>
@@ -319,8 +325,14 @@
       <img src="Assets/frontend-development.svg" alt="Frontend Development"/>
       <br/><br/>
       <p>
-        <a href="https://reactjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="React" width="50" height="50" style="margin: 0 10px;"/></a>
-        <a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" width="50" height="50" style="margin: 0 10px;"/></a>
+<a href="https://reactjs.org/" target="_blank">
+  <img src="https://techstack-generator.vercel.app/react-icon.svg"
+       alt="React"
+       width="65"
+       height="65"
+       style="margin: 0 20px;"/>
+</a>
+<a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" width="50" height="50" style="margin: 0 10px;"/></a>
         <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg" alt="Next.js" width="50" height="50" style="margin: 0 10px;"/></a>
       </p>
       <p>
@@ -330,14 +342,26 @@
       </p>
     </td>
     <td align="center" valign="top" width="45%">
-      <!-- Native App Development -->
+<!-- Native App Development -->
       <img src="Assets/native-app-development.svg" alt="Native App Development"/>
       <br/><br/>
-      <p style="margin-top: 30px;">
-        <a href="https://developer.apple.com/swift/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="Swift" width="50" height="50" style="margin: 0 20px;"/></a>
-        <a href="https://kotlinlang.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" width="50" height="50" style="margin: 0 20px;"/></a>
-      </p>
-    </td>
+      <p style="margin-top: 30px;"> 
+<!-- Swift -->
+<a href="https://developer.apple.com/swift/" target="_blank" title="Swift">
+  <img src="https://techstack-generator.vercel.app/swift-icon.svg"
+       alt="Swift" width="65" height="65" style="margin:0 20px;"/>
+</a>
+<!-- Xcode -->
+<a href="https://developer.apple.com/xcode/" target="_blank" title="Xcode">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg"
+       alt="Xcode" width="65" height="65" style="margin:0 20px;"/>
+</a>
+<!-- Create ML -->
+<a href="https://developer.apple.com/machine-learning/create-ml/" target="_blank" title="Create ML">
+  <img src="https://developer.apple.com/assets/elements/icons/core-ml/core-ml-64x64_2x.png"
+       alt="Create ML" width="65" height="65" style="margin:0 20px; border-radius:12px;"/>
+</a>
+</td>
   </tr>
   <tr>
     <td align="center" valign="top" width="45%">
@@ -345,18 +369,31 @@
       <img src="Assets/backend-development.svg" alt="Backend Development"/>
       <br/><br/>
       <p>
-        <a href="https://www.java.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" width="50" height="50" style="margin: 0 10px;"/></a>
-        <a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="Spring Boot" width="50" height="50" style="margin: 0 10px;"/></a>
+<a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
+  <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
+</a>
+<a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="Spring Boot" width="50" height="50" style="margin: 0 10px;"/></a>
         <a href="https://www.mysql.com/" target="_blank"><img src="https://camo.githubusercontent.com/3ed284d0ecd9fcccabf0711e2cad6bbec412e417bcfb1da25502a1ed9adbaf78/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f6d7973716c2d69636f6e2e737667" alt="MySQL" width="50" height="50" style="margin: 0 10px;"/></a>
         <a href="https://www.postgresql.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="50" height="50" style="margin: 0 10px;"/></a>
-      </p>
-      <p>
-        <a href="https://www.mongodb.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" style="margin: 10px 12px;"/></a>
-        <a href="https://www.docker.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="Docker" width="50" height="50" style="margin: 10px 12px;"/></a>
-        <a href="https://vercel.com/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel" width="50" height="50" style="margin: 10px 12px;"/></a>
-      </p>
-      <!-- Design Tools -->
-      <img src="Assets/design-tools.svg" alt="Design Tools"/>
+</p>
+<p>
+<a href="https://www.mongodb.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" style="margin: 10px 12px;"/></a>
+<a href="https://www.docker.com" target="_blank">
+  <img src="https://techstack-generator.vercel.app/docker-icon.svg"
+       alt="Docker" width="65" height="65" style="margin:0 20px;">
+</a>
+<a href="https://nodejs.org/" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+       alt="Node.js"
+       width="65"
+       height="65"
+       style="margin:0 20px;"/>
+</a>
+<a href="https://vercel.com/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel" width="50" height="50" style="margin: 10px 12px;"/></a>
+
+</p>
+<!-- Design Tools -->
+<img src="Assets/design-tools.svg" alt="Design Tools"/>
       <br/><br/>
       <p>
         <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="50" height="50" style="margin: 0 18px;"/></a>
@@ -384,8 +421,16 @@
 </table>
 </div>
 <br/>
+</div>
+<br/>
+
 
 ---
+
+
+
+
+
 
 <a>
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
@@ -409,6 +454,10 @@
 
 ---
 
+
+
+
+
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">
   <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
@@ -417,5 +466,31 @@
          width="300"/>
   </a>
 </div>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+<!-- Thank You / Follow CTA -->
+<div align="center" style="margin-top: 25px;">
+  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="500"/>
+</div>
+<br/>
 
 ---
