@@ -251,23 +251,27 @@
 <!-- Programming Languages Section -->
 <img src="Assets/programming-languages.svg" alt="Programming Languages"/>
 <p align="center">
-  <!-- Java -->
-  <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin: 0 16px;">
-    <svg width="45" height="45" viewBox="0 0 128 128">
-      <defs>
-        <filter id="glowJava" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-      <g filter="url(#glowJava)">
-        <image href="https://techstack-generator.vercel.app/java-icon.svg" width="128" height="128"/>
-        <animateTransform attributeName="transform" type="translate"
-          values="0 0; 0 -3; 0 0" dur="1.8s" begin="0s" repeatCount="indefinite"/>
-      </g>
-    </svg>
-  </a>
-  <!-- Python -->
+
+<!-- Java Animated -->
+<a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
+  <svg width="65" height="65" viewBox="0 0 65 65" style="overflow:visible;">
+    <image 
+      href="https://techstack-generator.vercel.app/java-icon.svg"
+      width="65" height="65"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0; 0 -4; 0 0"
+        dur="1.8s"
+        repeatCount="indefinite"
+      />
+    </image>
+  </svg>
+</a>
+
+<!-- Python -->
   <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
     <svg width="45" height="45" viewBox="0 0 128 128">
       <defs>
@@ -407,8 +411,6 @@
 
 ---
 
-<img src="Assets/thanks.svg" alt="Thank You"/>
-
 <p align="center">
   <!-- Light mode -->
   <picture>
@@ -420,7 +422,6 @@
 </p>
 
 ---
-
 
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">
