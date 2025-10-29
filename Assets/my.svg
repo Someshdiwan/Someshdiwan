@@ -1,0 +1,220 @@
+<svg width="100%" viewBox="0 0 1536 522" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+    <title id="t">Somesh Diwan — Software Developer | Backend Dev | AI and ML</title>
+    <desc id="d">Teal header card with animated sunflower, floating particles, and a penguin mascot that bobs, tilts, blinks, and glows. Floor glow now blooms bright → dim → bright.</desc>
+
+    <defs>
+        <style>
+            .title{font:900 120px/1 "Baloo 2","Lilita One","Arial Rounded MT Bold","Nunito",system-ui,sans-serif;letter-spacing:6px;fill:#2E4756;}
+            .sub{font:600 40px/1.25 "Kalam","Patrick Hand","Comic Sans MS",system-ui,cursive;fill:#3F5563;}
+            @media (prefers-reduced-motion: reduce){ .anim, .smil { display:none !important; } }
+        </style>
+
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity=".12"/>
+        </filter>
+
+        <!-- STRONG green glow (two stacked blurs) -->
+        <filter id="floorGlowStrong" x="-60%" y="-60%" width="220%" height="220%">
+            <!-- Build an alpha from the shape -->
+            <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur1"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="22" result="blur2"/>
+            <!-- Colorize both layers -->
+            <feFlood flood-color="#19A565" flood-opacity="1" result="gcol"/>
+            <feComposite in="gcol" in2="blur1" operator="in" result="glow1"/>
+            <feComposite in="gcol" in2="blur2" operator="in" result="glow2"/>
+            <!-- Merge halos; DO NOT include SourceGraphic so we only see glow, not the solid ellipse -->
+            <feMerge>
+                <feMergeNode in="glow2"/>
+                <feMergeNode in="glow1"/>
+            </feMerge>
+        </filter>
+
+        <!-- Sun (center breath + rays) -->
+        <g id="sun">
+            <circle r="22" fill="#FFE37A">
+                <animate attributeName="r" values="22;26;22" dur="4.8s" repeatCount="indefinite" calcMode="linear"/>
+                <animate attributeName="opacity" values="1;0.75;1" dur="4.8s" repeatCount="indefinite" calcMode="linear"/>
+            </circle>
+            <g fill="#F7D24C">
+                <path d="M0,-52 12,-18 -12,-18Z"/>
+                <path d="M37,-37 12,-12 -12,-12Z"/>
+                <path d="M52,0 18,-12 18,12Z"/>
+                <path d="M37,37 12,12 -12,12Z"/>
+                <path d="M0,52 -12,18 12,18Z"/>
+                <path d="-37,37 -12,12 12,12Z"/>
+                <path d="-52,0 -18,12 -18,-12Z"/>
+                <path d="-37,-37 -12,-12 12,-12Z"/>
+            </g>
+            <path d="M-30,-40 Q-70,-60 -80,-30 Q-60,-20 -30,-30Z" fill="#19A565" transform="rotate(-20)"/>
+        </g>
+
+        <!-- Floating particle path -->
+        <path id="floatPath" d="M 0,50 C 30,20 60,20 90,50 S 150,80 180,50" fill="none" stroke="none"/>
+    </defs>
+
+    <!-- =============== BACKGROUND & AMBIENCE =============== -->
+    <rect width="1536" height="522" fill="#A8CFCF"/>
+
+    <!-- Floating particles -->
+    <g opacity="0.35" class="smil">
+        <g transform="translate(220,430)">
+            <circle r="3" fill="#FFFFFF">
+                <animateMotion dur="12s" repeatCount="indefinite" rotate="auto"><mpath href="#floatPath"/></animateMotion>
+                <animate attributeName="opacity" values="0;0.9;0" dur="12s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        <g transform="translate(420,460)">
+            <circle r="2.5" fill="#FFFFFF">
+                <animateMotion dur="14s" repeatCount="indefinite" rotate="auto" begin="2s"><mpath href="#floatPath"/></animateMotion>
+                <animate attributeName="opacity" values="0;0.7;0" dur="14s" repeatCount="indefinite" begin="2s"/>
+            </circle>
+        </g>
+        <g transform="translate(760,445)">
+            <circle r="2.8" fill="#FFFFFF">
+                <animateMotion dur="13s" repeatCount="indefinite" rotate="auto" begin="1s"><mpath href="#floatPath"/></animateMotion>
+                <animate attributeName="opacity" values="0;0.75;0" dur="13s" repeatCount="indefinite" begin="1s"/>
+            </circle>
+        </g>
+        <g transform="translate(1080,470)">
+            <circle r="2.2" fill="#FFFFFF">
+                <animateMotion dur="15s" repeatCount="indefinite" rotate="auto" begin="3s"><mpath href="#floatPath"/></animateMotion>
+                <animate attributeName="opacity" values="0;0.6;0" dur="15s" repeatCount="indefinite" begin="3s"/>
+            </circle>
+        </g>
+    </g>
+
+    <!-- =============== CARD =============== -->
+    <g filter="url(#shadow)">
+        <rect x="64" y="56" width="1376" height="410" rx="22" ry="22" fill="#F6F7EE"/>
+        <path d="M64,108 a52,52 0 0 1 52,-52 h120 v52 z" fill="#F6F7EE"/>
+    </g>
+
+    <!-- Sunflower (slow spin) -->
+    <g transform="translate(136,108)">
+        <g class="smil">
+            <use href="#sun">
+                <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="18s" repeatCount="indefinite" calcMode="linear"/>
+            </use>
+        </g>
+        <use href="#sun" class="anim"/>
+    </g>
+
+    <!-- =============== TEXT =============== -->
+    <g>
+        <text x="220" y="222" class="title">SOMESH DIWAN</text>
+        <text x="228" y="290" class="sub">Software Developer | Backend Dev | AI and ML</text>
+    </g>
+
+    <!-- =============== PENGUIN & FLOOR GLOW =============== -->
+    <g transform="translate(1370,320) scale(0.85)">
+
+        <!-- Floor glow HALO (bright → dim → bright). This is **only** the glow, no solid ellipse. -->
+        <g class="smil" transform="translate(0,250)">
+            <!-- Outer halo -->
+            <ellipse cx="0" cy="0" rx="140" ry="24" fill="#19A565" opacity="0.0" filter="url(#floorGlowStrong)">
+                <animate attributeName="opacity" values="0.00;0.60;0.00" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+                <animate attributeName="rx" values="135;160;135" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+                <animate attributeName="ry" values="22;28;22" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+            </ellipse>
+            <!-- Inner halo (adds core brightness) -->
+            <ellipse cx="0" cy="0" rx="110" ry="18" fill="#19A565" opacity="0.0" filter="url(#floorGlowStrong)">
+                <animate attributeName="opacity" values="0.00;0.85;0.00" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
+                <animate attributeName="rx" values="105;122;105" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
+                <animate attributeName="ry" values="16;22;16" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
+            </ellipse>
+        </g>
+
+        <!-- Contact shadow (dark, still synced with bob for grounding) -->
+        <ellipse cx="0" cy="250" rx="120" ry="20" fill="#2E4756" opacity="0.18" class="smil">
+            <animate attributeName="opacity" values="0.14;0.30;0.14" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+            <animate attributeName="rx" values="116;128;116" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+            <animate attributeName="ry" values="18;22;18" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+        </ellipse>
+
+        <!-- Penguin root: BIGGER sway + bob -->
+        <g id="penguin">
+            <!-- Sway: -3° ↔ 3° -->
+            <animateTransform attributeName="transform" type="rotate"
+                              values="-3 0 80; 3 0 80; -3 0 80" dur="4.8s" repeatCount="indefinite" additive="sum" calcMode="linear"/>
+            <!-- Bob: 0 → -12px → 0 -->
+            <animateTransform attributeName="transform" type="translate"
+                              values="0 0; 0 -12; 0 0" dur="3.2s" repeatCount="indefinite"
+                              keyTimes="0;0.5;1" keySplines=".25,.1,.25,1;.25,.1,.25,1" calcMode="linear"/>
+
+            <!-- Body -->
+            <ellipse cx="0" cy="80" rx="140" ry="190" fill="#D7E9F4"/>
+            <ellipse cx="0" cy="80" rx="120" ry="165" fill="#EFF7FB"/>
+
+            <!-- Head group (stronger tilt) -->
+            <g id="head" transform="translate(0,-20)">
+                <animateTransform attributeName="transform" type="rotate"
+                                  values="-4 0 0; 4 0 0; -4 0 0" dur="4.6s" repeatCount="indefinite" additive="sum" calcMode="linear"/>
+                <circle cx="0" cy="0" r="110" fill="#D7E9F4"/>
+                <circle cx="0" cy="0" r="95" fill="#EFF7FB"/>
+
+                <!-- Beak -->
+                <path d="M -60 30 Q 0 70 60 30 Q 0 10 -60 30Z" fill="#FFE37A"/>
+                <path d="M -50 35 Q 0 60 50 35 Q 0 30 -50 35Z" fill="#F7D24C"/>
+
+                <!-- Eyes (white + drifting pupils) -->
+                <g transform="translate(-30, -10)">
+                    <circle cx="0" cy="0" r="16" fill="#ffffff"/>
+                    <circle cx="0" cy="0" r="8" fill="#2E4756">
+                        <animate attributeName="cx" values="-2;3;-2" dur="3.4s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+                <g transform="translate(30, -10)">
+                    <circle cx="0" cy="0" r="16" fill="#ffffff"/>
+                    <circle cx="0" cy="0" r="8" fill="#2E4756">
+                        <animate attributeName="cx" values="2;-3;2" dur="3.6s" repeatCount="indefinite"/>
+                    </circle>
+                </g>
+
+                <!-- Blinks (staggered) -->
+                <g class="smil">
+                    <g transform="translate(-30,-10)">
+                        <animateTransform attributeName="transform" type="scale"
+                                          values="1 1; 1 0.06; 1 1" dur="6.8s" repeatCount="indefinite"
+                                          begin="1.1s" additive="sum" calcMode="linear"/>
+                    </g>
+                    <g transform="translate(30,-10)">
+                        <animateTransform attributeName="transform" type="scale"
+                                          values="1 1; 1 0.07; 1 1" dur="8.9s" repeatCount="indefinite"
+                                          begin="2.0s" additive="sum" calcMode="linear"/>
+                    </g>
+                </g>
+            </g>
+
+            <!-- Wings -->
+            <g transform="translate(-120,70)">
+                <ellipse cx="0" cy="0" rx="40" ry="55" fill="#D7E9F4"/>
+                <g class="smil">
+                    <animateTransform attributeName="transform" type="rotate"
+                                      values="0 0 0; -10 0 0; 0 0 0" dur="2.0s" repeatCount="indefinite"
+                                      keyTimes="0;0.5;1" calcMode="linear"/>
+                </g>
+            </g>
+            <g transform="translate(120,70)">
+                <ellipse cx="0" cy="0" rx="40" ry="55" fill="#D7E9F4"/>
+                <g class="smil">
+                    <animateTransform attributeName="transform" type="rotate"
+                                      values="0 0 0; 10 0 0; 0 0 0" dur="2.0s" repeatCount="indefinite"
+                                      keyTimes="0;0.5;1" calcMode="linear"/>
+                </g>
+            </g>
+
+            <!-- Gadget -->
+            <g transform="translate(0,120)">
+                <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20" fill="#1F2A33"/>
+                <rect x="-100" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
+                <rect x="30" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
+                <!-- Screen: hue glow (green <-> aqua) + pulse -->
+                <rect x="-12" y="-15" width="24" height="35" rx="6" ry="6" fill="#19A565" opacity="0.92" class="smil">
+                    <animate attributeName="fill" values="#19A565;#18C5B8;#19A565" dur="3.0s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.0s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="-170" y="28" width="340" height="10" fill="#19A565" opacity="0.85"/>
+            </g>
+        </g>
+    </g>
+</svg>

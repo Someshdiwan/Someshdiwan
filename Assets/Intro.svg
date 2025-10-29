@@ -48,7 +48,7 @@
     <text x="20" y="190" class="title">🧑‍💻 About Me</text>
 
     <text x="40" y="225" class="bullet">💻 Skilled in Java, Python, JavaScript, and SQL.</text>
-    <text x="40" y="255" class="bullet">🛠 Experienced with Spring Boot, Node.js, React, and Express.js.</text>
+    <text x="40" y="255" class="bullet">🛠 Experienced with Spring Boot, Node.js, React.</text>
     <text x="40" y="285" class="bullet">📊 Familiar with databases like MySQL, PostgreSQL, and MongoDB.</text>
     <text x="40" y="315" class="bullet">🚀 Exploring ML, AI agents, and LLM-powered applications.</text>
     <text x="40" y="345" class="bullet">🌱 Always learning and contributing where software meets intelligence.</text>

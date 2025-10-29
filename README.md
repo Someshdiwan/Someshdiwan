@@ -1,7 +1,10 @@
+<img src="Assets/my.svg" alt="Somesh Diwan — Software Engineering | Java | Machine Learning" width="800">
+
 <img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
-
 ---
+
+
 
 
 
