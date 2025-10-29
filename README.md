@@ -547,7 +547,7 @@
 <br/>
 <!-- Thank You -->
 <div align="center" style="margin-top: 20px;">
-  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="700"/>
+  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="500"/>
 </div>
 <br/>
 
