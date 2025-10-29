@@ -400,7 +400,7 @@
   <tr>
     <td align="center">
       <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-        <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18896830172" alt="GitHub Streak Stats" width="100"/>
+        <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18896830172" alt="GitHub Streak Stats" width="300"/>
       </a>
     </td>
   </tr>
