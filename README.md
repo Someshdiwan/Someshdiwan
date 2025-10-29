@@ -252,8 +252,24 @@
 <img src="Assets/programming-languages.svg" alt="Programming Languages"/>
 <p align="center">
 
-<!-- Java Animated -->
-<img src="Assets/java-anim.svg">
+<!-- Java Animated Inline ⚡ GitHub-Safe -->
+<a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
+  <svg width="65" height="65" viewBox="0 0 65 65" style="overflow:visible;">
+    <image 
+      href="https://techstack-generator.vercel.app/java-icon.svg"
+      width="65" height="65"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0; 0 -4; 0 0"
+        dur="1.8s"
+        repeatCount="indefinite"
+      />
+    </image>
+  </svg>
+</a>
 
 <!-- Python -->
   <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
