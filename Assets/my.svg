@@ -1,11 +1,18 @@
 <svg width="100%" viewBox="0 0 1536 522" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
     <title id="t">Somesh Diwan — Software Developer | Backend Dev | AI and ML</title>
-    <desc id="d">Teal header card with animated sunflower, floating particles, and a penguin mascot that bobs, tilts, blinks, and glows. Floor glow now blooms bright → dim → bright.</desc>
+    <desc id="d">Teal header with animated sun, particles, and a penguin holding a glowing board with scrolling text.</desc>
 
+    <!-- =============== STYLES & SAFETY =============== -->
     <defs>
         <style>
             .title{font:900 120px/1 "Baloo 2","Lilita One","Arial Rounded MT Bold","Nunito",system-ui,sans-serif;letter-spacing:6px;fill:#2E4756;}
             .sub{font:600 40px/1.25 "Kalam","Patrick Hand","Comic Sans MS",system-ui,cursive;fill:#3F5563;}
+            .tickerText{
+            font:700 18px/1 "Nunito","Inter",system-ui,sans-serif;
+            letter-spacing:2px;
+            text-transform:uppercase;
+            fill:#EFFFF6;
+            }
             @media (prefers-reduced-motion: reduce){ .anim, .smil { display:none !important; } }
         </style>
 
@@ -13,19 +20,45 @@
             <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity=".12"/>
         </filter>
 
-        <!-- STRONG green glow (two stacked blurs) -->
-        <filter id="floorGlowStrong" x="-60%" y="-60%" width="220%" height="220%">
-            <!-- Build an alpha from the shape -->
-            <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur1"/>
-            <feGaussianBlur in="SourceAlpha" stdDeviation="22" result="blur2"/>
-            <!-- Colorize both layers -->
-            <feFlood flood-color="#19A565" flood-opacity="1" result="gcol"/>
-            <feComposite in="gcol" in2="blur1" operator="in" result="glow1"/>
-            <feComposite in="gcol" in2="blur2" operator="in" result="glow2"/>
-            <!-- Merge halos; DO NOT include SourceGraphic so we only see glow, not the solid ellipse -->
+        <!-- Strong layered glow (used for floor) -->
+        <filter id="strongGlow" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="b1"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="22" result="b2"/>
+            <feFlood flood-color="#19A565" result="col"/>
+            <feComposite in="col" in2="b1" operator="in" result="g1"/>
+            <feComposite in="col" in2="b2" operator="in" result="g2"/>
             <feMerge>
-                <feMergeNode in="glow2"/>
-                <feMergeNode in="glow1"/>
+                <feMergeNode in="g2"/>
+                <feMergeNode in="g1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- Text glow (brighter & broader) -->
+        <filter id="textGlow" x="-70%" y="-70%" width="240%" height="240%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="tb1"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="tb2"/>
+            <feFlood flood-color="#CFFFEF" result="tcol"/>
+            <feComposite in="tcol" in2="tb1" operator="in" result="tg1"/>
+            <feComposite in="tcol" in2="tb2" operator="in" result="tg2"/>
+            <feMerge>
+                <feMergeNode in="tg2"/>
+                <feMergeNode in="tg1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- Board glow filter -->
+        <filter id="boardGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="bg1"/>
+            <feGaussianBlur in="SourceAlpha" stdDeviation="20" result="bg2"/>
+            <feFlood flood-color="#19A565" result="bgcol"/>
+            <feComposite in="bgcol" in2="bg1" operator="in" result="bgg1"/>
+            <feComposite in="bgcol" in2="bg2" operator="in" result="bgg2"/>
+            <feMerge>
+                <feMergeNode in="bgg2"/>
+                <feMergeNode in="bgg1"/>
+                <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
 
@@ -53,7 +86,15 @@
     </defs>
 
     <!-- =============== BACKGROUND & AMBIENCE =============== -->
-    <rect width="1536" height="522" fill="#A8CFCF"/>
+    <!-- Gradient sky background -->
+    <defs>
+        <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#7FB3D5;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#A8CFCF;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#B8DFD8;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <rect width="1536" height="522" fill="url(#skyGradient)"/>
 
     <!-- Floating particles -->
     <g opacity="0.35" class="smil">
@@ -105,50 +146,46 @@
         <text x="228" y="290" class="sub">Software Developer | Backend Dev | AI and ML</text>
     </g>
 
-    <!-- =============== PENGUIN & FLOOR GLOW =============== -->
+    <!-- =============== PENGUIN, GLOW & BOARD =============== -->
     <g transform="translate(1370,320) scale(0.85)">
 
-        <!-- Floor glow HALO (bright → dim → bright). This is **only** the glow, no solid ellipse. -->
+        <!-- Floor glow (bright -> dim -> bright) -->
         <g class="smil" transform="translate(0,250)">
-            <!-- Outer halo -->
-            <ellipse cx="0" cy="0" rx="140" ry="24" fill="#19A565" opacity="0.0" filter="url(#floorGlowStrong)">
-                <animate attributeName="opacity" values="0.00;0.60;0.00" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
-                <animate attributeName="rx" values="135;160;135" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
-                <animate attributeName="ry" values="22;28;22" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+            <ellipse cx="0" cy="0" rx="140" ry="24" fill="#19A565" opacity="0.0" filter="url(#strongGlow)">
+                <animate attributeName="opacity" values="0.0;0.8;0.0" dur="3.4s" repeatCount="indefinite"/>
+                <animate attributeName="rx" values="135;160;135" dur="3.4s" repeatCount="indefinite"/>
+                <animate attributeName="ry" values="22;28;22" dur="3.4s" repeatCount="indefinite"/>
             </ellipse>
-            <!-- Inner halo (adds core brightness) -->
-            <ellipse cx="0" cy="0" rx="110" ry="18" fill="#19A565" opacity="0.0" filter="url(#floorGlowStrong)">
-                <animate attributeName="opacity" values="0.00;0.85;0.00" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
-                <animate attributeName="rx" values="105;122;105" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
-                <animate attributeName="ry" values="16;22;16" dur="3.6s" repeatCount="indefinite" calcMode="linear" begin="0.2s"/>
+            <ellipse cx="0" cy="0" rx="110" ry="18" fill="#19A565" opacity="0.0" filter="url(#strongGlow)">
+                <animate attributeName="opacity" values="0.0;1.0;0.0" dur="3.4s" repeatCount="indefinite" begin="0.15s"/>
+                <animate attributeName="rx" values="105;122;105" dur="3.4s" repeatCount="indefinite" begin="0.15s"/>
+                <animate attributeName="ry" values="16;22;16" dur="3.4s" repeatCount="indefinite" begin="0.15s"/>
             </ellipse>
         </g>
 
-        <!-- Contact shadow (dark, still synced with bob for grounding) -->
+        <!-- Dark contact shadow -->
         <ellipse cx="0" cy="250" rx="120" ry="20" fill="#2E4756" opacity="0.18" class="smil">
-            <animate attributeName="opacity" values="0.14;0.30;0.14" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
-            <animate attributeName="rx" values="116;128;116" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
-            <animate attributeName="ry" values="18;22;18" dur="3.6s" repeatCount="indefinite" calcMode="linear"/>
+            <animate attributeName="opacity" values="0.14;0.30;0.14" dur="3.4s" repeatCount="indefinite"/>
+            <animate attributeName="rx" values="116;128;116" dur="3.4s" repeatCount="indefinite"/>
+            <animate attributeName="ry" values="18;22;18" dur="3.4s" repeatCount="indefinite"/>
         </ellipse>
 
-        <!-- Penguin root: BIGGER sway + bob -->
+        <!-- Penguin root: sway + bob -->
         <g id="penguin">
-            <!-- Sway: -3° ↔ 3° -->
             <animateTransform attributeName="transform" type="rotate"
-                              values="-3 0 80; 3 0 80; -3 0 80" dur="4.8s" repeatCount="indefinite" additive="sum" calcMode="linear"/>
-            <!-- Bob: 0 → -12px → 0 -->
+                              values="-3 0 80; 3 0 80; -3 0 80" dur="4.8s" repeatCount="indefinite" additive="sum"/>
             <animateTransform attributeName="transform" type="translate"
                               values="0 0; 0 -12; 0 0" dur="3.2s" repeatCount="indefinite"
-                              keyTimes="0;0.5;1" keySplines=".25,.1,.25,1;.25,.1,.25,1" calcMode="linear"/>
+                              keyTimes="0;0.5;1" keySplines=".25,.1,.25,1;.25,.1,.25,1"/>
 
             <!-- Body -->
             <ellipse cx="0" cy="80" rx="140" ry="190" fill="#D7E9F4"/>
             <ellipse cx="0" cy="80" rx="120" ry="165" fill="#EFF7FB"/>
 
-            <!-- Head group (stronger tilt) -->
+            <!-- Head group -->
             <g id="head" transform="translate(0,-20)">
                 <animateTransform attributeName="transform" type="rotate"
-                                  values="-4 0 0; 4 0 0; -4 0 0" dur="4.6s" repeatCount="indefinite" additive="sum" calcMode="linear"/>
+                                  values="-4 0 0; 4 0 0; -4 0 0" dur="4.6s" repeatCount="indefinite" additive="sum"/>
                 <circle cx="0" cy="0" r="110" fill="#D7E9F4"/>
                 <circle cx="0" cy="0" r="95" fill="#EFF7FB"/>
 
@@ -156,7 +193,7 @@
                 <path d="M -60 30 Q 0 70 60 30 Q 0 10 -60 30Z" fill="#FFE37A"/>
                 <path d="M -50 35 Q 0 60 50 35 Q 0 30 -50 35Z" fill="#F7D24C"/>
 
-                <!-- Eyes (white + drifting pupils) -->
+                <!-- Eyes -->
                 <g transform="translate(-30, -10)">
                     <circle cx="0" cy="0" r="16" fill="#ffffff"/>
                     <circle cx="0" cy="0" r="8" fill="#2E4756">
@@ -170,50 +207,155 @@
                     </circle>
                 </g>
 
-                <!-- Blinks (staggered) -->
+                <!-- Blinks -->
                 <g class="smil">
                     <g transform="translate(-30,-10)">
                         <animateTransform attributeName="transform" type="scale"
-                                          values="1 1; 1 0.06; 1 1" dur="6.8s" repeatCount="indefinite"
-                                          begin="1.1s" additive="sum" calcMode="linear"/>
+                                          values="1 1; 1 0.06; 1 1" dur="6.8s" repeatCount="indefinite" begin="1.1s" additive="sum"/>
                     </g>
                     <g transform="translate(30,-10)">
                         <animateTransform attributeName="transform" type="scale"
-                                          values="1 1; 1 0.07; 1 1" dur="8.9s" repeatCount="indefinite"
-                                          begin="2.0s" additive="sum" calcMode="linear"/>
+                                          values="1 1; 1 0.07; 1 1" dur="8.9s" repeatCount="indefinite" begin="2.0s" additive="sum"/>
                     </g>
                 </g>
             </g>
 
             <!-- Wings -->
-            <g transform="translate(-120,70)">
+            <g id="wingL" transform="translate(-120,70)">
                 <ellipse cx="0" cy="0" rx="40" ry="55" fill="#D7E9F4"/>
                 <g class="smil">
                     <animateTransform attributeName="transform" type="rotate"
                                       values="0 0 0; -10 0 0; 0 0 0" dur="2.0s" repeatCount="indefinite"
-                                      keyTimes="0;0.5;1" calcMode="linear"/>
+                                      keyTimes="0;0.5;1"/>
                 </g>
             </g>
-            <g transform="translate(120,70)">
+            <g id="wingR" transform="translate(120,70)">
                 <ellipse cx="0" cy="0" rx="40" ry="55" fill="#D7E9F4"/>
                 <g class="smil">
                     <animateTransform attributeName="transform" type="rotate"
                                       values="0 0 0; 10 0 0; 0 0 0" dur="2.0s" repeatCount="indefinite"
-                                      keyTimes="0;0.5;1" calcMode="linear"/>
+                                      keyTimes="0;0.5;1"/>
                 </g>
             </g>
 
-            <!-- Gadget -->
-            <g transform="translate(0,120)">
-                <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20" fill="#1F2A33"/>
-                <rect x="-100" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
-                <rect x="30" y="-15" width="70" height="35" rx="10" ry="10" fill="#2D3A44"/>
-                <!-- Screen: hue glow (green <-> aqua) + pulse -->
-                <rect x="-12" y="-15" width="24" height="35" rx="6" ry="6" fill="#19A565" opacity="0.92" class="smil">
-                    <animate attributeName="fill" values="#19A565;#18C5B8;#19A565" dur="3.0s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.0s" repeatCount="indefinite"/>
+            <!-- ===== BOARD WITH SCROLLING TEXT ===== -->
+            <g id="board" transform="translate(0,120)">
+                <!-- Pulsing board glow -->
+                <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20"
+                      fill="#19A565" opacity="0" filter="url(#boardGlow)" class="smil">
+                    <animate attributeName="opacity" values="0;0.6;0" dur="3.4s" repeatCount="indefinite"/>
                 </rect>
-                <rect x="-170" y="28" width="340" height="10" fill="#19A565" opacity="0.85"/>
+
+                <!-- Console panel (capsule-shaped board) with subtle tilt -->
+                <g class="smil">
+                    <animateTransform attributeName="transform" type="rotate"
+                                      values="-1 0 0; 1 0 0; -1 0 0" dur="4.8s" repeatCount="indefinite"/>
+
+                    <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20" fill="#1F2A33"/>
+
+                    <!-- Edge lighting (LED style) -->
+                    <rect x="-168" y="-33" width="336" height="66" rx="19" ry="19"
+                          fill="none" stroke="#19A565" stroke-width="2" opacity="0.7">
+                        <animate attributeName="stroke"
+                                 values="#19A565;#18C5B8;#1FB8A3;#18C5B8;#19A565"
+                                 dur="4s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
+                    </rect>
+
+                    <!-- Inner glow edge -->
+                    <rect x="-166" y="-31" width="332" height="62" rx="18" ry="18"
+                          fill="none" stroke="#CFFFEF" stroke-width="1" opacity="0.3">
+                        <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
+                    </rect>
+
+                    <!-- Scanline effect -->
+                    <g opacity="0.15">
+                        <rect x="-170" y="-35" width="340" height="2" fill="#CFFFEF">
+                            <animate attributeName="y" from="-35" to="35" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0;0.4;0" dur="2s" repeatCount="indefinite"/>
+                        </rect>
+                    </g>
+
+                    <!-- Grip pads (little handles) -->
+                    <circle cx="-150" cy="28" r="6" fill="#2D3A44"/>
+                    <circle cx="150"  cy="28" r="6" fill="#2D3A44"/>
+                </g>
+
+                <!-- Sparkle effects around board -->
+                <g class="smil" opacity="0.8">
+                    <circle cx="-140" cy="-20" r="2" fill="#CFFFEF">
+                        <animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite"/>
+                        <animate attributeName="r" values="1;3;1" dur="2.1s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="135" cy="-25" r="2" fill="#18C5B8">
+                        <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" begin="0.5s"/>
+                        <animate attributeName="r" values="1;2.5;1" dur="2.8s" repeatCount="indefinite" begin="0.5s"/>
+                    </circle>
+                    <circle cx="-155" cy="10" r="2" fill="#19A565">
+                        <animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite" begin="1s"/>
+                        <animate attributeName="r" values="1;2;1" dur="3.2s" repeatCount="indefinite" begin="1s"/>
+                    </circle>
+                    <circle cx="148" cy="15" r="2" fill="#CFFFEF">
+                        <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="1.5s"/>
+                        <animate attributeName="r" values="1;2.8;1" dur="2.5s" repeatCount="indefinite" begin="1.5s"/>
+                    </circle>
+                </g>
+
+                <!-- Clipping mask for text overflow -->
+                <clipPath id="boardClip">
+                    <rect x="-160" y="-30" width="320" height="60" rx="18" ry="18"/>
+                </clipPath>
+
+                <!-- Scrolling ticker text - Layer 1 (main, fast) -->
+                <g clip-path="url(#boardClip)">
+                    <text class="tickerText" filter="url(#textGlow)" text-anchor="start" x="0" y="2">
+                        • SOMESH DIWAN • SOFTWARE DEVELOPER • JAVA • AI • ML • OPEN SOURCE • BUILD • SHIP • LEARN • SOMESH DIWAN • SOFTWARE ENGINEER • JAVA • AI • ML • OPEN SOURCE • BUILD • SHIP • LEARN •
+                        <animate attributeName="x" from="170" to="-1200" dur="10s" repeatCount="indefinite"/>
+                        <animate attributeName="fill"
+                                 values="#EFFFF6;#18C5B8;#1FB8A3;#18C5B8;#EFFFF6"
+                                 dur="8s" repeatCount="indefinite"/>
+                    </text>
+                </g>
+
+                <!-- Scrolling ticker text - Layer 2 (slower, subtle) -->
+                <g clip-path="url(#boardClip)" opacity="0.4">
+                    <text class="tickerText" filter="url(#textGlow)" text-anchor="start" x="0" y="8"
+                          style="font-size:14px;">
+                        ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦
+                        <animate attributeName="x" from="170" to="-900" dur="15s" repeatCount="indefinite"/>
+                        <animate attributeName="fill"
+                                 values="#19A565;#CFFFEF;#19A565"
+                                 dur="6s" repeatCount="indefinite"/>
+                    </text>
+                </g>
+
+                <!-- Particle trail effects -->
+                <g class="smil" clip-path="url(#boardClip)">
+                    <circle r="2" fill="#18C5B8" opacity="0.8">
+                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite"/>
+                        <animate attributeName="cy" values="2;-2;2" dur="2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0.8;0" dur="10s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle r="1.5" fill="#CFFFEF" opacity="0.6">
+                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite" begin="2s"/>
+                        <animate attributeName="cy" values="4;0;4" dur="1.8s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0.6;0" dur="10s" repeatCount="indefinite" begin="2s"/>
+                    </circle>
+                    <circle r="1.8" fill="#19A565" opacity="0.7">
+                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite" begin="4s"/>
+                        <animate attributeName="cy" values="-3;3;-3" dur="2.2s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0.7;0" dur="10s" repeatCount="indefinite" begin="4s"/>
+                    </circle>
+                </g>
+
+                <!-- Reflection effect on board surface -->
+                <g opacity="0.15" clip-path="url(#boardClip)">
+                    <text class="tickerText" text-anchor="start" x="0" y="30"
+                          style="font-size:16px;" transform="scale(1,-0.6)">
+                        • SOMESH DIWAN • SOFTWARE DEVELOPER • JAVA • AI • ML •
+                        <animate attributeName="x" from="170" to="-800" dur="10s" repeatCount="indefinite"/>
+                    </text>
+                </g>
             </g>
         </g>
     </g>
