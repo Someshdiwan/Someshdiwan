@@ -53,6 +53,7 @@
 </p>
 <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
+<!-- ✅ Project 1: Java SE -->
 <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">JavaEvolution – Learning • Growing • Mastering ↗</a>
@@ -100,6 +101,82 @@
   • Well-structured project hygiene: <code>pom.xml</code>, LICENSE, clear README — engineered for collaboration and future enhancements
 </div>
 </details>
+
+
+<!-- ✅ Project 3: ASCII Binary -->
+</li>
+          <!-- ✅ Project 3: ASCII–Binary Character Table -->
+          <li style="margin:18px 0;">
+            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+              <a href="https://github.com/Someshdiwan/ASCII-Binary-Character-Table">ASCII–Binary Character Table ↗</a>
+            </h4>
+            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+              <img src="https://img.shields.io/github/stars/Someshdiwan/ASCII-Binary-Character-Table?style=social" alt="stars">
+              <img src="https://img.shields.io/github/last-commit/Someshdiwan/ASCII-Binary-Character-Table" alt="last commit">
+            </p>
+            <details>
+              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
+<div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • Interactive reference project showcasing ASCII and Unicode character mappings<br>
+  • Includes downloadable <code>ASCII - Binary Character Table.pdf</code> for quick offline lookup<br>
+  • Explains differences between <strong>ASCII</strong> (128-character encoding) and <strong>Unicode</strong> (143K+ characters covering all scripts)<br>
+  • Web-based interface (<code>index.html</code>) displaying characters, binary codes, and descriptions with light/dark theme toggles<br>
+  • Assets (<code>sun.png</code>, <code>moon.png</code>, favicons) and <code>vercel.json</code> for seamless Vercel deployment<br>
+  • Perfect resource for developers learning text encoding, binary representation, and web deployment fundamentals<br>
+  • Contains <code>README.md</code> and <code>LICENSE</code> — open-source and educationally focused<br>
+</div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li>
+          <!-- ✅ Project 4: Docker Guide -->
+          <li style="margin:18px 0;">
+            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+              <a href="https://github.com/Someshdiwan/Docker-Guide">Docker Guide ↗</a>
+            </h4>
+            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+              <img src="https://img.shields.io/github/stars/Someshdiwan/Docker-Guide?style=social" alt="stars">
+              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Docker-Guide" alt="last commit">
+            </p>
+            <details>
+              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
+<div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • Visually rich guide covering essential Docker commands for development and maintenance<br>
+  • Organized tabs for Operations, Monitoring, Cleanup, and Best Practices<br>
+  • Demonstrates core actions like building, running, and cleaning containers with concise command blocks<br>
+  • Clean dark-themed interface designed for quick reference and hands-on learning<br>
+</div>
+</details>
+
+
+
+
+
+
+
+
 </li>
 
 <li style="margin:18px 0;opacity:0.7;">
