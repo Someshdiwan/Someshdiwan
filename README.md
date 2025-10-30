@@ -716,7 +716,7 @@
 </a>
 <p align="left">
   <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=18920143832" alt="Monthly contributions (line)" width="1000" />
+  <img src="Assets/contrib-monthly-line.svg?v=18929041979" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ---
@@ -827,7 +827,7 @@
 <!-- GitHub Streak Stats (no table, no border) -->
 <div align="center" style="margin-top: 20px;">
   <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18924774595"
+    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18929174798"
          alt="GitHub Streak Stats"
          width="300"/>
   </a>
