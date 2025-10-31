@@ -1,6 +1,6 @@
 <svg width="100%" viewBox="0 0 1536 522" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-    <title id="t">Somesh Diwan — Software Developer | Backend Dev | AI and ML</title>
-    <desc id="d">Teal header with animated sun, particles, and a penguin holding a glowing board with scrolling text.</desc>
+    <title id="t">Somesh Diwan — Software Developer | Backend Systems | AI/ML</title>
+    <desc id="d">Teal header with animated.</desc>
 
     <!-- =============== STYLES & SAFETY =============== -->
     <defs>
@@ -86,7 +86,6 @@
     </defs>
 
     <!-- =============== BACKGROUND & AMBIENCE =============== -->
-    <!-- Gradient sky background -->
     <defs>
         <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" style="stop-color:#7FB3D5;stop-opacity:1" />
@@ -143,7 +142,7 @@
     <!-- =============== TEXT =============== -->
     <g>
         <text x="220" y="222" class="title">SOMESH DIWAN</text>
-        <text x="228" y="290" class="sub">Software Developer | Backend Dev | AI and ML</text>
+        <text x="228" y="290" class="sub">Software Developer • Backend Systems • AI/ML</text>
     </g>
 
     <!-- =============== PENGUIN, GLOW & BOARD =============== -->
@@ -238,7 +237,7 @@
                 </g>
             </g>
 
-            <!-- ===== BOARD WITH SCROLLING TEXT ===== -->
+            <!-- ===== BOARD WITH SCROLLING TEXT (WELCOME / CTA) ===== -->
             <g id="board" transform="translate(0,120)">
                 <!-- Pulsing board glow -->
                 <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20"
@@ -250,10 +249,7 @@
                 <g class="smil">
                     <animateTransform attributeName="transform" type="rotate"
                                       values="-1 0 0; 1 0 0; -1 0 0" dur="4.8s" repeatCount="indefinite"/>
-
                     <rect x="-170" y="-35" width="340" height="70" rx="20" ry="20" fill="#1F2A33"/>
-
-                    <!-- Edge lighting (LED style) -->
                     <rect x="-168" y="-33" width="336" height="66" rx="19" ry="19"
                           fill="none" stroke="#19A565" stroke-width="2" opacity="0.7">
                         <animate attributeName="stroke"
@@ -261,8 +257,6 @@
                                  dur="4s" repeatCount="indefinite"/>
                         <animate attributeName="opacity" values="0.5;0.9;0.5" dur="4s" repeatCount="indefinite"/>
                     </rect>
-
-                    <!-- Inner glow edge -->
                     <rect x="-166" y="-31" width="332" height="62" rx="18" ry="18"
                           fill="none" stroke="#CFFFEF" stroke-width="1" opacity="0.3">
                         <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
@@ -276,12 +270,12 @@
                         </rect>
                     </g>
 
-                    <!-- Grip pads (little handles) -->
+                    <!-- Grip pads -->
                     <circle cx="-150" cy="28" r="6" fill="#2D3A44"/>
                     <circle cx="150"  cy="28" r="6" fill="#2D3A44"/>
                 </g>
 
-                <!-- Sparkle effects around board -->
+                <!-- Sparkles -->
                 <g class="smil" opacity="0.8">
                     <circle cx="-140" cy="-20" r="2" fill="#CFFFEF">
                         <animate attributeName="opacity" values="0;1;0" dur="2.1s" repeatCount="indefinite"/>
@@ -306,54 +300,74 @@
                     <rect x="-160" y="-30" width="320" height="60" rx="18" ry="18"/>
                 </clipPath>
 
-                <!-- Scrolling ticker text - Layer 1 (main, fast) -->
+                <!-- ====== LINE A: CTA comes first, ping-pong, then hides ====== -->
                 <g clip-path="url(#boardClip)">
-                    <text class="tickerText" filter="url(#textGlow)" text-anchor="start" x="0" y="2">
-                        • SOMESH DIWAN • SOFTWARE DEVELOPER • JAVA • AI • ML • OPEN SOURCE • BUILD • SHIP • LEARN • SOMESH DIWAN • SOFTWARE ENGINEER • JAVA • AI • ML • OPEN SOURCE • BUILD • SHIP • LEARN •
-                        <animate attributeName="x" from="170" to="-1200" dur="10s" repeatCount="indefinite"/>
+                    <text class="tickerText" text-anchor="start" x="0" y="2" filter="url(#textGlow)">
+                        🚀 EXPLORE • LEARN • CONTRIBUTE • CONNECT WITH IDEAS AND CODE • IF YOU ENJOY MY PROJECTS, DROP A ⭐ AND SHARE • OPEN SOURCE IS HOW WE GROW AS ENGINEERS • THANKS FOR STOPPING BY AND BEING PART OF THE JOURNEY 💻
+                        <animate id="ctaCycle"
+                                 attributeName="x"
+                                 values="170;-1650;170"
+                                 keyTimes="0;0.5;1"
+                                 dur="18s"
+                                 calcMode="spline"
+                                 keySplines=".25 .1 .25 1;.25 .1 .25 1"
+                                 begin="0s;welcomeCycle.end"
+                                 repeatCount="1"/>
                         <animate attributeName="fill"
-                                 values="#EFFFF6;#18C5B8;#1FB8A3;#18C5B8;#EFFFF6"
-                                 dur="8s" repeatCount="indefinite"/>
+                                 values="#EFFFF6;#00FFAA;#19A565;#00FFAA;#EFFFF6"
+                                 dur="12s"
+                                 repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="1;1" dur="0.001s" begin="ctaCycle.begin"/>
+                        <animate attributeName="opacity" values="0;0"  dur="18s"    begin="welcomeCycle.begin"/>
                     </text>
                 </g>
 
-                <!-- Scrolling ticker text - Layer 2 (slower, subtle) -->
-                <g clip-path="url(#boardClip)" opacity="0.4">
-                    <text class="tickerText" filter="url(#textGlow)" text-anchor="start" x="0" y="8"
-                          style="font-size:14px;">
-                        ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦ INNOVATION ✦ CODE ✦ DESIGN ✦ TECH ✦
-                        <animate attributeName="x" from="170" to="-900" dur="15s" repeatCount="indefinite"/>
+                <!-- ====== LINE B: Welcome starts after LINE A, ping-pong, then hides ====== -->
+                <g clip-path="url(#boardClip)" opacity="0.58">
+                    <text class="tickerText" text-anchor="start" x="0" y="8" filter="url(#textGlow)" style="font-size:14px;">
+                        • WELCOME TO MY GITHUB • I’M SOMESH DIWAN • SOFTWARE DEVELOPER • JAVA • SPRING BOOT • BACKEND DEVELOPMENT • SYSTEM DESIGN • AI and MACHINE LEARNING • EXPLORING IDEAS THAT SCALE • OPEN SOURCE PROJECTS • CLEAN CODE • COLLABORATE • INNOVATE • DROP A ⭐ IF YOU ENJOY THE WORK • FOLLOW FOR NEW BUILDS • ISSUES  PRs ALWAYS WELCOME •
+                        <animate id="welcomeCycle"
+                                 attributeName="x"
+                                 values="170;-1700;170"
+                                 keyTimes="0;0.5;1"
+                                 dur="38s"
+                                 calcMode="spline"
+                                 keySplines=".25 .1 .25 1;.25 .1 .25 1"
+                                 begin="ctaCycle.end"
+                                 repeatCount="1"/>
                         <animate attributeName="fill"
-                                 values="#19A565;#CFFFEF;#19A565"
-                                 dur="6s" repeatCount="indefinite"/>
+                                 values="#CFFFEF;#19A565;#00FFAA;#19A565;#CFFFEF"
+                                 dur="10s"
+                                 repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0" dur="18s"    begin="ctaCycle.begin"/>
+                        <animate attributeName="opacity" values="1;1" dur="0.001s" begin="welcomeCycle.begin"/>
                     </text>
                 </g>
 
                 <!-- Particle trail effects -->
                 <g class="smil" clip-path="url(#boardClip)">
                     <circle r="2" fill="#18C5B8" opacity="0.8">
-                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite"/>
+                        <animate attributeName="cx" from="170" to="-160" dur="12s" repeatCount="indefinite"/>
                         <animate attributeName="cy" values="2;-2;2" dur="2s" repeatCount="indefinite"/>
-                        <animate attributeName="opacity" values="0;0.8;0" dur="10s" repeatCount="indefinite"/>
+                        <animate attributeName="opacity" values="0;0.8;0" dur="12s" repeatCount="indefinite"/>
                     </circle>
                     <circle r="1.5" fill="#CFFFEF" opacity="0.6">
-                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite" begin="2s"/>
+                        <animate attributeName="cx" from="170" to="-160" dur="12s" repeatCount="indefinite" begin="2s"/>
                         <animate attributeName="cy" values="4;0;4" dur="1.8s" repeatCount="indefinite"/>
-                        <animate attributeName="opacity" values="0;0.6;0" dur="10s" repeatCount="indefinite" begin="2s"/>
+                        <animate attributeName="opacity" values="0;0.6;0" dur="12s" repeatCount="indefinite" begin="2s"/>
                     </circle>
                     <circle r="1.8" fill="#19A565" opacity="0.7">
-                        <animate attributeName="cx" from="170" to="-160" dur="10s" repeatCount="indefinite" begin="4s"/>
+                        <animate attributeName="cx" from="170" to="-160" dur="12s" repeatCount="indefinite" begin="4s"/>
                         <animate attributeName="cy" values="-3;3;-3" dur="2.2s" repeatCount="indefinite"/>
-                        <animate attributeName="opacity" values="0;0.7;0" dur="10s" repeatCount="indefinite" begin="4s"/>
+                        <animate attributeName="opacity" values="0;0.7;0" dur="12s" repeatCount="indefinite" begin="4s"/>
                     </circle>
                 </g>
 
                 <!-- Reflection effect on board surface -->
                 <g opacity="0.15" clip-path="url(#boardClip)">
-                    <text class="tickerText" text-anchor="start" x="0" y="30"
-                          style="font-size:16px;" transform="scale(1,-0.6)">
-                        • SOMESH DIWAN • SOFTWARE DEVELOPER • JAVA • AI • ML •
-                        <animate attributeName="x" from="170" to="-800" dur="10s" repeatCount="indefinite"/>
+                    <text class="tickerText" text-anchor="start" x="0" y="30" style="font-size:16px;" transform="scale(1,-0.6)">
+                        WELCOME • SWE • SDE • BACKEND • JAVA • SPRING BOOT • AI/ML •
+                        <animate attributeName="x" from="170" to="-900" dur="12s" repeatCount="indefinite"/>
                     </text>
                 </g>
             </g>

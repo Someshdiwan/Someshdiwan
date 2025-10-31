@@ -152,29 +152,6 @@
 </div>
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </li>
           <!-- ✅ Project 5: Docker Guide -->
           <li style="margin:18px 0;">
@@ -237,7 +214,7 @@
   </p>
   <details>
     <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-      UI Controls • Layouts & Panes • Event Handling • Scene Graph ↗
+      Learn More ↗
     </summary>
     <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
       • A comprehensive learning repository on <strong>JavaFX</strong>, illustrating the fundamentals and advanced constructs of modern Java GUI programming<br>
@@ -254,6 +231,67 @@
     </div>
   </details>
 </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ▼ MINI PROJECTS SECTION -->
+<details>
+  <summary style="cursor:pointer;list-style:none;">
+    <p align="left" style="margin:0;">
+      <img src="Assets/MiniProjects.svg" width="320" height="36" alt="Mini Projects For Hands On Skills">
+    </p>
+  </summary>
+  <div style="height:8px;"></div>
+  <div style="max-width:980px;margin-left:0;padding-left:10px;">
+    <ul style="list-style:none;padding-left:0;margin:14px 0;">
+      <!-- ✅ Mini Project: File Encryption Tool -->
+      <li style="margin:14px 0;">
+        <h4 style="margin:2px 0;font-size:15px;font-family:'Comic Sans MS','Segoe UI';">
+          <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
+        </h4>
+        <p style="margin:2px 0 4px 0;font-size:11px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+          <img src="https://img.shields.io/github/stars/Someshdiwan/File-Encryption-Tool?style=social" alt="stars">
+          <img src="https://img.shields.io/github/last-commit/Someshdiwan/File-Encryption-Tool" alt="last commit">
+        </p>
+        <details>
+          <summary style="cursor:pointer;font-size:12px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+            AES Encryption • Decryption • Key Management ↗
+          </summary>
+          <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • A compact <strong>Java AES File Encryption Tool</strong> showcasing real-world use of the <strong>Java Cryptography Architecture (JCA)</strong><br>
+  • Supports <strong>key generation</strong>, <strong>file encryption</strong>, and <strong>decryption</strong> via a simple CLI<br>
+  • Implements secure <code>256-bit AES</code> with modular methods and safe stream handling<br>
+  • Lightweight design — fast, functional, and perfect for learning practical cryptography<br>
+</div>
+        </details>
+      </li>
+    </ul>
+  </div>
+</details>
+
 
 
 
@@ -1018,5 +1056,15 @@
          width="500"/>
   </div>
 </div>
+
+ <!-- GitHub Streak Stats 
+  <div style="margin-top: 1px;">
+    <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
+      <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18929174798"
+           alt="GitHub Streak Stats"
+           width="270"/>
+    </a>
+  </div>
+  -->
 
 ---
