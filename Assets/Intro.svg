@@ -49,20 +49,20 @@
 
     <text x="40" y="225" class="bullet">💻 Skilled in Java, Python, JavaScript, and SQL.</text>
     <text x="40" y="255" class="bullet">🛠 Experienced with Spring Boot, Node.js, React.</text>
-    <text x="40" y="285" class="bullet">📊 Familiar with databases like MySQL, PostgreSQL, and MongoDB.</text>
-    <text x="40" y="315" class="bullet">🚀 Exploring ML, AI agents, and LLM-powered applications.</text>
+    <text x="40" y="285" class="bullet">🛢️ Familiar with databases like MySQL, PostgresSQL, and MongoDB.</text>
+    <text x="40" y="315" class="bullet">🚀 Exploring ML, AI Automation, and LLM-powered applications.</text>
     <text x="40" y="345" class="bullet">🌱 Always learning and contributing where software meets intelligence.</text>
-    <text x="40" y="395" class="bullet">🌱 I’m currently learning Competitive Programming.</text>
+    <text x="40" y="395" class="bullet">🎯 I’m currently learning Competitive Programming.</text>
 
 
     <!-- Philosophy -->
-    <text x="40" y="440" class="philosophy">
-        ✨ A lifelong learner &amp; refactoring enthusiast —
+    <text x="40" y="435" class="philosophy">
+        💡 Engineer at heart — learning, crafting, and improving with every iteration,
     </text>
-    <text x="40" y="470" class="philosophy">
-        always seeking the right names in code and simplifying complexity
+    <text x="40" y="465" class="philosophy">
+        building scalable systems with clarity and precision,
     </text>
-    <text x="40" y="500" class="philosophy">
-        through clean abstractions.
+    <text x="40" y="495" class="philosophy">
+        simplifying complexity through thoughtful design.
     </text>
 </svg>

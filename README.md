@@ -103,7 +103,32 @@
 </details>
 
 
-<!-- ✅ Project 3: ASCII Binary -->
+</li>
+          <!-- ✅ Project 3: Abstract Window Toolkit (AWT) -->
+          <li style="margin:18px 0;">
+            <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
+              <a href="https://github.com/Someshdiwan/Abstract-Window-Toolkit">Abstract Window Toolkit (AWT) ↗</a>
+            </h4>
+            <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+              <img src="https://img.shields.io/github/stars/Someshdiwan/Abstract-Window-Toolkit?style=social" alt="stars">
+              <img src="https://img.shields.io/github/last-commit/Someshdiwan/Abstract-Window-Toolkit" alt="last commit">
+            </p>
+            <details>
+              <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">Learn More</summary>
+<div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • Comprehensive collection of Java AWT programs demonstrating GUI design fundamentals and event handling<br>
+  • Covers multiple modules: <strong>Adapter Classes</strong>, <strong>Event Delegation Model</strong>, <strong>Frame-Based Applications</strong>, <strong>Layout Managers</strong>, <strong>Painting & Color</strong>, and more<br>
+  • Implements practical demos — <code>ButtonDemo</code>, <code>CheckBoxDemo</code>, <code>TextFieldDemo</code>, <code>ScrollbarDemo</code>, <code>KeyEventDemo</code>, <code>MouseEventDemo</code>, and <code>WindowEventDemo</code><br>
+  • Visual assets (PNG diagrams and comparisons) explain AWT layouts like FlowLayout, BorderLayout, GridLayout, and CardLayout<br>
+  • Demonstrates all four approaches to event handling: Frame as Listener, Inner Class, Anonymous Class, and Lambda Expression<br>
+  • Animation folder includes gravity, shape-fall, and space simulations written using AWT drawing and threading<br>
+  • Includes <code>LICENSE</code> and structured source folders for modular understanding and easy navigation<br>
+</div>
+</details>
+
+
+
+<!-- ✅ Project 4: ASCII Binary -->
 </li>
           <!-- ✅ Project 3: ASCII–Binary Character Table -->
           <li style="margin:18px 0;">
@@ -151,7 +176,7 @@
 
 
 </li>
-          <!-- ✅ Project 4: Docker Guide -->
+          <!-- ✅ Project 5: Docker Guide -->
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/Docker-Guide">Docker Guide ↗</a>
@@ -172,16 +197,75 @@
 
 
 
-
-
-
-
-
+<!-- ✅ Project 6: Java Swing -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Java-Swing">Java Swing ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Java-Swing?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Java-Swing" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Learn More
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Comprehensive repository demonstrating <strong>Java Swing</strong> concepts — the foundation of Java-based desktop GUI programming<br>
+      • Organized into interactive modules covering all major Swing components: <code>JButton</code>, <code>JTextField</code>, <code>JList</code>, <code>JComboBox</code>, <code>JTree</code>, <code>JSlider</code>, <code>JProgressBar</code>, and more<br>
+      • Includes real-world UI examples: <strong>Menus & Toolbars</strong>, <strong>Tabbed & Split Panes</strong>, <strong>Internal Frames</strong>, and <strong>Layered Panes</strong><br>
+      • Each folder demonstrates distinct topics — borders, sliders, spinners, look & feel, trees, layout management, and event-driven behavior<br>
+      • Provides comparative visual resources (<code>AWT vs Swing.png</code>, <code>Look and Feel Swing.png</code>) to explain design and framework evolution<br>
+      • Implements advanced GUI structures such as <strong>JInternalFrame</strong> and <strong>JLayeredPane</strong> to manage complex window hierarchies<br>
+      • Tree component modules illustrate hierarchical models with logical variations and textual documentation<br>
+      • Menu and toolbar module integrates icons, shortcuts, and color actions — mirroring real application interfaces<br>
+      • Comprehensive and modular — excellent for learners exploring event handling, component customization, and layout optimization in Swing<br>
+      • Includes <code>LICENSE</code> and visual assets to ensure complete reproducibility and educational reference<br>
+    </div>
+  </details>
 </li>
 
-<li style="margin:18px 0;opacity:0.7;">
-  Expanding this section with new ML projects & open-source contributions — stay tuned! ✨
+
+<!-- ✅ Project 7: Java FX -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/JavaFX">JavaFX ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/JavaFX?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/JavaFX" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      UI Controls • Layouts & Panes • Event Handling • Scene Graph ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • A comprehensive learning repository on <strong>JavaFX</strong>, illustrating the fundamentals and advanced constructs of modern Java GUI programming<br>
+      • Begins with <code>StructureOfFXApplication</code> — detailing the core architecture of a JavaFX app including <strong>Application</strong>, <strong>Stage</strong>, and <strong>Scene</strong> lifecycle<br>
+      • <strong>CommonPropertiesofControls</strong> explores shared control attributes like text alignment, color, font styles, and event listeners<br>
+      • <strong>Controls & Input Elements:</strong> practical implementations of CheckBox, RadioButton, ComboBox, DatePicker, ColorPicker, FileChooser, and TextArea — each paired with annotated diagrams and screenshots<br>
+      • <strong>EventHandling</strong> demonstrates multiple approaches — from simple event methods to custom event classes and handler interfaces — visualized with <code>Event Handling.png</code> for clarity<br>
+      • <strong>Layouts & Panes:</strong> rich demonstrations of layout managers such as BorderPane, GridPane, FlowPane, VBox, HBox, StackPane, TilePane, Accordion, TabPane, ScrollPane, and SplitPane<br>
+      • Each layout example visually shows how nodes, panes, and containers interact to form hierarchical scene graphs, with supportive logic notes and layout diagrams<br>
+      • <strong>Interactive Examples:</strong> modules like <code>ComboBoxFormApplication</code> and <code>BugFixComboBoxApp</code> integrate logic with form design, dynamic item selection, and user input validation<br>
+      • Includes explanatory text files and logic images (<code>Logic.png</code>, <code>Layouts.png</code>, etc.) that connect code behavior to underlying UI architecture<br>
+      • Designed as a visual–code hybrid reference for mastering scene graph design, component properties, and JavaFX event-driven programming<br>
+      • Licensed and modular — a complete educational package for students, developers, and educators seeking a structured deep dive into the JavaFX ecosystem<br>
+    </div>
+  </details>
 </li>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ul>
 </td>
@@ -191,6 +275,41 @@
         </p>
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
+
+<!-- ✅ Project : DIP -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Digital-Image-Processing">Digital Image Processing ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Digital-Image-Processing?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Digital-Image-Processing" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Filtering • Morphology • Edge Detection • Visualization ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • A comprehensive practical collection of <strong>Digital Image Processing (DIP)</strong> algorithms implemented in Python<br>
+      • Explores essential concepts such as <strong>smoothing, sharpening, frequency filtering, and edge enhancement</strong><br>
+      • <code>Low&HighPassFilter.py</code> demonstrates Fourier-based low-pass and high-pass transformations with clear visual results<br>
+      • <code>MorphologicalOperations.py</code> applies erosion, dilation, opening, and closing to extract or refine object structures<br>
+      • <code>BoundariesExtractionImage.py</code> isolates object contours and highlights region boundaries from grayscale inputs<br>
+      • <code>Smoothing&SharpeningImage.py</code> shows the impact of kernel operations and gradient-based sharpening filters<br>
+      • Each module is supported with paired <strong>input/output image sets</strong> for intuitive understanding of visual transformations<br>
+      • <code>DIP Overview</code> directory includes annotated images and videos explaining the effect of each transformation<br>
+      • Features a <strong>live static site</strong> hosted on GitHub Pages — <a href="https://someshdiwan.github.io/Digital-Image-Processing/" target="_blank">Explore Online ↗</a> — for interactive preview of results<br>
+      • Cleanly structured repository with <code>README.md</code>, modular Python scripts, and educational visuals for students and practitioners<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+<!-- ✅ Project 1: ANN -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
@@ -215,6 +334,8 @@
   </details>
 </li>
 
+
+ <!-- ✅ Project 2: CNN -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
@@ -239,6 +360,42 @@
   </details>
 </li>
 
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Generative-Adversarial-Network-">Generative Adversarial Network (GAN) ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Generative-Adversarial-Network-?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Generative-Adversarial-Network-" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      GANs • DCGAN • Pix2Pix • CycleGAN ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Comprehensive collection of <strong>Generative Adversarial Network (GAN)</strong> architectures exploring image generation and translation tasks<br>
+      • Begins with <code>Basic_GAN.ipynb</code> — an introduction to adversarial learning between generator and discriminator models<br>
+      • Includes <strong>Deep Convolutional GAN (DCGAN)</strong> for high-quality image synthesis using convolutional feature hierarchies<br>
+      • <code>Conditional_GAN.ipynb</code> and <code>Conditional GAN.txt</code> demonstrate label-conditioned image generation for multi-class control<br>
+      • Implements <strong>Pix2Pix</strong> for paired image-to-image translation and <strong>CycleGAN</strong> for unpaired domain mapping (e.g., photo ↔ sketch)<br>
+      • Covers <strong>Progressive Growing of GANs</strong> — generating high-resolution outputs through staged network expansion<br>
+      • Organized with explanatory text files and Jupyter notebooks for conceptual and visual understanding<br>
+      • Each subproject focuses on practical intuition — training workflow, loss dynamics, and visual output progression<br>
+      • Well-suited for learners exploring generative modeling, adversarial optimization, and modern deep learning architectures<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+
+
+
+ <!-- ✅ Project 4: ERS -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
@@ -262,6 +419,8 @@
   </details>
 </li>
 
+
+ <!-- ✅ Project 5: HFT -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/HFTutorial">Text Summarization with HuggingFace Transformers ↗</a>
@@ -285,11 +444,80 @@
     </div>
   </details>
 </li>
+
+
+
+<!-- ✅ Project 5: CVPR -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Computer-Vision-and-Pattern-Recognition">Computer Vision and Pattern Recognition ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Computer-Vision-and-Pattern-Recognition?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Computer-Vision-and-Pattern-Recognition" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Supervised • Unsupervised • Deep CNNs ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • A comprehensive repository exploring core computer vision and pattern recognition techniques<br>
+      • Implements supervised and unsupervised classification using <strong>Random Forests</strong> and <strong>K-Means clustering</strong> for multi-class problems<br>
+      • Deep learning experiments include CNN architectures trained on <code>CIFAR-10</code> and digit classification datasets<br>
+      • Features a notebook on applying <strong>Deep CNNs</strong> to solve NLP-style problems — bridging vision and language domains<br>
+      • Includes step-by-step notebooks: supervised binary/multi-class classification, Naive Bayes, and CNN-based pattern analysis<br>
+      • Ideal educational reference for understanding classical vs. deep learning approaches in pattern recognition<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+<!-- ✅ Project 6: IR -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Information-Retrieval">Information Retrieval ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Information-Retrieval?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Information-Retrieval" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Text Mining • Vector Space • Web Crawling ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Educational repository demonstrating the core principles of <strong>Information Retrieval (IR)</strong> and <strong>Text Mining</strong> using Python<br>
+      • Covers end-to-end text preprocessing — tokenization, stop-word removal, and stemming for document normalization<br>
+      • Implements <code>CountVectorizer.ipynb</code> and <code>Representing a Text Document in Vector Space Model.ipynb</code> to build and compare vector-based document representations<br>
+      • Demonstrates <strong>similarity computation</strong> techniques using cosine and Euclidean metrics for document matching<br>
+      • Includes <code>Naive Bayes Classifier.ipynb</code> and <code>Classification of Text Documents into Known Classes.ipynb</code> for supervised categorization of text data<br>
+      • <code>Web Crawling and Searching for News Stories.ipynb</code> illustrates basic crawling and content retrieval from live news sources<br>
+      • Additional notebook provides a <strong>hands-on example</strong> of XML parsing (<code>employee.xml</code>) for structured document processing<br>
+      • Comprehensive conceptual coverage bridging classical IR, feature extraction, and machine learning for text understanding<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
 </ul>
 </td>
     </tr>
   </table>
 </details>
+
+
+
+
+
+
+
 
 ---
 
@@ -395,13 +623,6 @@
        </td>
     </tr>
     <tr>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://www.duolingo.com/profile/Somesh99?via=share_profile_link"
-           target="_blank" rel="noopener">
-          <img src="https://img.icons8.com/color/96/duolingo-logo.png"
-               alt="Duolingo logo" width="48" height="48">
-        </a>
-      </td>
       <td align="center" style="border:none; padding:10px;">
         <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
           <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
@@ -779,62 +1000,33 @@
 
 
 
+<div align="center" style="margin-top: 20px; margin-bottom: 20px;">
 
+  <!-- Row of GIFs -->
+  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+    <img src="Image/MyCatDuoDuo.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/MyCatDuoDuo.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/MyCatDuoDuo.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/MyCatDuoDuo.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/MyCatDuoDuo.gif" alt="MyCatDuoDuo" width="150"/>
+  </div>
 
+  <!-- Thank You -->
+  <div style="margin-top: 15px; margin-bottom: 8px;">
+    <img src="Assets/thanks.svg"
+         alt="Thank you for visiting — please follow & star!"
+         width="500"/>
+  </div>
 
+  <!-- GitHub Streak Stats -->
+  <div style="margin-top: 1px;">
+    <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
+      <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18929174798"
+           alt="GitHub Streak Stats"
+           width="270"/>
+    </a>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- GitHub Streak Stats (no table, no border) -->
-<div align="center" style="margin-top: 20px;">
-  <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-    <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18929174798"
-         alt="GitHub Streak Stats"
-         width="300"/>
-  </a>
 </div>
-<br/>
-<!-- Thank You -->
-<div align="center" style="margin-top: 2px;">
-  <img src="Assets/thanks.svg" alt="Thank you for visiting — please follow & star!" width="500"/>
-</div>
-<br/>
+
+---
