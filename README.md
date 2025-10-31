@@ -1018,7 +1018,7 @@
          width="500"/>
   </div>
 
-  <!-- GitHub Streak Stats -->
+  <!-- GitHub Streak Stats 
   <div style="margin-top: 1px;">
     <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
       <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=18929174798"
@@ -1026,7 +1026,7 @@
            width="270"/>
     </a>
   </div>
-
+  -->
 </div>
 
 ---
