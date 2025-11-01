@@ -269,10 +269,10 @@
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
     <!-- ✅ Mini Project: File Encryption Tool -->
       <li style="margin:18px 0;" align="center">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
-        </h4>
-        <details>
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
+  </h4>
+  <details style="margin-top:6px;">
           <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
             AES Encryption • Decryption • Key Management ↗
           </summary>
