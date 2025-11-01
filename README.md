@@ -253,43 +253,129 @@
 
 
 
-
+---
 
 
 
 <!-- ▼ MINI PROJECTS SECTION -->
 <details>
   <summary style="cursor:pointer;list-style:none;">
-    <p align="left" style="margin:0;">
-      <img src="Assets/MiniProjects.svg" width="320" height="36" alt="Mini Projects For Hands On Skills">
+    <p align="center" style="margin:0;">
+      <img src="Assets/MiniProjects.svg" width="480" height="42" alt="Mini Projects For Hands On Skills">
     </p>
   </summary>
-  <div style="height:8px;"></div>
-  <div style="max-width:980px;margin-left:0;padding-left:10px;">
+  <div style="height:12px;"></div>
+  <div align="center" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
-      <!-- ✅ Mini Project: File Encryption Tool -->
-      <li style="margin:14px 0;">
-        <h4 style="margin:2px 0;font-size:15px;font-family:'Comic Sans MS','Segoe UI';">
+    <!-- ✅ Mini Project: File Encryption Tool -->
+      <li style="margin:18px 0;" align="center">
+        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
           <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
         </h4>
-        <p style="margin:2px 0 4px 0;font-size:11px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/File-Encryption-Tool?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/File-Encryption-Tool" alt="last commit">
-        </p>
         <details>
-          <summary style="cursor:pointer;font-size:12px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
             AES Encryption • Decryption • Key Management ↗
           </summary>
           <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-  • A compact <strong>Java AES File Encryption Tool</strong> showcasing real-world use of the <strong>Java Cryptography Architecture (JCA)</strong><br>
-  • Supports <strong>key generation</strong>, <strong>file encryption</strong>, and <strong>decryption</strong> via a simple CLI<br>
-  • Implements secure <code>256-bit AES</code> with modular methods and safe stream handling<br>
-  • Lightweight design — fast, functional, and perfect for learning practical cryptography<br>
-</div>
+      • A compact <strong>Java AES File Encryption Tool</strong> showcasing real-world use of the <strong>Java Cryptography Architecture (JCA)</strong><br>
+      • Supports <strong>key generation</strong>, <strong>file encryption</strong>, and <strong>decryption</strong> via a simple CLI<br>
+      • Implements secure <code>256-bit AES</code> with modular methods and safe stream handling<br>
+      • Lightweight design — fast, functional, and perfect for learning practical cryptography<br>
+    </div>
         </details>
       </li>
+      <!-- Add future mini projects below this -->
     </ul>
   </div>
+
+<!-- ✅ Mini Project: Inventory Management System -->
+<li style="margin:18px 0;" align="center">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/InventoryManagement">Inventory Management System ↗</a>
+  </h4>
+
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Flow • Features • File Layout ↗
+    </summary>
+    <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • Practical Java CRUD implementation showing how real software actually stores, updates and persists business data<br>
+  • Demonstrates basic inventory operations: insert, update, delete, search, list — the foundation of 80% real business systems<br>
+  • Teaches separation of storage vs user interaction before databases are introduced (CSV file used as lightweight persistence)<br>
+  • Reinforces why arrays / lists are not “toy” — they are the primitive basis behind tables, DB rows, and record stores<br>
+    </div>
+  </details>
+</li>
+
+
+<!-- ✅ Mini Project: Word Counter -->
+<li style="margin:18px 0;" align="center">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Word-Counter">Word Counter ↗</a>
+  </h4>
+
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Flow • Features • Why This Project ↗
+    </summary>
+    <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Practical text-processing demo showing how raw text is converted into meaningful measurable data<br>
+      • Demonstrates two approaches — <code>split()</code> tokenization vs <code>regex</code> tokenization — and how token strategy changes counts<br>
+      • Teaches how to compute total token count + target word frequency which is the baseline of real search, keyword analytics and NLP<br>
+      • Reinforces file handling (read external file), parsing, normalization and frequency mapping — core foundation before NLP libraries<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+<!-- ✅ Mini Project: Contact Manager -->
+<li style="margin:18px 0;" align="center">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Contact-Manager">Contact Manager ↗</a>
+  </h4>
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Flow • Features • Why This Project ↗
+    </summary>
+    <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Practical contacts CRUD system showing how interactive applications store and mutate user-provided data<br>
+      • Demonstrates add, view, search, update and delete operations — same fundamental pattern used in phonebooks / CRM apps<br>
+      • Reinforces validation logic (regex based phone checks) and name lookups using ArrayList index management<br>
+      • Builds the mental model for mapping user choices → controlled state manipulation before database era<br>
+    </div>
+  </details>
+</li>
+
+
+
+<!-- ✅ Mini Project: Quiz Game -->
+<li style="margin:18px 0;" align="center">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Quiz-Game">Quiz Game ↗</a>
+  </h4>
+
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Flow • Features • Why This Project ↗
+    </summary>
+    <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Demonstrates how interactive MCQ engines work: show question → show four options → read answer → evaluate<br>
+      • Reinforces conditional validation + scoring logic — immediate feedback loops used in quiz apps / exam portals<br>
+      • Introduces timed thinking — 10–second countdown concept forms basis of “timed round” game mechanics<br>
+      • Builds understanding of question → response → score update cycles before GUI / DB / networking layers are added<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+
+
 </details>
 
 
