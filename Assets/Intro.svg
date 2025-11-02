@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="950" height="500">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600">
     <style>
         .header {
         font-family: "Comic Sans MS", cursive;
@@ -35,7 +35,7 @@
 
     <!-- Intro -->
     <text x="20" y="80" class="text">
-        I'm Somesh Diwan, a Software Developer from India 🇮🇳
+        I'm Somesh Diwan, a Software Developer.
     </text>
     <text x="20" y="110" class="text">
         I enjoy building reliable backend systems in Java &amp; Spring Boot,
@@ -54,7 +54,6 @@
     <text x="40" y="345" class="bullet">🌱 Always learning and contributing where software meets intelligence.</text>
     <text x="40" y="395" class="bullet">🎯 I’m currently learning Competitive Programming.</text>
 
-
     <!-- Philosophy -->
     <text x="40" y="435" class="philosophy">
         💡 Engineer at heart — learning, crafting, and improving with every iteration,
@@ -65,4 +64,6 @@
     <text x="40" y="495" class="philosophy">
         simplifying complexity through thoughtful design.
     </text>
+
+    <text x="50" y="530" class="bullet">📍 All above opinions my own</text>
 </svg>
