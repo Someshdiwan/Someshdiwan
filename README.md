@@ -718,6 +718,11 @@
        style="display:block;" /> 
       </a>
       </td>
+      <td align="center" width="180" style="border:none; padding:10px;">
+           <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
+            <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
+            </a>
+      </td>
     </tr>
     <tr>
       <td align="center" style="border:none; padding:10px;">
