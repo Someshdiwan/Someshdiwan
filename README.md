@@ -699,7 +699,7 @@
   <table style="border-collapse:collapse; border-spacing:0; border:none; margin:auto;">
     <tr>
       <td align="center" width="180" style="border:none; padding:10px;">
-        <a href="https://www.codechef.com/users/someshdiwan7" target="_blank" rel="noopener">
+        <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener">
           <img src="https://img.icons8.com/color/96/codechef.png"
                alt="CodeChef logo" width="108" height="88">
         </a>
