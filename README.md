@@ -4,38 +4,6 @@
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <details>
   <summary align="center" style="cursor:pointer;list-style:none;">
     <picture>

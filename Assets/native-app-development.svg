@@ -23,8 +23,7 @@
         }
     </style>
     <text x="0" y="50%" class="title">
-        <tspan class="emoji">📱</tspan>
-        <tspan dx="5"> Native App Development</tspan>
+        <tspan dx="5"> Development</tspan>
         <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
     </text>
 </svg>
