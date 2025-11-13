@@ -1,5 +1,5 @@
 <svg width="100%" viewBox="0 0 1536 522" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
-    <title id="t">Somesh Diwan — Software Developer | Backend Systems | AI/ML</title>
+    <title id="t">Somesh Diwan — Software Developer | Backend Development | AI/ML</title>
     <desc id="d">Teal header with animated.</desc>
 
     <!-- =============== STYLES & SAFETY =============== -->
@@ -142,7 +142,7 @@
     <!-- =============== TEXT =============== -->
     <g>
         <text x="220" y="222" class="title">SOMESH DIWAN</text>
-        <text x="228" y="290" class="sub">Software Developer • Backend Systems • AI/ML</text>
+        <text x="228" y="290" class="sub">Software Developer • Backend Development • AI/ML</text>
     </g>
 
     <!-- =============== PENGUIN, GLOW & BOARD =============== -->

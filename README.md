@@ -2,7 +2,7 @@
 
 <img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
 
----
+------------------------------------------------------------------------------------------------------------------------
 
 <details>
   <summary align="center" style="cursor:pointer;list-style:none;">
@@ -20,6 +20,18 @@
           <img src="Assets/backend.svg" alt="🛠️ Backend & Engineering" width="480" height="42">
 </p>
 <ul style="list-style:none;padding-left:0;margin:14px 0;">
+
+
+<!-- ▼ FEATURED PROJECTS SECTION -->
+<details>
+  <summary style="cursor:pointer;list-style:none;">
+    <p align="center" style="margin:0;">
+      <img src="Assets/FeaturedProjects.svg" width="480" height="42" alt="Featured Projects">
+    </p>
+  </summary>
+  <div style="height:12px;"></div>
+  <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
+    <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
 <!-- ✅ Project 1: Java SE -->
 <li style="margin:18px 0;">
@@ -199,6 +211,9 @@
     </div>
   </details>
 </li>
+    </ul>
+  </div>
+</details>
 
 
 
@@ -215,14 +230,7 @@
 
 
 
-
-
-
-
-
-
----
-
+------------------------------------------------------------------------------------------------------------------------
 
 
 <!-- ▼ MINI PROJECTS SECTION -->
@@ -611,195 +619,110 @@
 
 
 
----
+------------------------------------------------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Extremely complicated while developing this first time -->
 
 <details>
   <summary align="center" style="list-style:none;">
     <img src="Assets/connect.svg?v=4" alt="Where to Find Me" width="350"
          style="cursor:pointer; display:block; margin:auto;">
   </summary>
+
   <!-- PROFILE VIEWS -->
   <p align="left">
     <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
          alt="Profile views counter" height="22">
   </p>
-  <!-- ICON GRID (no borders) -->
-  <table style="border-collapse:collapse; border-spacing:0; border:none; margin:auto;">
-    <tr>
-      <td align="center" width="180" style="border:none; padding:10px;">
-        <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener">
-          <img src="https://img.icons8.com/color/96/codechef.png"
-               alt="CodeChef logo" width="108" height="88">
+
+  <!-- CENTER WRAPPER ADDED HERE -->
+  <div align="center">
+    <!-- ICON GRID (no borders) -->
+    <table style="border-collapse:collapse; border-spacing:0; border:none; margin:auto;">
+      <tr>
+        <td align="center" width="180" style="border:none; padding:10px;">
+          <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener">
+            <img src="https://img.icons8.com/color/96/codechef.png"
+                 alt="CodeChef logo" width="108" height="88">
+          </a>
+        </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+          <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener">
+            <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
+                 alt="LeetCode logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+        <a class="link-card" href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener noreferrer" title="Codeforces — SomeshDiwan">
+             <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" 
+         alt="Codeforces logo"
+         width="48" height="48"
+         style="display:block;" /> 
         </a>
-      </td>
-      <td align="center" width="180" style="border:none; padding:10px;">
-        <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener">
-          <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
-               alt="LeetCode logo" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="180" style="border:none; padding:10px;">
-      <a class="link-card" href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener noreferrer" title="Codeforces — SomeshDiwan">
-           <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" 
-       alt="Codeforces logo"
-       width="48" height="48"
-       style="display:block;" /> 
-      </a>
-      </td>
-      <td align="center" width="180" style="border:none; padding:10px;">
-           <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
-            <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
-            </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener">
-          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-               alt="Hugging Face logo" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener">
-          <img src="https://cdn.simpleicons.org/producthunt/DA552F"
-               alt="Product Hunt logo" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
-               alt="Medium logo" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="180" style="border:none; padding:10px;">
-            <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
-                       target="_blank" rel="noopener">
-               <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
-           alt="Code Review Stack Exchange Profile" width="48" height="48">
-             </a>
-       </td>
-    </tr>
-    <tr>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
-               alt="WakaTime logo" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" style="border:none; padding:10px;">
-        <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
-               alt="Notion logo" width="48" height="48">
-        </a>
-       <td align="center" width="180" style="border:none; padding:10px;">
-        <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
-           target="_blank" rel="noopener">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
-               alt="My Anki — Vocabulary Vault" width="48" height="48">
-        </a>
-      </td>
-      </td>
-    </tr>
-  </table>
+        </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+             <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
+              <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
+              </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" style="border:none; padding:10px;">
+          <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener">
+            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                 alt="Hugging Face logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" style="border:none; padding:10px;">
+          <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener">
+            <img src="https://cdn.simpleicons.org/producthunt/DA552F"
+                 alt="Product Hunt logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" style="border:none; padding:10px;">
+          <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
+                 alt="Medium logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+              <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
+                         target="_blank" rel="noopener">
+                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
+             alt="Code Review Stack Exchange Profile" width="48" height="48">
+               </a>
+         </td>
+      </tr>
+      <tr>
+        <td align="center" style="border:none; padding:10px;">
+          <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+                 alt="WakaTime logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" style="border:none; padding:10px;">
+          <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
+                 alt="Notion logo" width="48" height="48">
+          </a>
+        </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+          <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
+             target="_blank" rel="noopener">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
+                 alt="My Anki — Vocabulary Vault" width="48" height="48">
+          </a>
+        </td>
+      </tr>
+    </table>
+
+  </div> <!-- END CENTER WRAPPER -->
+
   <br>
 </details>
 
 
-
-
-
-
-
-
-
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------------------------------------------------------------------------------------------
 
 <!-- Section Heading -->
 <img src="Assets/languages.svg" alt="Languages & Tools" width="370"/>
@@ -833,45 +756,8 @@
 </p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Tech Stack Table -->
+
 <div align="center">
 <table cellspacing="0" cellpadding="30" border="0" style="border-collapse: separate; border-spacing: 40px 20px;">
   <tr>
@@ -980,54 +866,7 @@
 <br/>
 </div>
 
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------------------------------------------------------------------------------------------
 
 <a>
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
@@ -1037,50 +876,7 @@
   <img src="Assets/contrib-monthly-line.svg?v=19026253997" alt="Monthly contributions (line)" width="1000" />
 </p>
 
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
   <!-- Light mode -->
@@ -1092,10 +888,7 @@
   </picture>
 </p>
 
----
-
-
-
+------------------------------------------------------------------------------------------------------------------------
 
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
 
@@ -1126,4 +919,4 @@
   </div>
   -->
 
----
+------------------------------------------------------------------------------------------------------------------------
