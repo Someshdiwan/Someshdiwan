@@ -744,11 +744,6 @@
     <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
 </a>
 
-<!-- JavaScript -->
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
-    <img src="https://techstack-generator.vercel.app/js-icon.svg" width="48" height="48" alt="JavaScript"/>
-</a>
-
 <!-- C++ -->
 <a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">
     <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
@@ -772,6 +767,10 @@
        width="65"
        height="65"
        style="margin: 0 20px;"/>
+</a>
+<!-- JavaScript -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
+    <img src="https://techstack-generator.vercel.app/js-icon.svg" width="48" height="48" alt="JavaScript"/>
 </a>
 <a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" width="50" height="50" style="margin: 0 10px;"/></a>
         <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg" alt="Next.js" width="50" height="50" style="margin: 0 10px;"/></a>
@@ -904,7 +903,7 @@
   <!-- Thank You -->
   <div style="margin-top: 15px; margin-bottom: 8px;">
     <img src="Assets/thanks.svg"
-         alt="Thank you for visiting — please follow & star!"
+         alt="Thank you for visiting"
          width="500"/>
   </div>
 </div>
