@@ -730,12 +730,18 @@
 ------------------------------------------------------------------------------------------------------------------------
 
 <!-- Section Heading -->
-<div align="center">
-  <img src="Assets/languages.svg" alt="Languages & Tools" width="370" />
-  <br>
+<div align="center" style="width:100%; max-width:980px; margin:24px auto 0;">
+
+  <!-- Languages & Tools title -->
+  <p align="center" style="margin:0;">
+    <img src="Assets/languages.svg" alt="Languages & Tools" width="350">
+  </p>
 
   <!-- Programming Languages Subsection -->
-  <img src="Assets/programming-languages.svg" alt="Programming Languages" width="500" />
+  <p align="center" style="margin:8px 0 0 0;">
+    <img src="Assets/programming-languages.svg" alt="Programming Languages" width="500">
+  </p>
+
 </div>
 
 <p align="center">
