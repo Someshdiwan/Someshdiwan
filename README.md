@@ -1,6 +1,7 @@
-<img src="Assets/my.svg" alt="Somesh Diwan — Software Engineering | Java | Machine Learning" width="800">
+[//]: # (<img src="Assets/my.svg" alt="Somesh Diwan — Software Engineering | Java | Machine Learning" width="800">)
 
-<img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>
+[//]: # ()
+[//]: # (<img src="Assets/Intro.svg" alt="Intro Section" width="1000"/>)
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -624,10 +625,14 @@
 <!-- Extremely complicated while developing this first time -->
 
 <details>
-  <summary align="center" style="list-style:none;">
-    <img src="Assets/connect.svg?v=4" alt="Where to Find Me" width="350"
-         style="cursor:pointer; display:block; margin:auto;">
-  </summary>
+<summary align="center" style="list-style: none;">
+  <img
+    src="Assets/connect.svg?v=4"
+    alt="Where to Find Me"
+    width="350"
+    style="cursor: pointer; display: block; margin: 0 auto;"
+  />
+</summary>
 
   <!-- PROFILE VIEWS -->
   <p align="left">
@@ -725,13 +730,13 @@
 ------------------------------------------------------------------------------------------------------------------------
 
 <!-- Section Heading -->
-<img src="Assets/languages.svg" alt="Languages & Tools" width="370"/>
-<br>
-
-<!-- Programming Languages Subsection -->
-<img align="center" src="Assets/programming-languages.svg" alt="Programming Languages" width="500"/>
-
 <div align="center">
+  <img src="Assets/languages.svg" alt="Languages & Tools" width="370" />
+  <br>
+
+  <!-- Programming Languages Subsection -->
+  <img src="Assets/programming-languages.svg" alt="Programming Languages" width="500" />
+</div>
 
 <p align="center">
 <!-- Java Icon (Static in GitHub README — but perfect compatibility) -->
