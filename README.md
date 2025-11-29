@@ -732,9 +732,6 @@
 <!-- Section Heading shifted right -->
 <div style="width:100%;">
   <div style="display:inline-block; margin-left:260px;">
-    <p align="center" style="margin:0;">
-      <img src="Assets/languages.svg" alt="Languages & Tools" width="350">
-    </p>
     <p align="center" style="margin:8px 0 0 0;">
       <img src="Assets/programming-languages.svg" alt="Programming Languages" width="500">
     </p>
@@ -746,18 +743,30 @@
 <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
   <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
 </a>
-
 <!-- Python -->
 <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
     <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
 </a>
 
-<!-- C++ -->
-<a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">
-    <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>
-</a>
+[//]: # (<!-- C++ -->)
+
+[//]: # (<a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">)
+
+[//]: # (    <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>)
+
+[//]: # (</a>)
 </p>
 
+
+
+
+<!-- Section Heading shifted right -->
+<div style="width:100%;">
+  <div style="display:inline-block; margin-left:260px;">
+    <p align="center" style="margin:0;">
+      <img src="Assets/languages.svg" alt="Languages & Tools" width="350">
+    </p>
+  </div>
 
 <!-- Tech Stack Table -->
 
