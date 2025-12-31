@@ -332,242 +332,257 @@
 </details>
 </ul>
 </td>
+      <td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
+        <p align="center" style="margin:0 0 8px 0;">
+          <img src="Assets/aiml.svg" alt="🤖 AI & Machine Learning" width="480" height="42">
+        </p>
+        <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
-<td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
-  <p align="center" style="margin:0 0 8px 0;">
-    <img src="Assets/aiml.svg" alt="🤖 AI & Machine Learning" width="480" height="42">
+
+<!-- ✅ Project : DIP -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Digital-Image-Processing">Digital Image Processing ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Digital-Image-Processing?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Digital-Image-Processing" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Filtering • Morphology • Edge Detection • Visualization ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • A comprehensive practical collection of <strong>Digital Image Processing (DIP)</strong> algorithms implemented in Python<br>
+      • Explores essential concepts such as <strong>smoothing, sharpening, frequency filtering, and edge enhancement</strong><br>
+      • <code>Low&HighPassFilter.py</code> demonstrates Fourier-based low-pass and high-pass transformations with clear visual results<br>
+      • <code>MorphologicalOperations.py</code> applies erosion, dilation, opening, and closing to extract or refine object structures<br>
+      • <code>BoundariesExtractionImage.py</code> isolates object contours and highlights region boundaries from grayscale inputs<br>
+      • <code>Smoothing&SharpeningImage.py</code> shows the impact of kernel operations and gradient-based sharpening filters<br>
+      • Each module is supported with paired <strong>input/output image sets</strong> for intuitive understanding of visual transformations<br>
+      • <code>DIP Overview</code> directory includes annotated images and videos explaining the effect of each transformation<br>
+      • Features a <strong>live static site</strong> hosted on GitHub Pages — <a href="https://someshdiwan.github.io/Digital-Image-Processing/" target="_blank">Explore Online ↗</a> — for interactive preview of results<br>
+      • Cleanly structured repository with <code>README.md</code>, modular Python scripts, and educational visuals for students and practitioners<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+<!-- ✅ Project 1: ANN -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Artificial-Neural-Networks-ANNs?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Artificial-Neural-Networks-ANNs" alt="last commit">
   </p>
 
-  <!-- ▼ FEATURED PROJECTS SECTION -->
   <details>
-    <summary style="cursor:pointer;list-style:none;">
-      <p align="center" style="margin:0;">
-        <img src="Assets/FeaturedProjects.svg" width="480" height="42" alt="Featured Projects">
-      </p>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Perceptrons • Logic Gates • Backpropagation ↗
     </summary>
-    <div style="height:12px;"></div>
-    <ul style="list-style:none;padding-left:0;margin:14px 0;">
-      <li style="margin:18px 0;text-align:center;font-size:13px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-        Featured projects will be added soon.
-      </li>
-    </ul>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Hands-on learning project demonstrating the fundamentals of Artificial Neural Networks<br>
+      • Builds perceptron models from scratch to classify AND, OR, and NOT gates (no frameworks — pure math)<br>
+      • Implements Multilayer Perceptron (MLP) with backpropagation to solve the nonlinear XOR problem<br>
+      • Visuals included (<code>and_gate.png</code>) to show convergence and decision boundaries<br>
+      • Python scripts show feedforward, weight updates, activation functions & loss behavior step-by-step<br>
+      • Great foundational reference for interviews, ML courses, or transitioning into deep learning frameworks
+    </div>
   </details>
+</li>
 
-------------------------------------------------------------------------------------------------------------------------
 
-  <!-- ▼ MINI PROJECTS SECTION -->
+ <!-- ✅ Project 2: CNN -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Convolutional-Neural-Network?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Convolutional-Neural-Network" alt="last commit">
+  </p>
+
   <details>
-    <summary style="cursor:pointer;list-style:none;">
-      <p align="center" style="margin:0;">
-        <img src="Assets/MiniProjects.svg" width="480" height="42" alt="Mini Projects">
-      </p>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      CNNs • Transfer Learning • Autoencoders ↗
     </summary>
-    <div style="height:12px;"></div>
-    <ul style="list-style:none;padding-left:0;margin:14px 0;">
-      <!-- ✅ Project : DIP -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Digital-Image-Processing">Digital Image Processing ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Digital-Image-Processing?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Digital-Image-Processing" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            Filtering • Morphology • Edge Detection • Visualization ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • A comprehensive practical collection of <strong>Digital Image Processing (DIP)</strong> algorithms implemented in Python<br>
-            • Explores essential concepts such as <strong>smoothing, sharpening, frequency filtering, and edge enhancement</strong><br>
-            • <code>Low&HighPassFilter.py</code> demonstrates Fourier-based low-pass and high-pass transformations with clear visual results<br>
-            • <code>MorphologicalOperations.py</code> applies erosion, dilation, opening, and closing to extract or refine object structures<br>
-            • <code>BoundariesExtractionImage.py</code> isolates object contours and highlights region boundaries from grayscale inputs<br>
-            • <code>Smoothing&SharpeningImage.py</code> shows the impact of kernel operations and gradient-based sharpening filters<br>
-            • Each module is supported with paired <strong>input/output image sets</strong> for intuitive understanding of visual transformations<br>
-            • <code>DIP Overview</code> directory includes annotated images and videos explaining the effect of each transformation<br>
-            • Features a <strong>live static site</strong> hosted on GitHub Pages — <a href="https://someshdiwan.github.io/Digital-Image-Processing/" target="_blank">Explore Online ↗</a> — for interactive preview of results<br>
-            • Cleanly structured repository with <code>README.md</code>, modular Python scripts, and educational visuals for students and practitioners<br>
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 1: ANN -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Artificial-Neural-Networks-ANNs?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Artificial-Neural-Networks-ANNs" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            Perceptrons • Logic Gates • Backpropagation ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • Hands-on learning project demonstrating the fundamentals of Artificial Neural Networks<br>
-            • Builds perceptron models from scratch to classify AND, OR, and NOT gates (no frameworks — pure math)<br>
-            • Implements Multilayer Perceptron (MLP) with backpropagation to solve the nonlinear XOR problem<br>
-            • Visuals included (<code>and_gate.png</code>) to show convergence and decision boundaries<br>
-            • Python scripts show feedforward, weight updates, activation functions & loss behavior step-by-step<br>
-            • Great foundational reference for interviews, ML courses, or transitioning into deep learning frameworks
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 2: CNN -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Convolutional-Neural-Network?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Convolutional-Neural-Network" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            CNNs • Transfer Learning • Autoencoders ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • End-to-end image classifiers with TensorFlow/Keras (clean training/validation workflow)<br>
-            • Transfer learning & fine-tuning notebook for rapid convergence on small datasets<br>
-            • Autoencoder implementation for representation learning & reconstruction demos<br>
-            • Supporting notebooks: basic perceptron, regression, vector ops, and a simple LSTM for sequence intuition<br>
-            • Reproducible runs (seeds), core metrics (accuracy/loss), quick visualization hooks<br>
-            • Organized as Jupyter notebooks: <code>Image Classifier.ipynb</code>, <code>Implementation of image classifier using CNN.ipynb</code>, <code>Implement Transfer Learning with Fine Tuning.ipynb</code>, <code>Implementation of Autoencoder.ipynb</code>, etc.
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 3: GAN -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Generative-Adversarial-Network-">Generative Adversarial Network (GAN) ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Generative-Adversarial-Network-?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Generative-Adversarial-Network-" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            GANs • DCGAN • Pix2Pix • CycleGAN ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • Comprehensive collection of <strong>Generative Adversarial Network (GAN)</strong> architectures exploring image generation and translation tasks<br>
-            • Begins with <code>Basic_GAN.ipynb</code> — an introduction to adversarial learning between generator and discriminator models<br>
-            • Includes <strong>Deep Convolutional GAN (DCGAN)</strong> for high-quality image synthesis using convolutional feature hierarchies<br>
-            • <code>Conditional_GAN.ipynb</code> and <code>Conditional GAN.txt</code> demonstrate label-conditioned image generation for multi-class control<br>
-            • Implements <strong>Pix2Pix</strong> for paired image-to-image translation and <strong>CycleGAN</strong> for unpaired domain mapping (e.g., photo ↔ sketch)<br>
-            • Covers <strong>Progressive Growing of GANs</strong> — generating high-resolution outputs through staged network expansion<br>
-            • Organized with explanatory text files and Jupyter notebooks for conceptual and visual understanding<br>
-            • Each subproject focuses on practical intuition — training workflow, loss dynamics, and visual output progression<br>
-            • Well-suited for learners exploring generative modeling, adversarial optimization, and modern deep learning architectures<br>
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 4: ERS -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Emotion-Recognition-System?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Emotion-Recognition-System" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            Speech Emotion AI • MFCCs • Spectrograms ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • Deep learning pipeline that classifies human emotions from speech signals (anger, happy, sad, fear, etc.)<br>
-            • Extracts powerful audio features using MFCCs and Spectrograms for emotion-specific acoustic patterns<br>
-            • Includes training notebooks (<code>Emotion Recognition.ipynb</code>) + inference-ready prediction workflow<br>
-            • Data augmentation folder to improve generalization and reduce overfitting on small speech datasets<br>
-            • Evaluation assets like confusion matrices and test predictions for model performance insights<br>
-            • Strong use-case for human–computer interaction, call-center analytics, mental health monitoring & more
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 5: HFT -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/HFTutorial">Text Summarization with HuggingFace Transformers ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/HFTutorial?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/HFTutorial" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            HuggingFace • BART • Abstractive Summaries ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • Demonstrates real-world NLP by summarizing long text using Hugging Face Transformers<br>
-            • Uses the <code>facebook/bart-large-cnn</code> model — a powerful encoder–decoder architecture for abstractive summarization<br>
-            • Simple Python inference script (<code>Main.py</code>) → tokenize → generate → decode → clean output<br>
-            • Includes discussion notes (<code>HFT.txt</code>) explaining how transformer-based models understand language context<br>
-            • Easily extendable into Streamlit/Flask API or dataset-based evaluation workflows<br>
-            • Dependency-managed through <code>Requirements.txt</code> — ready for GPU/Colab deployment
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 6: CVPR -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Computer-Vision-and-Pattern-Recognition">Computer Vision and Pattern Recognition ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Computer-Vision-and-Pattern-Recognition?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Computer-Vision-and-Pattern-Recognition" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            Supervised • Unsupervised • Deep CNNs ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • A comprehensive repository exploring core computer vision and pattern recognition techniques<br>
-            • Implements supervised and unsupervised classification using <strong>Random Forests</strong> and <strong>K-Means clustering</strong> for multi-class problems<br>
-            • Deep learning experiments include CNN architectures trained on <code>CIFAR-10</code> and digit classification datasets<br>
-            • Features a notebook on applying <strong>Deep CNNs</strong> to solve NLP-style problems — bridging vision and language domains<br>
-            • Includes step-by-step notebooks: supervised binary/multi-class classification, Naive Bayes, and CNN-based pattern analysis<br>
-            • Ideal educational reference for understanding classical vs. deep learning approaches in pattern recognition<br>
-          </div>
-        </details>
-      </li>
-      <!-- ✅ Project 7: IR -->
-      <li style="margin:18px 0;">
-        <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-          <a href="https://github.com/Someshdiwan/Information-Retrieval">Information Retrieval ↗</a>
-        </h4>
-        <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
-          <img src="https://img.shields.io/github/stars/Someshdiwan/Information-Retrieval?style=social" alt="stars">
-          <img src="https://img.shields.io/github/last-commit/Someshdiwan/Information-Retrieval" alt="last commit">
-        </p>
-        <details>
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            Text Mining • Vector Space • Web Crawling ↗
-          </summary>
-          <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-            • Educational repository demonstrating the core principles of <strong>Information Retrieval (IR)</strong> and <strong>Text Mining</strong> using Python<br>
-            • Covers end-to-end text preprocessing — tokenization, stop-word removal, and stemming for document normalization<br>
-            • Implements <code>CountVectorizer.ipynb</code> and <code>Representing a Text Document in Vector Space Model.ipynb</code> to build and compare vector-based document representations<br>
-            • Demonstrates <strong>similarity computation</strong> techniques using cosine and Euclidean metrics for document matching<br>
-            • Includes <code>Naive Bayes Classifier.ipynb</code> and <code>Classification of Text Documents into Known Classes.ipynb</code> for supervised categorization of text data<br>
-            • <code>Web Crawling and Searching for News Stories.ipynb</code> illustrates basic crawling and content retrieval from live news sources<br>
-            • Additional notebook provides a <strong>hands-on example</strong> of XML parsing (<code>employee.xml</code>) for structured document processing<br>
-            • Comprehensive conceptual coverage bridging classical IR, feature extraction, and machine learning for text understanding<br>
-          </div>
-        </details>
-      </li>
-    </ul>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • End-to-end image classifiers with TensorFlow/Keras (clean training/validation workflow)<br>
+      • Transfer learning & fine-tuning notebook for rapid convergence on small datasets<br>
+      • Autoencoder implementation for representation learning & reconstruction demos<br>
+      • Supporting notebooks: basic perceptron, regression, vector ops, and a simple LSTM for sequence intuition<br>
+      • Reproducible runs (seeds), core metrics (accuracy/loss), quick visualization hooks<br>
+      • Organized as Jupyter notebooks: <code>Image Classifier.ipynb</code>, <code>Implementation of image classifier using CNN.ipynb</code>, <code>Implement Transfer Learning with Fine Tuning.ipynb</code>, <code>Implementation of Autoencoder.ipynb</code>, etc.
+    </div>
   </details>
+</li>
+
+
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Generative-Adversarial-Network-">Generative Adversarial Network (GAN) ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Generative-Adversarial-Network-?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Generative-Adversarial-Network-" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      GANs • DCGAN • Pix2Pix • CycleGAN ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Comprehensive collection of <strong>Generative Adversarial Network (GAN)</strong> architectures exploring image generation and translation tasks<br>
+      • Begins with <code>Basic_GAN.ipynb</code> — an introduction to adversarial learning between generator and discriminator models<br>
+      • Includes <strong>Deep Convolutional GAN (DCGAN)</strong> for high-quality image synthesis using convolutional feature hierarchies<br>
+      • <code>Conditional_GAN.ipynb</code> and <code>Conditional GAN.txt</code> demonstrate label-conditioned image generation for multi-class control<br>
+      • Implements <strong>Pix2Pix</strong> for paired image-to-image translation and <strong>CycleGAN</strong> for unpaired domain mapping (e.g., photo ↔ sketch)<br>
+      • Covers <strong>Progressive Growing of GANs</strong> — generating high-resolution outputs through staged network expansion<br>
+      • Organized with explanatory text files and Jupyter notebooks for conceptual and visual understanding<br>
+      • Each subproject focuses on practical intuition — training workflow, loss dynamics, and visual output progression<br>
+      • Well-suited for learners exploring generative modeling, adversarial optimization, and modern deep learning architectures<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+
+
+
+ <!-- ✅ Project 4: ERS -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Emotion-Recognition-System?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Emotion-Recognition-System" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Speech Emotion AI • MFCCs • Spectrograms ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Deep learning pipeline that classifies human emotions from speech signals (anger, happy, sad, fear, etc.)<br>
+      • Extracts powerful audio features using MFCCs and Spectrograms for emotion-specific acoustic patterns<br>
+      • Includes training notebooks (<code>Emotion Recognition.ipynb</code>) + inference-ready prediction workflow<br>
+      • Data augmentation folder to improve generalization and reduce overfitting on small speech datasets<br>
+      • Evaluation assets like confusion matrices and test predictions for model performance insights<br>
+      • Strong use-case for human–computer interaction, call-center analytics, mental health monitoring & more
+    </div>
+  </details>
+</li>
+
+
+ <!-- ✅ Project 5: HFT -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/HFTutorial">Text Summarization with HuggingFace Transformers ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/HFTutorial?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/HFTutorial" alt="last commit">
+  </p>
+
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      HuggingFace • BART • Abstractive Summaries ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Demonstrates real-world NLP by summarizing long text using Hugging Face Transformers<br>
+      • Uses the <code>facebook/bart-large-cnn</code> model — a powerful encoder–decoder architecture for abstractive summarization<br>
+      • Simple Python inference script (<code>Main.py</code>) → tokenize → generate → decode → clean output<br>
+      • Includes discussion notes (<code>HFT.txt</code>) explaining how transformer-based models understand language context<br>
+      • Easily extendable into Streamlit/Flask API or dataset-based evaluation workflows<br>
+      • Dependency-managed through <code>Requirements.txt</code> — ready for GPU/Colab deployment
+    </div>
+  </details>
+</li>
+
+
+
+<!-- ✅ Project 5: CVPR -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Computer-Vision-and-Pattern-Recognition">Computer Vision and Pattern Recognition ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Computer-Vision-and-Pattern-Recognition?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Computer-Vision-and-Pattern-Recognition" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Supervised • Unsupervised • Deep CNNs ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • A comprehensive repository exploring core computer vision and pattern recognition techniques<br>
+      • Implements supervised and unsupervised classification using <strong>Random Forests</strong> and <strong>K-Means clustering</strong> for multi-class problems<br>
+      • Deep learning experiments include CNN architectures trained on <code>CIFAR-10</code> and digit classification datasets<br>
+      • Features a notebook on applying <strong>Deep CNNs</strong> to solve NLP-style problems — bridging vision and language domains<br>
+      • Includes step-by-step notebooks: supervised binary/multi-class classification, Naive Bayes, and CNN-based pattern analysis<br>
+      • Ideal educational reference for understanding classical vs. deep learning approaches in pattern recognition<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+
+<!-- ✅ Project 6: IR -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/Information-Retrieval">Information Retrieval ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/Information-Retrieval?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/Information-Retrieval" alt="last commit">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Text Mining • Vector Space • Web Crawling ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Educational repository demonstrating the core principles of <strong>Information Retrieval (IR)</strong> and <strong>Text Mining</strong> using Python<br>
+      • Covers end-to-end text preprocessing — tokenization, stop-word removal, and stemming for document normalization<br>
+      • Implements <code>CountVectorizer.ipynb</code> and <code>Representing a Text Document in Vector Space Model.ipynb</code> to build and compare vector-based document representations<br>
+      • Demonstrates <strong>similarity computation</strong> techniques using cosine and Euclidean metrics for document matching<br>
+      • Includes <code>Naive Bayes Classifier.ipynb</code> and <code>Classification of Text Documents into Known Classes.ipynb</code> for supervised categorization of text data<br>
+      • <code>Web Crawling and Searching for News Stories.ipynb</code> illustrates basic crawling and content retrieval from live news sources<br>
+      • Additional notebook provides a <strong>hands-on example</strong> of XML parsing (<code>employee.xml</code>) for structured document processing<br>
+      • Comprehensive conceptual coverage bridging classical IR, feature extraction, and machine learning for text understanding<br>
+    </div>
+  </details>
+</li>
+
+
+
+
+
+</ul>
 </td>
-</tr>
-</table>
+    </tr>
+  </table>
 </details>
 
 
 
-------------------------------------------------------------------------------------------------------------------------
 
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
 
 <!-- Extremely complicated while developing this first time -->
 
@@ -906,7 +921,7 @@
   GitHub Streak Stats
   <div style="margin-top: 1px;">
     <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-      <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=20614956329"
+      <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=20614207381"
            alt="GitHub Streak Stats"
            width="270"/>
     </a>
