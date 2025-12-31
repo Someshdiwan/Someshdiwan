@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1200" height="340" viewBox="0 0 1200 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="svgTitle">
+<title id="svgTitle">Monthly contributions for 2025 — Someshdiwan</title>
+<defs>
+    <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      /* fonts */
+      text, .label, .monthLabel { font-family: 'Comic Sans MS', 'Comic Sans', cursive; }
+      .title { font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-size:18px; fill:#e6eef6; font-weight:700; }
+      .label { font-size:11px; fill:#c7d2da; }
+      .monthLabel { font-size:12px; fill:#cfe8ff; }
+
+      .curve { fill:none; stroke:#60a5fa; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; filter:url(#softGlow); }
+      .curve-glow { fill:none; stroke:#60a5fa; stroke-width:10; stroke-opacity:0.06; stroke-linecap:round; stroke-linejoin:round; }
+      .area { fill:url(#areaGradient); opacity:0.95; }
+
+      /* Slow looping draw animation with breathing effect */
+      .draw {
+        stroke-dasharray: 2200;
+        stroke-dashoffset: 2200;
+        animation: drawLine 8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      }
+      @keyframes drawLine {
+        0% { stroke-dashoffset: 2200; opacity: 0.3; }
+        20% { opacity: 1; }
+        70% { stroke-dashoffset: 0; opacity: 1; }
+        85% { opacity: 0.8; }
+        100% { stroke-dashoffset: 0; opacity: 0.3; }
+      }
+
+      /* Fading area reveal */
+      .fadeIn { opacity: 0; animation: fadeInArea 2s ease-in-out 0.8s forwards; }
+      @keyframes fadeInArea { to { opacity: 1; } }
+
+      /* Glow pulse */
+      @keyframes pulseGlow { 0%,100% { stroke-opacity: 0.05; } 50% { stroke-opacity: 0.15; } }
+      .curve-glow { animation: pulseGlow 8s ease-in-out infinite; }
+
+      /* Particle styling (the animated orb) */
+      .particle { fill: #7dd3fc; stroke: #083344; stroke-width: 1.2; filter: url(#softGlow); }
+    </style>
+  </defs>
+<rect width="100%" height="100%" rx="12" fill="#0f1720" />
+<text x="600" y="36.66666666666667" text-anchor="middle" class="title">Contributions — 2025</text>
+<line x1="72" x2="1152" y1="44" y2="44" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="48" text-anchor="end" class="label">1051</text>
+<line x1="72" x2="1152" y1="91.2" y2="91.2" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="95.2" text-anchor="end" class="label">841</text>
+<line x1="72" x2="1152" y1="138.4" y2="138.4" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="142.4" text-anchor="end" class="label">631</text>
+<line x1="72" x2="1152" y1="185.6" y2="185.6" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="189.6" text-anchor="end" class="label">420</text>
+<line x1="72" x2="1152" y1="232.8" y2="232.8" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="236.8" text-anchor="end" class="label">210</text>
+<line x1="72" x2="1152" y1="280" y2="280" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="60" y="284" text-anchor="end" class="label">0</text>
+<text x="72" y="322" text-anchor="middle" class="monthLabel">Jan</text>
+<text x="170.1818181818182" y="322" text-anchor="middle" class="monthLabel">Feb</text>
+<text x="268.3636363636364" y="322" text-anchor="middle" class="monthLabel">Mar</text>
+<text x="366.5454545454545" y="322" text-anchor="middle" class="monthLabel">Apr</text>
+<text x="464.72727272727275" y="322" text-anchor="middle" class="monthLabel">May</text>
+<text x="562.9090909090909" y="322" text-anchor="middle" class="monthLabel">Jun</text>
+<text x="661.090909090909" y="322" text-anchor="middle" class="monthLabel">Jul</text>
+<text x="759.2727272727273" y="322" text-anchor="middle" class="monthLabel">Aug</text>
+<text x="857.4545454545455" y="322" text-anchor="middle" class="monthLabel">Sep</text>
+<text x="955.6363636363637" y="322" text-anchor="middle" class="monthLabel">Oct</text>
+<text x="1053.8181818181818" y="322" text-anchor="middle" class="monthLabel">Nov</text>
+<text x="1152" y="322" text-anchor="middle" class="monthLabel">Dec</text>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.75071360608945, 137.45454545454547 239.1696796701554, 170.1818181818182 234.41674595623215 C 202.9090909090909 229.6638122423089, 235.63636363636365 196.0938788455439, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.1059308594989, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 54.89058039961941, 857.4545454545455 44 C 890.1818181818182 33.10941960038059, 922.909090909091 165.29337139232476, 955.6363636363637 199.61179828734538 C 988.3636363636365 233.930225182366, 1021.090909090909 240.9660640659689, 1053.8181818181818 249.91056137012367 C 1086.5454545454545 258.85505867427844, 1135.6363636363635 252.7174119885823, 1152 253.27878211227403  L 1152 280 L 72 280 Z" class="area fadeIn"/>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.75071360608945, 137.45454545454547 239.1696796701554, 170.1818181818182 234.41674595623215 C 202.9090909090909 229.6638122423089, 235.63636363636365 196.0938788455439, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.1059308594989, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 54.89058039961941, 857.4545454545455 44 C 890.1818181818182 33.10941960038059, 922.909090909091 165.29337139232476, 955.6363636363637 199.61179828734538 C 988.3636363636365 233.930225182366, 1021.090909090909 240.9660640659689, 1053.8181818181818 249.91056137012367 C 1086.5454545454545 258.85505867427844, 1135.6363636363635 252.7174119885823, 1152 253.27878211227403 " class="curve-glow"/>
+<path d="M 72 221.6175071360609 C 88.36363636363636 223.75071360608945, 137.45454545454547 239.1696796701554, 170.1818181818182 234.41674595623215 C 202.9090909090909 229.6638122423089, 235.63636363636365 196.0938788455439, 268.3636363636364 193.0999048525214 C 301.0909090909091 190.1059308594989, 333.81818181818176 205.30034887408817, 366.5454545454545 216.45290199809705 C 399.27272727272725 227.60545512210592, 432 264.54360926102123, 464.72727272727275 260.0152235965747 C 497.4545454545455 255.48683793212814, 530.1818181818181 188.38439581351093, 562.9090909090909 189.2825880114177 C 595.6363636363636 190.18078020932444, 628.3636363636363 252.79226133840785, 661.090909090909 265.4043767840152 C 693.8181818181818 278.01649222962254, 726.5454545454545 301.8560101490644, 759.2727272727273 264.95528068506184 C 792 228.0545512210593, 824.7272727272727 54.89058039961941, 857.4545454545455 44 C 890.1818181818182 33.10941960038059, 922.909090909091 165.29337139232476, 955.6363636363637 199.61179828734538 C 988.3636363636365 233.930225182366, 1021.090909090909 240.9660640659689, 1053.8181818181818 249.91056137012367 C 1086.5454545454545 258.85505867427844, 1135.6363636363635 252.7174119885823, 1152 253.27878211227403 " class="curve draw" id="mainPath"/>
+
+    <g>
+      <circle id="particle" r="6" class="particle">
+        <animate attributeName="r"
+                 values="6;10;12;10;6"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="8s"
+                 repeatCount="indefinite" />
+        <animate attributeName="fill-opacity"
+                 values="0.2;0.9;1;0.9;0.2"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="8s"
+                 repeatCount="indefinite" />
+        <animate attributeName="stroke-opacity"
+                 values="0.2;0.9;1;0.9;0.2"
+                 keyTimes="0;0.2;0.55;0.85;1"
+                 dur="8s"
+                 repeatCount="indefinite" />
+        <animateMotion dur="8s" repeatCount="indefinite" rotate="auto">
+          <mpath href="#mainPath" />
+        </animateMotion>
+      </circle>
+    </g>
+  
+<circle cx="72" cy="221.6175071360609" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="72" y="211.6175071360609" text-anchor="middle" class="label">260</text>
+<circle cx="170.1818181818182" cy="234.41674595623215" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="170.1818181818182" y="224.41674595623215" text-anchor="middle" class="label">203</text>
+<circle cx="268.3636363636364" cy="193.0999048525214" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="268.3636363636364" y="183.0999048525214" text-anchor="middle" class="label">387</text>
+<circle cx="366.5454545454545" cy="216.45290199809705" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="366.5454545454545" y="206.45290199809705" text-anchor="middle" class="label">283</text>
+<circle cx="464.72727272727275" cy="260.0152235965747" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="464.72727272727275" y="250.01522359657469" text-anchor="middle" class="label">89</text>
+<circle cx="562.9090909090909" cy="189.2825880114177" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="562.9090909090909" y="179.2825880114177" text-anchor="middle" class="label">404</text>
+<circle cx="661.090909090909" cy="265.4043767840152" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="661.090909090909" y="255.4043767840152" text-anchor="middle" class="label">65</text>
+<circle cx="759.2727272727273" cy="264.95528068506184" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="759.2727272727273" y="254.95528068506184" text-anchor="middle" class="label">67</text>
+<circle cx="857.4545454545455" cy="44" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="857.4545454545455" y="34" text-anchor="middle" class="label">1051</text>
+<circle cx="955.6363636363637" cy="199.61179828734538" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="955.6363636363637" y="189.61179828734538" text-anchor="middle" class="label">358</text>
+<circle cx="1053.8181818181818" cy="249.91056137012367" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="1053.8181818181818" y="239.91056137012367" text-anchor="middle" class="label">134</text>
+<circle cx="1152" cy="253.27878211227403" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
+<text x="1152" y="243.27878211227403" text-anchor="middle" class="label">119</text>
+<line x1="72" x2="1152" y1="280" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+<line x1="72" x2="72" y1="44" y2="280" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+</svg>

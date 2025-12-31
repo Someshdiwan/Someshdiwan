@@ -216,23 +216,7 @@
   </div>
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ------------------------------------------------------------------------------------------------------------------------
-
 
 <!-- ▼ MINI PROJECTS SECTION -->
 <details>
@@ -647,8 +631,8 @@
       <tr>
         <td align="center" width="180" style="border:none; padding:10px;">
           <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener">
-            <img src="https://img.icons8.com/color/96/codechef.png"
-                 alt="CodeChef logo" width="108" height="88">
+            <img src="Assets/codechef.png"
+                 alt="CodeChef logo" width="70" height="80">
           </a>
         </td>
         <td align="center" width="180" style="border:none; padding:10px;">
@@ -665,6 +649,11 @@
          style="display:block;" /> 
         </a>
         </td>
+        <td align="center" width="180" style="border:none; padding:10px;">
+             <a href="https://atcoder.jp/users/SomeshDiwan" target="_blank" rel="noopener">
+             <img src="Assets/Atcoder3.png" alt="AtCoder logo" width="70" height="70">
+             </a>
+       </td>
         <td align="center" width="180" style="border:none; padding:10px;">
              <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
               <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
@@ -718,11 +707,16 @@
                  alt="My Anki — Vocabulary Vault" width="48" height="48">
           </a>
         </td>
+<td align="center" width="180" style="border:none; padding:10px;">
+  <a href="https://docs.google.com/spreadsheets/d/14Ag_rNUwVP-BIjj0KJyLUjOb-VFecCvsH6yBcZWnOAs/edit?gid=584521556"
+     target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
+         alt="Google Sheets — Vocabulary Vault" width="48" height="48">
+  </a>
+</td>
       </tr>
     </table>
-
   </div> <!-- END CENTER WRAPPER -->
-
   <br>
 </details>
 
@@ -747,17 +741,7 @@
 <a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
     <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
 </a>
-
-[//]: # (<!-- C++ -->)
-
-[//]: # (<a href="https://isocpp.org/" target="_blank" title="C++" style="display:inline-block; margin: 0 16px;">)
-
-[//]: # (    <img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="48" height="48" alt="C++"/>)
-
-[//]: # (</a>)
 </p>
-
-
 
 
 <!-- Section Heading shifted right -->
@@ -892,6 +876,14 @@
   <img src="Assets/contrib-monthly-line.svg?v=19026253997" alt="Monthly contributions (line)" width="1000" />
 </p>
 
+<!-- Monthly contribution line (year-bound, auto-updated during 2025) -->
+<p align="left">
+  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
+  <img src="Assets/contrib-monthly-line.svg?v=19026253997"
+       alt="Monthly contributions (line) — 2025"
+       width="1000" />
+</p>
+
 ------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
@@ -901,6 +893,16 @@
             srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
     <img alt="snake animation"
          src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg">
+  </picture>
+</p>
+
+<!-- Archived snake animation snapshot (frozen for 2025) -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+            srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
+    <img alt="GitHub contribution snake — 2025 (archived)"
+         src="Assets/2025/github-contribution-grid-snake.svg">
   </picture>
 </p>
 
@@ -925,7 +927,7 @@
   </div>
 </div>
 
- <!-- GitHub Streak Stats 
+ <!-- GitHub Streak Stats
   <div style="margin-top: 1px;">
     <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
       <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=20611720380"
@@ -933,6 +935,5 @@
            width="270"/>
     </a>
   </div>
-  -->
-
+ -->
 ------------------------------------------------------------------------------------------------------------------------
