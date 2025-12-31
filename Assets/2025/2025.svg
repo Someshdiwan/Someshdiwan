@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="56" role="img" aria-label="2025 Archived Contributions">
+    <style>
+        .title {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 24px;
+        font-weight: bold;
+        fill: #FF8C00;
+        dominant-baseline: middle;
+        }
+    </style>
+
+    <defs>
+        <!-- Halo -->
+        <radialGradient id="halo2025" cx="50%" cy="50%" r="65%">
+            <stop offset="0" stop-color="#FF8C00" stop-opacity="0.85"/>
+            <stop offset="1" stop-color="#FF8C00" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- Underline base -->
+        <linearGradient id="ul2025" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#FF8C00"/>
+            <stop offset="1" stop-color="#FF8C00"/>
+        </linearGradient>
+
+        <!-- Underline shimmer -->
+        <linearGradient id="sweep2025" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="0.45" stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="0.5" stop-color="#FF8C00" stop-opacity="1"/>
+            <stop offset="0.55" stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="1" stop-color="#FF8C00" stop-opacity="0"/>
+            <animateTransform
+                    attributeName="gradientTransform"
+                    type="translate"
+                    from="-260 0"
+                    to="260 0"
+                    dur="2.6s"
+                    repeatCount="indefinite"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Halo pulse -->
+    <circle cx="24" cy="28" r="18" fill="url(#halo2025)" opacity="0.85">
+        <animate attributeName="r" values="16;19;16" dur="2.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Emoji with motion -->
+    <g>
+        <text x="14" y="50%" class="title">📦</text>
+        <animateTransform
+                attributeName="transform"
+                type="rotate"
+                values="-6 24 28; 6 24 28; -6 24 28"
+                dur="3s"
+                repeatCount="indefinite"/>
+        <animateTransform
+                attributeName="transform"
+                type="translate"
+                additive="sum"
+                values="0 0; 0 -1; 0 0; 0 1; 0 0"
+                dur="2.2s"
+                repeatCount="indefinite"/>
+    </g>
+
+    <!-- Title -->
+    <text x="56" y="50%" class="title">2025 • Archived</text>
+
+    <!-- Underline -->
+    <g transform="translate(56,0)">
+        <path d="M0,42 L260,42"
+              fill="none"
+              stroke="url(#ul2025)"
+              stroke-width="3"
+              stroke-linecap="round"/>
+        <path d="M0,42 L260,42"
+              fill="none"
+              stroke="url(#sweep2025)"
+              stroke-width="3"
+              stroke-linecap="round"/>
+    </g>
+</svg>

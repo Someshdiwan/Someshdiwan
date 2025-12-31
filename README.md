@@ -329,29 +329,7 @@
     </div>
   </details>
 </li>
-
-
-
-
-
-
-
-
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </ul>
 </td>
       <td valign="top" width="50%" style="padding:16px 18px;border-left:1px solid #eee;">
@@ -871,20 +849,6 @@
 <a>
     <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
 </a>
-<p align="left">
-  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=20612610359" alt="Monthly contributions (line)" width="1000" />
-</p>
-
-<!-- Monthly contribution line (year-bound, auto-updated during 2025) -->
-<p align="left">
-  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=19026253997"
-       alt="Monthly contributions (line) — 2025"
-       width="1000" />
-</p>
-
-------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
   <!-- Light mode -->
@@ -896,21 +860,49 @@
   </picture>
 </p>
 
-<!-- Archived snake animation snapshot (frozen for 2025) -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"
-            srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
-    <img alt="GitHub contribution snake — 2025 (archived)"
-         src="Assets/2025/github-contribution-grid-snake.svg">
-  </picture>
+<p align="left">
+  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
+  <img src="Assets/contrib-monthly-line.svg?v=20612610359" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<div align="center" style="margin-top: 20px; margin-bottom: 20px;">
+<!-- Archived snake animation snapshot (frozen for 2025) -->
 
-  <!-- Row of GIFs -->
+<details>
+  <summary align="left" style="cursor:pointer;">
+    <img src="Assets/2025/2025.svg"
+         alt="Expand: 2025 Archived Contributions"
+         width="360" />
+  </summary>
+
+  <p align="left">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"
+              srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
+      <img alt="GitHub contribution snake — 2025 (archived)"
+           src="Assets/2025/github-contribution-grid-snake.svg">
+    </picture>
+  </p>
+
+  <!-- Monthly contribution line (year-bound, auto-updated during 2025) -->
+  <p align="left">
+    <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
+    <img src="Assets/contrib-monthly-line.svg?v=19026253997"
+         alt="Monthly contributions (line) — 2025"
+         width="1000" />
+  </p>
+</details>
+
+<div align="center" style="margin-top: 20px; margin-bottom: 20px;">
+  <!-- Thank You -->
+  <div style="margin-top: 15px; margin-bottom: 8px;">
+    <img src="Assets/thanks.svg"
+         alt="Thank you for visiting"
+         width="500"/>
+  </div>
+
+<!-- Row of GIFs 
   <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
     <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
     <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
@@ -918,16 +910,11 @@
     <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
     <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
   </div>
-
-  <!-- Thank You -->
-  <div style="margin-top: 15px; margin-bottom: 8px;">
-    <img src="Assets/thanks.svg"
-         alt="Thank you for visiting"
-         width="500"/>
-  </div>
 </div>
+-->
 
- <!-- GitHub Streak Stats
+ <!-- 
+  GitHub Streak Stats
   <div style="margin-top: 1px;">
     <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
       <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=20612612117"
@@ -936,4 +923,5 @@
     </a>
   </div>
  -->
+
 ------------------------------------------------------------------------------------------------------------------------
