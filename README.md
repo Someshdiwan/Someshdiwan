@@ -910,11 +910,11 @@
 
   <!-- Row of GIFs -->
   <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <img src="Image/Messi.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Messi.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Messi.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Messi.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Messi.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
+    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
   </div>
 
   <!-- Thank You -->
