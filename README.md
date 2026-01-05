@@ -846,15 +846,13 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- ===================== MONTHLY CONTRIBUTIONS ===================== -->
-
 <a>
   <img src="Assets/MonthlyContributions.svg"
        alt="🌟 Monthly Contributions"
        width="520"/>
 </a>
 
-<!-- ===================== LIVE SNAKE (ROLLING WINDOW) ===================== -->
+<!-- ===================== LIVE SNAKE (ROLLING, AUTO-UPDATES) ===================== -->
 
 <p align="center">
   <picture>
@@ -862,44 +860,46 @@
       srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
     <img
       src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg"
-      alt="GitHub contribution snake — last 12 months">
+      alt="GitHub contribution snake — live (rolling 52 weeks)">
   </picture>
 </p>
 
-<!-- ===================== CURRENT YEAR: MONTHLY LINE ===================== -->
+<!-- ===================== LIVE MONTHLY LINE (CURRENT YEAR) ===================== -->
 
 <p align="left">
   <img
     src="Assets/contrib-monthly-line.svg?v=live"
-    alt="Monthly contributions (current year)"
-    width="1000"/>
+    alt="Monthly contributions (line) — current year"
+    width="1000" />
 </p>
 
 <hr/>
 
-<!-- ===================== ARCHIVED: 2025 ===================== -->
+<!-- ===================== ARCHIVED YEAR: 2025 (FROZEN) ===================== -->
 
 <details>
-  <summary align="left">
+  <summary align="left" style="cursor:pointer;">
     <img
       src="Assets/2025/2025-Archived.svg"
-      alt="2025 — Archived Contributions"
-      width="360"/>
+      alt="Expand: 2025 Archived Contributions"
+      width="360" />
   </summary>
 
-  <!-- STATIC 2025 CONTRIBUTION GRID (CALENDAR-CORRECT) -->
   <p align="left">
-    <img
-      src="https://ghchart.rshah.org/0e75b6/Someshdiwan?year=2025"
-      alt="GitHub contributions — 2025"/>
+    <picture>
+      <source media="(prefers-color-scheme: dark)"
+        srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
+      <img
+        src="Assets/2025/github-contribution-grid-snake.svg"
+        alt="GitHub contribution snake — 2025 (archived)">
+    </picture>
   </p>
 
-  <!-- STATIC 2025 MONTHLY LINE -->
   <p align="left">
     <img
       src="Assets/2025/contrib-monthly-line.svg"
-      alt="Monthly contributions — 2025"
-      width="1000"/>
+      alt="Monthly contributions (line) — 2025"
+      width="1000" />
   </p>
 </details>
 
