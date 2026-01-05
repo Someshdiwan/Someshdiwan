@@ -852,55 +852,49 @@
        width="520"/>
 </a>
 
-<!-- ===================== LIVE SNAKE (ROLLING, AUTO-UPDATES) ===================== -->
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
+            srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
     <img
       src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg"
-      alt="GitHub contribution snake — live (rolling 52 weeks)">
+      alt="snake animation">
   </picture>
 </p>
-
-<!-- ===================== LIVE MONTHLY LINE (CURRENT YEAR) ===================== -->
 
 <p align="left">
   <img
     src="Assets/contrib-monthly-line.svg?v=live"
-    alt="Monthly contributions (line) — current year"
+    alt="Monthly contributions (line)"
     width="1000" />
 </p>
 
-<hr/>
-
-<!-- ===================== ARCHIVED YEAR: 2025 (FROZEN) ===================== -->
+<!-- ===================== ARCHIVED SNAKE (2025) ===================== -->
 
 <details>
-  <summary align="left" style="cursor:pointer;">
-    <img
-      src="Assets/2025/2025-Archived.svg"
-      alt="Expand: 2025 Archived Contributions"
-      width="360" />
-  </summary>
+<summary>
+  <img
+    src="Assets/2025/2025.svg"
+    alt="Expand: 2025 Archived Contributions"
+    width="360" />
+</summary>
 
-  <p align="left">
-    <picture>
-      <source media="(prefers-color-scheme: dark)"
-        srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
-      <img
-        src="Assets/2025/github-contribution-grid-snake.svg"
-        alt="GitHub contribution snake — 2025 (archived)">
-    </picture>
-  </p>
-
-  <p align="left">
+<p align="left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)"
+            srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
     <img
-      src="Assets/2025/contrib-monthly-line.svg"
-      alt="Monthly contributions (line) — 2025"
-      width="1000" />
-  </p>
+      src="Assets/2025/github-contribution-grid-snake.svg"
+      alt="GitHub contribution snake — 2025 (archived)">
+  </picture>
+</p>
+
+<p align="left">
+  <img
+    src="Assets/2025/contrib-monthly-line.svg"
+    alt="Monthly contributions (line) — 2025"
+    width="1000" />
+</p>
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------
