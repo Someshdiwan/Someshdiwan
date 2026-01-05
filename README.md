@@ -846,12 +846,10 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- ===================== MONTHLY CONTRIBUTIONS ===================== -->
-
 <a>
   <img src="Assets/MonthlyContributions.svg"
        alt="🌟 Monthly Contributions"
-       width="520" />
+       width="520"/>
 </a>
 
 <!-- ===================== LIVE SNAKE (ROLLING WINDOW) ===================== -->
@@ -871,37 +869,38 @@
 <p align="left">
   <img
     src="Assets/contrib-monthly-line.svg?v=live"
-    alt="Monthly contributions (current year)"
+    alt="Monthly contributions (line)"
     width="1000" />
 </p>
 
 <hr/>
 
-------------------------------------------------------------------------------------------------------------------------
-
 <!-- ===================== ARCHIVED: 2025 ===================== -->
 
 <details>
-  <summary align="left">
-    <img src="Assets/2025/2025-Archived.svg"
-         alt="2025 — Archived Contributions"
-         width="360" />
+  <summary align="left" style="cursor:pointer;">
+    <img
+      src="Assets/2025/2025.svg"
+      alt="Expand: 2025 Archived Contributions"
+      width="360" />
   </summary>
 
+  <!-- 2025 SNAKE (FROZEN SNAPSHOT) -->
   <p align="left">
     <picture>
       <source media="(prefers-color-scheme: dark)"
         srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
       <img
         src="Assets/2025/github-contribution-grid-snake.svg"
-        alt="GitHub contribution snake — 2025 (frozen)">
+        alt="GitHub contribution snake — 2025 (archived)">
     </picture>
   </p>
 
+  <!-- 2025 MONTHLY LINE (FROZEN) -->
   <p align="left">
     <img
       src="Assets/2025/contrib-monthly-line.svg"
-      alt="Monthly contributions — 2025"
+      alt="Monthly contributions (line) — 2025"
       width="1000" />
   </p>
 </details>
