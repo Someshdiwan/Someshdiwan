@@ -862,7 +862,7 @@
 
 <p align="left">
   <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=20612610359" alt="Monthly contributions (line)" width="1000" />
+  <img src="Assets/contrib-monthly-line.svg?v=20719987273" alt="Monthly contributions (line)" width="1000" />
 </p>
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -888,7 +888,7 @@
   <!-- Monthly contribution line (year-bound, auto-updated during 2025) -->
   <p align="left">
     <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-    <img src="Assets/contrib-monthly-line.svg?v=19026253997"
+    <img src="Assets/contrib-monthly-line.svg?v=20719987273"
          alt="Monthly contributions (line) — 2025"
          width="1000" />
   </p>
