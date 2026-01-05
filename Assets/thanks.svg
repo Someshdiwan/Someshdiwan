@@ -1,13 +1,392 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190">
-<style>
-    .title {
-    font-family: "Comic Sans MS", cursive;
-    font-size: 40px;
-    font-weight: bold;
-    fill: #FF8C00; /* orange tone = energy + creativity */
-    text-anchor: start;
-    dominant-baseline: middle;
-    }
-</style>
-<text x="0" y="30%" class="title">Thanks for stopping by my GitHub! ⭐</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190" viewBox="0 0 1000 190">
+    <defs>
+        <!-- PHYSICALLY ACCURATE DEEP SPACE -->
+        <radialGradient id="deepSpace" cx="50%" cy="50%" r="70%">
+            <stop offset="0%" style="stop-color:#0a0a1f;stop-opacity:1"/>
+            <stop offset="50%" style="stop-color:#050512;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+        </radialGradient>
+
+        <!-- INTERSTELLAR DUST (fractal Brownian motion) -->
+        <filter id="interstellarDust" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.008" numOctaves="5" seed="7">
+                <animate attributeName="baseFrequency" values="0.008;0.009;0.008" dur="120s" repeatCount="indefinite"/>
+            </feTurbulence>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.05
+                                                   0 0 0 0 0.08
+                                                   0 0 0 0 0.15
+                                                   0 0 0 0.15 0"/>
+            <feGaussianBlur stdDeviation="30"/>
+        </filter>
+        <!-- ASTROPHYSICALLY ACCURATE STAR FIELD -->
+        <pattern id="starField" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+            <!-- Main Sequence Stars (IMF: Salpeter mass function, luminosity from L∝M^3.5) -->
+
+            <!-- O-type (blue, 30,000K+, rare, L=10^5 L☉, rapid scintillation) -->
+            <circle cx="145" cy="98" r="0.95" fill="#9bb0ff">
+                <animate attributeName="opacity" values="0.82;0.89;0.85;0.92;0.82" keyTimes="0;0.28;0.6;0.87;1" dur="1.9s" begin="1.5s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="0.95;1.02;0.98;0.95" dur="1.9s" begin="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <!-- B-type (blue-white, 10,000-30,000K, L=10^3 L☉) -->
+            <circle cx="12" cy="18" r="0.85" fill="#aabfff">
+                <animate attributeName="opacity" values="0.78;0.86;0.81;0.88;0.78" keyTimes="0;0.3;0.6;0.85;1" dur="2.3s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="0.85;0.9;0.87;0.85" dur="2.3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="110" cy="15" r="0.9" fill="#b5c8ff">
+                <animate attributeName="opacity" values="0.82;0.9;0.85;0.92;0.82" keyTimes="0;0.32;0.64;0.9;1" dur="2.4s" begin="2.3s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="0.9;0.95;0.92;0.9" dur="2.4s" begin="2.3s" repeatCount="indefinite"/>
+            </circle>
+            <!-- A-type (white, 7,500-10,000K, L=50 L☉, like Sirius) -->
+            <circle cx="60" cy="150" r="1.15" fill="#ffffff">
+                <animate attributeName="opacity" values="0.88;0.96;0.91;0.98;0.88" keyTimes="0;0.3;0.6;0.85;1" dur="2.1s" begin="0.6s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="1.15;1.22;1.18;1.15" dur="2.1s" begin="0.6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="180" cy="175" r="1.05" fill="#f8f8ff">
+                <animate attributeName="opacity" values="0.9;0.97;0.93;0.99;0.9" keyTimes="0;0.28;0.62;0.88;1" dur="2.2s" begin="1.3s" repeatCount="indefinite"/>
+                <animate attributeName="r" values="1.05;1.11;1.08;1.05" dur="2.2s" begin="1.3s" repeatCount="indefinite"/>
+            </circle>
+            <!-- F-type (yellow-white, 6,000-7,500K, L=5 L☉) -->
+            <circle cx="78" cy="35" r="0.75" fill="#fff8ed">
+                <animate attributeName="opacity" values="0.75;0.82;0.78;0.85;0.75" keyTimes="0;0.35;0.6;0.9;1" dur="3.1s" begin="2.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="32" cy="95" r="0.82" fill="#fffaf0">
+                <animate attributeName="opacity" values="0.8;0.87;0.83;0.9;0.8" keyTimes="0;0.3;0.6;0.85;1" dur="3.0s" begin="0.3s" repeatCount="indefinite"/>
+            </circle>
+            <!-- G-type (yellow, 5,200-6,000K, L=1 L☉, like our Sun) -->
+            <circle cx="88" cy="125" r="0.78" fill="#fff5d6">
+                <animate attributeName="opacity" values="0.78;0.85;0.81;0.87;0.78" keyTimes="0;0.35;0.65;0.9;1" dur="3.8s" begin="2.1s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="45" cy="8" r="0.7" fill="#fff6dc">
+                <animate attributeName="opacity" values="0.74;0.81;0.77;0.83;0.74" keyTimes="0;0.25;0.55;0.8;1" dur="4.0s" begin="1.2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- K-type (orange, 3,700-5,200K, L=0.3 L☉) -->
+            <circle cx="125" cy="65" r="0.62" fill="#ffe4b5">
+                <animate attributeName="opacity" values="0.68;0.75;0.71;0.77;0.68" keyTimes="0;0.28;0.58;0.82;1" dur="4.8s" begin="0.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="22" cy="145" r="0.65" fill="#ffdead">
+                <animate attributeName="opacity" values="0.7;0.77;0.73;0.79;0.7" keyTimes="0;0.33;0.63;0.88;1" dur="4.9s" begin="2.8s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- M-type (red, <3,700K, L=0.01-0.1 L☉, most common, slowest scintillation) -->
+            <circle cx="168" cy="42" r="0.5" fill="#ffcab0">
+                <animate attributeName="opacity" values="0.58;0.65;0.61;0.67;0.58" keyTimes="0;0.32;0.62;0.88;1" dur="6.5s" begin="3.1s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="95" cy="55" r="0.48" fill="#ffb8a0">
+                <animate attributeName="opacity" values="0.55;0.62;0.58;0.64;0.55" keyTimes="0;0.27;0.57;0.83;1" dur="6.8s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Distant background stars (magnitude >6, atmospheric extinction) -->
+            <circle cx="155" cy="130" r="0.32" fill="#d4e4ff">
+                <animate attributeName="opacity" values="0.25;0.32;0.28;0.34;0.25" keyTimes="0;0.35;0.65;0.9;1" dur="9.2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="190" cy="88" r="0.35" fill="#e8f0ff">
+                <animate attributeName="opacity" values="0.27;0.34;0.29;0.36;0.27" keyTimes="0;0.3;0.6;0.88;1" dur="9.8s" begin="1.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="5" cy="182" r="0.3" fill="#fff8f0">
+                <animate attributeName="opacity" values="0.22;0.29;0.25;0.31;0.22" keyTimes="0;0.32;0.62;0.9;1" dur="10.5s" begin="3.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="138" cy="120" r="0.28" fill="#f0f8ff">
+                <animate attributeName="opacity" values="0.2;0.27;0.23;0.29;0.2" keyTimes="0;0.28;0.58;0.85;1" dur="11.1s" begin="2.6s" repeatCount="indefinite"/>
+            </circle>
+        </pattern>
+        <!-- PHYSICS-BASED COMET TAIL (solar wind pressure gradient) -->
+        <linearGradient id="cometTail" x1="100%" y1="0%" x2="0%" y2="0%">
+            <!-- Plasma emission (ionized gases) -->
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.7"/>
+            <stop offset="20%" style="stop-color:#c8e0ff;stop-opacity:0.5"/>
+            <stop offset="50%" style="stop-color:#6ba3ff;stop-opacity:0.25"/>
+            <stop offset="80%" style="stop-color:#2a5a99;stop-opacity:0.08"/>
+            <stop offset="100%" style="stop-color:#1a3d66;stop-opacity:0"/>
+        </linearGradient>
+
+        <!-- COMA GRADIENT (sublimation zone) -->
+        <radialGradient id="comaGrad">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+            <stop offset="30%" style="stop-color:#e8f4ff;stop-opacity:0.85"/>
+            <stop offset="65%" style="stop-color:#a8d5ff;stop-opacity:0.4"/>
+            <stop offset="100%" style="stop-color:#5a9eff;stop-opacity:0"/>
+        </radialGradient>
+
+        <!-- RAYLEIGH SCATTERING FILTER (atmospheric optics) -->
+        <filter id="cometScatter" x="-200%" y="-200%" width="500%" height="500%">
+            <feGaussianBlur stdDeviation="1.5" result="innerGlow"/>
+            <feGaussianBlur stdDeviation="4" result="midScatter"/>
+            <feGaussianBlur stdDeviation="8" result="outerHalo"/>
+
+            <!-- Blue wavelength scattering dominance -->
+            <feColorMatrix in="outerHalo" type="matrix"
+                           values="0.6 0 0 0 0
+                        0 0.75 0 0 0
+                        0 0.4 1 0 0
+                        0 0 0 1.2 0" result="blueScatter"/>
+
+            <feMerge>
+                <feMergeNode in="blueScatter"/>
+                <feMergeNode in="midScatter"/>
+                <feMergeNode in="innerGlow"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <!-- TEXT AMBIENT OCCLUSION -->
+        <filter id="textAmbient" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="1.2" result="blur">
+                <animate
+                        attributeName="stdDeviation"
+                        values="1.2;1.8;1.4;2;1.2"
+                        dur="12s"
+                        repeatCount="indefinite"/>
+            </feGaussianBlur>
+            <feColorMatrix in="blur" type="matrix"
+                           values="1 0 0 0 0
+                        0 0.5 0 0 0
+                        0 0 0 0 0
+                        0 0 0 0.6 0"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <!-- STAR SCINTILLATION FILTER (Kolmogorov turbulence) -->
+        <filter id="starScintillation" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="2.5">
+                <animate
+                        attributeName="stdDeviation"
+                        values="2.5;4.2;3;4.8;2.5"
+                        keyTimes="0;0.25;0.5;0.75;1"
+                        dur="12s"
+                        repeatCount="indefinite"/>
+            </feGaussianBlur>
+            <feColorMatrix type="matrix"
+                           values="1 0 0 0 0
+                        0 0.82 0 0 0
+                        0 0 0.25 0 0
+                        0 0 0 1.3 0"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <!-- REFLECTANCE (text as diffuse reflector) -->
+        <linearGradient id="reflectance" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="white" stop-opacity="0"/>
+            <stop offset="45%" stop-color="white" stop-opacity="0.12"/>
+            <stop offset="55%" stop-color="white" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="white" stop-opacity="0"/>
+
+            <animate
+                    attributeName="x1"
+                    values="-100%;200%"
+                    dur="22s"
+                    repeatCount="indefinite"/>
+            <animate
+                    attributeName="x2"
+                    values="0%;300%"
+                    dur="22s"
+                    repeatCount="indefinite"/>
+        </linearGradient>
+        <mask id="reflectanceMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#reflectance)"/>
+        </mask>
+        <!-- LIMB DARKENING (vignette from inverse square law) -->
+        <radialGradient id="limbDarken" cx="50%" cy="50%" r="65%">
+            <stop offset="0%" style="stop-color:#000000;stop-opacity:0"/>
+            <stop offset="75%" style="stop-color:#000000;stop-opacity:0"/>
+            <stop offset="100%" style="stop-color:#000000;stop-opacity:0.7"/>
+        </radialGradient>
+    </defs>
+    <style>
+        .base-text {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 36px;
+        font-weight: bold;
+        fill: #B86800;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        filter: url(#textAmbient);
+        }
+        .star-driver {
+        font-size: 40px;
+        filter: url(#starScintillation);
+        }
+    </style>
+    <!-- COSMIC BACKGROUND LAYERS -->
+    <rect width="100%" height="100%" rx="15" fill="url(#deepSpace)"/>
+    <rect width="100%" height="100%" rx="15" filter="url(#interstellarDust)" opacity="0.4"/>
+    <!-- STELLAR POPULATION (Hertzsprung-Russell distribution) -->
+    <rect width="100%" height="100%" rx="15" fill="url(#starField)" opacity="1"/>
+    <rect width="100%" height="100%" rx="15" fill="url(#starField)" opacity="0.5" transform="translate(67, 41)"/>
+    <rect width="100%" height="100%" rx="15" fill="url(#starField)" opacity="0.3" transform="translate(-43, 73)"/>
+    <!-- LIMB DARKENING -->
+    <rect width="100%" height="100%" rx="15" fill="url(#limbDarken)"/>
+    <!-- COMET (Keplerian orbit segment, perihelion passage ~2 AU, v≈35 km/s) -->
+    <g filter="url(#cometScatter)">
+        <!-- Type II tail (dust, β=0.5, radiation pressure to gravity ratio) -->
+        <ellipse cx="0" cy="0" rx="14" ry="0.9" fill="url(#cometTail)" opacity="0.16">
+            <animateMotion
+                    path="M 135,44 Q 455,88 765,138"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <animate
+                    attributeName="opacity"
+                    values="0;0.08;0.16;0.12;0.06;0"
+                    keyTimes="0;0.2;0.5;0.75;0.9;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <!-- Tail curvature increases as particles slow (conservation of angular momentum) -->
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0;-18;-23;-26"
+                    keyTimes="0;0.35;0.65;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+        </ellipse>
+        <!-- Type I tail (ion, β→∞, straight anti-solar direction) -->
+        <ellipse cx="0" cy="0" rx="9" ry="0.6" fill="url(#cometTail)" opacity="0.42">
+            <animateMotion
+                    path="M 135,44 Q 455,88 765,138"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <animate
+                    attributeName="opacity"
+                    values="0;0.28;0.42;0.36;0.22;0"
+                    keyTimes="0;0.2;0.5;0.75;0.9;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <!-- Ion tail remains straight (magnetic field lines) -->
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    values="0;-20;-21;-21"
+                    keyTimes="0;0.25;0.65;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+        </ellipse>
+        <!-- Coma (H2O sublimation: Qs ≈ 10^28 molecules/s at 2 AU) -->
+        <circle cx="0" cy="0" r="1.7" fill="url(#comaGrad)" opacity="0.48">
+            <animateMotion
+                    path="M 135,44 Q 455,88 765,138"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <animate
+                    attributeName="opacity"
+                    values="0;0.32;0.48;0.42;0.28;0"
+                    keyTimes="0;0.18;0.5;0.78;0.92;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <!-- Sublimation rate increases approaching perihelion -->
+            <animate
+                    attributeName="r"
+                    values="1.2;1.9;2.0;1.8;1.4;1.0"
+                    keyTimes="0;0.3;0.5;0.7;0.88;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+        </circle>
+        <!-- Nucleus (R≈1-5 km, albedo≈0.04, mass≈10^14 kg) -->
+        <circle cx="0" cy="0" r="0.95" fill="#ffffff">
+            <animateMotion
+                    path="M 135,44 Q 455,88 765,138"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <animate
+                    attributeName="opacity"
+                    values="0;0.88;1;0.96;0.82;0"
+                    keyTimes="0;0.15;0.5;0.8;0.94;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+            <!-- Non-principal axis rotation (period T≈8.2 hours) -->
+            <animate
+                    attributeName="r"
+                    values="0.85;1.0;1.05;0.98;0.9;0.8"
+                    keyTimes="0;0.28;0.5;0.72;0.9;1"
+                    dur="14s"
+                    repeatCount="indefinite"/>
+        </circle>
+        <!-- Active jets (collimated gas flow, Mach number M≈1.5) -->
+        <g opacity="0.52">
+            <!-- Jet 1: Sunward hemisphere active region -->
+            <circle cx="0" cy="0" r="0.42" fill="#c8e0ff">
+                <animateMotion
+                        path="M 135,44 Q 455,88 765,138"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+                <animate
+                        attributeName="opacity"
+                        values="0;0;0.45;0.58;0.42;0.18;0"
+                        keyTimes="0;0.4;0.52;0.66;0.78;0.92;1"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+                <!-- Ballistic trajectory (no drag: Δv = 0.8 km/s) -->
+                <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0,0; -3.2,-2.4; -6.8,-5.2; -11,-8.5; -14,-11"
+                        keyTimes="0;0.5;0.72;0.88;1"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+            </circle>
+            <!-- Jet 2: Secondary active region -->
+            <circle cx="0" cy="0" r="0.36" fill="#a8d5ff">
+                <animateMotion
+                        path="M 135,44 Q 455,88 765,138"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+                <animate
+                        attributeName="opacity"
+                        values="0;0;0.52;0.48;0.32;0.15;0"
+                        keyTimes="0;0.44;0.56;0.7;0.82;0.94;1"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+                <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0,0; -2.5,-4.2; -5.5,-9; -9,-14.5; -11.5,-18"
+                        keyTimes="0;0.52;0.74;0.9;1"
+                        dur="14s"
+                        repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </g>
+    <!-- TEXT (diffuse reflector in low illumination) -->
+    <g transform="translate(500, 95)">
+        <!-- Base text (diminished by inverse square law) -->
+        <text class="base-text" opacity="0.58">
+            <tspan x="0" dy="-20">Thanks for stopping by</tspan>
+            <tspan x="0" dy="50">my GitHub!</tspan>
+
+            <!-- Responds to stellar flux variation (Poisson photon statistics) -->
+            <animate
+                    attributeName="opacity"
+                    values="0.52;0.64;0.56;0.66;0.52"
+                    keyTimes="0;0.28;0.55;0.82;1"
+                    dur="12s"
+                    repeatCount="indefinite"/>
+        </text>
+        <!-- Specular highlight (anisotropic BRDF) -->
+        <text class="base-text" fill="#D89040" mask="url(#reflectanceMask)" opacity="0.22">
+            <tspan x="0" dy="-20">Thanks for stopping by</tspan>
+            <tspan x="0" dy="50">my GitHub!</tspan>
+        </text>
+        <!-- Star (G-type main sequence, ~5800K blackbody) -->
+        <text x="220" y="45" class="star-driver">
+            ⭐
+            <!-- Atmospheric seeing (Fried parameter r0 variation) -->
+            <animate
+                    attributeName="opacity"
+                    values="0.82;0.58;0.76;0.52;0.7;0.82"
+                    keyTimes="0;0.22;0.44;0.63;0.84;1"
+                    dur="12s"
+                    repeatCount="indefinite"/>
+
+            <!-- Proper motion (negligible at human timescales, showing rotation only) -->
+            <animateTransform
+                    attributeName="transform"
+                    type="rotate"
+                    from="0 220 45"
+                    to="360 220 45"
+                    dur="60s"
+                    repeatCount="indefinite"/>
+        </text>
+    </g>
 </svg>
