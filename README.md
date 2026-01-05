@@ -846,7 +846,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- ===================== MONTHLY CONTRIBUTIONS ===================== -->
+<!-- ===================== MONTHLY CONTRIBUTIONS (HEADER) ===================== -->
 
 <a>
   <img src="Assets/MonthlyContributions.svg"
@@ -854,19 +854,19 @@
        width="520" />
 </a>
 
-<!-- ===================== LIVE CONTRIBUTION SNAKE (CURRENT YEAR) ===================== -->
+<!-- ===================== LIVE SNAKE (CURRENT / ROLLING YEAR) ===================== -->
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
-      srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg?v=live">
+      srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
     <img
-      src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg?v=live"
+      src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg"
       alt="GitHub contribution snake — current year (live)">
   </picture>
 </p>
 
-<!-- ===================== MONTHLY LINE GRAPH (CURRENT YEAR) ===================== -->
+<!-- ===================== LIVE MONTHLY LINE (CURRENT YEAR) ===================== -->
 
 <p align="left">
   <img
@@ -877,18 +877,17 @@
 
 <hr/>
 
-------------------------------------------------------------------------------------------------------------------------
-
-<!-- ===================== ARCHIVED YEAR: 2025 ===================== -->
+<!-- ===================== ARCHIVED YEAR: 2025 (FROZEN) ===================== -->
 
 <details>
   <summary align="left" style="cursor:pointer;">
-    <img src="Assets/2025/2025.svg"
-         alt="Expand: 2025 Archived Contributions"
-         width="360" />
+    <img
+      src="Assets/2025/2025-Archived.svg"
+      alt="Expand: 2025 Archived Contributions"
+      width="360" />
   </summary>
 
-  <!-- 2025 SNAKE (FROZEN SNAPSHOT) -->
+  <!-- 2025 SNAKE (ARCHIVED — NEVER UPDATES) -->
   <p align="left">
     <picture>
       <source media="(prefers-color-scheme: dark)"
@@ -899,7 +898,7 @@
     </picture>
   </p>
 
-  <!-- 2025 MONTHLY LINE (FROZEN) -->
+  <!-- 2025 MONTHLY LINE (ARCHIVED — NEVER UPDATES) -->
   <p align="left">
     <img
       src="Assets/2025/contrib-monthly-line.svg"
