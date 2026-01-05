@@ -882,16 +882,6 @@
 </summary>
 
 <p align="left">
-  <picture>
-    <source media="(prefers-color-scheme: dark)"
-            srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
-    <img
-      src="Assets/2025/github-contribution-grid-snake.svg"
-      alt="GitHub contribution snake — 2025 (archived)">
-  </picture>
-</p>
-
-<p align="left">
   <img
     src="https://github.com/Someshdiwan/Someshdiwan/blob/main/Assets/2025/2025-Archived.svg"
     alt="Monthly contributions (line) — 2025"
