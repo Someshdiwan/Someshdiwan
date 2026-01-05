@@ -846,28 +846,40 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<!-- ===================== MONTHLY CONTRIBUTIONS ===================== -->
+
 <a>
-    <img src="Assets/MonthlyContributions.svg" alt="🌟 Monthly Contributions" width="520"/>
+  <img src="Assets/MonthlyContributions.svg"
+       alt="🌟 Monthly Contributions"
+       width="520" />
 </a>
 
+<!-- ===================== LIVE CONTRIBUTION SNAKE (CURRENT YEAR) ===================== -->
+
 <p align="center">
-  <!-- Light mode -->
   <picture>
     <source media="(prefers-color-scheme: dark)"
-            srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
-    <img alt="snake animation"
-         src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg">
+      srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg?v=live">
+    <img
+      src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg?v=live"
+      alt="GitHub contribution snake — current year (live)">
   </picture>
 </p>
 
+<!-- ===================== MONTHLY LINE GRAPH (CURRENT YEAR) ===================== -->
+
 <p align="left">
-  <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-  <img src="Assets/contrib-monthly-line.svg?v=20612610359" alt="Monthly contributions (line)" width="1000" />
+  <img
+    src="Assets/contrib-monthly-line.svg?v=live"
+    alt="Monthly contributions (line) — current year"
+    width="1000" />
 </p>
+
+<hr/>
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- Archived snake animation snapshot (frozen for 2025) -->
+<!-- ===================== ARCHIVED YEAR: 2025 ===================== -->
 
 <details>
   <summary align="left" style="cursor:pointer;">
@@ -876,21 +888,23 @@
          width="360" />
   </summary>
 
+  <!-- 2025 SNAKE (FROZEN SNAPSHOT) -->
   <p align="left">
     <picture>
       <source media="(prefers-color-scheme: dark)"
-              srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
-      <img alt="GitHub contribution snake — 2025 (archived)"
-           src="Assets/2025/github-contribution-grid-snake.svg">
+        srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
+      <img
+        src="Assets/2025/github-contribution-grid-snake.svg"
+        alt="GitHub contribution snake — 2025 (archived)">
     </picture>
   </p>
 
-  <!-- Monthly contribution line (year-bound, auto-updated during 2025) -->
+  <!-- 2025 MONTHLY LINE (FROZEN) -->
   <p align="left">
-    <!-- Workflow updates the ?v= query parameter to bust GitHub image cache on each run -->
-    <img src="Assets/contrib-monthly-line.svg?v=19026253997"
-         alt="Monthly contributions (line) — 2025"
-         width="1000" />
+    <img
+      src="Assets/2025/contrib-monthly-line.svg"
+      alt="Monthly contributions (line) — 2025"
+      width="1000" />
   </p>
 </details>
 
