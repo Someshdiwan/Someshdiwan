@@ -846,6 +846,8 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<!-- ===================== MONTHLY CONTRIBUTIONS ===================== -->
+
 <a>
   <img src="Assets/MonthlyContributions.svg"
        alt="🌟 Monthly Contributions"
@@ -860,17 +862,17 @@
       srcset="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake-dark.svg">
     <img
       src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/output/github-contribution-grid-snake.svg"
-      alt="GitHub contribution snake — rolling 12 months">
+      alt="GitHub contribution snake — last 12 months">
   </picture>
 </p>
 
-<!-- ===================== LIVE MONTHLY LINE ===================== -->
+<!-- ===================== CURRENT YEAR: MONTHLY LINE ===================== -->
 
 <p align="left">
   <img
     src="Assets/contrib-monthly-line.svg?v=live"
-    alt="Monthly contributions (line)"
-    width="1000" />
+    alt="Monthly contributions (current year)"
+    width="1000"/>
 </p>
 
 <hr/>
@@ -878,33 +880,28 @@
 <!-- ===================== ARCHIVED: 2025 ===================== -->
 
 <details>
-  <summary align="left" style="cursor:pointer;">
+  <summary align="left">
     <img
-      src="Assets/2025/2025.svg"
-      alt="Expand: 2025 Archived Contributions"
-      width="360" />
+      src="Assets/2025/2025-Archived.svg"
+      alt="2025 — Archived Contributions"
+      width="360"/>
   </summary>
 
-  <!-- 2025 SNAKE (FROZEN SNAPSHOT) -->
+  <!-- STATIC 2025 CONTRIBUTION GRID (CALENDAR-CORRECT) -->
   <p align="left">
-    <picture>
-      <source media="(prefers-color-scheme: dark)"
-        srcset="Assets/2025/github-contribution-grid-snake-dark.svg">
-      <img
-        src="Assets/2025/github-contribution-grid-snake.svg"
-        alt="GitHub contribution snake — 2025 (archived)">
-    </picture>
+    <img
+      src="https://ghchart.rshah.org/0e75b6/Someshdiwan?year=2025"
+      alt="GitHub contributions — 2025"/>
   </p>
 
-  <!-- 2025 MONTHLY LINE (FROZEN) -->
+  <!-- STATIC 2025 MONTHLY LINE -->
   <p align="left">
     <img
       src="Assets/2025/contrib-monthly-line.svg"
-      alt="Monthly contributions (line) — 2025"
-      width="1000" />
+      alt="Monthly contributions — 2025"
+      width="1000"/>
   </p>
 </details>
-
 
 ------------------------------------------------------------------------------------------------------------------------
 
