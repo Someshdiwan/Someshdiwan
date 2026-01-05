@@ -893,7 +893,7 @@
 
 <p align="left">
   <img
-    src="Assets/2025/contrib-monthly-line.svg"
+    src="https://github.com/Someshdiwan/Someshdiwan/blob/main/Assets/2025/2025-Archived.svg"
     alt="Monthly contributions (line) — 2025"
     width="1000" />
 </p>
