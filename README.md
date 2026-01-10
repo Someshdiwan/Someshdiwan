@@ -791,8 +791,22 @@
 <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
   <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
 </a>
-<a href="https://spring.io/projects/spring-boot" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="Spring Boot" width="50" height="50" style="margin: 0 10px;"/></a>
-        <a href="https://www.mysql.com/" target="_blank"><img src="https://camo.githubusercontent.com/3ed284d0ecd9fcccabf0711e2cad6bbec412e417bcfb1da25502a1ed9adbaf78/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f6d7973716c2d69636f6e2e737667" alt="MySQL" width="50" height="50" style="margin: 0 10px;"/></a>
+<a href="https://spring.io/projects/spring-boot" target="_blank">
+  <img
+    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
+    alt="Spring Boot"
+    width="50"
+    height="50"
+  />
+</a>
+<a href="https://www.mysql.com/" target="_blank">
+  <img
+    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+    alt="MySQL"
+    width="50"
+    height="50"
+  />
+</a>
         <a href="https://www.postgresql.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="50" height="50" style="margin: 0 10px;"/></a>
 </p>
 <p>
