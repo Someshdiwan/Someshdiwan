@@ -1,0 +1,177 @@
+<!--
+Designed and animated by Google Gemini, developed by Google
+Conceptualized, prompted, and refined by:         Somesh_Diwan
+
+Generated on: January 14, 2026 at 05:21:00 AM IST.
+
+© 2026 Google – All rights reserved.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="120" viewBox="0 0 960 120">
+    <defs>
+        <!-- DEEP NEURAL SUBSTRATE (high-dimensional manifold, quantized weights) -->
+        <radialGradient id="neuralSubstrate" cx="50%" cy="50%" r="80%">
+            <stop offset="0%" stop-color="#0a0f1f"/>
+            <stop offset="45%" stop-color="#0f172a"/>
+            <stop offset="75%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#020617"/>
+        </radialGradient>
+
+        <!-- SYNAPTIC WEIGHT GRADIENT (excitatory → inhibitory, He/Xavier initialization) -->
+        <linearGradient id="synapseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1e40af" stop-opacity="0.15"/>
+            <stop offset="25%" stop-color="#3b82f6" stop-opacity="0.5"/>
+            <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+            <stop offset="75%" stop-color="#a78bfa" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#1e40af" stop-opacity="0.15"/>
+        </linearGradient>
+
+        <!-- BACKPROPAGATION ERROR SIGNAL (vanishing/exploding gradient flow) -->
+        <linearGradient id="backpropGrad" x1="100%" y1="0%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#fb923c" stop-opacity="0"/>
+            <stop offset="40%" stop-color="#fb923c" stop-opacity="0.9"/>
+            <stop offset="60%" stop-color="#fb923c" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#fb923c" stop-opacity="0"/>
+            <animate attributeName="x1" values="100%;0%" dur="12s" repeatCount="indefinite"/>
+            <animate attributeName="x2" values="0%;100%" dur="12s" repeatCount="indefinite"/>
+        </linearGradient>
+
+        <!-- NEURAL BLOOM / ACTIVATION LEAKAGE (ReLU glow + residual connections) -->
+        <filter id="neuralBloom" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="2.2" result="blur">
+                <animate attributeName="stdDeviation" values="2;3;2.5;2" dur="8s" repeatCount="indefinite"/>
+            </feGaussianBlur>
+            <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0
+                                                           0 0 1.2 0 0
+                                                           0.4 0 1.4 0 0
+                                                           0 0 0 1.4 0"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- QUANTIZATION + PARAMETER NOISE (8-bit inference jitter, weight decay) -->
+        <filter id="quantNoise" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" seed="19">
+                <animate attributeName="baseFrequency" values="0.64;0.68;0.66;0.64" dur="15s" repeatCount="indefinite"/>
+            </feTurbulence>
+            <feColorMatrix values="0 0 0 0 0
+                                   0 0 0 0 0
+                                   0 0 0 0 0
+                                   0 0 0 0.09 0"/>
+            <feGaussianBlur stdDeviation="1"/>
+        </filter>
+
+        <!-- ATTENTION-LIKE FOCUS SWEEP (transformer self-attention scan) -->
+        <linearGradient id="attentionSweep" x1="-50%" y1="0%" x2="150%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="35%" stop-color="#a78bfa" stop-opacity="0.3"/>
+            <stop offset="50%" stop-color="#ffffff" stop-opacity="0.5"/>
+            <stop offset="65%" stop-color="#a78bfa" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            <animate attributeName="x1" values="-100%;200%" dur="16s" repeatCount="indefinite"/>
+            <animate attributeName="x2" values="0%;300%" dur="16s" repeatCount="indefinite"/>
+        </linearGradient>
+        <mask id="attentionMask">
+            <rect width="100%" height="100%" fill="url(#attentionSweep)"/>
+        </mask>
+    </defs>
+
+    <style>
+        .title-text {
+        font-family: "Comic Sans MS", cursive;
+        font-size: 36px;
+        font-weight: bold;
+        fill: #e2e8f0;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        filter: url(#neuralBloom);
+        letter-spacing: 1.2;
+        }
+    </style>
+
+    <!-- NEURAL SUBSTRATE BACKGROUND -->
+    <rect width="100%" height="100%" rx="15" fill="url(#neuralSubstrate)"/>
+    <rect width="100%" height="100%" rx="15" filter="url(#quantNoise)" opacity="0.6"/>
+
+    <!-- MULTI-LAYER CONNECTIONS (feedforward + skip connections) -->
+    <g stroke="url(#synapseGrad)" stroke-width="0.8" fill="none" opacity="0.7" filter="url(#neuralBloom)">
+        <!-- Layer connections -->
+        <path d="M 80,30 Q 280,20 480,60 T 880,50"/>
+        <path d="M 80,60 Q 280,80 480,40 T 880,70"/>
+        <path d="M 80,90 Q 280,100 480,50 T 880,90"/>
+        <!-- Cross-layer skips -->
+        <path d="M 80,45 Q 480,75 880,45" stroke-dasharray="8,4"/>
+        <path d="M 80,75 Q 480,35 880,75" stroke-dasharray="6,6"/>
+        <animate attributeName="opacity" values="0.5;0.8;0.6;0.8;0.5" dur="10s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- NEURON NODES (hidden layers with varying activation) -->
+    <g filter="url(#neuralBloom)">
+        <!-- Input layer -->
+        <circle cx="160" cy="40" r="8" fill="#3b82f6" opacity="0.3"/>
+        <circle cx="160" cy="80" r="8" fill="#3b82f6" opacity="0.3"/>
+
+        <!-- Hidden layers -->
+        <circle cx="480" cy="30" r="12" fill="#8b5cf6" opacity="0.4"/>
+        <circle cx="480" cy="60" r="14" fill="#a78bfa" opacity="0.5"/>
+        <circle cx="480" cy="90" r="10" fill="#8b5cf6" opacity="0.4"/>
+
+        <!-- Output layer -->
+        <circle cx="800" cy="60" r="10" fill="#c4b5fd" opacity="0.6"/>
+
+        <!-- Pulsing activations -->
+        <circle cx="480" cy="60" r="6" fill="#ffffff">
+            <animate attributeName="r" values="6;12;6" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="800" cy="60" r="5" fill="#ffffff">
+            <animate attributeName="r" values="5;10;5" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="3.5s" begin="1s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+
+    <!-- DATA FLOW / FORWARD PASS PARTICLES -->
+    <g filter="url(#neuralBloom)" opacity="0.9">
+        <circle r="3" fill="#60a5fa">
+            <animateMotion path="M 80,40 Q 480,40 800,60" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="fill" values="#60a5fa;#a78bfa;#c4b5fd;#60a5fa" dur="5s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="2.5" fill="#3b82f6">
+            <animateMotion path="M 80,80 Q 480,70 800,60" dur="4.8s" begin="0.7s" repeatCount="indefinite"/>
+            <animate attributeName="fill" values="#3b82f6;#8b5cf6;#a78bfa" dur="4.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="3" fill="#60a5fa">
+            <animateMotion path="M 80,60 Q 480,90 800,60" dur="5.2s" begin="1.4s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+
+    <!-- BACKPROPAGATION ERROR WAVE (periodic gradient update) -->
+    <path d="M 960,60 Q 480,60 0,60" stroke="url(#backpropGrad)" stroke-width="4" fill="none" opacity="0.8">
+        <animate attributeName="stroke-dasharray" values="0,960;480,480;960,0" dur="6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="6s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- SUBTLE SCAN LINE (training progress / epoch sweep) -->
+    <rect width="100%" height="4" fill="#ffffff" opacity="0.05">
+        <animate attributeName="y" values="0;120" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- TITLE TEXT (converged representation) -->
+    <g transform="translate(480,60)">
+        <text class="title-text">
+            <tspan x="0" dy="-12">Foundational AI &amp;</tspan>
+            <tspan x="0" dy="32" font-size="30">ML Learning Systems</tspan>
+            <animate attributeName="opacity" values="0.9;1;0.92;1;0.9" dur="10s" repeatCount="indefinite"/>
+        </text>
+        <!-- Attention highlight sweep -->
+        <text class="title-text" fill="#ffffff" mask="url(#attentionMask)" opacity="0.4">
+            <tspan x="0" dy="-12">Foundational AI &amp;</tspan>
+            <tspan x="0" dy="32" font-size="30">ML Learning Systems</tspan>
+        </text>
+    </g>
+
+    <!-- BORDER GLOW -->
+    <rect x="2" y="2" width="956" height="116" rx="15" fill="none" stroke="#1e293b" stroke-width="3" opacity="0.8"/>
+</svg>

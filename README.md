@@ -23,7 +23,7 @@
 <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
 
-<!-- ▼ FEATURED PROJECTS SECTION -->
+<!-- FEATURED PROJECTS SECTION -->
 <details>
   <summary style="cursor:pointer;list-style:none;">
     <p align="center" style="margin:0;">
@@ -34,7 +34,7 @@
   <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
-<!-- ✅ Project 1: Java SE -->
+<!-- Project 1: Java SE -->
 <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/JavaEvolution-Learning-Growing-Mastering">JavaEvolution – Learning • Growing • Mastering ↗</a>
@@ -60,7 +60,7 @@
 </details>
 
 </li>
-          <!-- ✅ Project 2: Todo List App -->
+          <!-- Project 2: Todo List App -->
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/Todo-List-Application">Todo-List Application ↗</a>
@@ -85,7 +85,7 @@
 
 
 </li>
-          <!-- ✅ Project 3: Abstract Window Toolkit (AWT) -->
+          <!-- Project 3: Abstract Window Toolkit (AWT) -->
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/Abstract-Window-Toolkit">Abstract Window Toolkit (AWT) ↗</a>
@@ -108,10 +108,9 @@
 </details>
 
 
-
-<!-- ✅ Project 4: ASCII Binary -->
+<!-- Project 4: ASCII Binary -->
 </li>
-          <!-- ✅ Project 3: ASCII–Binary Character Table -->
+          <!-- Project 3: ASCII–Binary Character Table -->
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/ASCII-Binary-Character-Table">ASCII–Binary Character Table ↗</a>
@@ -134,7 +133,7 @@
 </details>
 
 </li>
-          <!-- ✅ Project 5: Docker Guide -->
+          <!-- Project 5: Docker Guide -->
           <li style="margin:18px 0;">
             <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI',Roboto,Arial,sans-serif;">
               <a href="https://github.com/Someshdiwan/Docker-Guide">Docker Guide ↗</a>
@@ -155,7 +154,7 @@
 
 
 
-<!-- ✅ Project 6: Java Swing -->
+<!-- Project 6: Java Swing -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Java-Swing">Java Swing ↗</a>
@@ -184,7 +183,7 @@
 </li>
 
 
-<!-- ✅ Project 7: Java FX -->
+<!-- Project 7: Java FX -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/JavaFX">JavaFX ↗</a>
@@ -218,7 +217,8 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- ▼ MINI PROJECTS SECTION -->
+<!-- MINI PROJECTS SECTION For Backend Development -->
+
 <details>
   <summary style="cursor:pointer;list-style:none;">
     <p align="center" style="margin:0;">
@@ -228,7 +228,8 @@
   <div style="height:12px;"></div>
   <div align="center" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
-    <!-- ✅ Mini Project: File Encryption Tool -->
+    
+  <!-- Mini Project: File Encryption Tool -->
       <li style="margin:18px 0;" align="center">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
@@ -249,7 +250,7 @@
     </ul>
   </div>
 
-<!-- ✅ Mini Project: Inventory Management System -->
+<!-- Mini Project: Inventory Management System -->
 <li style="margin:18px 0;" align="center">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/InventoryManagement">Inventory Management System ↗</a>
@@ -268,8 +269,7 @@
   </details>
 </li>
 
-
-<!-- ✅ Mini Project: Word Counter -->
+<!-- Mini Project: Word Counter -->
 <li style="margin:18px 0;" align="center">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Word-Counter">Word Counter ↗</a>
@@ -288,10 +288,7 @@
   </details>
 </li>
 
-
-
-
-<!-- ✅ Mini Project: Contact Manager -->
+<!-- Mini Project: Contact Manager -->
 <li style="margin:18px 0;" align="center">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Contact-Manager">Contact Manager ↗</a>
@@ -311,7 +308,7 @@
 
 
 
-<!-- ✅ Mini Project: Quiz Game -->
+<!-- Mini Project: Quiz Game -->
 <li style="margin:18px 0;" align="center">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Quiz-Game">Quiz Game ↗</a>
@@ -339,7 +336,70 @@
         <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
 
-<!-- ✅ Project : DIP -->
+<!-- FEATURED PROJECTS SECTION For AI & Machine Learning -->
+<details>
+  <summary style="cursor:pointer;list-style:none;">
+    <p align="center" style="margin:0;">
+      <img src="Assets/LearningIntelligenceResearchSystems.svg" width="1000" height="90" alt="Learning & Intelligence Research Systems">
+    </p>
+  </summary>
+  <div style="height:12px;"></div>
+  <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
+    <ul style="list-style:none;padding-left:0;margin:14px 0;">
+
+
+<!-- Project: How Transformer LLMs Work -->
+<li style="margin:18px 0;">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/How-Transformer-LLMs-Work">How Transformer LLMs Work - Research Implementation ↗</a>
+  </h4>
+  <p style="margin:4px 0 6px 0;font-size:12px;color:#666;font-family:'Comic Sans MS','Segoe UI';">
+    <img src="https://img.shields.io/github/stars/Someshdiwan/How-Transformer-LLMs-Work?style=social" alt="stars">
+    <img src="https://img.shields.io/github/last-commit/Someshdiwan/How-Transformer-LLMs-Work" alt="last commit">
+    <img src="https://img.shields.io/badge/License-Apache--2.0-blue" alt="license">
+  </p>
+  <details>
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      Encoder-Decoder • Self-Attention • Neural Machine Translation • Tokenization • Mathematical Foundations ↗
+    </summary>
+    <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+      • Built complete <strong>English-Hindi Transformer translator from scratch in PyTorch</strong> — implementing encoder-decoder architecture, multi-head attention, positional encoding, and layer normalization without pre-trained models<br>
+      • Developed <strong>custom tokenization pipeline</strong> with trained SentencePiece models (400+ vocab) for both languages, handling morphologically rich Hindi text and understanding subword tokenization strategies<br>
+      • Implemented <strong>self-attention mechanism with mathematical foundations</strong>: Query-Key-Value projections, scaled dot-product attention (Q·K^T/√d_k), softmax normalization, and weighted aggregation — visualized through interactive notebooks<br>
+      • Created <strong>comparative tokenizer study</strong> benchmarking BERT, GPT-2, and RoBERTa on bilingual datasets to analyze vocabulary efficiency, OOV handling, and tokenization behavior differences<br>
+      • Built <strong>end-to-end production pipeline</strong>: dataset preprocessing with teacher forcing → model training with cross-entropy loss → checkpointing → FastAPI REST API → Streamlit web interface for real-time translation<br>
+      • Designed comprehensive <strong>system architecture diagrams</strong> (encoder-decoder flow, multi-head attention structure, ML system design) for technical documentation and presentations<br>
+      • Gained deep understanding of <strong>why Transformers replaced RNNs</strong>: parallel processing advantages, attention for long-range dependencies, computational efficiency, and gradient flow in deep architectures<br>
+      • Mastered <strong>PyTorch fundamentals</strong>: custom nn.Module design, Dataset/DataLoader patterns, GPU optimization, model serialization, and debugging attention weights<br>
+      • Explored <strong>research-level concepts</strong>: positional encoding (sinusoidal embeddings), backpropagation through time, trade-offs between model capacity and compute, low-resource language handling<br>
+      • Developed <strong>MLOps practices</strong>: dependency management (Poetry + pip), model versioning, reproducible experiments, API deployment, and monitoring inference performance<br>
+      • Positioned for <strong>advanced NLP work</strong>: understanding fundamentals enables implementing state-of-the-art systems (BERT, GPT, T5), debugging model internals, and contributing to research on parameter-efficient fine-tuning (LoRA), model compression
+    </div>
+  </details>
+</li>
+
+
+
+</ul>
+</div>
+</details>
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+<!-- Projects and learning: Foundational AI & ML Learning System -->
+
+<details>
+  <summary style="cursor:pointer;list-style:none;">
+    <p align="center" style="margin:0;">
+      <img src="Assets/FoundationalLearningSystems.svg" width="960" height="50" alt="Foundational AI & ML Learning Systems">
+    </p>
+  </summary>
+  <div style="height:12px;"></div>
+  <div align="center" style="width:100%;max-width:980px;margin:0 auto;">
+    <ul style="list-style:none;padding-left:0;margin:14px 0;">
+
+<!-- Project : DIP -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Digital-Image-Processing">Digital Image Processing ↗</a>
@@ -367,12 +427,7 @@
   </details>
 </li>
 
-
-
-
-
-
-<!-- ✅ Project 1: ANN -->
+<!-- Project 1: ANN -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Artificial-Neural-Networks-ANNs">Artificial Neural Networks (ANNs) ↗</a>
@@ -398,7 +453,7 @@
 </li>
 
 
- <!-- ✅ Project 2: CNN -->
+<!-- Project 2: CNN -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Convolutional-Neural-Network">Convolutional Neural Network ↗</a>
@@ -450,15 +505,7 @@
   </details>
 </li>
 
-
-
-
-
-
-
-
-
- <!-- ✅ Project 4: ERS -->
+<!-- Project 4: ERS -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Emotion-Recognition-System">Emotion Recognition System ↗</a>
@@ -483,7 +530,7 @@
 </li>
 
 
- <!-- ✅ Project 5: HFT -->
+<!-- Project 5: HFT -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/HFTutorial">Text Summarization with HuggingFace Transformers ↗</a>
@@ -508,9 +555,7 @@
   </details>
 </li>
 
-
-
-<!-- ✅ Project 5: CVPR -->
+<!-- Project 5: CVPR -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Computer-Vision-and-Pattern-Recognition">Computer Vision and Pattern Recognition ↗</a>
@@ -534,12 +579,7 @@
   </details>
 </li>
 
-
-
-
-
-
-<!-- ✅ Project 6: IR -->
+<!-- Project 6: IR -->
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Information-Retrieval">Information Retrieval ↗</a>
@@ -563,23 +603,14 @@
       • Comprehensive conceptual coverage bridging classical IR, feature extraction, and machine learning for text understanding<br>
     </div>
   </details>
-</li>
-
-
-
-
-
 </ul>
-</td>
-    </tr>
-  </table>
+</div>
 </details>
 
-
-
-
-
-
+</td>
+</tr>
+</table>
+</details>
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -629,7 +660,7 @@
         </td>
         <td align="center" width="180" style="border:none; padding:10px;">
              <a href="https://atcoder.jp/users/SomeshDiwan" target="_blank" rel="noopener">
-             <img src="Assets/Atcoder3.png" alt="AtCoder logo" width="70" height="70">
+             <img src="Assets/Atcoder.png" alt="AtCoder logo" width="87" height="87">
              </a>
        </td>
         <td align="center" width="180" style="border:none; padding:10px;">
@@ -912,8 +943,6 @@
          width="1000"/>
   </div>
 
-------------------------------------------------------------------------------------------------------------------------
-
 <!-- Row of GIFs 
   <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
     <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
@@ -935,3 +964,5 @@
     </a>
   </div>
  -->
+
+------------------------------------------------------------------------------------------------------------------------
