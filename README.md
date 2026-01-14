@@ -340,7 +340,7 @@
 <details>
   <summary style="cursor:pointer;list-style:none;">
     <p align="center" style="margin:0;">
-      <img src="Assets/LearningIntelligenceResearchSystems.svg" width="1000" height="90" alt="Learning & Intelligence Research Systems">
+      <img src="Assets/LearningIntelligenceResearchSystems2.svg" width="480" height="42" alt="Learning & Intelligence Research Systems">
     </p>
   </summary>
   <div style="height:12px;"></div>

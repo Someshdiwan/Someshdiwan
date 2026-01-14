@@ -33,5 +33,5 @@
         <rect x="21" y="20" width="418" height="26" rx="13" fill="url(#shined)"/>
     </g>
     <text x="230" y="45" fill="#ffffff" font-size="20" font-family="Comic Sans MS, cursive" text-anchor="middle" font-weight="bold">🌟 Featured Projects</text>
-    <text x="230" y="63" fill="#e6e6e6" font-size="13" font-family="Comic Sans MS, cursive" text-anchor="middle">(Click to expand ⬇️)</text>
+    <text x="230" y="63" fill="#e6e6e6" font-size="13" font-family="Comic Sans MS, cursive" text-anchor="middle">(Click to redirect and expand ⬇️)</text>
 </svg>
