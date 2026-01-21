@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const { graphql } = require('@octokit/graphql');
 const {
     parseISO,
@@ -169,7 +167,6 @@ async function run() {
       </feMerge>
     </filter>
     <style>
-      /* fonts */
       text, .label, .monthLabel { font-family: ${fontFamily}; }
       .title { font-family: ${fontFamily}; font-size:18px; fill:${textColor}; font-weight:700; }
       .label { font-size:11px; fill:#c7d2da; }
@@ -269,7 +266,6 @@ async function run() {
     fs.writeFileSync(args.out, svg, 'utf8');
     console.log('✅ Wrote', args.out);
 
-    // CI-friendly totals log for quick verification
     const total = months.reduce((s, v) => s + v, 0);
     console.log(`Totals per month: ${months.join(', ')}`);
     console.log(`Total contributions in ${year}: ${total}`);
