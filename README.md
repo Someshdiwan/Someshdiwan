@@ -221,7 +221,7 @@
 
 <details>
   <summary style="cursor:pointer;list-style:none;">
-    <p align="center" style="margin:0;">
+    <p align="left" style="margin:0;">
       <img src="Assets/MiniProjects.svg" width="480" height="42" alt="Mini Projects For Hands On Skills">
     </p>
   </summary>
@@ -364,20 +364,15 @@
     <div style="margin:8px 0 0 6px;font-size:13px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
       • Built complete <strong>English-Hindi Transformer translator from scratch in PyTorch</strong> — implementing encoder-decoder architecture, multi-head attention, positional encoding, and layer normalization without pre-trained models<br>
       • Developed <strong>custom tokenization pipeline</strong> with trained SentencePiece models (400+ vocab) for both languages, handling morphologically rich Hindi text and understanding subword tokenization strategies<br>
-      • Implemented <strong>self-attention mechanism with mathematical foundations</strong>: Query-Key-Value projections, scaled dot-product attention (Q·K^T/√d_k), softmax normalization, and weighted aggregation — visualized through interactive notebooks<br>
+      • Implemented <strong>self-attention mechanism with mathematical foundations</strong>: Query-Key-Value projections, softmax normalization, and weighted aggregation — visualized through interactive notebooks<br>
       • Created <strong>comparative tokenizer study</strong> benchmarking BERT, GPT-2, and RoBERTa on bilingual datasets to analyze vocabulary efficiency, OOV handling, and tokenization behavior differences<br>
-      • Built <strong>end-to-end production pipeline</strong>: dataset preprocessing with teacher forcing → model training with cross-entropy loss → checkpointing → FastAPI REST API → Streamlit web interface for real-time translation<br>
       • Designed comprehensive <strong>system architecture diagrams</strong> (encoder-decoder flow, multi-head attention structure, ML system design) for technical documentation and presentations<br>
       • Gained deep understanding of <strong>why Transformers replaced RNNs</strong>: parallel processing advantages, attention for long-range dependencies, computational efficiency, and gradient flow in deep architectures<br>
       • Mastered <strong>PyTorch fundamentals</strong>: custom nn.Module design, Dataset/DataLoader patterns, GPU optimization, model serialization, and debugging attention weights<br>
       • Explored <strong>research-level concepts</strong>: positional encoding (sinusoidal embeddings), backpropagation through time, trade-offs between model capacity and compute, low-resource language handling<br>
-      • Developed <strong>MLOps practices</strong>: dependency management (Poetry + pip), model versioning, reproducible experiments, API deployment, and monitoring inference performance<br>
-      • Positioned for <strong>advanced NLP work</strong>: understanding fundamentals enables implementing state-of-the-art systems (BERT, GPT, T5), debugging model internals, and contributing to research on parameter-efficient fine-tuning (LoRA), model compression
     </div>
   </details>
 </li>
-
-
 
 </ul>
 </div>
@@ -395,7 +390,7 @@
     </p>
   </summary>
   <div style="height:12px;"></div>
-  <div align="center" style="width:100%;max-width:980px;margin:0 auto;">
+  <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
 
 <!-- Project : DIP -->
