@@ -44,9 +44,9 @@
         <animate attributeName="r" values="16;19;16" dur="2.6s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.6s" repeatCount="indefinite"/>
     </circle>
-    <!-- 🤝 emoji with tilt + bob -->
+    <!-- emoji with tilt + bob -->
     <g>
-        <text x="16" y="50%" class="title">💫</text>
+        <text x="16" y="50%" class="title">📍</text>
         <animateTransform attributeName="transform" type="rotate"
                           values="-7 24 28; 7 24 28; -7 24 28"
                           dur="3s" repeatCount="indefinite"/>
@@ -70,10 +70,7 @@
             <animateTransform attributeName="transform" type="scale" values="1;1.4;1" dur="3.2s" begin="0.6s" repeatCount="indefinite"/>
         </g>
     </g>
-    <!-- Title -->
     <text x="56" y="50%" class="title">Where to Find Me</text>
-    <!-- Underline: base shadow + static teal + continuous shimmer -->
-    <!-- Underline (no shadow): static + moving shimmer -->
     <g transform="translate(56,0)">
         <path d="M0,42 L260,42"
               fill="none"
