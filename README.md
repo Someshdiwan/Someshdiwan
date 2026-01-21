@@ -729,7 +729,7 @@
 <!-- Section Heading shifted right -->
 <div style="width:100%;">
   <div style="display:inline-block; margin-left:260px;">
-    <p align="center" style="margin:8px 0 0 0;">
+    <p align="center" style="margin:10px 0 0 0;">
       <img src="Assets/programming-languages.svg" alt="Programming Languages" width="500">
     </p>
   </div>
@@ -745,6 +745,9 @@
     <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
 </a>
 </p>
+
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 <!-- Section Heading shifted right -->
