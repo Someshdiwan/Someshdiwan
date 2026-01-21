@@ -221,15 +221,15 @@
 
 <details>
   <summary style="cursor:pointer;list-style:none;">
-    <p align="left" style="margin:0;">
+    <p align="center" style="margin:0;">
       <img src="Assets/MiniProjects.svg" width="480" height="42" alt="Mini Projects For Hands On Skills">
     </p>
   </summary>
   <div style="height:12px;"></div>
-  <div align="center" style="width:100%;max-width:980px;margin:0 auto;">
+  <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
   <!-- Mini Project: File Encryption Tool -->
-      <li style="margin:18px 0;" align="center">
+      <li style="margin:18px 0;" align="left">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
   </h4>
@@ -250,7 +250,7 @@
   </div>
 
 <!-- Mini Project: Inventory Management System -->
-<li style="margin:18px 0;" align="center">
+<li style="margin:18px 0;" align="left">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/InventoryManagement">Inventory Management System ↗</a>
   </h4>
@@ -269,7 +269,7 @@
 </li>
 
 <!-- Mini Project: Word Counter -->
-<li style="margin:18px 0;" align="center">
+<li style="margin:18px 0;" align="left">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Word-Counter">Word Counter ↗</a>
   </h4>
@@ -288,7 +288,7 @@
 </li>
 
 <!-- Mini Project: Contact Manager -->
-<li style="margin:18px 0;" align="center">
+<li style="margin:18px 0;" align="left">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Contact-Manager">Contact Manager ↗</a>
   </h4>
@@ -308,7 +308,7 @@
 
 
 <!-- Mini Project: Quiz Game -->
-<li style="margin:18px 0;" align="center">
+<li style="margin:18px 0;" align="left">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Quiz-Game">Quiz Game ↗</a>
   </h4>
