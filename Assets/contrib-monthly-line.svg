@@ -14,7 +14,6 @@
       </feMerge>
     </filter>
     <style>
-      /* fonts */
       text, .label, .monthLabel { font-family: 'Comic Sans MS', 'Comic Sans', cursive; }
       .title { font-family: 'Comic Sans MS', 'Comic Sans', cursive; font-size:18px; fill:#e6eef6; font-weight:700; }
       .label { font-size:11px; fill:#c7d2da; }
@@ -53,15 +52,15 @@
 <rect width="100%" height="100%" rx="12" fill="#0f1720" />
 <text x="600" y="36.66666666666667" text-anchor="middle" class="title">Contributions — 2026</text>
 <line x1="72" x2="1152" y1="44" y2="44" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="60" y="48" text-anchor="end" class="label">72</text>
+<text x="60" y="48" text-anchor="end" class="label">99</text>
 <line x1="72" x2="1152" y1="91.2" y2="91.2" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="60" y="95.2" text-anchor="end" class="label">58</text>
+<text x="60" y="95.2" text-anchor="end" class="label">79</text>
 <line x1="72" x2="1152" y1="138.4" y2="138.4" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="60" y="142.4" text-anchor="end" class="label">43</text>
+<text x="60" y="142.4" text-anchor="end" class="label">59</text>
 <line x1="72" x2="1152" y1="185.6" y2="185.6" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="60" y="189.6" text-anchor="end" class="label">29</text>
+<text x="60" y="189.6" text-anchor="end" class="label">40</text>
 <line x1="72" x2="1152" y1="232.8" y2="232.8" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
-<text x="60" y="236.8" text-anchor="end" class="label">14</text>
+<text x="60" y="236.8" text-anchor="end" class="label">20</text>
 <line x1="72" x2="1152" y1="280" y2="280" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4 4"/>
 <text x="60" y="284" text-anchor="end" class="label">0</text>
 <text x="72" y="322" text-anchor="middle" class="monthLabel">Jan</text>
@@ -104,7 +103,7 @@
     </g>
   
 <circle cx="72" cy="44" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
-<text x="72" y="34" text-anchor="middle" class="label">72</text>
+<text x="72" y="34" text-anchor="middle" class="label">99</text>
 <circle cx="170.1818181818182" cy="280" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
 <circle cx="268.3636363636364" cy="280" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
 <circle cx="366.5454545454545" cy="280" r="4" fill="#9be7ff" stroke="#063241" stroke-width="1"/>
