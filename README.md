@@ -653,11 +653,6 @@
         </a>
         </td>
         <td align="center" width="180" style="border:none; padding:10px;">
-             <a href="https://atcoder.jp/users/SomeshDiwan" target="_blank" rel="noopener">
-             <img src="Assets/Atcoder.png" alt="AtCoder logo" width="87" height="87">
-             </a>
-       </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
              <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
               <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
               </a>
