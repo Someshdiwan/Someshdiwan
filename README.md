@@ -816,16 +816,3 @@
     width="1000" />
 </p>
 </details>
-
-------------------------------------------------------------------------------------------------------------------------
-
-<div align="center" style="margin-top: 20px; margin-bottom: 20px;">
-  <!-- Thank You -->
-  <div style="margin-top: 15px; margin-bottom: 8px;">
-    <img src="Assets/thanks.svg"
-         alt="Thank you for visiting"
-         width="1000"/>
-  </div>
-</div>
-
-------------------------------------------------------------------------------------------------------------------------
