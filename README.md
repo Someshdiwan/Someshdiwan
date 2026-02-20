@@ -622,10 +622,11 @@
 
 <br>
 
-<!-- Profile Views pending updating -->
+<!-- Profile Views (auto-updated daily by fetch-profile-views workflow) -->
 <p align="left">
-  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
-       alt="Profile views counter" height="22">
+  <img src=".github/profile-views.svg"
+       alt="Profile views counter"
+       height="22">
 </p>
 
 <!-- Icon Grid -->
