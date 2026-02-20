@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="28" role="img" aria-label="Hugging Face">
+    <defs>
+        <linearGradient id="gradDark" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.5"/>
+            <stop offset="45%"  stop-color="#ffffff" stop-opacity="0.5"/>
+            <stop offset="50%"  stop-color="#ffffff" stop-opacity="1"/>
+            <stop offset="55%"  stop-color="#ffffff" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5"/>
+            <animateTransform attributeName="gradientTransform"
+                              type="translate" from="-120 0" to="120 0"
+                              dur="2.8s" repeatCount="indefinite"/>
+        </linearGradient>
+        <linearGradient id="gradLight" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#1a1a1a" stop-opacity="0.5"/>
+            <stop offset="45%"  stop-color="#1a1a1a" stop-opacity="0.5"/>
+            <stop offset="50%"  stop-color="#000000" stop-opacity="1"/>
+            <stop offset="55%"  stop-color="#1a1a1a" stop-opacity="0.5"/>
+            <stop offset="100%" stop-color="#1a1a1a" stop-opacity="0.5"/>
+            <animateTransform attributeName="gradientTransform"
+                              type="translate" from="-120 0" to="120 0"
+                              dur="2.8s" repeatCount="indefinite"/>
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b1"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3"   result="b2"/>
+            <feMerge>
+                <feMergeNode in="b2"/>
+                <feMergeNode in="b1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <style>
+        .dark  { display: none; }
+        .light { display: inline; }
+        @media (prefers-color-scheme: dark) {
+        .dark  { display: inline; }
+        .light { display: none; }
+        }
+    </style>
+    <g class="light">
+        <text x="60" y="18"
+              font-family="Comic Sans MS, Chalkboard SE, cursive"
+              font-size="13" font-weight="bold"
+              fill="#1a1a1a" text-anchor="middle" opacity="0.75">Hugging Face</text>
+        <text x="60" y="18"
+              font-family="Comic Sans MS, Chalkboard SE, cursive"
+              font-size="13" font-weight="bold"
+              fill="url(#gradLight)" text-anchor="middle"
+              filter="url(#glow)">Hugging Face</text>
+    </g>
+    <g class="dark">
+        <text x="60" y="18"
+              font-family="Comic Sans MS, Chalkboard SE, cursive"
+              font-size="13" font-weight="bold"
+              fill="#ffffff" text-anchor="middle" opacity="0.75">Hugging Face</text>
+        <text x="60" y="18"
+              font-family="Comic Sans MS, Chalkboard SE, cursive"
+              font-size="13" font-weight="bold"
+              fill="url(#gradDark)" text-anchor="middle"
+              filter="url(#glow)">Hugging Face</text>
+    </g>
+</svg>

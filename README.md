@@ -607,8 +607,6 @@
 
 ------------------------------------------------------------------------------------------------------------------------
 
-<!-- Extremely complicated while developing this first time -->
-
 <!-- ══ WHERE TO FIND ME ══ -->
 <details>
 <summary align="center" style="list-style: none; cursor: pointer;">
@@ -619,48 +617,67 @@
     style="display: block; margin: 0 auto;"
   />
 </summary>
-
 <br>
 
-<!-- Profile Views (auto-updated daily by fetch-profile-views workflow) -->
-<p align="left">
+<!-- Profile Views -->
+<p align="center">
   <img src=".github/profile-views.svg"
        alt="Profile views counter"
        height="22">
 </p>
+<br>
 
 <!-- Icon Grid -->
 <div align="center">
   <table style="border-collapse:collapse; border:none; margin:auto;">
     <tr>
-      <td align="center" width="160" style="border:none; padding:12px;">
-      <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
-      <img src="Assets/codechef.png" alt="CodeChef" width="70" height="80"><br>
-      <img src="Assets/MyHandles/Codechef.svg" alt="CodeChef" width="170"/>
-  </a>
-</td>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <!-- CodeChef -->
+      <td align="center" width="160" style="border:none; padding:16px 12px;">
+        <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
+          <img src="Assets/codechef.png" alt="CodeChef" width="60" height="70"
+               style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Codechef.svg" alt="CodeChef" width="110"
+               style="display:block; margin:4px auto 0;">
+        </a>
+      </td>
+      <!-- LeetCode -->
+      <td align="center" width="160" style="border:none; padding:16px 12px;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode">
           <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
-               alt="LeetCode" width="48" height="48">
+               alt="LeetCode" width="60" height="70"
+               style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Leetcode.svg" alt="LeetCode" width="110"
+               style="display:block; margin:4px auto 0;">
         </a>
       </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <!-- Codeforces -->
+      <td align="center" width="160" style="border:none; padding:16px 12px;">
         <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener" title="Codeforces">
           <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg"
-               alt="Codeforces" width="48" height="48">
+               alt="Codeforces" width="60" height="70"
+               style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Codeforces.svg" alt="Codeforces" width="110"
+               style="display:block; margin:4px auto 0;">
         </a>
       </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <!-- Hugging Face -->
+      <td align="center" width="160" style="border:none; padding:16px 12px;">
         <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener" title="Hugging Face">
           <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-               alt="Hugging Face" width="48" height="48">
+               alt="Hugging Face" width="60" height="70"
+               style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/HuggingFace.svg" alt="Hugging Face" width="110"
+               style="display:block; margin:4px auto 0;">
         </a>
       </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <!-- Product Hunt -->
+      <td align="center" width="160" style="border:none; padding:16px 12px;">
         <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener" title="Product Hunt">
           <img src="https://cdn.simpleicons.org/producthunt/DA552F"
-               alt="Product Hunt" width="48" height="48">
+               alt="Product Hunt" width="60" height="70"
+               style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/ProductHunt.svg" alt="Product Hunt" width="110"
+               style="display:block; margin:4px auto 0;">
         </a>
       </td>
     </tr>
