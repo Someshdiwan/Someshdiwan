@@ -621,7 +621,8 @@
 <br>
 
 <p align="center">
-  <img src=".github/profile-views.svg" alt="Profile views counter" height="24">
+  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
+       alt="Profile views counter" height="24">
 </p>
 
 <div align="center">
