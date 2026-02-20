@@ -622,7 +622,7 @@
 
 <br>
 
-<!-- Profile Views -->
+<!-- Profile Views pending updating -->
 <p align="left">
   <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
        alt="Profile views counter" height="22">
@@ -633,10 +633,11 @@
   <table style="border-collapse:collapse; border:none; margin:auto;">
     <tr>
       <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
-          <img src="Assets/codechef.png" alt="CodeChef" width="70" height="80">
-        </a>
-      </td>
+      <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
+      <img src="Assets/codechef.png" alt="CodeChef" width="70" height="80"><br>
+      <img src="Assets/MyHandles/Codechef.svg" alt="CodeChef" width="170"/>
+  </a>
+</td>
       <td align="center" width="160" style="border:none; padding:12px;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode">
           <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
