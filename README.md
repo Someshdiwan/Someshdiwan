@@ -624,10 +624,9 @@
   <img src=".github/profile-views.svg" alt="Profile views counter" height="24">
 </p>
 
-<br>
-
 <div align="center">
   <table style="border-collapse:collapse; border:none; margin:0 auto;">
+    <!-- Row 1 -->
     <tr>
       <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
@@ -670,14 +669,24 @@
         </a>
       </td>
     </tr>
+    <!-- Row 2 -->
+    <tr>
+  <td align="center" style="border:none; padding:20px 22px;">
+    <a href="https://www.kaggle.com/someshsanjaydiwan" target="_blank" rel="noopener" title="Kaggle">
+      <img src="https://www.kaggle.com/static/images/site-logo.png"
+           alt="Kaggle" width="94" height="64"
+           style="display:block; margin:0 auto;"><br>
+      <img src="Assets/MyHandles/Kaggel.svg" alt="Kaggle"
+           width="120" style="display:block; margin:6px auto 0;">
+    </a>
+  </td>
+</tr>
   </table>
 </div>
-
 <br>
-
 </details>
 
----
+------------------------------------------------------------------------------------------------------------------------
 
 <!-- ══ SIDE HUSTLE ══ -->
 <details>
