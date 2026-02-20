@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="90" role="img" aria-label="Side Hustle">
+    <style>
+        .title {
+        font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+        font-size: 28px;
+        font-weight: bold;
+        fill: url(#titleGrad);
+        letter-spacing: 5px;
+        dominant-baseline: middle;
+        }
+        .sub {
+        font-family: "Comic Sans MS", "Chalkboard SE", cursive;
+        font-size: 10px;
+        font-weight: bold;
+        fill: #FF8C00;
+        letter-spacing: 2.5px;
+        dominant-baseline: middle;
+        opacity: 0.8;
+        }
+    </style>
+
+    <defs>
+        <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stop-color="#FF5500"/>
+            <stop offset="30%"  stop-color="#FF8C00"/>
+            <stop offset="60%"  stop-color="#FFE066"/>
+            <stop offset="80%"  stop-color="#FF8C00"/>
+            <stop offset="100%" stop-color="#FF5500"/>
+            <animateTransform attributeName="gradientTransform"
+                              type="translate" from="-1 0" to="1 0"
+                              dur="4s" repeatCount="indefinite"/>
+        </linearGradient>
+
+        <filter id="neon" x="-40%" y="-120%" width="180%" height="340%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2"  result="b1"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5"  result="b2"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="b3"/>
+            <feMerge>
+                <feMergeNode in="b3"/>
+                <feMergeNode in="b2"/>
+                <feMergeNode in="b1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <filter id="emojiGlow" x="-80%" y="-80%" width="260%" height="260%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#FF8C00" stop-opacity="1"/>
+            <stop offset="60%"  stop-color="#FF4400" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#FF8C00" stop-opacity="0"/>
+        </radialGradient>
+
+        <linearGradient id="sweep" x1="0" y1="0" x2="350" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="44%"  stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="50%"  stop-color="#FFFFFF"  stop-opacity="1"/>
+            <stop offset="56%"  stop-color="#FF8C00" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FF8C00" stop-opacity="0"/>
+            <animateTransform attributeName="gradientTransform"
+                              type="translate" from="-350 0" to="350 0"
+                              dur="2.2s" repeatCount="indefinite"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Emoji halo -->
+    <circle cx="42" cy="44" r="18" fill="url(#halo)">
+        <animate attributeName="r"       values="16;22;16" dur="2.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Emoji float + tilt -->
+    <g filter="url(#emojiGlow)">
+        <animateTransform attributeName="transform" type="rotate"
+                          values="-12 42 44; 12 42 44; -12 42 44"
+                          dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" additive="sum"
+                          values="0 -3; 0 3; 0 -3"
+                          dur="1.8s" repeatCount="indefinite"/>
+        <text x="28" y="52" style="font-size:26px; font-family: sans-serif;">⚡</text>
+    </g>
+
+    <!-- Title -->
+    <text x="80" y="44" class="title" filter="url(#neon)">SIDE HUSTLE</text>
+
+    <!-- Underline -->
+    <g transform="translate(80,0)">
+        <path d="M0,57 L350,57" fill="none"
+              stroke="#FF8C00" stroke-width="1.8" stroke-linecap="round" opacity="0.3"/>
+        <path d="M0,57 L350,57" fill="none"
+              stroke="url(#sweep)" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="82" y="74" class="sub">[ click to explore  ›› ]</text>
+
+</svg>

@@ -471,8 +471,6 @@
     </div>
   </details>
 </li>
-
-
 <li style="margin:18px 0;">
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/Generative-Adversarial-Network-">Generative Adversarial Network (GAN) ↗</a>
@@ -611,113 +609,137 @@
 
 <!-- Extremely complicated while developing this first time -->
 
+<!-- ══ WHERE TO FIND ME ══ -->
 <details>
-<summary align="center" style="list-style: none;">
+<summary align="center" style="list-style: none; cursor: pointer;">
   <img
     src="Assets/connect.svg?v=4"
     alt="Where to Find Me"
     width="350"
-    style="cursor: pointer; display: block; margin: 0 auto;"
+    style="display: block; margin: 0 auto;"
   />
 </summary>
 
-  <!-- PROFILE VIEWS -->
-  <p align="left">
-    <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
-         alt="Profile views counter" height="22">
-  </p>
+<br>
 
-  <!-- CENTER WRAPPER ADDED HERE -->
-  <div align="center">
-    <!-- ICON GRID (no borders) -->
-    <table style="border-collapse:collapse; border-spacing:0; border:none; margin:auto;">
-      <tr>
-        <td align="center" width="180" style="border:none; padding:10px;">
-          <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener">
-            <img src="Assets/codechef.png"
-                 alt="CodeChef logo" width="70" height="80">
-          </a>
-        </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
-          <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener">
-            <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
-                 alt="LeetCode logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
-        <a class="link-card" href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener noreferrer" title="Codeforces — SomeshDiwan">
-             <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg" 
-         alt="Codeforces logo"
-         width="48" height="48"
-         style="display:block;" /> 
+<!-- Profile Views -->
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
+       alt="Profile views counter" height="22">
+</p>
+
+<!-- Icon Grid -->
+<div align="center">
+  <table style="border-collapse:collapse; border:none; margin:auto;">
+    <tr>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
+          <img src="Assets/codechef.png" alt="CodeChef" width="70" height="80">
         </a>
-        </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
-             <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener">
-              <img src="Assets/substack.png" alt="Substack logo" width="45" height="45">
-              </a>
-        </td>
-      </tr>
-      <tr>
-        <td align="center" style="border:none; padding:10px;">
-          <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener">
-            <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-                 alt="Hugging Face logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" style="border:none; padding:10px;">
-          <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener">
-            <img src="https://cdn.simpleicons.org/producthunt/DA552F"
-                 alt="Product Hunt logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" style="border:none; padding:10px;">
-          <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
-                 alt="Medium logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
-              <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
-                         target="_blank" rel="noopener">
-                 <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
-             alt="Code Review Stack Exchange Profile" width="48" height="48">
-               </a>
-         </td>
-      </tr>
-      <tr>
-        <td align="center" style="border:none; padding:10px;">
-          <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
-                 alt="WakaTime logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" style="border:none; padding:10px;">
-          <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
-                 alt="Notion logo" width="48" height="48">
-          </a>
-        </td>
-        <td align="center" width="180" style="border:none; padding:10px;">
-          <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
-             target="_blank" rel="noopener">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
-                 alt="My Anki — Vocabulary Vault" width="48" height="48">
-          </a>
-        </td>
-<td align="center" width="180" style="border:none; padding:10px;">
-  <a href="https://docs.google.com/spreadsheets/d/14Ag_rNUwVP-BIjj0KJyLUjOb-VFecCvsH6yBcZWnOAs/edit?gid=584521556"
-     target="_blank" rel="noopener">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
-         alt="Google Sheets — Vocabulary Vault" width="48" height="48">
-  </a>
-</td>
-      </tr>
-    </table>
-  </div> <!-- END CENTER WRAPPER -->
-  <br>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode">
+          <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
+               alt="LeetCode" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener" title="Codeforces">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg"
+               alt="Codeforces" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener" title="Hugging Face">
+          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+               alt="Hugging Face" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener" title="Product Hunt">
+          <img src="https://cdn.simpleicons.org/producthunt/DA552F"
+               alt="Product Hunt" width="48" height="48">
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
+
+<!-- ══ SIDE HUSTLE ══ -->
+<details>
+<summary align="center" style="list-style: none; cursor: pointer;">
+  <img
+    src="Assets/SideHustel.svg?v=4"
+    alt="Side Hustle"
+    width="350"
+    style="display: block; margin: 0 auto;"
+  />
+</summary>
+
+<br>
+
+<!-- Icon Grid -->
+<div align="center">
+  <table style="border-collapse:collapse; border:none; margin:auto;">
+    <tr>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener" title="Substack">
+          <img src="Assets/substack.png" alt="Substack" width="45" height="45">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+               alt="WakaTime" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener" title="Notion">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
+               alt="Notion" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
+           target="_blank" rel="noopener" title="Anki — Vocabulary Vault">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
+               alt="Anki" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://docs.google.com/spreadsheets/d/14Ag_rNUwVP-BIjj0KJyLUjOb-VFecCvsH6yBcZWnOAs/edit?gid=584521556"
+           target="_blank" rel="noopener" title="Google Sheets — Vocabulary Vault">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
+               alt="Google Sheets" width="48" height="48">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener" title="Medium">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
+               alt="Medium" width="48" height="48">
+        </a>
+      </td>
+      <td align="center" width="160" style="border:none; padding:12px;">
+        <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
+           target="_blank" rel="noopener" title="Code Review Stack Exchange">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
+               alt="Stack Exchange" width="48" height="48">
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+</details>
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -729,167 +751,29 @@
     </p>
   </div>
 </div>
-
 <p align="center">
-<!-- Java Icon (Static in GitHub README — but perfect compatibility) -->
+<!-- Java -->
 <a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
   <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
 </a>
+<!-- Animated & -->
+<img src="Assets/ampersand.svg" width="40" height="65" alt="and" style="vertical-align:middle; margin:0 8px;"/>
 <!-- Python -->
-<a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin: 0 16px;">
-    <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
+<a href="https://www.python.org" target="_blank" title="Python" style="display:inline-block; margin:0 16px;">
+  <img src="https://techstack-generator.vercel.app/python-icon.svg" width="48" height="48" alt="Python"/>
 </a>
 </p>
-
 
 ------------------------------------------------------------------------------------------------------------------------
 
-
-<!-- Section Heading shifted right -->
-<div style="width:100%;">
-  <div style="display:inline-block; margin-left:260px;">
-    <p align="center" style="margin:0;">
-      <img src="Assets/languages.svg" alt="Languages & Tools" width="350">
-    </p>
-  </div>
-
-<!-- Tech Stack Table -->
-
-<div align="center">
-<table cellspacing="0" cellpadding="30" border="0" style="border-collapse: separate; border-spacing: 40px 20px;">
-  <tr>
-    <td align="center" valign="top" width="45%">
-      <!-- Frontend Development -->
-      <img src="Assets/frontend-development.svg" alt="Frontend Development"/>
-      <br/><br/>
-      <p>
-<a href="https://reactjs.org/" target="_blank">
-  <img src="https://techstack-generator.vercel.app/react-icon.svg"
-       alt="React"
-       width="65"
-       height="65"
-       style="margin: 0 20px;"/>
-</a>
-<!-- JavaScript -->
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript" style="display:inline-block; margin: 0 16px;">
-    <img src="https://techstack-generator.vercel.app/js-icon.svg" width="48" height="48" alt="JavaScript"/>
-</a>
-<a href="https://vuejs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="Vue.js" width="50" height="50" style="margin: 0 10px;"/></a>
-        <a href="https://nextjs.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original-wordmark.svg" alt="Next.js" width="50" height="50" style="margin: 0 10px;"/></a>
-      </p>
-      <p>
-        <a href="https://vitest.dev/" target="_blank"><img src="https://vitest.dev/logo.svg" alt="Vitest" width="50" height="50" style="margin: 10px 10px;"/></a>
-        <a href="https://jekyllrb.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" alt="Jekyll" width="50" height="50" style="margin: 10px 10px;"/></a>
-        <a href="https://vitejs.dev/" target="_blank"><img src="https://vitejs.dev/logo.svg" alt="Vite" width="50" height="50" style="margin: 10px 10px;"/></a>
-      </p>
-    </td>
-    <td align="center" valign="top" width="45%">
-<!-- Native App Development -->
-      <img src="Assets/native-app-development.svg" alt="Native App Development"/>
-      <br/><br/>
-      <p style="margin-top: 30px;"> 
-<!-- Swift -->
-<a href="https://developer.apple.com/swift/" target="_blank" title="Swift">
-  <img src="https://techstack-generator.vercel.app/swift-icon.svg"
-       alt="Swift" width="65" height="65" style="margin:0 20px;"/>
-</a>
-<!-- Xcode -->
-<a href="https://developer.apple.com/xcode/" target="_blank" title="Xcode">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xcode/xcode-original.svg"
-       alt="Xcode" width="65" height="65" style="margin:0 20px;"/>
-</a>
-<!-- Create ML -->
-<a href="https://developer.apple.com/machine-learning/create-ml/" target="_blank" title="Create ML">
-  <img src="https://developer.apple.com/assets/elements/icons/core-ml/core-ml-64x64_2x.png"
-       alt="Create ML" width="65" height="65" style="margin:0 20px; border-radius:12px;"/>
-</a>
-</td>
-  </tr>
-  <tr>
-    <td align="center" valign="top" width="45%">
-      <!-- Backend Development -->
-      <img src="Assets/backend-development.svg" alt="Backend Development"/>
-      <br/><br/>
-      <p>
-<a href="https://www.java.com" target="_blank" title="Java" style="display:inline-block; margin:0 16px;">
-  <img src="https://techstack-generator.vercel.app/java-icon.svg" width="65" height="65" alt="Java Icon"/>
-</a>
-<a href="https://spring.io/projects/spring-boot" target="_blank">
-  <img
-    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg"
-    alt="Spring Boot"
-    width="50"
-    height="50"
-  />
-</a>
-&nbsp;&nbsp;
-<a href="https://www.mysql.com/" target="_blank">
-  <img
-    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-    alt="MySQL"
-    width="50"
-    height="50"
-  />
-</a>
-        <a href="https://www.postgresql.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="50" height="50" style="margin: 0 10px;"/></a>
-</p>
-<p>
-<a href="https://www.mongodb.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="MongoDB" width="50" height="50" style="margin: 10px 12px;"/></a>
-<a href="https://www.docker.com" target="_blank">
-  <img src="https://techstack-generator.vercel.app/docker-icon.svg"
-       alt="Docker" width="65" height="65" style="margin:0 20px;">
-</a>
-<a href="https://nodejs.org/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-       alt="Node.js"
-       width="65"
-       height="65"
-       style="margin:0 20px;"/>
-</a>
-<a href="https://vercel.com/" target="_blank"><img src="https://avatars.githubusercontent.com/u/14985020?s=200&v=4" alt="Vercel" width="50" height="50" style="margin: 10px 12px;"/></a>
-
-</p>
-<!-- Design Tools -->
-<img src="Assets/design-tools.svg" alt="Design Tools"/>
-      <br/><br/>
-      <p>
-        <a href="https://www.figma.com/" target="_blank"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="50" height="50" style="margin: 0 18px;"/></a>
-        <a href="https://miro.com/" target="_blank"><img src="https://cdn.simpleicons.org/miro" alt="Miro" width="50" height="50" style="margin: 0 18px;"/></a>
-      </p>
-    </td>
-    <td align="center" valign="top" width="45%">
-      <!-- AI Tools -->
-      <img src="Assets/ai-tools.svg" alt="AI Tools"/>
-      <br/><br/>
-      <p>
-        <a href="https://claude.ai/" target="_blank"><img src="https://avatars.githubusercontent.com/u/76263028?s=200&v=4" alt="Claude AI" width="50" height="50" style="margin: 0 10px;"/></a>
-        <a href="https://lmstudio.ai/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/lmstudio.svg" alt="LM Studio" width="50" height="50" style="margin: 0 10px;"/></a>
-      </p>
-      <p>
-        <a href="https://ollama.com/" target="_blank"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/ollama.svg" alt="Ollama" width="50" height="50" style="margin: 10px 10px;"/></a>
-        <a href="https://huggingface.co/" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" width="50" height="50" style="margin: 10px 10px;"/></a>
-      </p>
-      <p>
-      <p align="center">
-      <img src="Assets/jan-wave.svg" alt="Jan AI" width="300" style="margin:5px 0;"/>
-      </p>
-    </p>
-      <br/>
-    </td>
-  </tr>
-</table>
-</div>
-<br/>
-</div>
-
-------------------------------------------------------------------------------------------------------------------------
-
-<a>
-  <img src="Assets/MonthlyContributions.svg"
-       alt="🌟 Monthly Contributions"
-       width="520"/>
-</a>
-
+<details>
+<summary>
+  <a>
+    <img src="Assets/MonthlyContributions.svg"
+         alt="🌟 Monthly Contributions"
+         width="520"/>
+  </a>
+</summary>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
@@ -899,13 +783,13 @@
       alt="GitHub contribution snake — rolling 52 weeks">
   </picture>
 </p>
-
 <p align="left">
   <img
     src="Assets/contrib-monthly-line.svg?v=live"
     alt="Monthly contributions (line)"
     width="1000" />
 </p>
+</details>
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -916,7 +800,6 @@
     alt="Expand: 2025 Archived Contributions"
     width="300" />
 </summary>
-
 <p align="left">
   <img
     src="https://github.com/Someshdiwan/Someshdiwan/blob/main/Assets/2025/2025-Archived.svg"
@@ -934,27 +817,6 @@
          alt="Thank you for visiting"
          width="1000"/>
   </div>
-
-<!-- Row of GIFs 
-  <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
-    <img src="Image/Cat.gif" alt="MyCatDuoDuo" width="150"/>
-  </div>
 </div>
--->
-
- <!-- 
-  GitHub Streak Stats
-  <div style="margin-top: 1px;">
-    <a href="https://github.com/Someshdiwan/Someshdiwan" rel="noopener">
-      <img src="https://raw.githubusercontent.com/Someshdiwan/Someshdiwan/main/streak.svg?v=22169166893"
-           alt="GitHub Streak Stats"
-           width="270"/>
-    </a>
-  </div>
- -->
 
 ------------------------------------------------------------------------------------------------------------------------

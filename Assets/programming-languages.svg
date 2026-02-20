@@ -34,8 +34,8 @@
         }
     </style>
     <text x="0" y="50%" class="title">
-        <tspan dx="5"> Programming Languages</tspan>
-        <tspan class="emoji">🧠👨🏻‍💻</tspan>
+        <tspan dx="5">My Programming Languages</tspan>
+        <tspan class="emoji">👨🏻‍💻</tspan>
         <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
     </text>
 </svg>
