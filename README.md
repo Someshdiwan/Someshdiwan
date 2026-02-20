@@ -617,67 +617,56 @@
     style="display: block; margin: 0 auto;"
   />
 </summary>
+
 <br>
 
-<!-- Profile Views -->
 <p align="center">
-  <img src=".github/profile-views.svg"
-       alt="Profile views counter"
-       height="22">
+  <img src=".github/profile-views.svg" alt="Profile views counter" height="24">
 </p>
+
 <br>
 
-<!-- Icon Grid -->
 <div align="center">
-  <table style="border-collapse:collapse; border:none; margin:auto;">
+  <table style="border-collapse:collapse; border:none; margin:0 auto;">
     <tr>
-      <!-- CodeChef -->
-      <td align="center" width="160" style="border:none; padding:16px 12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://www.codechef.com/users/someshdiwan" target="_blank" rel="noopener" title="CodeChef">
-          <img src="Assets/codechef.png" alt="CodeChef" width="60" height="70"
-               style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/Codechef.svg" alt="CodeChef" width="110"
-               style="display:block; margin:4px auto 0;">
+          <img src="Assets/codechef.png" alt="CodeChef"
+               width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Codechef.svg" alt="CodeChef"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-      <!-- LeetCode -->
-      <td align="center" width="160" style="border:none; padding:16px 12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://leetcode.com/u/someshdiwan/" target="_blank" rel="noopener" title="LeetCode">
           <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
-               alt="LeetCode" width="60" height="70"
-               style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/Leetcode.svg" alt="LeetCode" width="110"
-               style="display:block; margin:4px auto 0;">
+               alt="LeetCode" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Leetcode.svg" alt="LeetCode"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-      <!-- Codeforces -->
-      <td align="center" width="160" style="border:none; padding:16px 12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://codeforces.com/profile/SomeshDiwan" target="_blank" rel="noopener" title="Codeforces">
           <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codeforces.svg"
-               alt="Codeforces" width="60" height="70"
-               style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/Codeforces.svg" alt="Codeforces" width="110"
-               style="display:block; margin:4px auto 0;">
+               alt="Codeforces" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Codeforces.svg" alt="Codeforces"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-      <!-- Hugging Face -->
-      <td align="center" width="160" style="border:none; padding:16px 12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://huggingface.co/CodeWithSomesh" target="_blank" rel="noopener" title="Hugging Face">
           <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
-               alt="Hugging Face" width="60" height="70"
-               style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/HuggingFace.svg" alt="Hugging Face" width="110"
-               style="display:block; margin:4px auto 0;">
+               alt="Hugging Face" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/HuggingFace.svg" alt="Hugging Face"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-      <!-- Product Hunt -->
-      <td align="center" width="160" style="border:none; padding:16px 12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://www.producthunt.com/@someshdiwan" target="_blank" rel="noopener" title="Product Hunt">
           <img src="https://cdn.simpleicons.org/producthunt/DA552F"
-               alt="Product Hunt" width="60" height="70"
-               style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/ProductHunt.svg" alt="Product Hunt" width="110"
-               style="display:block; margin:4px auto 0;">
+               alt="Product Hunt" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/ProductHunt.svg" alt="Product Hunt"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
     </tr>
@@ -688,7 +677,7 @@
 
 </details>
 
-------------------------------------------------------------------------------------------------------------------------
+---
 
 <!-- ══ SIDE HUSTLE ══ -->
 <details>
@@ -700,57 +689,50 @@
     style="display: block; margin: 0 auto;"
   />
 </summary>
-
 <br>
 
-<!-- Icon Grid -->
 <div align="center">
-  <table style="border-collapse:collapse; border:none; margin:auto;">
+  <table style="border-collapse:collapse; border:none; margin:0 auto;">
     <tr>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
+        <a href="https://x.com/CodesAndAlgo" target="_blank" rel="noopener" title="The Parallel Mind on X">
+          <img src="https://cdn.simpleicons.org/x/000000"
+               alt="X" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/X_Account.svg" alt="X Account"
+               width="120" style="display:block; margin:6px auto 0;">
+        </a>
+      </td>
+      <td align="center" style="border:none; padding:20px 22px;">
+        <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener" title="Medium">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
+               alt="Medium" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/MediumArticles.svg" alt="Medium Articles"
+               width="120" style="display:block; margin:6px auto 0;">
+        </a>
+      </td>
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://someshdiwan.substack.com" target="_blank" rel="noopener" title="Substack">
-          <img src="Assets/substack.png" alt="Substack" width="45" height="45">
+          <img src="Assets/substack.png"
+               alt="Substack" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Substack.svg" alt="Substack"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
-               alt="WakaTime" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://www.notion.com/@someshdiwan" target="_blank" rel="noopener" title="Notion">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/notion.svg"
-               alt="Notion" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://ankiweb.net/shared/decks?search=Vocabulary%20Vault%20%E2%80%94%20Rich%20English%20vocab%20flashcards"
-           target="_blank" rel="noopener" title="Anki — Vocabulary Vault">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/anki.svg"
-               alt="Anki" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
+      <td align="center" style="border:none; padding:20px 22px;">
         <a href="https://docs.google.com/spreadsheets/d/14Ag_rNUwVP-BIjj0KJyLUjOb-VFecCvsH6yBcZWnOAs/edit?gid=584521556"
            target="_blank" rel="noopener" title="Google Sheets — Vocabulary Vault">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
-               alt="Google Sheets" width="48" height="48">
+               alt="Google Sheets" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/EnglishVocabularyGoogleSheet.svg" alt="English Vocabulary"
+               width="150" style="display:block; margin:6px auto 0;">
         </a>
       </td>
-    </tr>
-    <tr>
-      <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://medium.com/@SomeshDiwan" target="_blank" rel="noopener" title="Medium">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/medium.svg"
-               alt="Medium" width="48" height="48">
-        </a>
-      </td>
-      <td align="center" width="160" style="border:none; padding:12px;">
-        <a href="https://codereview.stackexchange.com/users/289194/somesh?tab=profile"
-           target="_blank" rel="noopener" title="Code Review Stack Exchange">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/stackexchange.svg"
-               alt="Stack Exchange" width="48" height="48">
+      <td align="center" style="border:none; padding:20px 22px;">
+        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+               alt="WakaTime" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Wakatime.svg" alt="WakaTime"
+               width="120" style="display:block; margin:6px auto 0;">
         </a>
       </td>
     </tr>
@@ -758,7 +740,9 @@
 </div>
 
 <br>
+
 </details>
+
 
 ------------------------------------------------------------------------------------------------------------------------
 
@@ -809,8 +793,6 @@
     width="1000" />
 </p>
 </details>
-
-------------------------------------------------------------------------------------------------------------------------
 
 <details>
 <summary>

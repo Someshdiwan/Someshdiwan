@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" role="img" aria-label="CodeChef">
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="32" role="img" aria-label="WakaTime">
     <defs>
         <linearGradient id="gradDark" x1="0" y1="0" x2="140" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.5"/>
@@ -43,22 +43,22 @@
         <text x="70" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
-              fill="#1a1a1a" text-anchor="middle" opacity="0.75">CodeChef</text>
+              fill="#1a1a1a" text-anchor="middle" opacity="0.75">WakaTime</text>
         <text x="70" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="url(#gradLight)" text-anchor="middle"
-              filter="url(#glow)">CodeChef</text>
+              filter="url(#glow)">WakaTime</text>
     </g>
     <g class="dark">
         <text x="70" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
-              fill="#ffffff" text-anchor="middle" opacity="0.75">CodeChef</text>
+              fill="#ffffff" text-anchor="middle" opacity="0.75">WakaTime</text>
         <text x="70" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="url(#gradDark)" text-anchor="middle"
-              filter="url(#glow)">CodeChef</text>
+              filter="url(#glow)">WakaTime</text>
     </g>
 </svg>
