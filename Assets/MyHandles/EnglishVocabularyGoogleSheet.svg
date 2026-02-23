@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" role="img" aria-label="English Vocabulary">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="190" height="32"
+     viewBox="-20 0 230 32"
+     overflow="visible"
+     role="img" aria-label="My English Vocabulary">
+
     <defs>
         <linearGradient id="gradDark" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.5"/>
@@ -11,6 +16,7 @@
                               type="translate" from="-160 0" to="160 0"
                               dur="2.8s" repeatCount="indefinite"/>
         </linearGradient>
+
         <linearGradient id="gradLight" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0%"   stop-color="#1a1a1a" stop-opacity="0.5"/>
             <stop offset="45%"  stop-color="#1a1a1a" stop-opacity="0.5"/>
@@ -21,7 +27,8 @@
                               type="translate" from="-160 0" to="160 0"
                               dur="2.8s" repeatCount="indefinite"/>
         </linearGradient>
-        <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+
+        <filter id="glow" x="-60%" y="-150%" width="220%" height="400%">
             <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="b1"/>
             <feGaussianBlur in="SourceGraphic" stdDeviation="3"   result="b2"/>
             <feMerge>
@@ -31,6 +38,7 @@
             </feMerge>
         </filter>
     </defs>
+
     <style>
         .dark  { display: none; }
         .light { display: inline; }
@@ -39,26 +47,41 @@
         .light { display: none; }
         }
     </style>
+
+    <!-- LIGHT MODE -->
     <g class="light">
-        <text x="80" y="21"
+        <text x="95" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
-              fill="#1a1a1a" text-anchor="middle" opacity="0.75">English Vocabulary</text>
-        <text x="80" y="21"
+              fill="#1a1a1a" text-anchor="middle" opacity="0.75">
+            My English Vocabulary
+        </text>
+
+        <text x="95" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="url(#gradLight)" text-anchor="middle"
-              filter="url(#glow)">English Vocabulary</text>
+              filter="url(#glow)">
+            My English Vocabulary
+        </text>
     </g>
+
+    <!-- DARK MODE -->
     <g class="dark">
-        <text x="80" y="21"
+        <text x="95" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
-              fill="#ffffff" text-anchor="middle" opacity="0.75">English Vocabulary</text>
-        <text x="80" y="21"
+              fill="#ffffff" text-anchor="middle" opacity="0.75">
+            My English Vocabulary
+        </text>
+
+        <text x="95" y="21"
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="url(#gradDark)" text-anchor="middle"
-              filter="url(#glow)">English Vocabulary</text>
+              filter="url(#glow)">
+            My English Vocabulary
+        </text>
     </g>
+
 </svg>

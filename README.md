@@ -733,8 +733,8 @@
            target="_blank" rel="noopener" title="Google Sheets — Vocabulary Vault">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
                alt="Google Sheets" width="64" height="64" style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/EnglishVocabularyGoogleSheet.svg" alt="English Vocabulary"
-               width="150" style="display:block; margin:6px auto 0;">
+          <img src="Assets/MyHandles/EnglishVocabularyGoogleSheet.svg" alt="My English Vocabulary"
+               width="180" style="display:block; margin:10px auto 0;">
         </a>
       </td>
       <td align="center" style="border:none; padding:20px 22px;">
