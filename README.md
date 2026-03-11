@@ -729,6 +729,15 @@
         </a>
       </td>
       <td align="center" style="border:none; padding:20px 22px;">
+        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
+               alt="WakaTime" width="64" height="64" style="display:block; margin:0 auto;"><br>
+          <img src="Assets/MyHandles/Wakatime.svg" alt="WakaTime"
+               width="120" style="display:block; margin:6px auto 0;">
+        </a>
+      </td>
+<tr>
+<td align="center" style="border:none; padding:20px 22px;">
         <a href="https://docs.google.com/spreadsheets/d/14Ag_rNUwVP-BIjj0KJyLUjOb-VFecCvsH6yBcZWnOAs/edit?gid=584521556"
            target="_blank" rel="noopener" title="Google Sheets — Vocabulary Vault">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Google_Sheets_logo_%282014-2020%29.svg"
@@ -737,14 +746,7 @@
                width="180" style="display:block; margin:10px auto 0;">
         </a>
       </td>
-      <td align="center" style="border:none; padding:20px 22px;">
-        <a href="https://wakatime.com/@SomeshDiwan" target="_blank" rel="noopener" title="WakaTime">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/wakatime.svg"
-               alt="WakaTime" width="64" height="64" style="display:block; margin:0 auto;"><br>
-          <img src="Assets/MyHandles/Wakatime.svg" alt="WakaTime"
-               width="120" style="display:block; margin:6px auto 0;">
-        </a>
-      </td>
+</tr>
     </tr>
   </table>
 </div>
