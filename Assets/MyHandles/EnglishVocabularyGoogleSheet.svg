@@ -3,7 +3,7 @@
      width="190" height="32"
      viewBox="-20 0 230 32"
      overflow="visible"
-     role="img" aria-label="My English Vocabulary">
+     role="img" aria-label="English Vocabulary">
 
     <defs>
         <linearGradient id="gradDark" x1="0" y1="0" x2="160" y2="0" gradientUnits="userSpaceOnUse">
@@ -54,7 +54,7 @@
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="#1a1a1a" text-anchor="middle" opacity="0.75">
-            My English Vocabulary
+            English Vocabulary
         </text>
 
         <text x="95" y="21"
@@ -62,7 +62,7 @@
               font-size="16" font-weight="bold"
               fill="url(#gradLight)" text-anchor="middle"
               filter="url(#glow)">
-            My English Vocabulary
+            English Vocabulary
         </text>
     </g>
 
@@ -72,7 +72,7 @@
               font-family="Comic Sans MS, Chalkboard SE, cursive"
               font-size="16" font-weight="bold"
               fill="#ffffff" text-anchor="middle" opacity="0.75">
-            My English Vocabulary
+            English Vocabulary
         </text>
 
         <text x="95" y="21"
@@ -80,7 +80,7 @@
               font-size="16" font-weight="bold"
               fill="url(#gradDark)" text-anchor="middle"
               filter="url(#glow)">
-            My English Vocabulary
+            English Vocabulary
         </text>
     </g>
 
