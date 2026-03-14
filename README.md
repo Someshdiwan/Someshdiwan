@@ -228,23 +228,6 @@
   <div style="height:12px;"></div>
   <div align="left" style="width:100%;max-width:980px;margin:0 auto;">
     <ul style="list-style:none;padding-left:0;margin:14px 0;">
-  <!-- Mini Project: File Encryption Tool -->
-      <li style="margin:18px 0;" align="left">
-  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
-    <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
-  </h4>
-  <details style="margin-top:6px;">
-          <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
-            AES Encryption • Decryption • Key Management ↗
-          </summary>
-          <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
-      • A compact <strong>Java AES File Encryption Tool</strong> showcasing real-world use of the <strong>Java Cryptography Architecture (JCA)</strong><br>
-      • Supports <strong>key generation</strong>, <strong>file encryption</strong>, and <strong>decryption</strong> via a simple CLI<br>
-      • Implements secure <code>256-bit AES</code> with modular methods and safe stream handling<br>
-      • Lightweight design — fast, functional, and perfect for learning practical cryptography<br>
-    </div>
-        </details>
-      </li>
       <!-- Add future mini projects below this -->
     </ul>
   </div>
@@ -254,7 +237,6 @@
   <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
     <a href="https://github.com/Someshdiwan/InventoryManagement">Inventory Management System ↗</a>
   </h4>
-
   <details style="margin-top:6px;">
     <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
       Flow • Features • File Layout ↗
@@ -264,6 +246,24 @@
   • Demonstrates basic inventory operations: insert, update, delete, search, list — the foundation of 80% real business systems<br>
   • Teaches separation of storage vs user interaction before databases are introduced (CSV file used as lightweight persistence)<br>
   • Reinforces why arrays / lists are not “toy” — they are the primitive basis behind tables, DB rows, and record stores<br>
+    </div>
+  </details>
+</li>
+
+<!-- Mini Project: File Encryption Tool -->
+<li style="margin:18px 0;" align="left">
+  <h4 style="margin:4px 0;font-size:16px;font-family:'Comic Sans MS','Segoe UI';">
+    <a href="https://github.com/Someshdiwan/File-Encryption-Tool">File Encryption Tool ↗</a>
+  </h4>
+  <details style="margin-top:6px;">
+    <summary style="cursor:pointer;font-size:13px;color:#0a66c2;font-family:'Comic Sans MS','Segoe UI';">
+      AES • Key Generation • Stream Handling ↗
+    </summary>
+    <div style="margin:6px 0 0 8px;font-size:12px;color:#444;font-family:'Comic Sans MS','Segoe UI';">
+  • Practical demonstration of Java Cryptography Architecture (JCA) showing how real applications protect sensitive data<br>
+  • Implements 256-bit AES encryption/decryption via CLI — the same algorithm securing government and financial systems<br>
+  • Teaches symmetric cryptography fundamentals: key generation, cipher initialization, secure stream processing<br>
+  • Lightweight modular design emphasizing proper resource cleanup and exception handling in crypto operations<br>
     </div>
   </details>
 </li>
