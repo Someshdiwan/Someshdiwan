@@ -617,12 +617,10 @@
     style="display: block; margin: 0 auto;"
   />
 </summary>
-
 <br>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20views&color=0e75b6&style=flat"
-       alt="Profile views counter" height="24">
+  <img src="https://komarev.com/ghpvc/?username=Someshdiwan&label=Profile%20Views&color=0e75b6&style=flat" alt="Someshdiwan Profile Views" />
 </p>
 
 <div align="center">
