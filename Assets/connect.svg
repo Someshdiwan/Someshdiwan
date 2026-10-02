@@ -64,7 +64,7 @@
         <animate attributeName="opacity" values="0.55;0.95;0.55" dur="2.6s" repeatCount="indefinite"/>
     </circle>
     <g>
-        <text x="16" y="50%" class="title">📍</text>
+        <text x="16" y="50%" class="title">🤔</text>
         <animateTransform attributeName="transform" type="rotate"
                           values="-7 24 28; 7 24 28; -7 24 28"
                           dur="3s" repeatCount="indefinite"/>
